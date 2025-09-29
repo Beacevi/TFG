@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Escritorio\\_TFG\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\escritorio\\_tfg\\assets\\scripts\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\escritorio\\_tfg\\assets\\scripts\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Coins.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\_TFG\\Assets\\Scripts\\Coins.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Coins.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\_TFG\\Assets\\Scripts\\Coins.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Coins.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:49:55.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Energy.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\_TFG\\Assets\\Scripts\\Energy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Energy.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\_TFG\\Assets\\Scripts\\Energy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Energy.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:12:58.153Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
