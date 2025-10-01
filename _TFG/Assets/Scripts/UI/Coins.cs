@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public int _actualCoins;
-    private const int _maxCoins = 2;
-    private const int _minCoins = 0;
-    public TextMeshProUGUI _textActualCoins; //> Se actualiza el texto de Coins de la UI
+    public  int             _actualCoins;
+    public  TextMeshProUGUI _textActualCoins; //> Se actualiza el texto de Coins de la UI
+
+    private const int       _maxCoins = 2;
+    private const int       _minCoins = 0;
+    
     void Start()
     {
         ActualiceCoinsUI();
