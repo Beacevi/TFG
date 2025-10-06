@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\scripts\\ui\\buttons\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\buttons\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\simondice\\circlebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\simondice\\circlebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\buttons\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\gems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\buttons\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\buttons\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\buttons\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\buttons\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,40 +42,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SimonGameManager.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:53:15.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CircleButton.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\CircleButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SimonDice\\CircleButton.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\CircleButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SimonDice\\CircleButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:49:55.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Gems.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Gems.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Gems.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Gems.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Gems.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T17:41:04.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PlayButton.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\PlayButton.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\PlayButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Buttons\\PlayButton.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\PlayButton.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\PlayButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Buttons\\PlayButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-03T17:01:05.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "HamburguerButton.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\HamburguerButton.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\HamburguerButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Buttons\\HamburguerButton.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\HamburguerButton.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Buttons\\HamburguerButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Buttons\\HamburguerButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T17:01:01.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T17:01:01.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Hour.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Hour.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Hour.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -71,26 +120,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Energy.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Energy.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Energy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Energy.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Energy.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Energy.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Energy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T18:18:57.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T18:18:57.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Coins.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Coins.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Coins.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Coins.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Coins.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Coins.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Coins.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T18:17:00.976Z"
             }
