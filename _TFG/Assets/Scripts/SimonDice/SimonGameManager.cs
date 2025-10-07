@@ -13,9 +13,12 @@ public class SimonGameManager : MonoBehaviour
     private List<int> pattern = new List<int>();
     private List<int> playerInput = new List<int>();
     private bool isPlayerTurn = false;
-
+    private bool hasFailed = false;
     private int level = 0;
-    private bool hasFailed = false; 
+
+    public Color failColor = Color.red; // Color del flash de fallo
+    public int failFlashes = 2;         // Cuántas veces parpadea
+    private bool canPress = false;
 
     void Awake()
     {
@@ -39,7 +42,7 @@ public class SimonGameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        // Si no hay fallo, se añade un nuevo paso al patrón
+        // Solo añadir nuevo paso si no hubo fallo
         if (!hasFailed)
         {
             int newIndex = Random.Range(0, circles.Length);
@@ -53,57 +56,92 @@ public class SimonGameManager : MonoBehaviour
             hasFailed = false;
         }
 
-        // Mostrar patrón completo
-        foreach (int index in pattern)
-        {
-            yield return StartCoroutine(circles[index].Flash(flashDuration));
-            yield return new WaitForSeconds(timeBetweenFlashes);
-        }
+        // Mostrar el patrón
+        yield return StartCoroutine(PlayPattern());
 
         isPlayerTurn = true;
     }
-    IEnumerator RestartSamePattern()
+
+    IEnumerator HandleFail()
     {
         isPlayerTurn = false;
         playerInput.Clear();
 
-        // 
-        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < failFlashes; i++)
+        {
+            foreach (var circle in circles)
+                circle.SetColorInstant(failColor);
+            yield return new WaitForSeconds(0.2f);
 
-        // Repite misma secuencia
+            foreach (var circle in circles)
+                circle.RestoreOriginalColor();
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        //Repite el mismo patrón
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(PlayPattern());
+
+        isPlayerTurn = true;
+        hasFailed = false;
+    }
+
+    IEnumerator PlayPattern()
+    {
+        canPress = false;
+
         foreach (int index in pattern)
         {
             yield return StartCoroutine(circles[index].Flash(flashDuration));
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
 
-        isPlayerTurn = true;
-        hasFailed = false;
+        canPress = true;
     }
-    public void OnCirclePressed(int index)
-    {
-        if (!isPlayerTurn) return;
 
+    IEnumerator HandlePlayerPress(int index)
+    {
         playerInput.Add(index);
         int currentStep = playerInput.Count - 1;
 
-        // Verificar jugada actual
         if (playerInput[currentStep] != pattern[currentStep])
         {
             Debug.Log("ERES UN MAULA");
             hasFailed = true;
-            StartCoroutine(RestartSamePattern());
-            return;
+            StartCoroutine(HandleFail());
+            yield break;
         }
 
         // Si completó correctamente la secuencia
         if (playerInput.Count == pattern.Count)
         {
-            Debug.Log("OLEEEEE");
+            Debug.Log("OLEEEEEEE");
+            yield return new WaitForSeconds(0.3f);
             StartCoroutine(StartNewRound());
+            yield break;
         }
+
+        // Delay
+        yield return new WaitForSeconds(0.2f);
+        canPress = true;
     }
+
+    public void OnCirclePressed(int index)
+    {
+        if (!isPlayerTurn || !canPress) return;
+
+        canPress = false;
+        StartCoroutine(HandlePlayerPress(index));     
+    }
+
+    // Método para verificar si el jugador puede presionar
+    public bool CanPlayerPress()
+    {
+        return isPlayerTurn && canPress;
+    }
+
+
 }
 
 
-    
+

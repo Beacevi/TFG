@@ -21,8 +21,10 @@ public class CircleButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (SimonGameManager.Instance != null)
-            SimonGameManager.Instance.OnCirclePressed(index);
+        if (SimonGameManager.Instance == null) return;
+        if (!SimonGameManager.Instance.CanPlayerPress()) return;
+
+        SimonGameManager.Instance.OnCirclePressed(index);
 
         // Reproduce sonido y efecto al tocar
         //PlaySound();
@@ -40,6 +42,15 @@ public class CircleButton : MonoBehaviour
         spriteRenderer.color = originalColor;
     }
 
+    public void SetColorInstant(Color newColor)
+    {
+        spriteRenderer.color = newColor;
+    }
+
+    public void RestoreOriginalColor()
+    {
+        spriteRenderer.color = originalColor;
+    }
     /*private void PlaySound()
     {
         if (sound != null && audioSource != null)
