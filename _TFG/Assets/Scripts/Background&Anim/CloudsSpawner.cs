@@ -20,19 +20,19 @@ public class CloudsSpawner : MonoBehaviour
     [SerializeField] private float _scaleMax = 1.2f;
 
     [Header("Amount of Objets for Spawn")]
-    [SerializeField] private int _minObjets = 1;   // Mínimo a spawnear
-    [SerializeField] private int _maxObjets = 2;   // Máximo a spawnear
+    [SerializeField] public int _minObjets = 1;   //> Mínimo a spawnear 
+    [SerializeField] public int _maxObjets = 2;   //> Máximo a spawnear
 
     private void Start()
     {
         InvokeRepeating(nameof(SpawnObjeto), 0f, _timepNextSpawns); //> Repetir spawn cada cierto tiempo
     }
 
-    void SpawnObjeto()
+    private void SpawnObjeto()
     {
-        int _amount = Random.Range(_minObjets, _maxObjets + 1);
+        int _amount = Random.Range(_minObjets, _maxObjets);
 
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < _amount; i++)
         {
             Vector3 _spawnPoint = new Vector3(
             Random.Range(xMin, xMax),           //> Posición X
