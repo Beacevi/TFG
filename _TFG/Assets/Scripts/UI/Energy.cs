@@ -9,19 +9,22 @@ using TMPro;
 /// </summary>
 public class Energy : MonoBehaviour
 {
-    public  int         _actualEnergy;               //> Energia del jugador
-    private float       _countdownTimer;             //> Variable que funciona como timer 
-    
-    private const int   _incrementPerTime   = 1;     //> Cantidad de Energía que se suma cada vez de cada cierto tiempo(_time)
-    private const int   _maxEnergy          = 4;     //> Energía maxima que puede tener el jugador
-    private const int   _minEnergy          = 0;     //> Energía minima que puede tener el jugador 
-    public  const float _time               = 10f;   //> Segundos que tienen que pasar para que se suba uno de enrgía
+    public int         _actualEnergy;               //> Energia del jugador
+
+    [Header("Timer")]
+    [SerializeField] private float       _countdownTimer;             //> Variable que funciona como timer 
+    [SerializeField] private const int   _incrementPerTime   = 1;     //> Cantidad de Energía que se suma cada vez de cada cierto tiempo(_time)
+    [SerializeField] private const float _time = 10f;   //> Segundos que tienen que pasar para que se suba uno de enrgía
+
+    [Header("Range of Energy")]
+    [SerializeField] private const int   _maxEnergy          = 4;     //> Energía maxima que puede tener el jugador
+    [SerializeField] private const int   _minEnergy          = 0;     //> Energía minima que puede tener el jugador 
 
     private bool        _isCoroutineRunning = false; //> Booleano para saber si hay una corrutina en marcha
 
-    
-    public TextMeshProUGUI _textActualEnergy;        //> Se actualiza el texto de Energy de la UI
-    public TextMeshProUGUI _textTimerEnergy;         //> Timer del tiempo que queda para que se actualice la siguiente energia
+    [Header("Texts")]
+    [SerializeField] private TextMeshProUGUI _textActualEnergy;        //> Se actualiza el texto de Energy de la UI
+    [SerializeField] private TextMeshProUGUI _textTimerEnergy;         //> Timer del tiempo que queda para que se actualice la siguiente energia
 
     
 
