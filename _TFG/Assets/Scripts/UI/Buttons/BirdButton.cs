@@ -7,22 +7,21 @@ public class BirdButton : MonoBehaviour
     [Header("Animators")]
     [SerializeField] private Animator _animator; //>Animator del boton
     [SerializeField] private Animator _balloonAnimator; //>Animator del glovo
+    [SerializeField] private Animator _birdAnimator; //>Animator del glovo
 
     [Header("Scripts")]
     [SerializeField] private HamburguerButton _hamburguerButtonScript;
+    [SerializeField] private ButtonFunctions _buttonFunctions;
 
     [Header("Panels")]
     [SerializeField] private GameObject _BirdPanel;
-    [SerializeField] private GameObject _OptionsPanel;
-    [SerializeField] private GameObject _MainMenuPanel;
 
     [Header("Icons")]
     [SerializeField] private GameObject _openedIcon;
     [SerializeField] private GameObject _closedIcon;
 
     [Header("Plus")]
-    [SerializeField] private GameObject _cloudPrefab;
-    [SerializeField] private Button _buttonExpandBird;
+    [SerializeField] private Button     _buttonExpandBird;
 
     private bool isOpen = false;
 
@@ -41,28 +40,27 @@ public class BirdButton : MonoBehaviour
         _hamburguerButtonScript.HamburguerMenu();
 
         _balloonAnimator.SetTrigger("EditingTrigger");
-        _cloudPrefab.SetActive(false);
+        _birdAnimator.SetTrigger("EditingTrigger");
 
-        _OptionsPanel.SetActive(false);
-        _MainMenuPanel.SetActive(false);
+        _buttonFunctions.OpenMenu();
     }
     public void CloseBirdMenu()
     {
         _BirdPanel.SetActive(false);
 
-        BirdMenu();
+        if(isOpen)
+            BirdMenu();
 
         _balloonAnimator.SetTrigger("NotEditingTrigger");
-        _cloudPrefab.SetActive(true);
+        _birdAnimator.SetTrigger("NotEditingTrigger");
 
-        _OptionsPanel.SetActive(true);
-        _MainMenuPanel.SetActive(true);
+        _buttonFunctions.CloseMenu();
     }
     public void BirdMenu()
     {
         if (isOpen)
         {
-            StartCoroutine(InteractibleButton());
+            StartCoroutine(_buttonFunctions.InteractibleButton(_buttonExpandBird, _animator));
             _animator.SetTrigger("CloseTrigger");
 
             _openedIcon.SetActive(true);
@@ -71,7 +69,7 @@ public class BirdButton : MonoBehaviour
         }
         else
         {
-            StartCoroutine(InteractibleButton());
+            StartCoroutine(_buttonFunctions.InteractibleButton(_buttonExpandBird, _animator));
             _animator.SetTrigger("OpenTrigger");
 
             _closedIcon.SetActive(true);
@@ -79,13 +77,5 @@ public class BirdButton : MonoBehaviour
             isOpen = true;
         }
 
-    }
-    private IEnumerator InteractibleButton()
-    {
-        _buttonExpandBird.interactable = false;
-        yield return null; 
-        float duration = _animator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(duration);
-        _buttonExpandBird.interactable = true;
     }
 }

@@ -12,6 +12,7 @@ public class PlayButton : MonoBehaviour
 
     [Header("Plus")]
     [SerializeField] private Button _buttonPlay;
+    [SerializeField] private ButtonFunctions _buttonFunctions;
 
     private bool isOpen = false;
 
@@ -25,7 +26,7 @@ public class PlayButton : MonoBehaviour
     {
         if (isOpen)
         {
-            StartCoroutine(InteractibleButton());     
+            StartCoroutine(_buttonFunctions.InteractibleButton(_buttonPlay, _animator));     
             _animator.SetTrigger("CloseTrigger");
 
             _openedIcon.SetActive(true);
@@ -34,7 +35,7 @@ public class PlayButton : MonoBehaviour
         }
         else
         {
-            StartCoroutine(InteractibleButton());   
+            StartCoroutine(_buttonFunctions.InteractibleButton(_buttonPlay, _animator));   
             _animator.SetTrigger("OpenTrigger");
 
             _closedIcon.SetActive(true);
@@ -42,16 +43,5 @@ public class PlayButton : MonoBehaviour
             isOpen = true;
         }
 
-    }
-    private IEnumerator InteractibleButton()
-    {
-        _buttonPlay.interactable = false;
-
-        yield return null;
-
-        float duration = _animator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(duration);
-
-        _buttonPlay.interactable = true;
     }
 }

@@ -12,6 +12,8 @@ public class HamburguerButton : MonoBehaviour
 
     [Header("Plus")]
     [SerializeField] private Button _buttonHamburguer;
+    [SerializeField] private ButtonFunctions _buttonFunctions;
+
     private bool isOpen = false;
 
 
@@ -24,7 +26,7 @@ public class HamburguerButton : MonoBehaviour
     {
         if (isOpen)
         {
-            StartCoroutine(InteractibleButton());
+            StartCoroutine(_buttonFunctions.InteractibleButton(_buttonHamburguer, _animator));
             _animator.SetTrigger("CloseTrigger");
 
             _openedIcon.SetActive(true);
@@ -33,23 +35,12 @@ public class HamburguerButton : MonoBehaviour
         }
         else
         {
-            StartCoroutine(InteractibleButton());
+            StartCoroutine(_buttonFunctions.InteractibleButton(_buttonHamburguer, _animator));
             _animator.SetTrigger("OpenTrigger");
 
             _closedIcon.SetActive(true);
             _openedIcon.SetActive(false);
             isOpen = true;
         }
-
-    }
-    private IEnumerator InteractibleButton()
-    {
-        _buttonHamburguer.interactable = false;
-        yield return null;
-
-        float duration = _animator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(duration);
-
-        _buttonHamburguer.interactable = true;
     }
 }
