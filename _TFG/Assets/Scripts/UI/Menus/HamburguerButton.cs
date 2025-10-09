@@ -12,13 +12,15 @@ public class HamburguerButton : MonoBehaviour
 
     [Header("Plus")]
     [SerializeField] private Button _buttonHamburguer;
-    [SerializeField] private ButtonFunctions _buttonFunctions;
+    private ButtonFunctions _buttonFunctions;
 
     private bool isOpen = false;
 
 
     private void Start()
     {
+        _buttonFunctions = GetComponent<ButtonFunctions>();
+
         _openedIcon.SetActive(true);
         _closedIcon.SetActive(false);
     }

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class BirdButton : MonoBehaviour
 {
@@ -10,8 +9,7 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private Animator _birdAnimator; //>Animator del glovo
 
     [Header("Scripts")]
-    [SerializeField] private HamburguerButton _hamburguerButtonScript;
-    [SerializeField] private ButtonFunctions _buttonFunctions;
+    private ButtonFunctions  _buttonFunctions;
 
     [Header("Panels")]
     [SerializeField] private GameObject _BirdPanel;
@@ -21,13 +19,15 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private GameObject _closedIcon;
 
     [Header("Plus")]
-    [SerializeField] private Button     _buttonExpandBird;
+    [SerializeField] private Button _buttonExpandBird;
 
     private bool isOpen = false;
 
 
     private void Start()
     {
+        _buttonFunctions = GetComponent<ButtonFunctions>();
+
         _openedIcon.SetActive(true); 
         _closedIcon.SetActive(false);
 
@@ -36,8 +36,6 @@ public class BirdButton : MonoBehaviour
     public void OpenBirdMenu()
     {
         _BirdPanel.SetActive(true);
-
-        _hamburguerButtonScript.HamburguerMenu();
 
         _balloonAnimator.SetTrigger("EditingTrigger");
         _birdAnimator.SetTrigger("EditingTrigger");

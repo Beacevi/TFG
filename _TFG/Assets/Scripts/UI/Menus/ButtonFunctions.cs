@@ -4,6 +4,9 @@ using System.Collections;
 
 public class ButtonFunctions : MonoBehaviour
 {
+    [Header("Scripts")]
+    private HamburguerButton _hamburguerButtonScript;
+    private PlayButton _playButtonScript;
 
     [Header("Panels")]
     [SerializeField] private GameObject _OptionsPanel;
@@ -21,10 +24,18 @@ public class ButtonFunctions : MonoBehaviour
         yield return new WaitForSeconds(duration);
         button.interactable = true;
     }
-
+    private void Start()
+    {
+        _hamburguerButtonScript = GetComponent<HamburguerButton>();
+        _playButtonScript = GetComponent<PlayButton>();
+    }
     public void OpenMenu()
     {
         _cloudPrefab.SetActive(false);
+
+        _hamburguerButtonScript.HamburguerMenu();
+        if(_playButtonScript.isOpen)
+            _playButtonScript.PlayMenu();
 
         _OptionsPanel.SetActive(true);
         _MainMenuPanel.SetActive(true);

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class PlayButton : MonoBehaviour
 {
@@ -12,13 +11,15 @@ public class PlayButton : MonoBehaviour
 
     [Header("Plus")]
     [SerializeField] private Button _buttonPlay;
-    [SerializeField] private ButtonFunctions _buttonFunctions;
+    private ButtonFunctions _buttonFunctions;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
 
 
     private void Start()
     {
+        _buttonFunctions = GetComponent<ButtonFunctions>();
+
         _openedIcon.SetActive(true);
         _closedIcon.SetActive(false);
     }
