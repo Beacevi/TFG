@@ -1135,7 +1135,6 @@ MonoBehaviour:
   _openedIcon: {fileID: 262838671}
   _closedIcon: {fileID: 820193165}
   _buttonHamburguer: {fileID: 1837749550}
-  _buttonFunctions: {fileID: 137319701}
 --- !u!114 &137319698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,7 +1151,6 @@ MonoBehaviour:
   _openedIcon: {fileID: 1342109119}
   _closedIcon: {fileID: 550435137}
   _buttonPlay: {fileID: 1599839125}
-  _buttonFunctions: {fileID: 137319701}
   isOpen: 0
 --- !u!114 &137319699
 MonoBehaviour:
@@ -1183,7 +1181,6 @@ MonoBehaviour:
   _animator: {fileID: 2141005783}
   _balloonAnimator: {fileID: 706438966}
   _birdAnimator: {fileID: 613804841}
-  _buttonFunctions: {fileID: 137319701}
   _BirdPanel: {fileID: 2141005780}
   _openedIcon: {fileID: 1240793823}
   _closedIcon: {fileID: 1295408420}
@@ -1200,8 +1197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aceb1182a6d75394e9c96c251445df8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hamburguerButtonScript: {fileID: 137319697}
-  _playButtonScript: {fileID: 137319698}
   _OptionsPanel: {fileID: 3524322}
   _MainMenuPanel: {fileID: 1665622291}
   _cloudPrefab: {fileID: 7053339088832149667, guid: a87b5c316c71ef14189a094b95807e64, type: 3}
@@ -1218,11 +1213,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d759fc6aec7bd6c409035e3420edfde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonFunctions: {fileID: 137319701}
   _CollectionPanel: {fileID: 1011420084}
   _AllCollection: {fileID: 1313238281}
   _InfoCollection: {fileID: 1164488954}
   _ButtonCloseCollection: {fileID: 1391871519}
+  _TitleText: {fileID: 287542088}
+  _SubtitleText: {fileID: 2015363721}
+  _InfoText: {fileID: 602145757}
+  _ImageCollection: {fileID: 818965418}
 --- !u!1 &141174511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7513,7 +7511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: Gorrion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9975,9 +9973,10 @@ GameObject:
   - component: {fileID: 932245884}
   - component: {fileID: 932245883}
   - component: {fileID: 932245882}
+  - component: {fileID: 932245885}
   m_Layer: 5
   m_Name: ButtonImage
-  m_TagString: Untagged
+  m_TagString: Avestruz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10045,6 +10044,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 932245885}
+        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319702}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: OpenInfo
@@ -10095,6 +10106,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932245880}
   m_CullTransparentMesh: 1
+--- !u!114 &932245885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932245880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98386b3439281443aeb6e6ebfc95935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasManager: {fileID: 137319702}
 --- !u!1 &932281001
 GameObject:
   m_ObjectHideFlags: 0
@@ -13795,9 +13819,10 @@ GameObject:
   - component: {fileID: 1330524438}
   - component: {fileID: 1330524437}
   - component: {fileID: 1330524436}
+  - component: {fileID: 1330524439}
   m_Layer: 5
   m_Name: ButtonImage
-  m_TagString: Untagged
+  m_TagString: Gorrion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13865,6 +13890,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1330524439}
+        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319702}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: OpenInfo
@@ -13915,6 +13952,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330524434}
   m_CullTransparentMesh: 1
+--- !u!114 &1330524439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330524434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98386b3439281443aeb6e6ebfc95935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasManager: {fileID: 137319702}
 --- !u!1 &1336803515
 GameObject:
   m_ObjectHideFlags: 0
@@ -20072,7 +20122,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 230, y: 81}
+  m_CellSize: {x: 235, y: 50}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -20398,7 +20448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: Avestruz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

@@ -28,6 +28,8 @@ public class ButtonFunctions : MonoBehaviour
     {
         _hamburguerButtonScript = GetComponent<HamburguerButton>();
         _playButtonScript = GetComponent<PlayButton>();
+
+        _cloudPrefab.SetActive(true);
     }
     public void OpenMenu()
     {
