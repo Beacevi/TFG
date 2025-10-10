@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public  int             _actualCoins = 200;
-    [SerializeField] private TextMeshProUGUI _textActualCoins; //> Se actualiza el texto de Coins de la UI
+    [Header("CoinsNumber")]
+    public int _actualCoinsTop = 200;
+    public int _actualCoinsDown = 250;
 
-    private const int       _maxCoins = 1000;
-    private const int       _minCoins = 0;
+    [Header("Text")]
+    [SerializeField] private TextMeshProUGUI _textActualCoinsTop; //> Se actualiza el texto de Coins de la UI
+    [SerializeField] private TextMeshProUGUI _textActualCoinsDown;
+
+    private const int _maxCoins = 1000;
+    private const int _minCoins = 0;
     
     void Start()
     {
@@ -24,6 +29,7 @@ public class Coins : MonoBehaviour
 
     private void ActualiceCoinsUI()
     {
-        _textActualCoins.text = _actualCoins.ToString()  + "$";
+        _textActualCoinsTop.text  = _actualCoinsTop.ToString();
+        _textActualCoinsDown.text = _actualCoinsDown.ToString();
     }
 }

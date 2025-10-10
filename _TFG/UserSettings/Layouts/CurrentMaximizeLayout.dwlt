@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 19597
+  controlID: 131
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -93,9 +93,9 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 19598
+  controlID: 132
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19503
+  controlID: 47
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -244,9 +244,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9273ffff8275ffff7cc000008cc0000068c1000000c2000000c300009ac30000d0c300004ec40000c2c40000e4c4000016c600007ec60000
+      m_SelectedIDs: 96900000
+      m_LastClickedID: 37014
+      m_ExpandedIDs: c4dcffff10f9ffff54910000d491000004920000409200005e930000a49400004495000062950000ac950000ca950000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -290,8 +290,8 @@ MonoBehaviour:
     y: 0
     width: 990
     height: 609
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -877,9 +877,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.5806402, y: 4.125178, z: 4.3985314}
+    m_Target: {x: 333.0248, y: 815.5548, z: -0.6861472}
     speed: 2
-    m_Value: {x: 1.5806402, y: 4.125178, z: 4.3985314}
+    m_Value: {x: 333.0248, y: 815.5548, z: -0.6861472}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -929,9 +929,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.417399
+    m_Target: 139.32477
     speed: 2
-    m_Value: 12.417399
+    m_Value: 139.32477
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 19599
+  controlID: 133
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -1206,7 +1206,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Scripts/UI
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1216,16 +1216,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources
+  - Assets/Scripts/UI
   m_LastFoldersGridSize: 64
-  m_LastProjectPath: C:\Users\Alumno\Documents\GitHub\TFG\_TFG
+  m_LastProjectPath: C:\Users\User\OneDrive\Documentos\GitHub\TFG\_TFG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ecb30000
-    m_LastClickedID: 46060
-    m_ExpandedIDs: 00000000d6a6000060ac0000d0ae0000c0b3000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 234}
+    m_SelectedIDs: e6970000
+    m_LastClickedID: 38886
+    m_ExpandedIDs: 00000000ee4600002247000028470000e2970000e4970000e6970000e8970000689800006e98000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1254,7 +1254,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d6a6000060ac0000d0ae0000c0b30000ecb3000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000ee46000028470000e2970000e4970000e6970000e8970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1280,9 +1280,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 96900000
+    m_LastClickedInstanceID: 37014
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000060c50000f2c500005091000090980000f08d00002a96000020ab0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1412,7 +1412,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 49774
+  m_LastSelectedObjectID: 37014
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 19638
+  controlID: 164
   draggingID: 0
 --- !u!114 &18
 MonoBehaviour:
@@ -1483,7 +1483,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 603
-    height: 587
+    height: 668
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 19}
@@ -1515,7 +1515,7 @@ MonoBehaviour:
     x: 1317
     y: 79
     width: 602
-    height: 561
+    height: 642
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1556,9 +1556,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 587
+    y: 668
     width: 603
-    height: 346
+    height: 265
   m_MinSize: {x: 361, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 21}
@@ -1588,9 +1588,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1317
-    y: 666
+    y: 747
     width: 602
-    height: 320
+    height: 239
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1605,11 +1605,11 @@ MonoBehaviour:
       displayed: 0
       id: Overlays/OverlayMenu
       index: 0
-      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":21.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
       snapOffset: {x: 24, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 21}
       snapCorner: 0
       layout: 1
       size: {x: 0, y: 0}
