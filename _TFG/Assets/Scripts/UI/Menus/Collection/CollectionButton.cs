@@ -68,13 +68,13 @@ public class CollectionButton : MonoBehaviour
             case "Avestruz":
                 _TitleText.text = "Avestruz";
                 _SubtitleText.text = "04/08/2013";
-                _InfoText.text = "Te voy a dar lo tuyyo nena";
+                _InfoText.text = "Quien lea esto es una cerda zorra puta de mierda";
                 _ImageCollection.sprite = Resources.Load<Sprite>("Glovo");
                 break;
             case "Untagged":
                 _TitleText.text = "ShortKing";
                 _SubtitleText.text = "Cerda";
-                _InfoText.text = "Quien lea esto es una cerda zorra puta de mierda";
+                _InfoText.text = "jhvjjkuiugc  ";
                 break; 
             default:
                 _TitleText.text = "ShortKing";
