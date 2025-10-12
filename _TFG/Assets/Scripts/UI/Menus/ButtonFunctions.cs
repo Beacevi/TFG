@@ -9,8 +9,7 @@ public class ButtonFunctions : MonoBehaviour
     private PlayButton _playButtonScript;
 
     [Header("Panels")]
-    [SerializeField] private GameObject _OptionsPanel;
-    [SerializeField] private GameObject _MainMenuPanel;
+    [SerializeField] private GameObject _OptionMenuPanel;
 
     [Header("Plus")]
     [SerializeField] private GameObject _cloudPrefab;
@@ -39,16 +38,14 @@ public class ButtonFunctions : MonoBehaviour
         if(_playButtonScript.isOpen)
             _playButtonScript.PlayMenu();
 
-        _OptionsPanel.SetActive(true);
-        _MainMenuPanel.SetActive(true);
+        _OptionMenuPanel.SetActive(true);
     }
 
     public void CloseMenu()
     {
         _cloudPrefab.SetActive(true);
 
-        _OptionsPanel.SetActive(true);
-        _MainMenuPanel.SetActive(true);
+        _OptionMenuPanel.SetActive(true);
     }
 
     public void HideBirds(bool isSeen)

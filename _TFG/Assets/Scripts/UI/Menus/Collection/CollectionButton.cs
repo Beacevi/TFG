@@ -72,12 +72,14 @@ public class CollectionButton : MonoBehaviour
                 _ImageCollection.sprite = Resources.Load<Sprite>("Glovo");
                 break;
             case "Untagged":
-                _TitleText.text = "Title";
-                _SubtitleText.text = "Subtitle";
-                _InfoText.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor";
+                _TitleText.text = "ShortKing";
+                _SubtitleText.text = "Cerda";
+                _InfoText.text = "Quien lea esto es una cerda zorra puta de mierda";
                 break; 
             default:
-                _TitleText.text = "Title";
+                _TitleText.text = "ShortKing";
+                _SubtitleText.text = "Cerda";
+                _InfoText.text = "Quien lea esto es una cerda zorra puta de mierda";
                 break;
         }
     }
