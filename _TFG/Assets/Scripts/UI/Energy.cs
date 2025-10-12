@@ -17,7 +17,7 @@ public class Energy : MonoBehaviour
     [SerializeField] private const float _time = 10f;   //> Segundos que tienen que pasar para que se suba uno de enrgía
 
     [Header("Range of Energy")]
-    [SerializeField] private const int   _maxEnergy          = 4;     //> Energía maxima que puede tener el jugador
+    [SerializeField] private const int   _maxEnergy          = 500;     //> Energía maxima que puede tener el jugador
     [SerializeField] private const int   _minEnergy          = 0;     //> Energía minima que puede tener el jugador 
 
     private bool        _isCoroutineRunning = false; //> Booleano para saber si hay una corrutina en marcha
