@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 85875515}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -1304,6 +1304,10 @@ MonoBehaviour:
   _animator: {fileID: 2141005783}
   _balloonAnimator: {fileID: 706438966}
   _birdAnimator: {fileID: 613804841}
+  _Bird1: {fileID: 987529844}
+  _Bird2: {fileID: 652481720}
+  _Bird3: {fileID: 1799327728}
+  _BoostText: {fileID: 1906285917}
   _BirdPanel: {fileID: 2141005780}
   _openedIcon: {fileID: 1240793823}
   _closedIcon: {fileID: 1295408420}
@@ -1490,7 +1494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 146341876}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -1846,7 +1850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 189150724}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -5277,7 +5281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 448931637}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -7358,7 +7362,7 @@ GameObject:
   - component: {fileID: 652481723}
   - component: {fileID: 652481722}
   m_Layer: 5
-  m_Name: Bird
+  m_Name: Bird2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11749,7 +11753,7 @@ GameObject:
   - component: {fileID: 987529847}
   - component: {fileID: 987529846}
   m_Layer: 5
-  m_Name: Bird
+  m_Name: Bird1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13054,7 +13058,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 1126633821}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -13640,7 +13644,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 1152003153}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -16831,7 +16835,7 @@ GameObject:
   - component: {fileID: 1437753289}
   m_Layer: 5
   m_Name: ButtonImage
-  m_TagString: B
+  m_TagString: C
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16924,7 +16928,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 1437753289}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1
@@ -20269,7 +20273,7 @@ GameObject:
   - component: {fileID: 1799327731}
   - component: {fileID: 1799327730}
   m_Layer: 5
-  m_Name: Bird
+  m_Name: Bird3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23087,7 +23091,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843671138}
+      - m_Target: {fileID: 2049940362}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
         m_Mode: 1

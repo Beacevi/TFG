@@ -1,6 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class BirdButton : MonoBehaviour
 {
@@ -29,7 +32,7 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private Button _buttonExpandBird;
 
     private bool isOpen = false;
-    private string[] BirdSelected      = new string[3];
+    Queue<string> BirdSelected = new Queue<string>();
     private Image [] BirdSelectedImage = new Image[3];
 
     private void Start()
@@ -86,18 +89,47 @@ public class BirdButton : MonoBehaviour
     }
     public void UpdateTextBasedOnTag(string buttonTag)
     {
-        for(int i = 0; i < BirdSelected.Length; ++i)
+        if(BirdSelected.Contains(buttonTag))
         {
-            if(BirdSelected[i] != "cero")
-            {
-                BirdSelected[i]   = buttonTag;
-                //BirdSelectedImage = ;
-            }
+            return;
         }
+        else
+        {
+            if (BirdSelected.Count >= 3)
+                BirdSelected.Dequeue(); //< Expulsa del queu el ultimo tag que hay en el queu
 
-        if (BirdSelected[0] == "A" && BirdSelected[0] == "B" && BirdSelected[0] == "C")
-        {
-            _BoostText.text = "HarryxDraco";
+            BirdSelected.Enqueue(buttonTag); //< Añade el tag al principio del queu
+
+            if (BirdSelected.Count == 2)
+            {
+                _Bird2.tag = _Bird1.tag;
+            }
+            else
+            {
+                string temp = _Bird2.tag;
+                _Bird2.tag = _Bird1.tag;
+                _Bird3.tag = temp;
+            }
+            _Bird1.tag = buttonTag;
         }
+        
+        _BoostText.text = "No Boost";
+
+        TypeOfBoosts();
+    }
+    private void TypeOfBoosts()
+    {
+        if (BirdSelected.Contains("A") && BirdSelected.Contains("B") && BirdSelected.Contains("C"))
+        {
+            _BoostText.text = "A+B+C";
+        }
+        if (BirdSelected.Contains("D") && BirdSelected.Contains("F") && BirdSelected.Contains("E"))
+        {
+            _BoostText.text = "D+F+G";
+        }
+    }
+    public void CleanMyBirds()
+    {
+        BirdSelected.Clear();
     }
 }
