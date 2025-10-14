@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BirdButton : MonoBehaviour
 {
@@ -7,6 +8,12 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private Animator _animator; //>Animator del boton
     [SerializeField] private Animator _balloonAnimator; //>Animator del glovo
     [SerializeField] private Animator _birdAnimator; //>Animator del glovo
+
+    [Header("BirdSelected & Boost")]
+    [SerializeField] private GameObject _Bird1;
+    [SerializeField] private GameObject _Bird2;
+    [SerializeField] private GameObject _Bird3;
+    [SerializeField] private TMP_Text   _BoostText;
 
     [Header("Scripts")]
     private ButtonFunctions  _buttonFunctions;
@@ -22,7 +29,8 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private Button _buttonExpandBird;
 
     private bool isOpen = false;
-
+    private string[] BirdSelected      = new string[3];
+    private Image [] BirdSelectedImage = new Image[3];
 
     private void Start()
     {
@@ -75,5 +83,21 @@ public class BirdButton : MonoBehaviour
             isOpen = true;
         }
 
+    }
+    public void UpdateTextBasedOnTag(string buttonTag)
+    {
+        for(int i = 0; i < BirdSelected.Length; ++i)
+        {
+            if(BirdSelected[i] != "cero")
+            {
+                BirdSelected[i]   = buttonTag;
+                //BirdSelectedImage = ;
+            }
+        }
+
+        if (BirdSelected[0] == "A" && BirdSelected[0] == "B" && BirdSelected[0] == "C")
+        {
+            _BoostText.text = "HarryxDraco";
+        }
     }
 }

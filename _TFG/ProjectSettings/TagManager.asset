@@ -6,8 +6,15 @@ TagManager:
   tags:
   - Obstacle
   - CloudObstacle
-  - Gorrion
-  - Avestruz
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
   layers:
   - Default
   - TransparentFX

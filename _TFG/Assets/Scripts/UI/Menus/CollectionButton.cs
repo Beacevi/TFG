@@ -59,27 +59,15 @@ public class CollectionButton : MonoBehaviour
     {
         switch (buttonTag)
         {
-            case "Gorrion":
-                _TitleText.text = "Gorrion";
-                _SubtitleText.text = "11/10/2026";
-                _InfoText.text = "Puta cerda de mierda, lesbiana, fea, guarra y ortera";
-                _ImageCollection.sprite = Resources.Load<Sprite>("UI/Buttons/Birds/Bird");
-                break;
-            case "Avestruz":
-                _TitleText.text = "Avestruz";
-                _SubtitleText.text = "04/08/2013";
-                _InfoText.text = "Quien lea esto es una cerda zorra puta de mierda";
-                _ImageCollection.sprite = Resources.Load<Sprite>("Glovo");
-                break;
             case "Untagged":
                 _TitleText.text = "ShortKing";
-                _SubtitleText.text = "Cerda";
-                _InfoText.text = "jhvjjkuiugc  ";
+                _SubtitleText.text = "Dobby";
+                _InfoText.text = "jhvjjkuiugc";
                 break; 
             default:
-                _TitleText.text = "ShortKing";
-                _SubtitleText.text = "Cerda";
-                _InfoText.text = "Quien lea esto es una cerda zorra puta de mierda";
+                _TitleText.text = "HarryxDraco";
+                _SubtitleText.text = "Sex";
+                _InfoText.text = "Draco mira fijamente a Harry y acerca lentamente sus labios a los suyos, Harry no se lo puede creer, y tampoco se puede detener";
                 break;
         }
     }
