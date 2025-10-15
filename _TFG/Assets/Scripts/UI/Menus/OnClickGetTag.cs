@@ -1,9 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class OnClickCollection : MonoBehaviour
 {
     [SerializeField] private CollectionButton _canvasManagerCollection;
     [SerializeField] private BirdButton       _canvasManagerBird;
+
+    private Image myButtonImage;
 
     public void OnButtonClickCollection()
     {
@@ -14,8 +16,9 @@ public class OnClickCollection : MonoBehaviour
     public void OnButtonClickBird()
     {
         string buttonTag = gameObject.tag;
-        //Sprite image = gameObject.Sprite;
 
-        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag);
+        myButtonImage = gameObject.GetComponent<Image>();
+
+        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, myButtonImage);
     }
 }

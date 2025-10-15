@@ -87,7 +87,7 @@ public class BirdButton : MonoBehaviour
         }
 
     }
-    public void UpdateTextBasedOnTag(string buttonTag)
+    public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage)
     {
         if(BirdSelected.Contains(buttonTag))
         {
@@ -99,23 +99,33 @@ public class BirdButton : MonoBehaviour
                 BirdSelected.Dequeue(); //< Expulsa del queu el ultimo tag que hay en el queu
 
             BirdSelected.Enqueue(buttonTag); //< Añade el tag al principio del queu
+            
+            if (BirdSelected.Count > 1)
+                SwapTagImage();
 
-            if (BirdSelected.Count == 2)
-            {
-                _Bird2.tag = _Bird1.tag;
-            }
-            else
-            {
-                string temp = _Bird2.tag;
-                _Bird2.tag = _Bird1.tag;
-                _Bird3.tag = temp;
-            }
             _Bird1.tag = buttonTag;
+            _Bird1.GetComponentInParent<TMP_Text>().text = _Bird1.tag;
+            _Bird1.GetComponent<Image>().sprite = buttonImage.sprite;
         }
         
         _BoostText.text = "No Boost";
 
         TypeOfBoosts();
+    }
+    private void SwapTagImage()
+    {
+        string temp = _Bird2.tag;
+        _Bird2.tag = _Bird1.tag;
+        _Bird2.GetComponentInParent<TMP_Text>().text = _Bird2.tag;
+        if (BirdSelected.Count > 2)
+        {
+            _Bird3.tag = temp;
+            _Bird3.GetComponentInParent<TMP_Text>().text = _Bird3.tag;
+        }
+        
+        Image tempImage = _Bird2.GetComponent<Image>();
+        _Bird2.GetComponent<Image>().sprite = _Bird1.GetComponent<Image>().sprite;
+        _Bird3.GetComponent<Image>().sprite = tempImage.GetComponent<Image>().sprite;
     }
     private void TypeOfBoosts()
     {

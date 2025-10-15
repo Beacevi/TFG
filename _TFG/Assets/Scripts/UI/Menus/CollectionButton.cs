@@ -63,6 +63,7 @@ public class CollectionButton : MonoBehaviour
                 _TitleText.text = "ShortKing";
                 _SubtitleText.text = "Dobby";
                 _InfoText.text = "jhvjjkuiugc";
+                _ImageCollection.sprite = Resources.Load<Sprite>("Glovo");
                 break; 
             default:
                 _TitleText.text = "HarryxDraco";
