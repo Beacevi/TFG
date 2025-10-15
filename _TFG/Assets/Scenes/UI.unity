@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6694580591840097681, guid: d4423ecef5239034591878ca201cb0d3, type: 3}
+  m_Sprite: {fileID: 5043726804271044299, guid: 05fd725193cfd50478038424bbea8443, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6694580591840097681, guid: d4423ecef5239034591878ca201cb0d3, type: 3}
+  m_Sprite: {fileID: -1447735423192876108, guid: 0f636b688f624104c9399e3aaeea10f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3958,7 +3958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: Alpha
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -4591,7 +4591,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: 'Omega
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7361,6 +7363,7 @@ GameObject:
   - component: {fileID: 652481724}
   - component: {fileID: 652481723}
   - component: {fileID: 652481722}
+  - component: {fileID: 652481725}
   m_Layer: 5
   m_Name: Bird2
   m_TagString: Untagged
@@ -7430,7 +7433,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 652481723}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 652481725}
+        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
+        m_MethodName: OnButtonClickTakeBirdOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &652481723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7469,6 +7484,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652481720}
   m_CullTransparentMesh: 1
+--- !u!114 &652481725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652481720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98386b3439281443aeb6e6ebfc95935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasManagerCollection: {fileID: 0}
+  _canvasManagerBird: {fileID: 137319700}
 --- !u!1 &653839881
 GameObject:
   m_ObjectHideFlags: 0
@@ -11752,6 +11781,7 @@ GameObject:
   - component: {fileID: 987529848}
   - component: {fileID: 987529847}
   - component: {fileID: 987529846}
+  - component: {fileID: 987529849}
   m_Layer: 5
   m_Name: Bird1
   m_TagString: Untagged
@@ -11821,7 +11851,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 987529847}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 987529849}
+        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
+        m_MethodName: OnButtonClickTakeBirdOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &987529847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11860,6 +11902,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987529844}
   m_CullTransparentMesh: 1
+--- !u!114 &987529849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987529844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98386b3439281443aeb6e6ebfc95935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasManagerCollection: {fileID: 0}
+  _canvasManagerBird: {fileID: 137319700}
 --- !u!1 &1011420084
 GameObject:
   m_ObjectHideFlags: 0
@@ -16960,7 +17016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6694580591840097681, guid: d4423ecef5239034591878ca201cb0d3, type: 3}
+  m_Sprite: {fileID: -8723735946329424280, guid: 5545d8248fe22e348b82b79f6cc30775, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20272,6 +20328,7 @@ GameObject:
   - component: {fileID: 1799327732}
   - component: {fileID: 1799327731}
   - component: {fileID: 1799327730}
+  - component: {fileID: 1799327733}
   m_Layer: 5
   m_Name: Bird3
   m_TagString: Untagged
@@ -20341,7 +20398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1799327731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1799327733}
+        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
+        m_MethodName: OnButtonClickTakeBirdOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1799327731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20380,6 +20449,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799327728}
   m_CullTransparentMesh: 1
+--- !u!114 &1799327733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799327728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98386b3439281443aeb6e6ebfc95935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasManagerCollection: {fileID: 0}
+  _canvasManagerBird: {fileID: 137319700}
 --- !u!1 &1800870662
 GameObject:
   m_ObjectHideFlags: 0
@@ -20538,7 +20621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: Beta
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

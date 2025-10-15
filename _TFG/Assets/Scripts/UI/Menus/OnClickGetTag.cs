@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class OnClickCollection : MonoBehaviour
@@ -5,8 +6,8 @@ public class OnClickCollection : MonoBehaviour
     [SerializeField] private CollectionButton _canvasManagerCollection;
     [SerializeField] private BirdButton       _canvasManagerBird;
 
-    private Image myButtonImage;
-
+    private Image _myButtonImage;
+    private TMP_Text _myButtonText;
     public void OnButtonClickCollection()
     {
         string buttonTag = gameObject.tag;
@@ -17,8 +18,16 @@ public class OnClickCollection : MonoBehaviour
     {
         string buttonTag = gameObject.tag;
 
-        myButtonImage = gameObject.GetComponent<Image>();
+        _myButtonImage = gameObject.GetComponent<Image>();
+        _myButtonText  = gameObject.GetComponentInParent<TMP_Text>();
 
-        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, myButtonImage);
+        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonText);
     }
+
+    public void OnButtonClickTakeBirdOff()
+    {
+        string buttonTag = gameObject.tag;
+        _canvasManagerBird.ClearOneTag(buttonTag);
+    }
+    
 }

@@ -33,7 +33,6 @@ public class BirdButton : MonoBehaviour
 
     private bool isOpen = false;
     Queue<string> BirdSelected = new Queue<string>();
-    private Image [] BirdSelectedImage = new Image[3];
 
     private void Start()
     {
@@ -87,7 +86,7 @@ public class BirdButton : MonoBehaviour
         }
 
     }
-    public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage)
+    public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, TMP_Text buttonTitle)
     {
         if(BirdSelected.Contains(buttonTag))
         {
@@ -104,7 +103,7 @@ public class BirdButton : MonoBehaviour
                 SwapTagImage();
 
             _Bird1.tag = buttonTag;
-            _Bird1.GetComponentInParent<TMP_Text>().text = _Bird1.tag;
+            _Bird1.GetComponentInParent<TMP_Text>().text = buttonTitle.text;
             _Bird1.GetComponent<Image>().sprite = buttonImage.sprite;
         }
         
@@ -114,18 +113,20 @@ public class BirdButton : MonoBehaviour
     }
     private void SwapTagImage()
     {
-        string temp = _Bird2.tag;
+        string temp = _Bird2.GetComponentInParent<TMP_Text>().text;
+        _Bird2.GetComponentInParent<TMP_Text>().text = _Bird1.GetComponentInParent<TMP_Text>().text;
+        string tempTag = _Bird2.tag;
         _Bird2.tag = _Bird1.tag;
-        _Bird2.GetComponentInParent<TMP_Text>().text = _Bird2.tag;
+
         if (BirdSelected.Count > 2)
         {
-            _Bird3.tag = temp;
-            _Bird3.GetComponentInParent<TMP_Text>().text = _Bird3.tag;
+            _Bird3.GetComponentInParent<TMP_Text>().text = temp;
+            _Bird3.tag = tempTag;
         }
         
-        Image tempImage = _Bird2.GetComponent<Image>();
+        Sprite tempImage = _Bird2.GetComponent<Image>().sprite;
         _Bird2.GetComponent<Image>().sprite = _Bird1.GetComponent<Image>().sprite;
-        _Bird3.GetComponent<Image>().sprite = tempImage.GetComponent<Image>().sprite;
+        _Bird3.GetComponent<Image>().sprite = tempImage;
     }
     private void TypeOfBoosts()
     {
@@ -137,6 +138,84 @@ public class BirdButton : MonoBehaviour
         {
             _BoostText.text = "D+F+G";
         }
+        else
+            _BoostText.text = "No Boost";
+    }
+    public void ClearOneTag(string tagToRemove)
+    {
+        if (_Bird1.tag == tagToRemove)
+        {
+            QuitInfoOfBird(_Bird1);
+            if (BirdSelected.Count >= 2)
+            {
+                ChangeBird1InfoToBird2(_Bird1, _Bird2);
+                if (BirdSelected.Count == 3)
+                {
+                    ChangeBird1InfoToBird2(_Bird2, _Bird3);
+                    QuitInfoOfBird(_Bird3);
+                }
+                else
+                {
+                    QuitInfoOfBird(_Bird2);
+                }
+            }
+        }
+        else if (_Bird2.tag == tagToRemove)
+        {
+            QuitInfoOfBird(_Bird2);
+            if (BirdSelected.Count == 3)
+            {
+                ChangeBird1InfoToBird2(_Bird2, _Bird3);
+                QuitInfoOfBird(_Bird3);
+            }
+        }
+        else if (_Bird3.tag == tagToRemove)
+        {
+            QuitInfoOfBird(_Bird3);
+        }
+
+        Queue<string> updatedQueue = new Queue<string>();
+
+        while (BirdSelected.Count > 0)
+        {
+            string currentTag = BirdSelected.Dequeue();
+            if (currentTag != tagToRemove)
+            {
+                updatedQueue.Enqueue(currentTag);
+            }
+        }
+
+        BirdSelected = updatedQueue;
+
+        TypeOfBoosts();
+    }
+    public void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
+    {
+        bird1.tag = bird2.tag;
+
+        bird1.GetComponentInParent<TMP_Text>().text = bird2.GetComponentInParent<TMP_Text>().text;
+
+        bird1.GetComponent<Image>().sprite = bird2.GetComponent<Image>().sprite;
+
+        if (bird1 == _Bird1 && BirdSelected.Count == 3)
+        {
+            bird2.tag = _Bird3.tag;
+
+            bird2.GetComponentInParent<TMP_Text>().text = _Bird3.GetComponentInParent<TMP_Text>().text;
+
+            bird2.GetComponent<Image>().sprite = _Bird3.GetComponent<Image>().sprite;
+        }
+        if(BirdSelected.Count == 2)
+        {
+            QuitInfoOfBird(_Bird2);
+        }
+
+    }
+    public void QuitInfoOfBird(GameObject bird)
+    {
+        bird.tag = "Untagged";
+        bird.GetComponentInParent<TMP_Text>().text = "Tittle";
+        bird.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/Buttons/Birds/Bird");
     }
     public void CleanMyBirds()
     {

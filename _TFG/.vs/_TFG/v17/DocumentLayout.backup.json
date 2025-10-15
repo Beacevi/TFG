@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\birdbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\onclickgettag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\onclickgettag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\collectionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\collectionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,13 +46,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OnClickGetTag.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T17:09:30.745Z",
               "EditorCaption": ""
@@ -71,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HamburguerButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T11:36:12.094Z",
               "EditorCaption": ""
@@ -90,20 +90,20 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAiwHUAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAWwHMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T11:18:27.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CollectionButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwEMAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEEAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T11:17:47.304Z",
               "EditorCaption": ""
