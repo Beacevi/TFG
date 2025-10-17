@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9acf3cc5f2348504d81774de053626a7
+guid: 13a90e3d70f2a6143bacacbdba9a694b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1010188601609643858
-    second: Bird2_0
+      213: -941448650186611615
+    second: Small green bird_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,19 +110,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bird2_0
+      name: Small green bird_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 31
-        width: 726
-        height: 684
+        x: 23
+        y: 29
+        width: 707
+        height: 707
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea898eca1d61bf1f0800000000000000
-      internalID: -1010188601609643858
+      spriteID: 1642b5fc07d4fe2f0800000000000000
+      internalID: -941448650186611615
       vertices: []
       indices: 
       edges: []
@@ -164,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1f742fe303f081343bf0f755741f1d0d
+    spriteID: 4192cddbd80013c4e95edc3518027d93
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bird2_0: -1010188601609643858
+      Small green bird_0: -941448650186611615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

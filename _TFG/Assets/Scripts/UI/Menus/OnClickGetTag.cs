@@ -6,8 +6,6 @@ public class OnClickCollection : MonoBehaviour
     [SerializeField] private CollectionButton _canvasManagerCollection;
     [SerializeField] private BirdButton       _canvasManagerBird;
 
-    private Image _myButtonImage;
-    private TMP_Text _myButtonText;
     public void OnButtonClickCollection()
     {
         string buttonTag = gameObject.tag;
@@ -18,10 +16,27 @@ public class OnClickCollection : MonoBehaviour
     {
         string buttonTag = gameObject.tag;
 
-        _myButtonImage = gameObject.GetComponent<Image>();
-        _myButtonText  = gameObject.GetComponentInParent<TMP_Text>();
+        Image _myButtonImage = gameObject.GetComponent<Image>();
 
-        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonText);
+        Transform grandparentTransform = gameObject.transform.parent.parent;
+        string _myButtonTitle = grandparentTransform.GetComponent<TMP_Text>().text;
+
+        Transform greatgrandparentTransform = gameObject.transform.parent.parent.parent;
+        string _myButtonUpdate = greatgrandparentTransform.GetComponent<TMP_Text>().text;
+
+        Image fatherPanel = gameObject.transform.parent.GetComponent<Image>();
+        Color selectedColor = new Color32(158, 137, 171, 255);
+
+        if (_canvasManagerBird.BirdSelected.Count == 3)
+        {
+            fatherPanel.color = Color.white;
+        }
+        else
+        {
+            fatherPanel.color = selectedColor;
+        }
+
+        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonTitle, _myButtonUpdate);
     }
 
     public void OnButtonClickTakeBirdOff()
