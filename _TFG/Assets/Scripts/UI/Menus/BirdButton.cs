@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -38,6 +39,10 @@ public class BirdButton : MonoBehaviour
 
     private bool isOpen        = false;
     public Queue<string> BirdSelected = new Queue<string>();
+
+    [SerializeField] private Image _panelBird1;
+    [SerializeField] private Image _panelBird2;
+    [SerializeField] private Image _panelBird3;
 
     private void Start()
     {
@@ -137,8 +142,23 @@ public class BirdButton : MonoBehaviour
         Transform greatgrandparentBird = Bird.transform.parent.parent.parent;
         return greatgrandparentBird.GetComponent<TMP_Text>().text;
     }
+    private void ChangeColorPanel(Image panel, bool isSelected)
+    {
+        if (panel == null) return;
+        Color selectedColor = new Color32(158, 137, 171, 255);
 
-    public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate)
+        panel.color = isSelected ? selectedColor : Color.white;
+    }
+    private void SetBird(GameObject bird, string Title, string Update, string Tag, Sprite ImageBird)
+    {
+        SetGrandpaText(bird, Title);
+        SetGreatGrandpaText(bird, Update);
+
+        bird.tag = Tag;
+
+        bird.GetComponent<Image>().sprite = ImageBird;
+    }
+    public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
     {
         if(BirdSelected.Contains(buttonTag)) return;
         else
@@ -146,6 +166,7 @@ public class BirdButton : MonoBehaviour
             if (BirdSelected.Count >= 3)
             {
                 BirdSelected.Dequeue(); //< Expulsa del queu el ultimo tag que hay en el queu
+                ChangeColorPanel(_panelBird3, false);
             }
 
             BirdSelected.Enqueue(buttonTag); //< Añade el tag al principio del queu
@@ -155,33 +176,29 @@ public class BirdButton : MonoBehaviour
                 SwapTagImage();
             }
 
-            _Bird1.tag = buttonTag;
-            _Bird1.GetComponent<Image>().sprite = buttonImage.sprite;
+            SetBird(_Bird1, buttonTitle, buttonUpdate, buttonTag, buttonImage.sprite);
 
-            SetGrandpaText(_Bird1, buttonTitle);
-            SetGreatGrandpaText(_Bird1, buttonUpdate);
-
-
+            _panelBird1 = panel;
+            ChangeColorPanel(_panelBird1, true);
 
             if (BirdSelected.Count == 1)
             {
                 _MyBird1.SetActive(true);
-                SetImage(_Bird1, _MyBird1);
             }
             else if (BirdSelected.Count == 2)
             {
                 _MyBird2.SetActive(true);
                 SetImage(_Bird2, _MyBird2);
-                SetImage(_Bird1, _MyBird1);
             }
             else
             {
                 _MyBird3.SetActive(true);
                 SetImage(_Bird3, _MyBird3);
                 SetImage(_Bird2, _MyBird2);
-                SetImage(_Bird1, _MyBird1);
             }
-            
+
+            SetImage(_Bird1, _MyBird1);
+
         }
         
     }
@@ -189,68 +206,131 @@ public class BirdButton : MonoBehaviour
     private void SwapTagImage()
     {
         string tempTitle = GetGrandpaText(_Bird2);
-        SetGrandpaText(_Bird2, GetGrandpaText(_Bird1));
-
 
         string tempUpdate = GetGreatGrandpaText(_Bird2);
-        SetGreatGrandpaText(_Bird2, GetGreatGrandpaText(_Bird1));
 
         string tempTag = _Bird2.tag;
-        _Bird2.tag = _Bird1.tag;
 
         Sprite tempImage = _Bird2.GetComponent<Image>().sprite;
-        _Bird2.GetComponent<Image>().sprite = _Bird1.GetComponent<Image>().sprite;
+
+        SetBird(_Bird2, GetGrandpaText(_Bird1), GetGreatGrandpaText(_Bird1), _Bird1.tag, _Bird1.GetComponent<Image>().sprite);
+
+        Image temp = _panelBird2;
+        _panelBird2 = _panelBird1;
+        ChangeColorPanel(_panelBird2, true);
 
         if (BirdSelected.Count > 2)
         {
-            SetGrandpaText(_Bird3, tempTitle);
-            SetGreatGrandpaText(_Bird3, tempUpdate);
+            _panelBird3 = temp;
+            ChangeColorPanel(_panelBird3, true);
 
-            _Bird3.tag = tempTag;
-
-            _Bird3.GetComponent<Image>().sprite = tempImage;
+            SetBird(_Bird3, tempTitle, tempUpdate, tempTag, tempImage);
         }
     }
-    
-
 
     /// <summary>
     /// Remove Birds
     /// </summary>
+    public void QuitInfoOfBird(GameObject bird)
+    {
+        SetBird(bird, "Tittle", "Update Today", "Untagged", Resources.Load<Sprite>("UI/Buttons/Birds/Bird"));
+    }
+    private void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
+    {
+        SetBird(bird1, GetGrandpaText(bird2), GetGreatGrandpaText(bird2), bird2.tag, bird2.GetComponent<Image>().sprite);
+        
+
+        if (bird1 == _Bird1 && BirdSelected.Count == 3)
+        {
+            SetBird(bird2, GetGrandpaText(_Bird3), GetGreatGrandpaText(_Bird3), _Bird3.tag, _Bird3.GetComponent<Image>().sprite);
+        }
+        else if (BirdSelected.Count == 2)
+        {
+            QuitInfoOfBird(_Bird2);
+            _MyBird2.SetActive(false);
+        }
+    }
+    private void ReaoganizePanel(ref Image bird1, ref Image bird2)
+    {
+        ChangeColorPanel(bird2, false); // Limpia el panel anterior
+        bird1 = bird2;                  // Copia la referencia del siguiente
+        ChangeColorPanel(bird1, true);  // Activa el nuevo panel
+    }
     public void ClearOneTag(string tagToRemove)
     {
         if (_Bird1.tag == tagToRemove)
         {
             QuitInfoOfBird(_Bird1);
+
             _MyBird1.SetActive(false);
+
+            ChangeColorPanel(_panelBird1, false);
 
             if (BirdSelected.Count >= 2)
             {
                 ChangeBird1InfoToBird2(_Bird1, _Bird2);
+
+                ReaoganizePanel(ref _panelBird1, ref _panelBird2);
+
                 if (BirdSelected.Count == 3)
                 {
                     ChangeBird1InfoToBird2(_Bird2, _Bird3);
+
                     QuitInfoOfBird(_Bird3);
                     _MyBird3.SetActive(false);
+
+                    ReaoganizePanel(ref _panelBird2, ref _panelBird3);
+                    _panelBird3 = null;
                 }
                 else
                 {
                     QuitInfoOfBird(_Bird2);
                     _MyBird2.SetActive(false);
+                    _panelBird2 = null;
                 }
+
+                ChangeColorPanel(_panelBird1, true);
+            }
+            else
+            {
+                _panelBird1 = null;
             }
         }
         else if (_Bird2.tag == tagToRemove)
         {
             QuitInfoOfBird(_Bird2);
+
+            ChangeColorPanel(_panelBird2, false);
+
             if (BirdSelected.Count == 3)
             {
                 ChangeBird1InfoToBird2(_Bird2, _Bird3);
+
                 QuitInfoOfBird(_Bird3);
                 _MyBird3.SetActive(false);
+
+                ReaoganizePanel(ref _panelBird2, ref _panelBird3);
+                _panelBird3 = null;
             }
+            else
+            {
+                _MyBird2.SetActive(false);
+
+                ChangeColorPanel(_panelBird2, false);
+                ReaoganizePanel(ref _panelBird2, ref _panelBird1);
+
+                _panelBird2 = null;
+            }
+
+            
         }
-        else if (_Bird3.tag == tagToRemove) QuitInfoOfBird(_Bird3);
+        else if (_Bird3.tag == tagToRemove)
+        {
+            QuitInfoOfBird(_Bird3);
+
+            ChangeColorPanel(_panelBird3, false);
+            _panelBird3 = null;
+        }
 
         Queue<string> updatedQueue = new Queue<string>();
 
@@ -261,54 +341,40 @@ public class BirdButton : MonoBehaviour
         }
 
         BirdSelected = updatedQueue;
+
         SetImage(_Bird1, _MyBird1);
         SetImage(_Bird2, _MyBird2);
         SetImage(_Bird3, _MyBird3);
 
         TypeOfBoosts();
     }
-    public void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
+    public void CleanMyBirds()
     {
-        bird1.tag = bird2.tag;
-
-        SetGrandpaText(bird1, GetGrandpaText(bird2));
-        SetGreatGrandpaText(bird1, GetGreatGrandpaText(bird2));
-
-        bird1.GetComponent<Image>().sprite = bird2.GetComponent<Image>().sprite;
-
-        if (bird1 == _Bird1 && BirdSelected.Count == 3)
-        {
-            bird2.tag = _Bird3.tag;
-
-            SetGrandpaText(bird2, GetGrandpaText(_Bird3));
-            SetGreatGrandpaText(bird2, GetGreatGrandpaText(_Bird3));
-
-            bird2.GetComponent<Image>().sprite = _Bird3.GetComponent<Image>().sprite;
-        }
-        else if(BirdSelected.Count == 2)
+        if (BirdSelected.Count() >= 2)
         {
             QuitInfoOfBird(_Bird2);
             _MyBird2.SetActive(false);
+            ChangeColorPanel(_panelBird2, false);
+            _panelBird2 = null;
+            if (BirdSelected.Count() == 3)
+            {
+                QuitInfoOfBird(_Bird3);
+                _MyBird3.SetActive(false);
+                ChangeColorPanel(_panelBird3, false);
+                _panelBird3 = null;
+            }
         }
-            
-    }
-    public void QuitInfoOfBird(GameObject bird)
-    {
-        bird.tag = "Untagged";
 
-        SetGrandpaText(bird, "Tittle");
-        SetGreatGrandpaText(bird, "Update Today");
-
-        bird.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/Buttons/Birds/Bird");
-    }
-    public void CleanMyBirds()
-    {
-        if(BirdSelected.Count()>3) QuitInfoOfBird(_Bird3);
-        else if(BirdSelected.Count()>2) QuitInfoOfBird(_Bird2);
         QuitInfoOfBird(_Bird1);
+
         BirdSelected.Clear();
+
         _MyBird1.SetActive(false);
-        _MyBird2.SetActive(false);
-        _MyBird3.SetActive(false);
+        
+        ChangeColorPanel(_panelBird1, false);
+        
+        _panelBird1 = null;
+        
+        TypeOfBoosts();
     }
 }

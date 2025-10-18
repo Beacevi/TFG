@@ -25,18 +25,9 @@ public class OnClickCollection : MonoBehaviour
         string _myButtonUpdate = greatgrandparentTransform.GetComponent<TMP_Text>().text;
 
         Image fatherPanel = gameObject.transform.parent.GetComponent<Image>();
-        Color selectedColor = new Color32(158, 137, 171, 255);
+        
 
-        if (_canvasManagerBird.BirdSelected.Count == 3)
-        {
-            fatherPanel.color = Color.white;
-        }
-        else
-        {
-            fatherPanel.color = selectedColor;
-        }
-
-        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonTitle, _myButtonUpdate);
+        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonTitle, _myButtonUpdate, fatherPanel);
     }
 
     public void OnButtonClickTakeBirdOff()
