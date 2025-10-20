@@ -8,14 +8,10 @@ public class CircleButton : MonoBehaviour
     private Color originalColor;
     public Color colorSimon;
 
-    
-    //public AudioClip sound;         
-    //private AudioSource audioSource;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //audioSource = GetComponent<AudioSource>();
         originalColor = spriteRenderer.color;
     }
 
@@ -26,8 +22,6 @@ public class CircleButton : MonoBehaviour
 
         SimonGameManager.Instance.OnCirclePressed(index);
 
-        // Reproduce sonido y efecto al tocar
-        //PlaySound();
         StartCoroutine(Flash(0.2f));
     }
 
@@ -37,7 +31,6 @@ public class CircleButton : MonoBehaviour
         flashColor.a = 1f; // Asegurar que sea visible
 
         spriteRenderer.color = flashColor;
-        //PlaySound();
         yield return new WaitForSeconds(duration);
         spriteRenderer.color = originalColor;
     }
@@ -50,12 +43,5 @@ public class CircleButton : MonoBehaviour
     public void RestoreOriginalColor()
     {
         spriteRenderer.color = originalColor;
-    }
-    /*private void PlaySound()
-    {
-        if (sound != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(sound);
-        }
-    }*/
+    } 
 }

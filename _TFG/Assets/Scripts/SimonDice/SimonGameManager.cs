@@ -7,18 +7,26 @@ public class SimonGameManager : MonoBehaviour
     public static SimonGameManager Instance { get; private set; }
 
     public CircleButton[] circles;
-    public float flashDuration = 0.5f;
+    public LevelIndicator levelIndicator;
+    public AudioClip[] circleSounds;
+    private AudioSource audioSource;
+
+    public float flashDuration = 0.4f;
     public float timeBetweenFlashes = 0.3f;
 
     private List<int> pattern = new List<int>();
     private List<int> playerInput = new List<int>();
+
     private bool isPlayerTurn = false;
     private bool hasFailed = false;
+    private bool canPress = false;
+    private bool hasFailedCurrentLevel = false;
+
     private int level = 0;
 
     public Color failColor = Color.red; // Color del flash de fallo
     public int failFlashes = 2;         // Cuántas veces parpadea
-    private bool canPress = false;
+    
 
     void Awake()
     {
@@ -28,6 +36,8 @@ public class SimonGameManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -60,11 +70,13 @@ public class SimonGameManager : MonoBehaviour
         yield return StartCoroutine(PlayPattern());
 
         isPlayerTurn = true;
+        canPress = true;
     }
 
     IEnumerator HandleFail()
     {
         isPlayerTurn = false;
+        canPress = false;
         playerInput.Clear();
 
         for (int i = 0; i < failFlashes; i++)
@@ -78,11 +90,15 @@ public class SimonGameManager : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
+        if (levelIndicator != null)
+            levelIndicator.SetLevelFail(level - 1);
+
         //Repite el mismo patrón
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(PlayPattern());
 
         isPlayerTurn = true;
+        canPress = true;
         hasFailed = false;
     }
 
@@ -92,7 +108,9 @@ public class SimonGameManager : MonoBehaviour
 
         foreach (int index in pattern)
         {
+            PlaySound(index);
             yield return StartCoroutine(circles[index].Flash(flashDuration));
+            
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
 
@@ -101,6 +119,9 @@ public class SimonGameManager : MonoBehaviour
 
     IEnumerator HandlePlayerPress(int index)
     {
+        PlaySound(index);
+        StartCoroutine(circles[index].Flash(0.2f));
+
         playerInput.Add(index);
         int currentStep = playerInput.Count - 1;
 
@@ -108,14 +129,24 @@ public class SimonGameManager : MonoBehaviour
         {
             Debug.Log("ERES UN MAULA");
             hasFailed = true;
+            hasFailedCurrentLevel = true;
             StartCoroutine(HandleFail());
             yield break;
         }
-
+      
         // Si completó correctamente la secuencia
         if (playerInput.Count == pattern.Count)
         {
             Debug.Log("OLEEEEEEE");
+            if (levelIndicator != null)
+            {
+                if (!hasFailedCurrentLevel)
+                    levelIndicator.SetLevelSuccess(level - 1); 
+                else
+                    levelIndicator.SetLevelFail(level - 1); 
+            }
+
+            hasFailedCurrentLevel = false;
             yield return new WaitForSeconds(0.3f);
             StartCoroutine(StartNewRound());
             yield break;
@@ -133,7 +164,13 @@ public class SimonGameManager : MonoBehaviour
         canPress = false;
         StartCoroutine(HandlePlayerPress(index));     
     }
-
+    private void PlaySound(int circleIndex)
+    {
+        if (audioSource != null && circleIndex < circleSounds.Length && circleSounds[circleIndex] != null)
+        {
+            audioSource.PlayOneShot(circleSounds[circleIndex]);
+        }
+    }
     // Método para verificar si el jugador puede presionar
     public bool CanPlayerPress()
     {
