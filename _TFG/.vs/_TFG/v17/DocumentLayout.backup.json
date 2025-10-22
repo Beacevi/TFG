@@ -1,45 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\scripts\\cambiarescena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cambiarescena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\shader\\glow.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\shader\\glow.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\scripts\\simondice\\levelindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\simondice\\levelindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\simondice\\levelindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\boosts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boosts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\birdbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\birdbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\birdbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\onclickgettag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\cambiarescena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cambiarescena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\boosts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boosts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\onclickgettag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\onclickgettag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\collectionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\collectionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\collectionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\buttonfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\buttonfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\buttonfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\scripts\\ui\\menus\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -55,36 +63,65 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CambiarEscena.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\CambiarEscena.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CambiarEscena.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\CambiarEscena.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CambiarEscena.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Title": "Glow.shader",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Shader\\Glow.shader",
+              "RelativeDocumentMoniker": "Assets\\Shader\\Glow.shader",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Shader\\Glow.shader",
+              "RelativeToolTip": "Assets\\Shader\\Glow.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-10-22T15:47:06.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SimonGameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T11:53:50.8Z",
+              "WhenOpened": "2025-10-22T15:46:40.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LevelIndicator.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\LevelIndicator.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\LevelIndicator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SimonDice\\LevelIndicator.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\LevelIndicator.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\SimonDice\\LevelIndicator.cs",
               "RelativeToolTip": "Assets\\Scripts\\SimonDice\\LevelIndicator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:40:17.443Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "CambiarEscena.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\CambiarEscena.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CambiarEscena.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\CambiarEscena.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CambiarEscena.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T11:53:50.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Boosts.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\Boosts.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Boosts.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boosts.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\Boosts.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Boosts.cs",
               "RelativeToolTip": "Assets\\Scripts\\Boosts.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -92,11 +129,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "OnClickGetTag.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\OnClickGetTag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -104,11 +141,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Hour.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Hour.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Hour.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Hour.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAqwFwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -116,23 +153,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "BirdButton.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\BirdButton.cs",
-              "ViewState": "AgIAAGcBAAAAAAAAAAArwAcBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAIAwwJYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T11:18:27.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "HamburguerButton.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -140,11 +177,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "CollectionButton.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAIwEEAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -152,11 +189,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PlayButton.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\PlayButton.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\PlayButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\PlayButton.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\PlayButton.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\PlayButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\PlayButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -164,11 +201,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ButtonFunctions.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

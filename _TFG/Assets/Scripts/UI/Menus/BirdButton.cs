@@ -145,9 +145,10 @@ public class BirdButton : MonoBehaviour
     private void ChangeColorPanel(Image panel, bool isSelected)
     {
         if (panel == null) return;
-        Color selectedColor = new Color32(158, 137, 171, 255);
+        Color selectedColor = new Color32(210, 229, 245, 255);
+        Color unselectedColor = new Color32(221, 227, 234, 255);
 
-        panel.color = isSelected ? selectedColor : Color.white;
+        panel.color = isSelected ? selectedColor : unselectedColor;
     }
     private void SetBird(GameObject bird, string Title, string Update, string Tag, Sprite ImageBird)
     {
@@ -233,7 +234,7 @@ public class BirdButton : MonoBehaviour
     /// </summary>
     public void QuitInfoOfBird(GameObject bird)
     {
-        SetBird(bird, "Tittle", "Update Today", "Untagged", Resources.Load<Sprite>("UI/Buttons/Birds/Bird"));
+        SetBird(bird, "Tittle", "Update Today", "Untagged", Resources.Load<Sprite>("Birds/UnselectedBird"));
     }
     private void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
     {

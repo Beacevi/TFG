@@ -432,8 +432,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 761
-    y: 590
+    x: 762
+    y: 24
     width: 379
     height: 396
   m_SerializedDataModeController:
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 412, y: 917}
+  m_TargetSize: {x: 3840, y: 2160}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -462,16 +462,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -206
-    m_HBaseRangeMax: 206
-    m_VBaseRangeMin: -458.5
-    m_VBaseRangeMax: 458.5
+    m_HBaseRangeMin: -1920
+    m_HBaseRangeMax: 1920
+    m_VBaseRangeMin: -1080
+    m_VBaseRangeMax: 1080
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -491,7 +491,7 @@ MonoBehaviour:
       y: 21
       width: 379
       height: 375
-    m_Scale: {x: 0.4089422, y: 0.4089422}
+    m_Scale: {x: 0.098697916, y: 0.098697916}
     m_Translation: {x: 189.5, y: 187.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -499,12 +499,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -463.3907
-      y: -458.5
-      width: 926.7814
-      height: 917
+      x: -1920
+      y: -1899.7362
+      width: 3840
+      height: 3799.4724
     m_MinimalGUI: 1
-  m_defaultScale: 0.4089422
+  m_defaultScale: 0.098697916
   m_LastWindowPixelSize: {x: 379, y: 396}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 325
     height: 485
   m_SerializedDataModeController:
@@ -599,8 +599,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 326
-    y: 79
+    x: 327
+    y: 24
     width: 1078
     height: 485
   m_SerializedDataModeController:
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 590
+    y: 24
     width: 760
     height: 396
   m_SerializedDataModeController:
@@ -1434,7 +1434,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 0eb40000
     m_LastClickedID: 46094
-    m_ExpandedIDs: 000000000ca7000054b100000eb400003ab40000d4bd000000ca9a3bffffff7f
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000ca7000054b100000eb400003ab40000d4bd000000ca9a3bffffff7f
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1614,8 +1614,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Animation\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1142
-    y: 590
+    x: 1143
+    y: 24
     width: 262
     height: 396
   m_SerializedDataModeController:
@@ -1653,8 +1653,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1406
-    y: 79
+    x: 1
+    y: 24
     width: 513
     height: 641
   m_SerializedDataModeController:
@@ -1702,8 +1702,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Sprite Editor\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1406
-    y: 746
+    x: 1
+    y: 691
     width: 513
     height: 240
   m_SerializedDataModeController:
