@@ -26,7 +26,7 @@ public class BirdButton : MonoBehaviour
 
     [Header("Scripts")]
     private ButtonFunctions  _buttonFunctions;
-    private Boosts           _boostManager;
+    private BoostsManager    _boostManager;
 
     [Header("Panels")]
     [SerializeField] private GameObject _BirdPanel;
@@ -48,7 +48,7 @@ public class BirdButton : MonoBehaviour
     private void Start()
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
-        _boostManager    = GetComponent<Boosts>();
+        _boostManager    = GetComponent<BoostsManager>();
 
         _MyBird1.SetActive(false);
         _MyBird2.SetActive(false);
