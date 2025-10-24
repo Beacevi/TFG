@@ -2375,13 +2375,11 @@ MonoBehaviour:
   _MyBird2: {fileID: 0}
   _MyBird3: {fileID: 0}
   _BoostText: {fileID: 0}
+  _BoostImage: {fileID: 0}
   _BirdPanel: {fileID: 0}
   _openedIcon: {fileID: 0}
   _closedIcon: {fileID: 0}
   _buttonExpandBird: {fileID: 0}
-  _panelBird1: {fileID: 0}
-  _panelBird2: {fileID: 0}
-  _panelBird3: {fileID: 0}
 --- !u!114 &694060118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,7 +2910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &772014734
 Transform:
   m_ObjectHideFlags: 0
