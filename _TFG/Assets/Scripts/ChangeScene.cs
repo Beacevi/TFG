@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class CambiarEscena : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
     public void Cambiar_A_Escena(string nombreEscena)
     {

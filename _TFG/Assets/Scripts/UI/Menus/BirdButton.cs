@@ -22,6 +22,7 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private GameObject _MyBird2;
     [SerializeField] private GameObject _MyBird3;
     [SerializeField] private TMP_Text   _BoostText;
+    [SerializeField] private GameObject _BoostImage;
 
     [Header("Scripts")]
     private ButtonFunctions  _buttonFunctions;
@@ -40,9 +41,9 @@ public class BirdButton : MonoBehaviour
     private bool isOpen        = false;
     public Queue<string> BirdSelected = new Queue<string>();
 
-    [SerializeField] private Image _panelBird1;
-    [SerializeField] private Image _panelBird2;
-    [SerializeField] private Image _panelBird3;
+    private Image _panelBird1;
+    private Image _panelBird2;
+    private Image _panelBird3;
 
     private void Start()
     {
@@ -57,6 +58,7 @@ public class BirdButton : MonoBehaviour
         _closedIcon.SetActive(false);
 
         _BirdPanel.SetActive(false);
+        _BoostImage.SetActive(false);
     }
     public void OpenBirdMenu()
     {
@@ -107,10 +109,12 @@ public class BirdButton : MonoBehaviour
         if (boost != null)
         {
             _BoostText.text = boost.name;
+            _BoostImage.SetActive(true);
         }
         else
         {
             _BoostText.text = "No Boost";
+            _BoostImage.SetActive(false);
         }
     }
 
@@ -234,7 +238,7 @@ public class BirdButton : MonoBehaviour
     /// </summary>
     public void QuitInfoOfBird(GameObject bird)
     {
-        SetBird(bird, "Tittle", "Update Today", "Untagged", Resources.Load<Sprite>("Birds/UnselectedBird"));
+        SetBird(bird, "Bird Name", "No Level", "Untagged", Resources.Load<Sprite>("Birds/UnselectedBird"));
     }
     private void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
     {
