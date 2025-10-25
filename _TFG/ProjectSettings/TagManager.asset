@@ -15,6 +15,10 @@ TagManager:
   - G
   - H
   - I
+  - Top
+  - Middle
+  - Bottom
+  - Support
   layers:
   - Default
   - TransparentFX

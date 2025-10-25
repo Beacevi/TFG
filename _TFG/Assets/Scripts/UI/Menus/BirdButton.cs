@@ -10,9 +10,9 @@ using UnityEngine.UI;
 public class BirdButton : MonoBehaviour
 {
     [Header("Animators")]
-    [SerializeField] private Animator _animator; //>Animator del boton
-    [SerializeField] private Animator _balloonAnimator; //>Animator del glovo
-    [SerializeField] private Animator _birdAnimator; //>Animator del glovo
+    [SerializeField] private Animator _animator; 
+    [SerializeField] private Animator _balloonAnimator; 
+    [SerializeField] private Animator _birdAnimator; 
 
     [Header("BirdSelected & Boost")]
     [SerializeField] private GameObject _Bird1;
