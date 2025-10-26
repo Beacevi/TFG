@@ -1,29 +1,61 @@
+using Firebase.Firestore;
 using System.Collections.Generic;
 using UnityEngine;
 
+[FirestoreData]
 public class Player
 {
-    public int maxBalloonLevel;
-    public int level;
-    public int sumPrice;
-    public int upgradeCost;
-    public int VLevel;
-    public int SC;
+    [FirestoreProperty] public int maxBalloonLevel { get; set; }
+    [FirestoreProperty] public int level { get; set; }
+    [FirestoreProperty] public int sumPrice { get; set; }
+    [FirestoreProperty] public int upgradeCost { get; set; }
+    [FirestoreProperty] public int VLevel { get; set; }
+    [FirestoreProperty] public int SC { get; set; }
+    [FirestoreProperty] public int coins { get; set; }
+    [FirestoreProperty] public int energy { get; set; }
+    [FirestoreProperty] public int gems { get; set; }
 
-    public int coins;
-    public int energy;
-    public int gems;
+    public Player() { }
+    
+    public Player(Player player)
+    {
+        maxBalloonLevel = player.maxBalloonLevel;
+        level = player.level;
+        sumPrice = player.sumPrice;
+        upgradeCost = player.upgradeCost;
+        VLevel = player.VLevel;
+        SC = player.SC;
+
+        coins = player.coins;
+        energy = player.energy;
+        gems = player.gems;
+    }
+
 }
 public class PlayerManager : MonoBehaviour
 {
-
-    private Dictionary<int, Player> levelTable;
+    public static PlayerManager playerInstance;
+    public Dictionary<int, Player> levelTable;
 
     private void Awake()
     {
+        if (playerInstance != null && playerInstance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        playerInstance = this;
+        DontDestroyOnLoad(gameObject);
+
+        inicializarLevelTable();
+    }
+
+    private void inicializarLevelTable()
+    {
         levelTable = new Dictionary<int, Player>
         {
-            {  1, new Player { maxBalloonLevel =  1, level =  1, sumPrice =     25, upgradeCost =     25, VLevel = 1, SC =  50 } },
+            {  1, new Player { maxBalloonLevel =  1, level =  1, sumPrice =     25, upgradeCost =     25, VLevel = 1, SC =  100 } },//Cambiar SC a 50 otra vez
             {  2, new Player { maxBalloonLevel =  1, level =  2, sumPrice =     65, upgradeCost =     40, VLevel = 1, SC =  50 } },
             {  3, new Player { maxBalloonLevel =  2, level =  3, sumPrice =    130, upgradeCost =     65, VLevel = 1, SC =  50 } },
             {  4, new Player { maxBalloonLevel =  2, level =  4, sumPrice =    235, upgradeCost =    105, VLevel = 1, SC =  50 } },
@@ -45,4 +77,5 @@ public class PlayerManager : MonoBehaviour
             { 20, new Player { maxBalloonLevel = 10, level = 20, sumPrice = 518885, upgradeCost = 194600, VLevel = 7, SC = 900 } },
         };
     }
+
 }

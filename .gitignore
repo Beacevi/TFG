@@ -1,1 +1,46 @@
-/_TFG/UserSettings
+# ==== Unity ==== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# Asset meta data should be included
+!/[Aa]ssets/**/*.meta
+
+# Auto-generated VS/MD/IDE files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Unity3D generated file
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+
+# ==== OS specific ==== #
+.DS_Store
+Thumbs.db
+
+# ==== Git LFS ====
+# Track archivos grandes con LFS, por ejemplo:
+# *.png filter=lfs diff=lfs merge=lfs -text
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.wav filter=lfs diff=lfs merge=lfs -text

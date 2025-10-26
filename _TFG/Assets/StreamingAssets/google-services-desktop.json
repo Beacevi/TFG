@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "264966857771",
+    "project_id": "cloud-wander",
+    "storage_bucket": "cloud-wander.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264966857771:android:5bc2212f5f378f6f54f66e",
+        "android_client_info": {
+          "package_name": "com.hortensiastudio.cloudwander"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI6R7pfQrKFH2AZvb4urS8XdTqc06iOoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
