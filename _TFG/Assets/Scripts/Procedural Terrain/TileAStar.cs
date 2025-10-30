@@ -4,10 +4,10 @@ using UnityEngine.Tilemaps;
 
 public class TileAStar : MonoBehaviour
 {
-    public Tilemap tilemap;
-    public Transform player;
-    public float moveSpeed = 3f;
-    public PCGtiles_IsometricPerlin mapGenerator;
+    [SerializeField] Tilemap tilemap;
+    [SerializeField] Transform player;
+    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] PCGtiles_IsometricPerlin mapGenerator;
 
     private List<Vector3> path = new List<Vector3>();
     private int currentIndex = 0;

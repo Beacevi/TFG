@@ -3,9 +3,9 @@ using UnityEngine.Tilemaps;
 
 public class TileHoverDetector : MonoBehaviour
 {
-    public Tilemap mainTilemap;
-    public Tilemap highlightTilemap;
-    public Tile highlightTile;
+    [SerializeField] Tilemap mainTilemap;
+    [SerializeField] Tilemap highlightTilemap;
+    [SerializeField] Tile highlightTile;
 
     private Vector3Int previousCell = new Vector3Int(int.MinValue, int.MinValue, 0);
 

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class IsometricCamera : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset = new Vector3(25, 25, -25);
-    public float followSpeed = 5f;
+    [SerializeField] Transform player;
+    [SerializeField] Vector3 offset = new Vector3(25, 25, -25);
+    [SerializeField] float followSpeed = 5f;
 
     void Start()
     {

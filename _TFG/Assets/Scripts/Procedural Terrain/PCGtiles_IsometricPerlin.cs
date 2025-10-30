@@ -14,35 +14,36 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     [SerializeField] GameObject player; 
 
     [Header("Tilemap")]
-    public Tilemap tilemap;
+    [SerializeField] Tilemap tilemap;
 
     [Header("Tiles (RuleTile or TileBase)")]
-    public TileBase ruleGrass;
-    public TileBase ruleSand;
-    public TileBase ruleWater;
+    [SerializeField] TileBase ruleGrass;
+    [SerializeField] TileBase ruleSand;
+    [SerializeField] TileBase ruleWater;
 
     [Header("Map Settings")]
     public int width = 50;
     public int height = 50;
 
     [Header("Perlin Noise Settings")]
-    public float noiseScale = 10f;
-    public int seed = -1;
+    [SerializeField] float noiseScale = 10f;
+    [SerializeField] int seed = -1;
 
     [Header("Island Shape Settings")]
-    public float islandFalloffPower = 2.5f;   //cuanto mas alto, mas suave el borde
-    public float islandSizeFactor = 0.75f;    //cuanto mas bajo, mas pequeña la isla
-    public float coastRoughness = 0.25f;      //cuanto mas alto, mas irregular el contorno
+    [SerializeField] float islandFalloffPower = 2.5f;   //cuanto mas alto, mas suave el borde
+    [SerializeField] float islandSizeFactor = 0.75f;    //cuanto mas bajo, mas pequeña la isla
+    [SerializeField] float coastRoughness = 0.25f;      //cuanto mas alto, mas irregular el contorno
 
     [Header("Cellular Automata")]
     [Range(0, 5)] public int smoothingIterations = 2;
 
     [Header("Object Prefabs (per biome)")]
-    public GameObject[] grassObjects;
-    public GameObject[] sandObjects;
+    [SerializeField] LayerMask terrainLayerMask;
+    [SerializeField] GameObject[] grassObjects;
+    [SerializeField] GameObject[] sandObjects;
 
     [Range(0f, 1f)]
-    public float spawnChance = 0.1f;
+    [SerializeField] float spawnChance = 0.1f;
 
     private float seedOffsetX;
     private float seedOffsetY;
@@ -239,13 +240,28 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
                 GameObject prefab = pool[Random.Range(0, pool.Length)];
                 Vector3 worldPos = tilemap.CellToWorld(cell);
+                worldPos += new Vector3(0, 1.25f/4, 0);
 
                 GameObject spawned = Instantiate(prefab, worldPos, Quaternion.identity, parent);
                 spawned.name = $"{prefab.name}_{x}_{y}";
 
+                int maxOrder = width + height;
                 SpriteRenderer sr = spawned.GetComponent<SpriteRenderer>();
                 if (sr != null)
-                    sr.sortingOrder = x + y;
+                {
+                    sr.sortingOrder = maxOrder - (x + y);
+                    //sr.renderingLayerMask = terrainLayerMask;
+                }
+                else
+                {
+                    for (int i = 0; i < spawned.transform.childCount; i++)
+                    {
+                        sr = spawned.transform.GetChild(i).GetComponent<SpriteRenderer>();
+                        //sr.renderingLayerMask = terrainLayerMask;
+                        if (sr != null)
+                            sr.sortingOrder = maxOrder - (x + y);
+                    }
+                }
 
                 //si bloquea el paso:
                 //node.walkable = false;
