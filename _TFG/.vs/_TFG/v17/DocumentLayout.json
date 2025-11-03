@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\github\\gameprogrammingpatterns\\tfg\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\github\\gameprogrammingpatterns\\tfg\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,28 +34,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\Node.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\Node.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "InteractableGameObject.cs",
+              "DocumentMoniker": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
+              "ToolTip": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:49:54.629Z",
+              "WhenOpened": "2025-11-03T13:22:51.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TileAStar.cs",
+              "DocumentMoniker": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "ToolTip": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T16:49:56.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PCGtiles_IsometricPerlin.cs",
+              "DocumentMoniker": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "ToolTip": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowA8BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T16:12:40.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "IsometricCamera.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "DocumentMoniker": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "ToolTip": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,42 +90,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TileAStar.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:49:56.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PCGtiles_IsometricPerlin.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAAAAABAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:12:40.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\Node.cs",
+              "ToolTip": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\Node.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T16:49:54.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TileClickDetector.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "DocumentMoniker": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "ToolTip": "C:\\Github\\GameProgrammingPatterns\\TFG\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:49:57.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T16:49:57.223Z"
             }
           ]
         }

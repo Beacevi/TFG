@@ -831,6 +831,12 @@ MonoBehaviour:
   islandSizeFactor: 0.75
   coastRoughness: 0.2
   smoothingIterations: 2
+  interactableGameObjects:
+  - {fileID: 926288913471853959, guid: 8198ab1b178ef2a408fac1b7ea419a87, type: 3}
+  - {fileID: 4595146617996938225, guid: 48bf3801890eb814793525cfe21b5402, type: 3}
+  - {fileID: 8457740664911959370, guid: f969d3a2d9a91d444ba1c268bd91788c, type: 3}
+  - {fileID: 5805991993125803581, guid: 8dc499cf6d2d9344d8348cd5d3cc5408, type: 3}
+  interactableGameObjectsCount: 30
   grassObjects:
   - {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
   - {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}

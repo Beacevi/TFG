@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -37,11 +39,18 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     [Header("Cellular Automata")]
     [Range(0, 5)] public int smoothingIterations = 2;
 
+    [Header("Interactable Objects")]
+    //[SerializeField] LayerMask interactableGameObjectsLayerMask;
+    [SerializeField] GameObject[] interactableGameObjects;
+    [SerializeField] int interactableGameObjectsCount = 10;
+    //[Range(0f, 1f)]
+    //[SerializeField] float spawnChance = 0.1f;
+
+
     [Header("Object Prefabs (per biome)")]
-    [SerializeField] LayerMask terrainLayerMask;
+    //[SerializeField] LayerMask terrainLayerMask;
     [SerializeField] GameObject[] grassObjects;
     [SerializeField] GameObject[] sandObjects;
-
     [Range(0f, 1f)]
     [SerializeField] float spawnChance = 0.1f;
 
@@ -70,7 +79,8 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     public void Regenerate()
     {
         GenerateMap();
-        SpawnObjectsFromNodes();
+        SpawnInteractablesObjectsFromNodes();
+        SpawnDecorationFromNodes();
         SpawnPlayer();
     }
 
@@ -205,7 +215,77 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         tilemap.CompressBounds();
     }
 
-    private void SpawnObjectsFromNodes()
+    private void SpawnInteractablesObjectsFromNodes()
+    {
+        Transform parent = transform.Find("SpawnedInteractableObjects");
+        if (parent != null)
+            DestroyImmediate(parent.gameObject);
+
+        parent = new GameObject("SpawnedInteractableObjects").transform;
+        parent.parent = transform;
+
+        if (interactableGameObjects == null || interactableGameObjects.Length == 0)
+            return;
+
+        List<Vector2Int> validNodes = new List<Vector2Int>();
+
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                Node node = nodes[x, y];
+                if (node.walkable && !node.hasObject)
+                    validNodes.Add(new Vector2Int(x, y));
+            }
+        }
+
+        int amountToSpawn = Mathf.Min(interactableGameObjectsCount, validNodes.Count);
+
+        validNodes = validNodes.OrderBy(v => Random.value).ToList(); //los mezcla
+
+        for (int i = 0; i < amountToSpawn; i++)
+        {
+            Vector2Int pos = validNodes[i];
+            Node node = nodes[pos.x, pos.y];
+
+            Vector3Int cell = new Vector3Int(pos.x, pos.y, 0);
+            TileBase currentTile = tilemap.GetTile(cell);
+            if (currentTile == null)
+                continue;
+
+            GameObject prefab = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
+
+            Vector3 worldPos = tilemap.CellToWorld(cell);
+            worldPos += new Vector3(0, 1.25f / 4, 0);
+
+            GameObject spawned = Instantiate(prefab, worldPos, Quaternion.identity, parent);
+            spawned.name = $"{prefab.name}_{pos.x}_{pos.y}";
+
+            int maxOrder = width + height;
+            SpriteRenderer sr = spawned.GetComponent<SpriteRenderer>();
+
+            if (sr != null)
+            {
+                sr.sortingOrder = maxOrder - (pos.x + pos.y);
+            }
+            else
+            {
+                for (int c = 0; c < spawned.transform.childCount; c++)
+                {
+                    sr = spawned.transform.GetChild(c).GetComponent<SpriteRenderer>();
+                    if (sr != null)
+                        sr.sortingOrder = maxOrder - (pos.x + pos.y);
+                }
+            }
+
+            node.hasObject = true;
+            node.Interactable = spawned;
+
+
+        }
+    }
+
+    private void SpawnDecorationFromNodes()
     {
         Transform parent = transform.Find("SpawnedObjects");
         if (parent != null)
@@ -220,7 +300,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
             {
                 Node node = nodes[x, y];
 
-                if (!node.walkable)
+                if (!node.walkable || node.hasObject)
                     continue;
 
                 if (Random.value > spawnChance)
@@ -319,7 +399,8 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
             seedOffsetX = Random.Range(0f, 100000f);
             seedOffsetY = Random.Range(0f, 100000f);
             GenerateMap();
-            SpawnObjectsFromNodes();
+            SpawnInteractablesObjectsFromNodes();
+            SpawnDecorationFromNodes();
         }
     }
 }

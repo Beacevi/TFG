@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -11,9 +12,11 @@ public class TileAStar : MonoBehaviour
 
     private List<Vector3> path = new List<Vector3>();
     private int currentIndex = 0;
-    private bool moving = false;
+    public bool moving = false;
 
     private const int INF = int.MaxValue / 4;
+
+    private Node lastPathNode = null;
 
     private void Start()
     {
@@ -50,7 +53,32 @@ public class TileAStar : MonoBehaviour
                 currentIndex++;
                 if (currentIndex >= path.Count)
                 {
-                    moving = false;
+                    if (lastPathNode != null)
+                    {
+                        if (lastPathNode.hasObject)
+                        {
+                            var interactable = lastPathNode.Interactable?.GetComponent<InteractableGameObject>();
+                            if (interactable != null)
+                            {
+                                interactable.Interact();
+                            }
+                            else
+                            {
+                                Debug.Log("el nodo tiene objeto pero InteractableGameObject no existe en el prefab.");
+                                moving = false;
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("lastPathNode no tiene objeto.");
+                            moving = false;
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("lastPathNode es NULL.");
+                        moving = false;
+                    }
                     path.Clear();
                 }
             }
@@ -70,6 +98,7 @@ public class TileAStar : MonoBehaviour
 
         Node start = nodes[startCell.x, startCell.y];
         Node target = nodes[targetCell.x, targetCell.y];
+        lastPathNode = target;
 
         if (!start.walkable || !target.walkable)
             return new List<Vector3>();

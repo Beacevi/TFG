@@ -4,6 +4,9 @@ public class Node
 {
     public Vector2Int position;
     public bool walkable;
+    public bool hasObject;
+
+    public GameObject Interactable;
 
     public Node parent;
     public int gCost;
