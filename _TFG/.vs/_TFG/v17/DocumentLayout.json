@@ -1,29 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Github\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\scripts\\managers\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -39,10 +43,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Managers\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlayerManager.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Managers\\PlayerManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\PlayerManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T17:00:42.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InteractableGameObject.cs",
-              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
-              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -51,24 +68,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TileAStar.cs",
-              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwDcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:49:56.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T16:49:56.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PCGtiles_IsometricPerlin.cs",
-              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
-              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAowA8BAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -76,37 +92,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IsometricCamera.cs",
-              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:49:51.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T16:49:51.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\Node.cs",
-              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\Node.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\Node.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T16:49:54.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T16:49:54.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TileClickDetector.cs",
-              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
-              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "RelativeToolTip": "Assets\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
