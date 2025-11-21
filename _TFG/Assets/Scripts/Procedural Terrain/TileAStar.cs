@@ -60,7 +60,7 @@ public class TileAStar : MonoBehaviour
                             var interactable = lastPathNode.Interactable?.GetComponent<InteractableGameObject>();
                             if (interactable != null)
                             {
-                                interactable.Interact();
+                                interactable.Interact(this);
                             }
                             else
                             {
