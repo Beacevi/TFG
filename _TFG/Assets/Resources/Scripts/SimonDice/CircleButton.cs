@@ -1,21 +1,22 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class CircleButton : MonoBehaviour
+public class CircleButton : MonoBehaviour, IPointerClickHandler
 {
     public int index;
-    private SpriteRenderer spriteRenderer;
+    private Image image;
     private Color originalColor;
     public Color colorSimon;
 
-
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
+        image = GetComponent<Image>();
+        originalColor = image.color;
     }
 
-    void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData)
     {
         if (SimonGameManager.Instance == null) return;
         if (!SimonGameManager.Instance.CanPlayerPress()) return;
@@ -28,20 +29,21 @@ public class CircleButton : MonoBehaviour
     public IEnumerator Flash(float duration)
     {
         Color flashColor = colorSimon;
-        flashColor.a = 1f; // Asegurar que sea visible
+        flashColor.a = 1f;
 
-        spriteRenderer.color = flashColor;
+        image.color = flashColor;
         yield return new WaitForSeconds(duration);
-        spriteRenderer.color = originalColor;
+        image.color = originalColor;
     }
 
     public void SetColorInstant(Color newColor)
     {
-        spriteRenderer.color = newColor;
+        image.color = newColor;
     }
 
     public void RestoreOriginalColor()
     {
-        spriteRenderer.color = originalColor;
-    } 
+        image.color = originalColor;
+    }
 }
+
