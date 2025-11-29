@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,7 +22,9 @@ public class SimonGameManager : MonoBehaviour
     private bool hasFailed = false;
     private bool canPress = false;
     private bool hasFailedCurrentLevel = false;
-
+    private bool gameStarted = false;
+    public Button startButton;
+    
     private int level = 0;
 
     public Color failColor = Color.red; // Color del flash de fallo
@@ -42,7 +45,15 @@ public class SimonGameManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartNewRound());
+        isPlayerTurn = false;
+        canPress = false;
+
+
+        if (startButton != null)
+        {
+            startButton.gameObject.SetActive(true);
+        }
+
     }
 
     IEnumerator StartNewRound()
@@ -82,18 +93,24 @@ public class SimonGameManager : MonoBehaviour
         for (int i = 0; i < failFlashes; i++)
         {
             foreach (var circle in circles)
+            {
                 circle.SetColorInstant(failColor);
+            }
             yield return new WaitForSeconds(0.2f);
 
             foreach (var circle in circles)
+            {
                 circle.RestoreOriginalColor();
+            }
             yield return new WaitForSeconds(0.2f);
         }
 
         if (levelIndicator != null)
+        {
             levelIndicator.SetLevelFail(level - 1);
+        }
 
-        //Repite el mismo patrón
+        // Repite el mismo patrón
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(PlayPattern());
 
@@ -101,6 +118,7 @@ public class SimonGameManager : MonoBehaviour
         canPress = true;
         hasFailed = false;
     }
+
 
     IEnumerator PlayPattern()
     {
@@ -141,9 +159,13 @@ public class SimonGameManager : MonoBehaviour
             if (levelIndicator != null)
             {
                 if (!hasFailedCurrentLevel)
-                    levelIndicator.SetLevelSuccess(level - 1); 
+                {
+                    levelIndicator.SetLevelSuccess(level - 1);
+                }
                 else
-                    levelIndicator.SetLevelFail(level - 1); 
+                {
+                    levelIndicator.SetLevelFail(level - 1);
+                }
             }
 
             hasFailedCurrentLevel = false;
@@ -171,10 +193,25 @@ public class SimonGameManager : MonoBehaviour
             audioSource.PlayOneShot(circleSounds[circleIndex]);
         }
     }
-    // Método para verificar si el jugador puede presionar
+
+
     public bool CanPlayerPress()
     {
         return isPlayerTurn && canPress;
+    }
+
+    public void OnStartButtonPressed()
+    {
+        if (gameStarted) return; // Evita doble click
+
+        gameStarted = true;
+
+        if (startButton != null)
+        {
+            startButton.gameObject.SetActive(false);
+        }
+
+        StartCoroutine(StartNewRound());
     }
 
 
