@@ -20,11 +20,13 @@ public class OnClickCollection : MonoBehaviour
 
         Image _myButtonImage = gameObject.GetComponent<Image>();
 
-        Transform grandparentTransform = gameObject.transform.parent.parent;
-        string _myButtonTitle = grandparentTransform.GetComponent<TMP_Text>().text;
 
-        Transform greatgrandparentTransform = gameObject.transform.parent.parent.parent;
-        string _myButtonUpdate = greatgrandparentTransform.GetComponent<TMP_Text>().text;
+        string _myButtonUpdate = "";
+
+
+        string _myButtonTitle = gameObject.GetComponentInChildren<TMP_Text>().text;
+
+        Slider _myButtonLevel = gameObject.GetComponentInChildren<Slider>();
 
         Image fatherPanel = gameObject.transform.parent.GetComponent<Image>();
         

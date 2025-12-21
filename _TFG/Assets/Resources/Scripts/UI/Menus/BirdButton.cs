@@ -23,6 +23,8 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private GameObject _MyBird3;
     [SerializeField] private TMP_Text   _BoostText;
     [SerializeField] private GameObject _BoostImage;
+    [SerializeField] private Sprite     _NoBird;
+    [SerializeField] private Button     _Deletebirdbutton;
 
     [Header("Scripts")]
     private ButtonFunctions  _buttonFunctions;
@@ -45,6 +47,7 @@ public class BirdButton : MonoBehaviour
     private Image _panelBird2;
     private Image _panelBird3;
 
+
     private void Start()
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
@@ -59,6 +62,7 @@ public class BirdButton : MonoBehaviour
 
         _BirdPanel.SetActive(false);
         _BoostImage.SetActive(false);
+        _Deletebirdbutton.gameObject.SetActive(false);
     }
     public void OpenBirdMenu()
     {
@@ -162,6 +166,9 @@ public class BirdButton : MonoBehaviour
         bird.tag = Tag;
 
         bird.GetComponent<Image>().sprite = ImageBird;
+
+        if(!_Deletebirdbutton.gameObject.activeSelf)
+            _Deletebirdbutton.gameObject.SetActive(true);
     }
     public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
     {
@@ -355,31 +362,47 @@ public class BirdButton : MonoBehaviour
     }
     public void CleanMyBirds()
     {
+        
         if (BirdSelected.Count() >= 2)
         {
-            QuitInfoOfBird(_Bird2);
-            _MyBird2.SetActive(false);
-            ChangeColorPanel(_panelBird2, false);
-            _panelBird2 = null;
+            //QuitInfoOfBird(_Bird2);
+            //_MyBird2.SetActive(false);
+            //ChangeColorPanel(_panelBird2, false);
+            //_panelBird2 = null;
+            //_MyBird2.GetComponent<SpriteRenderer>().sprite = _NoBird;
+
+            Clean(_MyBird2, _Bird2, _panelBird2);
+
             if (BirdSelected.Count() == 3)
             {
-                QuitInfoOfBird(_Bird3);
-                _MyBird3.SetActive(false);
-                ChangeColorPanel(_panelBird3, false);
-                _panelBird3 = null;
+                //QuitInfoOfBird(_Bird3);
+                //_MyBird3.SetActive(false);
+                //ChangeColorPanel(_panelBird3, false);
+                //_panelBird3 = null;
+                //_MyBird3.GetComponent<SpriteRenderer>().sprite = _NoBird;
+
+                Clean(_MyBird3, _Bird3, _panelBird3);
             }
         }
 
-        QuitInfoOfBird(_Bird1);
+        //QuitInfoOfBird(_Bird1);
+        //BirdSelected.Clear();
+        //_MyBird1.SetActive(false);
+        //ChangeColorPanel(_panelBird1, false); 
+        //_panelBird1 = null;
+        //_MyBird1.GetComponent<SpriteRenderer>().sprite = _NoBird;
+        Clean(_MyBird1, _Bird1, _panelBird1);
 
-        BirdSelected.Clear();
+        _Deletebirdbutton.gameObject.SetActive(false);
 
-        _MyBird1.SetActive(false);
-        
-        ChangeColorPanel(_panelBird1, false);
-        
-        _panelBird1 = null;
-        
         TypeOfBoosts();
+    }
+    private void Clean(GameObject MyBird, GameObject Bird,Image PanelBird)
+    {
+        QuitInfoOfBird(Bird);
+        MyBird.SetActive(false);
+        ChangeColorPanel(PanelBird, false);
+        PanelBird = null;
+        Bird.GetComponent<Image>().sprite = _NoBird;
     }
 }
