@@ -278,6 +278,8 @@ public class BirdButton : MonoBehaviour
 
             ChangeColorPanel(_panelBird1, false);
 
+            
+
             if (BirdSelected.Count >= 2)
             {
                 ChangeBird1InfoToBird2(_Bird1, _Bird2);
@@ -286,31 +288,46 @@ public class BirdButton : MonoBehaviour
 
                 if (BirdSelected.Count == 3)
                 {
+                    
                     ChangeBird1InfoToBird2(_Bird2, _Bird3);
 
                     QuitInfoOfBird(_Bird3);
                     _MyBird3.SetActive(false);
+                   
 
                     ReaoganizePanel(ref _panelBird2, ref _panelBird3);
+
+                    _Bird3.GetComponent<Image>().sprite = _NoBird;
                     _panelBird3 = null;
+
+                    
                 }
                 else
                 {
                     QuitInfoOfBird(_Bird2);
+
+
+                   
                     _MyBird2.SetActive(false);
+
+                    _Bird2.GetComponent<Image>().sprite = _NoBird;
                     _panelBird2 = null;
+
+                    
                 }
 
                 ChangeColorPanel(_panelBird1, true);
             }
             else
             {
+                _Bird1.GetComponent<Image>().sprite = _NoBird;
                 _panelBird1 = null;
             }
         }
         else if (_Bird2.tag == tagToRemove)
         {
             QuitInfoOfBird(_Bird2);
+            
 
             ChangeColorPanel(_panelBird2, false);
 
@@ -322,6 +339,8 @@ public class BirdButton : MonoBehaviour
                 _MyBird3.SetActive(false);
 
                 ReaoganizePanel(ref _panelBird2, ref _panelBird3);
+                _Bird3.GetComponent<Image>().sprite = _NoBird;
+
                 _panelBird3 = null;
             }
             else
@@ -331,14 +350,17 @@ public class BirdButton : MonoBehaviour
                 ChangeColorPanel(_panelBird2, false);
                 ReaoganizePanel(ref _panelBird2, ref _panelBird1);
 
+                _Bird2.GetComponent<Image>().sprite = _NoBird;
                 _panelBird2 = null;
             }
-
+             
             
         }
         else if (_Bird3.tag == tagToRemove)
         {
             QuitInfoOfBird(_Bird3);
+
+            _Bird3.GetComponent<Image>().sprite = _NoBird;
 
             ChangeColorPanel(_panelBird3, false);
             _panelBird3 = null;

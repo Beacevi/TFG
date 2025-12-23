@@ -30,6 +30,7 @@ public class OnClickCollection : MonoBehaviour
 
         Image fatherPanel = gameObject.transform.parent.GetComponent<Image>();
         
+        Debug.Log("Tag del boton pulsado: " + buttonTag);
 
         _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonTitle, _myButtonUpdate, fatherPanel);
     }
