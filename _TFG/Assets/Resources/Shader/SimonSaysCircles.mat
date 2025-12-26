@@ -25,8 +25,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _GradientRadius: 1
-    - _OpaqueRadius: 0.396
+    - _GradientRadius: 0.872
+    - _OpaqueRadius: 0.374
     m_Colors:
     - _MainColor: {r: 0.8039216, g: 0.62352943, b: 0.8745098, a: 1}
   m_BuildTextureStacks: []
