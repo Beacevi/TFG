@@ -19,6 +19,12 @@ public class Hour : MonoBehaviour
     [SerializeField] private GameObject _sunnyIcon;
     [SerializeField] private GameObject _nightIcon;
 
+    [Header("Background")]
+    [SerializeField] private GameObject _background;
+    [SerializeField] private Material   _day;
+    [SerializeField] private Material   _night;
+
+
     private int _lastMinute = -1;
     private int _lastHour   = -1;
 
@@ -83,11 +89,13 @@ public class Hour : MonoBehaviour
         if (currentHour >= 18 || currentHour < 6)
         {
             _sunnyIcon.SetActive(false);
+            _background.GetComponent<Renderer>().material = _night;
             _nightIcon.SetActive(true);
         }
         else
         {
             _sunnyIcon.SetActive(true);
+            _background.GetComponent<Renderer>().material = _day;
             _nightIcon.SetActive(false);
         }
     }

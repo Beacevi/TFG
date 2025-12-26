@@ -78,6 +78,7 @@ public class RewardsMenu : MonoBehaviour
     public void DailyStampClick(GameObject child)
     {
         Image image = child.GetComponent<Image>();
+
         if (child.GetComponent<Image>().color != new Color32(255, 255, 255, 255))
         {
             child.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
