@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using Firebase.Auth;                    // Firebase Authentication
 using Firebase.Extensions;              // Permite usar ContinueWithOnMainThread
-using Google;                           // Google Sign-In para Unity
-using System.Threading.Tasks;
-using UnityEngine;
-using Firebase.Auth;                    // Firebase Authentication
 using Firebase.Firestore;               // Firebase Firestore (base de datos)
-using TMPro;                            // TextMeshPro para UI
+using Google;                           // Google Sign-In para Unity
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using TMPro;                            // TextMeshPro para UI
+using UnityEngine;
 
 /// <summary>
 /// Maneja el login con Google usando Firebase Authentication
@@ -235,6 +236,46 @@ public class GoogleFirebaseLogin : MonoBehaviour
                     Debug.LogError("Error creando datos base: " + task.Exception);
             });
     }
+
+    /// <summary>
+    /// Guarda los datos actuales del jugador en Firestore.
+    /// Debe llamarse solo cuando el usuario ya esté logueado.
+    /// </summary>
+    public void SaveUserData()
+    {
+        // Seguridad básica: comprobar que hay usuario logueado
+        if (user == null)
+        {
+            Debug.LogWarning("No se puede guardar: usuario no logueado.");
+            return;
+        }
+
+        // Referencia al documento del usuario (users/{uid})
+        DocumentReference docRef = db.Collection("users").Document(user.UserId);
+
+        // Datos a guardar / actualizar
+        var dataToSave = new Dictionary<string, object>
+    {
+        { "coins", coinsActuales },
+        { "lastSave", Timestamp.GetCurrentTimestamp() }
+        // { "level", levelActual } ← si lo usas más adelante
+    };
+
+        //SetOptions.Merge = true → NO borra el resto del documento
+        docRef.SetAsync(dataToSave, SetOptions.MergeAll)
+            .ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCompletedSuccessfully)
+                {
+                    Debug.Log("Datos del usuario guardados correctamente.");
+                }
+                else
+                {
+                    Debug.LogError("Error guardando datos del usuario: " + task.Exception);
+                }
+            });
+    }
+
 
     // =========================
     // LOGOUT
