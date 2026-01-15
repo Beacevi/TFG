@@ -1,76 +1,92 @@
-﻿using UnityEngine;
-using Firebase;
+﻿using System.Collections;
+using Firebase.Extensions;
+using Google;
+using System.Threading.Tasks;
+using UnityEngine;
 using Firebase.Auth;
 using Firebase.Firestore;
-using System.Threading.Tasks;
 
 public class GoogleFirebaseLogin : MonoBehaviour
 {
+    [Header("Google API")]
+    [SerializeField] private string webClientId = "264966857771-k8ksaobqrna2mtl7fm8p4fl6u16g521u.apps.googleusercontent.com"; // Web Client ID de Firebase
+    private bool isGoogleSignInInitialized = false;
+
+    [Header("Firebase")]
     private FirebaseAuth auth;
+    private FirebaseUser user;
     private FirebaseFirestore db;
 
-    void Awake()
+    void Start()
     {
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
-        {
-            if (task.Result == DependencyStatus.Available)
-            {
-                auth = FirebaseAuth.DefaultInstance;
-                db = FirebaseFirestore.DefaultInstance;
-                Debug.Log("Firebase listo");
-            }
-            else
-            {
-                Debug.LogError("Firebase no disponible: " + task.Result);
-            }
-        });
+        InitFirebase();
     }
 
-    // Asignar a botón UI
+    void InitFirebase()
+    {
+        auth = FirebaseAuth.DefaultInstance;
+        db = FirebaseFirestore.DefaultInstance;
+        Debug.Log("Firebase listo");
+    }
+
     public void OnGoogleButtonPressed()
     {
-        SignInWithGoogle();
-    }
-
-    private void SignInWithGoogle()
-    {
-#if UNITY_ANDROID && !UNITY_EDITOR
-        // Llamar al plugin oficial de Firebase para Google Sign-In
-        Firebase.Auth.GoogleSignIn.DefaultInstance.SignInAsync().ContinueWith(task =>
+        if (!isGoogleSignInInitialized)
         {
-            if (task.IsFaulted || task.IsCanceled)
+            GoogleSignIn.Configuration = new GoogleSignInConfiguration
             {
-                Debug.LogError("Google Sign-In fallido: " + task.Exception);
+                WebClientId = webClientId,
+                RequestEmail = true,
+                RequestIdToken = true
+            };
+            isGoogleSignInInitialized = true;
+        }
+
+        GoogleSignIn.DefaultInstance.SignIn().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCanceled)
+            {
+                Debug.LogWarning("Google sign-in cancelado.");
                 return;
             }
 
-            // Obtienes el idToken real
-            string idToken = task.Result.IdToken;
-
-            // Login en Firebase
-            Credential credential = GoogleAuthProvider.GetCredential(idToken, null);
-            auth.SignInWithCredentialAsync(credential).ContinueWith(firebaseTask =>
+            if (task.IsFaulted)
             {
-                if (firebaseTask.IsCanceled || firebaseTask.IsFaulted)
+                Debug.LogError("Google sign-in error: " + task.Exception);
+                return;
+            }
+
+            GoogleSignInUser googleUser = task.Result;
+
+            Credential credential = GoogleAuthProvider.GetCredential(googleUser.IdToken, null);
+
+            auth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(authTask =>
+            {
+                if (authTask.IsCanceled)
                 {
-                    Debug.LogError("Firebase login fallido: " + firebaseTask.Exception);
+                    Debug.LogWarning("Firebase auth cancelado.");
                     return;
                 }
 
-                FirebaseUser user = firebaseTask.Result;
-                Debug.Log("Firebase login correcto. UID: " + user.UserId);
+                if (authTask.IsFaulted)
+                {
+                    Debug.LogError("Firebase auth fallido: " + authTask.Exception);
+                    return;
+                }
+
+                user = auth.CurrentUser;
+                Debug.Log($"Firebase login correcto. UID: {user.UserId}");
+
+                // Ahora manejamos Firestore
                 CheckOrCreateUserInFirestore(user.UserId);
             });
         });
-#else
-        Debug.LogWarning("Login Google solo funciona en Android real");
-#endif
     }
 
     private void CheckOrCreateUserInFirestore(string uid)
     {
         DocumentReference docRef = db.Collection("users").Document(uid);
-        docRef.GetSnapshotAsync().ContinueWith(task =>
+        docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsCanceled || task.IsFaulted)
             {
@@ -97,17 +113,25 @@ public class GoogleFirebaseLogin : MonoBehaviour
         int level = snapshot.ContainsField("level") ? snapshot.GetValue<int>("level") : 1;
         int coins = snapshot.ContainsField("coins") ? snapshot.GetValue<int>("coins") : 0;
         Debug.Log($"Datos cargados → Level: {level}, Coins: {coins}");
+        // Aquí puedes actualizar UI o variables de juego según lo necesites
     }
 
     private void CreateBaseUserData(DocumentReference docRef)
     {
         var newUser = new { level = 1, coins = 0, lastLogin = Timestamp.GetCurrentTimestamp() };
-        docRef.SetAsync(newUser).ContinueWith(task =>
+        docRef.SetAsync(newUser).ContinueWithOnMainThread(task =>
         {
             if (task.IsCompletedSuccessfully)
                 Debug.Log("Datos base creados con éxito.");
             else
                 Debug.LogError("Error creando datos base: " + task.Exception);
         });
+    }
+
+    public void SignOut()
+    {
+        GoogleSignIn.DefaultInstance.SignOut();
+        auth.SignOut();
+        Debug.Log("Usuario desconectado.");
     }
 }
