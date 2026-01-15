@@ -12,7 +12,20 @@
           "package_name": "com.hortensiastudio.cloudwander"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "264966857771-unge7a5j8g21m35lrrf9rvrh852o3ls6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hortensiastudio.cloudwander",
+            "certificate_hash": "b781839baa385eb4a977e4bf96e4382e52039da3"
+          }
+        },
+        {
+          "client_id": "264966857771-k8ksaobqrna2mtl7fm8p4fl6u16g521u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCI6R7pfQrKFH2AZvb4urS8XdTqc06iOoI"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264966857771-k8ksaobqrna2mtl7fm8p4fl6u16g521u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
