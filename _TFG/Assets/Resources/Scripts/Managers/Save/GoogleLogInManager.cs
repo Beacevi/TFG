@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Firebase.Auth;
 using Firebase.Firestore;
+using TMPro;
+using System;
 
 public class GoogleFirebaseLogin : MonoBehaviour
 {
@@ -17,6 +19,13 @@ public class GoogleFirebaseLogin : MonoBehaviour
     private FirebaseUser user;
     private FirebaseFirestore db;
 
+    public TextMeshProUGUI textUUID;
+    public TextMeshProUGUI textNuevoUser;
+    public TextMeshProUGUI textAnteriorUser;
+    public TextMeshProUGUI textCoins;
+
+    public int coins = 0;
+
     void Start()
     {
         InitFirebase();
@@ -27,6 +36,16 @@ public class GoogleFirebaseLogin : MonoBehaviour
         auth = FirebaseAuth.DefaultInstance;
         db = FirebaseFirestore.DefaultInstance;
         Debug.Log("Firebase listo");
+    }
+
+    public void aumentarCoins()
+    {
+        int coinsNuevas = coins + 1;
+
+        textCoins.text = "" + coinsNuevas;
+
+        coins = coinsNuevas;
+
     }
 
     public void OnGoogleButtonPressed()
@@ -77,6 +96,7 @@ public class GoogleFirebaseLogin : MonoBehaviour
                 user = auth.CurrentUser;
                 Debug.Log($"Firebase login correcto. UID: {user.UserId}");
 
+                textUUID.text = user.UserId.ToString();
                 // Ahora manejamos Firestore
                 CheckOrCreateUserInFirestore(user.UserId);
             });
@@ -98,11 +118,14 @@ public class GoogleFirebaseLogin : MonoBehaviour
             if (snapshot.Exists)
             {
                 Debug.Log("Usuario existe, cargando datos...");
+                
+                textAnteriorUser.text = "El usuario NOOOO es nuevo";
                 LoadUserData(snapshot);
             }
             else
             {
                 Debug.Log("Usuario nuevo, creando datos base...");
+                textNuevoUser.text = "El usuario es nuevo";
                 CreateBaseUserData(docRef);
             }
         });
@@ -118,7 +141,7 @@ public class GoogleFirebaseLogin : MonoBehaviour
 
     private void CreateBaseUserData(DocumentReference docRef)
     {
-        var newUser = new { level = 1, coins = 0, lastLogin = Timestamp.GetCurrentTimestamp() };
+        var newUser = new { level = 1, coins = coins, lastLogin = Timestamp.GetCurrentTimestamp() };
         docRef.SetAsync(newUser).ContinueWithOnMainThread(task =>
         {
             if (task.IsCompletedSuccessfully)
