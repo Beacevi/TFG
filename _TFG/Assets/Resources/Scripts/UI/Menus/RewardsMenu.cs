@@ -35,7 +35,7 @@ public class RewardsMenu : MonoBehaviour
     public void OpenAnimation(int num)
     {
         Button button = GetComponent<Button>();
-        Close(num);
+        Close();
 
         _cloudPrefab.SetActive(false);
 
@@ -67,11 +67,11 @@ public class RewardsMenu : MonoBehaviour
         _animator.SetTrigger("CloseTrigger");
         StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _RewardsMenu));
 
-        Close(4);
+        Close();
 
         isOpen = false;
     }
-    private void Close(int num)
+    private void Close()
     {
         _cloudPrefab.SetActive(true);
 
