@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Resources\Scripts\CSVReader\GoogleSheetsForUnity.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\PlayButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Resources\Scripts\SimonDice\CircleButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\ShopMenu.cs" />
+    <Compile Include="Assets\Resources\Scripts\CSVReader\CSVReader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\Save\GoogleLogInManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -139,15 +141,18 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Packages\System.Management.7.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Packages\Google.Apis.Sheets.v4.1.72.0.3966\lib\netstandard2.0\Google.Apis.Sheets.v4.xml" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - License.txt" />
     <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppFirestore.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\Packages\System.Management.7.0.2\lib\netstandard2.0\System.Management.xml" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Unity - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Resources\Shader\GradientColors.shader" />
+    <None Include="Assets\Packages\Google.Apis.1.72.0\lib\netstandard2.0\Google.Apis.dll" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - AFL.txt" />
     <None Include="Assets\Packages\Google.Apis.1.72.0\lib\netstandard2.0\Google.Apis.xml" />
@@ -157,9 +162,11 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-firestore-unity\maven-metadata.xml" />
+    <None Include="Assets\Packages\Google.Apis.Auth.1.72.0\lib\netstandard2.0\Google.Apis.Auth.dll" />
     <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppAuth.dll" />
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.Firestore.dll" />
     <None Include="Assets\AssetsTerrain\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
+    <None Include="Assets\Packages\Google.Apis.Sheets.v4.1.72.0.3966\lib\netstandard2.0\Google.Apis.Sheets.v4.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Firebase\Plugins\Firebase.TaskExtension.dll" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
@@ -172,14 +179,23 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Packages\System.CodeDom.7.0.0\lib\netstandard2.0\System.CodeDom.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
+    <None Include="Assets\Packages\Google.Apis.Core.1.72.0\lib\netstandard2.0\Google.Apis.Core.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.Auth.dll" />
+    <None Include="Assets\Packages\System.CodeDom.7.0.0\lib\netstandard2.0\System.CodeDom.xml" />
+    <None Include="Assets\Packages\Newtonsoft.Json.13.0.4\lib\netstandard2.0\Newtonsoft.Json.dll" />
+    <None Include="Assets\Packages\Newtonsoft.Json.13.0.4\lib\netstandard2.0\Newtonsoft.Json.xml" />
+    <None Include="Assets\Packages\System.CodeDom.7.0.0\LICENSE.TXT" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Packages\System.Management.7.0.2\lib\netstandard2.0\System.Management.dll" />
+    <None Include="Assets\Packages\System.CodeDom.7.0.0\THIRD-PARTY-NOTICES.TXT" />
     <None Include="Assets\Firebase\Plugins\Firebase.Firestore.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Resources\Shader\RadialTransparency.shader" />
+    <None Include="Assets\Packages\System.Management.7.0.2\LICENSE.TXT" />
     <None Include="Assets\Firebase\Plugins\Firebase.Platform.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\AssetsTerrain\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow Mask.shader" />
@@ -189,7 +205,9 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Packages\Google.Apis.Core.1.72.0\lib\netstandard2.0\Google.Apis.Core.xml" />
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.App.dll" />
+    <None Include="Assets\Packages\System.Management.7.0.2\THIRD-PARTY-NOTICES.TXT" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Packages\System.CodeDom.7.0.0\useSharedDesignerContext.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -695,6 +713,30 @@
     </Reference>
     <Reference Include="Google.MiniJson">
       <HintPath>Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>Assets\Packages\Google.Apis.Auth.1.72.0\lib\netstandard2.0\Google.Apis.Auth.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>Assets\Packages\Google.Apis.1.72.0\lib\netstandard2.0\Google.Apis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>Assets\Packages\Google.Apis.Core.1.72.0\lib\netstandard2.0\Google.Apis.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Sheets.v4">
+      <HintPath>Assets\Packages\Google.Apis.Sheets.v4.1.72.0.3966\lib\netstandard2.0\Google.Apis.Sheets.v4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>Assets\Packages\System.Management.7.0.2\lib\netstandard2.0\System.Management.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Packages\Newtonsoft.Json.13.0.4\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

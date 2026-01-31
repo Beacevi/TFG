@@ -563,11 +563,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
-        m_MethodName: closeRewardsMenu
-        m_Mode: 1
+        m_MethodName: CloseAnimation
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 25348853}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2862,6 +2862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957694e1b7091a140bce218cbf7689be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1768333966}
   _cloudPrefab: {fileID: 1792421553}
   _titleText: {fileID: 1284575894}
   _RewardsMenu: {fileID: 1906923088}
@@ -2881,6 +2882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed9b3725e86f54b9ed4eb78f76a03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1470188929}
   _storeMenu: {fileID: 1470188926}
   _resetStorePanel: {fileID: 2142141415}
   _timerText: {fileID: 1557004731}
@@ -8975,10 +8977,10 @@ MonoBehaviour:
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: OpenStoreMenu
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 381039105}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -24999,7 +25001,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
-        m_MethodName: openRewardsMenu
+        m_MethodName: OpenAnimation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31342,6 +31344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470188927}
   - component: {fileID: 1470188928}
+  - component: {fileID: 1470188929}
   m_Layer: 5
   m_Name: Store
   m_TagString: Untagged
@@ -31366,8 +31369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 211}
-  m_SizeDelta: {x: 464, y: 427}
+  m_AnchoredPosition: {x: -6.366, y: -525}
+  m_SizeDelta: {x: 476.7321, y: 427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470188928
 MonoBehaviour:
@@ -31393,6 +31396,28 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!95 &1470188929
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470188926}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 961c4a5d2f0038c488842bfe33cc41e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1470499017
 GameObject:
   m_ObjectHideFlags: 0
@@ -36203,8 +36228,9 @@ GameObject:
   - component: {fileID: 1768333965}
   - component: {fileID: 1768333964}
   - component: {fileID: 1768333963}
+  - component: {fileID: 1768333966}
   m_Layer: 5
-  m_Name: MenuPanel
+  m_Name: RewardPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36227,10 +36253,10 @@ RectTransform:
   - {fileID: 363134761}
   m_Father: {fileID: 1906923089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 206, y: -460.75}
+  m_SizeDelta: {x: 323, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768333963
 MonoBehaviour:
@@ -36294,6 +36320,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768333961}
   m_CullTransparentMesh: 1
+--- !u!95 &1768333966
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768333961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1cf69334099b6340a738b3aa6e6222a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1772263554
 GameObject:
   m_ObjectHideFlags: 0
@@ -36786,7 +36834,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
-        m_MethodName: openRewardsMenu
+        m_MethodName: OpenAnimation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37451,11 +37499,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
+        m_MethodName: CloseAnimation
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1814638030}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -39964,7 +40012,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906923088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
@@ -41750,7 +41798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 7
     m_Right: 0
     m_Top: 13
     m_Bottom: 0
@@ -43394,7 +43442,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
-        m_MethodName: openRewardsMenu
+        m_MethodName: OpenAnimation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
