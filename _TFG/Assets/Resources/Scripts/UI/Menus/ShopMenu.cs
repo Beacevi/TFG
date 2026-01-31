@@ -2,9 +2,12 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 public class ShopMenu : MonoBehaviour
 {
+
+    [Header("Animators")]
+    [SerializeField] private Animator _animator;
+
     [Header("Panels")]
     [SerializeField] private GameObject _storeMenu;
     [SerializeField] private GameObject _resetStorePanel;
@@ -30,14 +33,14 @@ public class ShopMenu : MonoBehaviour
     private bool _isResetMessageOpen = false;
     void Start()
     {
-        Close();
-
         _buttonFunctions = GetComponent<ButtonFunctions>();
 
-        _normalColor = _timerText.color;
+        _normalColor   = _timerText.color;
         _nextResetTime = DateTime.Today.AddDays(1);
 
         InvokeRepeating(nameof(UpdateTimerUI), 0f, 1f);
+
+        _storeMenu.SetActive(false);
     }
 
     private void UpdateTimerUI()
@@ -65,9 +68,12 @@ public class ShopMenu : MonoBehaviour
         }
     }
 
-    public void OpenStoreMenu()
+    public void OpenStoreMenu(Button button)
     {
         _storeMenu.SetActive(true);
+        
+        _animator.SetTrigger("OpenTrigger");
+        StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
 
         _birds.SetActive(false);
         _balloon.SetActive(false);
@@ -87,15 +93,24 @@ public class ShopMenu : MonoBehaviour
             _isResetMessageOpen = false;
         }   
     }
-    public void Close()
+    public void CloseAnimation(Button button)
     {
-        _storeMenu.SetActive(false);
+        
+        _animator.SetTrigger("CloseTrigger");
+        StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _storeMenu));
+
+        Close();
+
+
+        //_storeMenu.SetActive(false);
+    }
+    private void Close()
+    {
         _resetStorePanel.SetActive(false);
 
         _birds.SetActive(true);
         _balloon.SetActive(true);
     }
-
 
     public void ResetStore()
     {

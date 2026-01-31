@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class RewardsMenu : MonoBehaviour
 {
+    [Header("Animators")]
+    [SerializeField] private Animator _animator;
+
     [Header("Plus")]
     [SerializeField] private GameObject _cloudPrefab;
 
@@ -17,15 +20,22 @@ public class RewardsMenu : MonoBehaviour
     [SerializeField] private GameObject _characterUpgradesPanel;
     [SerializeField] private GameObject _dailyStampsPanel;
 
+    private bool isOpen;
+
+    private ButtonFunctions _buttonFunctions;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        closeRewardsMenu();
+        _RewardsMenu.SetActive(false);
+        _buttonFunctions = GetComponent<ButtonFunctions>();
+        isOpen = false;
     }
 
-    public void openRewardsMenu(int num)
+    public void OpenAnimation(int num)
     {
-        closeRewardsMenu();
+        Button button = GetComponent<Button>();
+        Close(num);
 
         _cloudPrefab.SetActive(false);
 
@@ -42,13 +52,29 @@ public class RewardsMenu : MonoBehaviour
             OpenDailyStamps();
         }
 
-        _RewardsMenu.SetActive(true);
+        if (!isOpen)
+        {
+            _RewardsMenu.SetActive(true);
+            
+            StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
+            _animator.SetTrigger("OpenTrigger");
+        }
+
+        isOpen = true;
     }
-    public void closeRewardsMenu()
+    public void CloseAnimation(Button button)
+    {
+        _animator.SetTrigger("CloseTrigger");
+        StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _RewardsMenu));
+
+        Close(4);
+
+        isOpen = false;
+    }
+    private void Close(int num)
     {
         _cloudPrefab.SetActive(true);
 
-        _RewardsMenu.SetActive(false);
         _upgradesPanel.SetActive(false);
         _shipUpgradesPanel.SetActive(false);
         _characterUpgradesPanel.SetActive(false);

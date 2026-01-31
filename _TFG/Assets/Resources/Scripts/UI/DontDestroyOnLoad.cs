@@ -9,6 +9,12 @@ public class DontDestroyOnLoad : MonoBehaviour
     [SerializeField] private GameObject _OptionMenu;
     private void Awake()
     {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         _instance = this;
         DontDestroyOnLoad(gameObject);
 
