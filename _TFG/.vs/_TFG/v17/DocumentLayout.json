@@ -1,9 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\save\\googleloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\buttonfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\buttonfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\dontdestroyonload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\dontdestroyonload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\save\\googleloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\save\\googleloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,30 +41,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginWithGoogle.cs",
-              "DocumentMoniker": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
-              "ToolTip": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAkwIIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RewardsMenu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T08:47:19.123Z",
+              "WhenOpened": "2026-01-31T16:17:06.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "DontDestroyOnLoad.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\DontDestroyOnLoad.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\DontDestroyOnLoad.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\DontDestroyOnLoad.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\DontDestroyOnLoad.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T16:06:45.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ButtonFunctions.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:07:23.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HamburguerButton.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwB4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:33:34.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomMenu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAmwAgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:32:07.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopMenu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowGEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:31:57.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginWithGoogle.cs",
+              "DocumentMoniker": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
+              "ToolTip": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAkwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T08:47:19.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GoogleLogInManager.cs",
-              "DocumentMoniker": "C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
-              "ToolTip": "C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T08:23:36.456Z",
               "EditorCaption": ""

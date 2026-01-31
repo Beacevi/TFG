@@ -101,8 +101,6 @@ public class ShopMenu : MonoBehaviour
 
         Close();
 
-
-        //_storeMenu.SetActive(false);
     }
     private void Close()
     {
