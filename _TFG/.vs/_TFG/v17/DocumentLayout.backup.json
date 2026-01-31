@@ -1,13 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\csvreader\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\csvreader\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\anfur\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\save\\googleloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\save\\googleloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\csvreader\\googlesheetsforunity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\csvreader\\googlesheetsforunity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginWithGoogle.cs",
-              "DocumentMoniker": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
-              "ToolTip": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs [Solo lectura]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs [Solo lectura]",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAkwH0AAAAvAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GoogleSheetsForUnity.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\GoogleSheetsForUnity.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\CSVReader\\GoogleSheetsForUnity.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\GoogleSheetsForUnity.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\CSVReader\\GoogleSheetsForUnity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T08:47:19.123Z",
-              "EditorCaption": " [Solo lectura]"
+              "WhenOpened": "2026-01-31T13:41:16.562Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GoogleLogInManager.cs",
-              "DocumentMoniker": "C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
-              "ToolTip": "C:\\Users\\anfur\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\Save\\GoogleLogInManager.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAkwHEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CSVReader.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T08:23:36.456Z",
+              "WhenOpened": "2026-01-26T17:43:54.442Z",
               "EditorCaption": ""
             }
           ]
