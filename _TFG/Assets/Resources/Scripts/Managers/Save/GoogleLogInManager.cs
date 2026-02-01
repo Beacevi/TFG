@@ -15,6 +15,8 @@ using UnityEngine;
 /// </summary>
 public class GoogleFirebaseLogin : MonoBehaviour
 {
+    public static GoogleFirebaseLogin Instance;
+
     // =========================
     // CONFIGURACIÓN GOOGLE
     // =========================
@@ -54,6 +56,19 @@ public class GoogleFirebaseLogin : MonoBehaviour
     // =========================
     // UNITY LIFECYCLE
     // =========================
+
+    void Awake()
+    {
+        // Singleton
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -120,6 +135,7 @@ public class GoogleFirebaseLogin : MonoBehaviour
                 if (task.IsFaulted)
                 {
                     Debug.LogError("Google sign-in error: " + task.Exception);
+                    textNuevoUser.text = "Google sign-in error: " + task.Exception;
                     return;
                 }
 
@@ -137,18 +153,21 @@ public class GoogleFirebaseLogin : MonoBehaviour
                         if (authTask.IsCanceled)
                         {
                             Debug.LogWarning("Firebase auth cancelado.");
+                            textNuevoUser.text = "Firebase auth cancelado.";
                             return;
                         }
 
                         if (authTask.IsFaulted)
                         {
                             Debug.LogError("Firebase auth fallido: " + authTask.Exception);
+                            textNuevoUser.text = "Firebase auth fallido: " + authTask.Exception;
                             return;
                         }
 
                         // Usuario autenticado correctamente en Firebase
                         user = auth.CurrentUser;
                         Debug.Log($"Firebase login correcto. UID: {user.UserId}");
+                        textNuevoUser.text = $"Firebase login correcto. UID: {user.UserId}";
 
                         textUUID.text = user.UserId;
 
@@ -277,17 +296,78 @@ public class GoogleFirebaseLogin : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Guarda los datos de los KPIs actuales del jugador en Firestore.
+    /// Debe llamarse solo cuando el usuario ya esté logueado.
+    /// </summary>
+    public void SaveUserDataKPIs()
+    {
+        // Seguridad básica: comprobar que hay usuario logueado
+        if (user == null)
+        {
+            Debug.LogWarning("No se puede guardar: usuario no logueado.");
+            textNuevoUser.text = "No se puede guardar: usuario no logueado.";
+            return;
+        }
+
+        // Referencia al documento del usuario (users/{uid})
+        DocumentReference docRef = db.Collection("users").Document(user.UserId);
+
+        // Datos a guardar / actualizar
+        var dataToSave = new Dictionary<string, object>
+        {
+            { "SesionesTotales", KPIsManager.Instance.contadorSesiones },
+            { "UltimaSesion", Timestamp.GetCurrentTimestamp() },
+            { "TiempoTotalJuego", (double)KPIsManager.Instance.tiempoJuego }
+            // { "level", levelActual } ← si lo usas más adelante
+        };
+
+        //SetOptions.Merge = true → NO borra el resto del documento
+        docRef.SetAsync(dataToSave, SetOptions.MergeAll)
+            .ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCompletedSuccessfully)
+                {
+                    Debug.Log("Datos del usuario guardados correctamente.");
+                    textNuevoUser.text = "Datos del usuario guardados correctamente.";
+                }
+                else
+                {
+                    Debug.LogError("Error guardando datos del usuario: " + task.Exception);
+                    textNuevoUser.text = "Error guardando datos del usuario: " + task.Exception;
+                }
+            });
+    }
+
+
     // =========================
     // LOGOUT
     // =========================
 
     /// <summary>
-    /// Cierra sesión tanto en Google como en Firebase. Actualmente solo en Firebase
+    /// Cierra sesión tanto en Google como en Firebase.
     /// </summary>
     public void SignOut()
     {
-        //GoogleSignIn.DefaultInstance.SignOut();
+        GoogleSignIn.DefaultInstance.SignOut();
         auth.SignOut();
         Debug.Log("Usuario desconectado.");
     }
+
+        void OnApplicationQuit()
+    {
+        SaveUserDataKPIs();
+        SaveUserData();
+    }
+
+    void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            SaveUserDataKPIs();
+            SaveUserData();
+        }
+            
+    }
+
 }
