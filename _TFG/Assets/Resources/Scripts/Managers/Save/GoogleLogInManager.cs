@@ -297,12 +297,11 @@ public class GoogleFirebaseLogin : MonoBehaviour
 
 
     /// <summary>
-    /// Guarda los datos de los KPIs actuales del jugador en Firestore.
+    /// Guarda los KPIs del usuario y registra una nueva sesión.
     /// Debe llamarse solo cuando el usuario ya esté logueado.
     /// </summary>
     public void SaveUserDataKPIs()
     {
-        // Seguridad básica: comprobar que hay usuario logueado
         if (user == null)
         {
             Debug.LogWarning("No se puede guardar: usuario no logueado.");
@@ -310,34 +309,50 @@ public class GoogleFirebaseLogin : MonoBehaviour
             return;
         }
 
-        // Referencia al documento del usuario (users/{uid})
-        DocumentReference docRef = db.Collection("users").Document(user.UserId);
+        // Documento del usuario
+        DocumentReference userDoc = db.Collection("users").Document(user.UserId);
 
-        // Datos a guardar / actualizar
-        var dataToSave = new Dictionary<string, object>
+        // ---------- DATOS RESUMEN (totales) ----------
+        var userData = new Dictionary<string, object>
         {
-            { "SesionesTotales", KPIsManager.Instance.contadorSesiones },
-            { "UltimaSesion", Timestamp.GetCurrentTimestamp() },
-            { "TiempoTotalJuego", (double)KPIsManager.Instance.tiempoJuego }
-            // { "level", levelActual } ← si lo usas más adelante
+            { "SesionesTotales", FieldValue.Increment(1) },
+            { "TiempoTotalJuego", FieldValue.Increment((double)KPIsManager.Instance.SesionTimer) },
+            { "UltimaSesion", Timestamp.GetCurrentTimestamp() }
         };
 
-        //SetOptions.Merge = true → NO borra el resto del documento
-        docRef.SetAsync(dataToSave, SetOptions.MergeAll)
+        // ---------- DATOS DE ESTA SESIÓN ----------
+        string sessionId = System.Guid.NewGuid().ToString();
+
+        var sessionData = new Dictionary<string, object>
+        {
+            { "Duracion", (double)KPIsManager.Instance.SesionTimer },
+            { "Fecha", Timestamp.GetCurrentTimestamp() }
+        };
+
+        // ---------- GUARDADO ----------
+        // Guardar resumen del usuario
+        userDoc.SetAsync(userData, SetOptions.MergeAll);
+
+        // Crear documento de sesión
+        userDoc
+            .Collection("sessions")
+            .Document(sessionId)
+            .SetAsync(sessionData)
             .ContinueWithOnMainThread(task =>
             {
                 if (task.IsCompletedSuccessfully)
                 {
-                    Debug.Log("Datos del usuario guardados correctamente.");
-                    textNuevoUser.text = "Datos del usuario guardados correctamente.";
+                    Debug.Log("Sesión y KPIs guardados correctamente.");
+                    textNuevoUser.text = "Sesión y KPIs guardados correctamente.";
                 }
                 else
                 {
-                    Debug.LogError("Error guardando datos del usuario: " + task.Exception);
-                    textNuevoUser.text = "Error guardando datos del usuario: " + task.Exception;
+                    Debug.LogError("Error guardando sesión: " + task.Exception);
+                    textNuevoUser.text = "Error guardando sesión: " + task.Exception;
                 }
             });
     }
+
 
 
     // =========================
