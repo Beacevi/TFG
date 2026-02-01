@@ -18,6 +18,8 @@ public class TileAStar : MonoBehaviour
 
     private Node lastPathNode = null;
 
+    public int stepsAvailable = 30;
+
     private void Start()
     {
         if(!tilemap)
@@ -36,6 +38,13 @@ public class TileAStar : MonoBehaviour
             Vector3Int start = tilemap.WorldToCell(player.position);
 
             path = FindPath(start, clicked);
+
+            if (path.Count > stepsAvailable)
+            {
+                path = path.GetRange(0, stepsAvailable);
+            }
+
+
             if (path.Count > 0)
             {
                 moving = true;
@@ -79,6 +88,11 @@ public class TileAStar : MonoBehaviour
                         Debug.Log("lastPathNode es NULL.");
                         moving = false;
                     }
+
+                    stepsAvailable -= path.Count;
+                    stepsAvailable = Mathf.Max(0, stepsAvailable);
+
+                    moving = false;
                     path.Clear();
                 }
             }

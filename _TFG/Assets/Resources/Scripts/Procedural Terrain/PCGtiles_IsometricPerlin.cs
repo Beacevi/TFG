@@ -80,7 +80,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         GenerateMap();
         SpawnInteractablesObjectsFromNodes();
         SpawnDecorationFromNodes();
-        SpawnPlayer();
+        SpawnPlayer(10);
     }
 
     private void GenerateMap()
@@ -348,7 +348,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         }
 
     }
-    private void SpawnPlayer()
+    private void SpawnPlayer(int stepsAvailable)
     {
         if (player == null)
         {
@@ -384,6 +384,8 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
         GameObject spawnedPlayer = Instantiate(player, spawnPosition, Quaternion.identity);
         spawnedPlayer.name = "Player";
+
+        spawnedPlayer.GetComponent<TileAStar>().stepsAvailable = stepsAvailable;
 
         Debug.Log($"Jugador spawneado en {chosenPos}");
 
