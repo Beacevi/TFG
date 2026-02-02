@@ -22,6 +22,7 @@ TagManager:
   - HighlightTileMap
   - MapGenerator
   - MainTileMap
+  - SceneChanger
   layers:
   - Default
   - TransparentFX
