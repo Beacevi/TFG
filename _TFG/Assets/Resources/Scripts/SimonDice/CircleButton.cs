@@ -10,6 +10,9 @@ public class CircleButton : MonoBehaviour, IPointerClickHandler
     private Color originalColor;
     public Color colorSimon;
 
+    [Header("VFX")]
+    public ParticleSystem flashParticles;
+
     void Awake()
     {
         image = GetComponent<Image>();
@@ -32,6 +35,13 @@ public class CircleButton : MonoBehaviour, IPointerClickHandler
         flashColor.a = 1f;
 
         image.color = flashColor;
+
+        if (flashParticles != null)
+        {
+            Debug.Log("Playing particles!");
+            flashParticles.Play();
+        }
+
         yield return new WaitForSeconds(duration);
         image.color = originalColor;
     }
