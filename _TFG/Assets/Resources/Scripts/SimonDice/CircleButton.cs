@@ -36,11 +36,12 @@ public class CircleButton : MonoBehaviour, IPointerClickHandler
 
         image.color = flashColor;
 
-        if (flashParticles != null)
+        /*if (flashParticles != null)
         {
             Debug.Log("Playing particles!");
             flashParticles.Play();
         }
+        */
 
         yield return new WaitForSeconds(duration);
         image.color = originalColor;
