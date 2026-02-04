@@ -373,6 +373,7 @@ public class GoogleFirebaseLogin : MonoBehaviour
     {
         SaveUserDataKPIs();
         SaveUserData();
+        deleteDataFromMemory();
     }
 
     void OnApplicationPause(bool pause)
@@ -381,8 +382,19 @@ public class GoogleFirebaseLogin : MonoBehaviour
         {
             SaveUserDataKPIs();
             SaveUserData();
+            deleteDataFromMemory();
         }
             
+    }
+
+    public void deleteDataFromMemory()
+    {
+        KPIsManager.Instance.contadorSesiones = 0;
+        KPIsManager.Instance.fechaActual = null;
+        KPIsManager.Instance.MinijuegoTimer = 0;
+        KPIsManager.Instance.SesionTimer = 0;
+        KPIsManager.Instance.tiempoJuego = 0;
+        coinsActuales = 0;
     }
 
 }
