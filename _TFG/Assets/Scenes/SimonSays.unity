@@ -6037,7 +6037,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 64873a23000f357488c8d30836aaa098, type: 3}
   contadorText: {fileID: 948669224}
   flashDuration: 1
-  timeBetweenFlashes: 0.4
+  timeBetweenFlashes: 1
   startButton: {fileID: 2045130779}
   failColor: {r: 1, g: 0.5415094, b: 0.5415094, a: 1}
   failFlashes: 3

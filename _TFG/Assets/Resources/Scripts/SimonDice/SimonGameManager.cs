@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class SimonGameManager : MonoBehaviour
 {
@@ -14,8 +15,8 @@ public class SimonGameManager : MonoBehaviour
     private AudioSource audioSource;
     public TextMeshProUGUI contadorText;
 
-    public float flashDuration = 0.4f;
-    public float timeBetweenFlashes = 0.3f;
+    public float flashDuration = 1f;
+    public float timeBetweenFlashes = 1f;
 
     private List<int> pattern = new List<int>();
     private List<int> playerInput = new List<int>();
@@ -72,6 +73,13 @@ public class SimonGameManager : MonoBehaviour
             //Debug.Log($"Nivel {level}");
             contadorText.enabled = true;
             contadorText.text = $"Level {level}";
+
+            flashDuration = Mathf.Max(0.05f, flashDuration - 0.08f); // Aumenta la dificultad reduciendo el tiempo de flash
+            timeBetweenFlashes = Mathf.Max(0.05f, timeBetweenFlashes - 0.06f); // Aumenta la dificultad reduciendo el tiempo entre flashes
+                
+            //flashDuration = Mathf.Clamp(flashDuration, 0.05f, 1f);
+            //timeBetweenFlashes = Mathf.Clamp(timeBetweenFlashes, 0.05f, 1f);
+            
         }
         else
         {
