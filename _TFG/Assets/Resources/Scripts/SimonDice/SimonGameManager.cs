@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class SimonGameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SimonGameManager : MonoBehaviour
     public LevelIndicator levelIndicator;
     public AudioClip[] circleSounds;
     private AudioSource audioSource;
+    public TextMeshProUGUI contadorText;
 
     public float flashDuration = 0.4f;
     public float timeBetweenFlashes = 0.3f;
@@ -24,7 +26,6 @@ public class SimonGameManager : MonoBehaviour
     private bool hasFailedCurrentLevel = false;
     private bool gameStarted = false;
     public Button startButton;
-    
     private int level = 0;
 
     public Color failColor = Color.red; // Color del flash de fallo
@@ -51,7 +52,7 @@ public class SimonGameManager : MonoBehaviour
 
         if (startButton != null)
         {
-            startButton.gameObject.SetActive(true);
+            startButton.gameObject.SetActive(true);       
         }
 
     }
@@ -59,8 +60,7 @@ public class SimonGameManager : MonoBehaviour
     IEnumerator StartNewRound()
     {
         isPlayerTurn = false;
-        playerInput.Clear();
-
+        playerInput.Clear();  
         yield return new WaitForSeconds(1f);
 
         // Solo añadir nuevo paso si no hubo fallo
@@ -69,7 +69,9 @@ public class SimonGameManager : MonoBehaviour
             int newIndex = Random.Range(0, circles.Length);
             pattern.Add(newIndex);
             level++;
-            Debug.Log($"Nivel {level}");
+            //Debug.Log($"Nivel {level}");
+            contadorText.enabled = true;
+            contadorText.text = $"Level {level}";
         }
         else
         {
@@ -77,6 +79,7 @@ public class SimonGameManager : MonoBehaviour
             hasFailed = false;
         }
 
+        
         // Mostrar el patrón
         yield return StartCoroutine(PlayPattern());
 
@@ -210,7 +213,7 @@ public class SimonGameManager : MonoBehaviour
         {
             startButton.gameObject.SetActive(false);
         }
-
+  
         StartCoroutine(StartNewRound());
     }
 
