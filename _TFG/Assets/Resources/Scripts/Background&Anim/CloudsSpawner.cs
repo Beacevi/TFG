@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class CloudsSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _cloudsPrefab;    //> Prefab que vamos a spawnear
-    [SerializeField] private float      _timepNextSpawns = .5f;
+    [SerializeField] private GameObject _coinPrefab;
+    [SerializeField] private int _coinChance = 10; // 1 in 10
+
+
+    [Header("Cloud Prefab")]
+    [SerializeField] private GameObject _cloudsPrefab;
+
+    [Header("Spawn Rate (Random Range)")]
+    [SerializeField] private float _spawnRateMin = 0.5f;
+    [SerializeField] private float _spawnRateMax = 1.5f;
 
     [Header("Area of the Spawn")]
     [SerializeField] private float xMin = -4f;
@@ -19,35 +27,57 @@ public class CloudsSpawner : MonoBehaviour
     [SerializeField] private float _scaleMin = 0.8f;
     [SerializeField] private float _scaleMax = 1.2f;
 
-    [Header("Amount of Objets for Spawn")]
-    [SerializeField] public int _minObjets = 1;   //> Mínimo a spawnear 
-    [SerializeField] public int _maxObjets = 2;   //> Máximo a spawnear
+    [Header("Amount of Objects per Spawn")]
+    [SerializeField] private int _minObjets = 1;
+    [SerializeField] private int _maxObjets = 2;
 
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnObjeto), 0f, _timepNextSpawns); //> Repetir spawn cada cierto tiempo
+        StartCoroutine(SpawnLoop());
+    }
+
+    private System.Collections.IEnumerator SpawnLoop()
+    {
+        while (true)
+        {
+            SpawnObjeto();
+
+            float nextSpawn = Random.Range(_spawnRateMin, _spawnRateMax);
+            yield return new WaitForSeconds(nextSpawn);
+        }
     }
 
     private void SpawnObjeto()
     {
-        int _amount = Random.Range(_minObjets, _maxObjets);
+        int _amount = Random.Range(_minObjets, _maxObjets + 1);
 
         for (int i = 0; i < _amount; i++)
         {
             Vector3 _spawnPoint = new Vector3(
-            Random.Range(xMin, xMax),           //> Posición X
-            Random.Range(yMin, yMax),           //> Posición Y
-            Random.Range(zMin, zMax)            //> Posición Z
+                Random.Range(xMin, xMax),
+                Random.Range(yMin, yMax),
+                Random.Range(zMin, zMax)
             );
 
-            /// Instancia el objeto
-            GameObject _newObject = Instantiate(_cloudsPrefab, _spawnPoint, Quaternion.identity);
+            //GameObject _newObject = Instantiate(_cloudsPrefab, _spawnPoint, Quaternion.identity);
 
-            /// Escala aleatoria (igual en X e Y para no deformar el objeto)
+            GameObject prefabToSpawn;
+
+            // 1 out of every _coinChance spawns becomes a coin
+            if (Random.Range(1, _coinChance + 1) == 1)
+            {
+                prefabToSpawn = _coinPrefab;
+            }
+            else
+            {
+                prefabToSpawn = _cloudsPrefab;
+            }
+
+            GameObject _newObject = Instantiate(prefabToSpawn, _spawnPoint, Quaternion.identity);
+
+
             float _scale = Random.Range(_scaleMin, _scaleMax);
             _newObject.transform.localScale = new Vector3(_scale, _scale, 1f);
         }
-            
     }
 }
-
