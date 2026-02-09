@@ -64,6 +64,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Resources\Scripts\CSVReader\GoogleSheetsForUnity.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\PlayButton.cs" />
+    <Compile Include="Assets\Resources\Scripts\RealTimeDayNightGradient.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Resources\Scripts\KPIs\KPIsManager.cs" />
