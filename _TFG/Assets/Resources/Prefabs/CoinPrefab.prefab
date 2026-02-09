@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4870071093075171456}
   - component: {fileID: 6355607513167108392}
+  - component: {fileID: 5290315342147471834}
   - component: {fileID: -4044301828758079302}
+  - component: {fileID: 2824664493354129890}
   m_Layer: 0
   m_Name: CoinPrefab
   m_TagString: Untagged
@@ -88,6 +90,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &5290315342147471834
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899624229605756167}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.66238326
 --- !u!114 &-4044301828758079302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,5 +139,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: {x: 1, y: 1}
-  _speedMin: 3
+  _speedMin: 0.5
   _speedMax: 5
+--- !u!114 &2824664493354129890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899624229605756167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515e27b59c2cd442889d0f478680813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
