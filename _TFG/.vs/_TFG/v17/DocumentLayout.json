@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\effects\\clima\\wheater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\effects\\clima\\wheater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,6 +17,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\background\u0026anim\\cloudsspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,6 +86,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Wheater.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Effects\\Clima\\Wheater.cs",
+              "RelativeDocumentMoniker": "Assets\\Effects\\Clima\\Wheater.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Effects\\Clima\\Wheater.cs",
+              "RelativeToolTip": "Assets\\Effects\\Clima\\Wheater.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T16:17:25.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CloudsMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:47:58.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+=======
           "SelectedChildIndex": 9,
           "Children": [
             {
@@ -112,6 +153,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "CloudsSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsSpawner.cs",
@@ -124,7 +166,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 3,
+=======
               "DocumentIndex": 5,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "Light2DPulse.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Effects Scripts\\Light2DPulse.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Effects Scripts\\Light2DPulse.cs",
@@ -136,7 +182,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 5,
+=======
               "DocumentIndex": 7,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "CircleButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\CircleButton.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\CircleButton.cs",
@@ -148,7 +198,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 4,
+=======
               "DocumentIndex": 6,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "SimonGameManager.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
@@ -160,7 +214,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 7,
+=======
               "DocumentIndex": 9,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "IsometricCamera.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
@@ -172,7 +230,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 8,
+=======
               "DocumentIndex": 10,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "ChangeScene.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\ChangeScene.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ChangeScene.cs",
@@ -184,7 +246,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 9,
+=======
               "DocumentIndex": 11,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "TileAStar.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
@@ -196,6 +262,9 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 10,
+=======
               "DocumentIndex": 0,
               "Title": "CustomMenu.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
@@ -226,6 +295,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "PCGtiles_IsometricPerlin.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
@@ -237,7 +307,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 11,
+=======
               "DocumentIndex": 13,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "RewardsMenu.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
@@ -261,7 +335,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 13,
+=======
               "DocumentIndex": 14,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "ButtonFunctions.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ButtonFunctions.cs",
@@ -273,7 +351,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 6,
+=======
               "DocumentIndex": 8,
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "Title": "HamburguerButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
@@ -285,6 +367,33 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 14,
+              "Title": "CustomMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAmwAgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:32:07.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ShopMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowGEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:31:57.558Z"
+            },
+            {
+              "$type": "Document",
+=======
+>>>>>>> ced003a673d58ff2e0f7719d2b0a3f8ce959a4f6
               "DocumentIndex": 17,
               "Title": "LoginWithGoogle.cs",
               "DocumentMoniker": "C:\\Users\\anfur\\AppData\\Local\\Temp\\fd9f454b-ce86-437e-b8f2-0074d6543a0e_LoginWithGoogle.rar.LoginWithGoogle.rar\\LoginWithGoogle.cs",
