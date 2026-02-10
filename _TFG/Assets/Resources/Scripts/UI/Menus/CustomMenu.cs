@@ -42,17 +42,19 @@ public class CustomMenu : MonoBehaviour
         _actualColorBottom  = _BottomPart.GetComponent<SpriteRenderer>().color;
         _actualColorSupport = _SupportPart.GetComponent<SpriteRenderer>().color;
     }
-    public void OpenCustomMenu()
+    public void OpenCustomMenu(UnityEngine.UI.Button button)
     {
         _CustomPanel.SetActive(true);
         _balloonAnimator.SetTrigger("EditingTrigger");
 
+        _animator.SetTrigger("OpenTrigger");
+        StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
+
         _buttonFunctions.OpenMenu();
     }
 
-    public void CloseCustomMenu()
+    public void CloseCustomMenu(UnityEngine.UI.Button button)
     {
-        _CustomPanel.SetActive(false);
 
         if(!check)
         {
@@ -65,6 +67,9 @@ public class CustomMenu : MonoBehaviour
         }
 
         _balloonAnimator.SetTrigger("NotEditingTrigger");
+
+        _animator.SetTrigger("CloseTrigger");
+        StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _CustomPanel));
 
         _buttonFunctions.CloseMenu();
     }

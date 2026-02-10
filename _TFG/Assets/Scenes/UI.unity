@@ -2863,7 +2863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be3fc7faf58f1d4289609dd47c3e8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
+  _animator: {fileID: 87084553}
   _balloonAnimator: {fileID: 1312963381}
   _TopPart: {fileID: 1276258651}
   _MiddlePart: {fileID: 324415606}
@@ -20960,10 +20960,10 @@ MonoBehaviour:
       - m_Target: {fileID: 137319704}
         m_TargetAssemblyTypeName: CustomMenu, Assembly-CSharp
         m_MethodName: OpenCustomMenu
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 910420018}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23756,10 +23756,10 @@ MonoBehaviour:
       - m_Target: {fileID: 137319704}
         m_TargetAssemblyTypeName: CustomMenu, Assembly-CSharp
         m_MethodName: CloseCustomMenu
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1030682418}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
