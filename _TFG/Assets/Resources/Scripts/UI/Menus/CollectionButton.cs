@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class CollectionButton : MonoBehaviour
 {
+    [Header("Animators")]
+    [SerializeField] private Animator _animator;
+
     [Header("Scripts")]
     private ButtonFunctions  _buttonFunctions;
 
@@ -27,16 +30,25 @@ public class CollectionButton : MonoBehaviour
         _InfoCollection.SetActive(false);
     }
 
-    public void OpenCollectionMenu()
+    public void OpenCollectionMenu(Button button)
     {
         _CollectionPanel.SetActive(true);
+
+        _animator.SetTrigger("OpenTrigger");
+        StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
 
         _buttonFunctions.OpenMenu();
     }
 
-    public void CloseCollectionMenu()
+    public void CloseCollectionMenu(Button button)
     {
-        _CollectionPanel.SetActive(false);
+        _animator.SetTrigger("CloseTrigger");
+        StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _CollectionPanel));
+
+        Close();
+    }
+    private void Close()
+    {
 
         _buttonFunctions.CloseMenu();
     }
