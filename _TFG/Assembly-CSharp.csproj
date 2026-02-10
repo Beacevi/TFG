@@ -70,7 +70,6 @@
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\Light2DPulse.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\CustomMenu.cs" />
     <Compile Include="Assets\GoogleSignIn\Impl\BaseObject.cs" />
-    <Compile Include="Assets\Effects\Clima\Wheater.cs" />
     <Compile Include="Assets\Resources\Scripts\Procedural Terrain\PCGtiles_IsometricPerlin.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Gems.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -147,6 +146,7 @@
     <Compile Include="Assets\GoogleSignIn\Impl\SignInHelperObject.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Effects\Clima\Weather.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\System.Management.7.0.2\useSharedDesignerContext.txt" />
