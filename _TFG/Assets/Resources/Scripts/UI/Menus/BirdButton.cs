@@ -84,7 +84,12 @@ public class BirdButton : MonoBehaviour
         _balloonAnimator.SetTrigger("NotEditingTrigger");
         _birdAnimator   .SetTrigger("NotEditingTrigger");
 
-       
+        if(!isOpen)
+        {
+            _animator.SetTrigger("Close");
+            StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _BirdPanel));
+        }
+        
 
         _buttonFunctions.CloseMenu();
     }
@@ -104,6 +109,8 @@ public class BirdButton : MonoBehaviour
                 _animator.SetTrigger("Close");
                 StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _BirdPanel));
             }
+
+            return;
         }
         else
         {
@@ -113,6 +120,8 @@ public class BirdButton : MonoBehaviour
             _closedIcon.SetActive(true);
             _openedIcon.SetActive(false);
             isOpen = true;
+
+            
         }
 
     }
