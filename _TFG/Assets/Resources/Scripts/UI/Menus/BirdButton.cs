@@ -47,6 +47,7 @@ public class BirdButton : MonoBehaviour
     private Image _panelBird2;
     private Image _panelBird3;
 
+    Button button;
 
     private void Start()
     {
@@ -64,27 +65,30 @@ public class BirdButton : MonoBehaviour
         _BoostImage.SetActive(false);
         _Deletebirdbutton.gameObject.SetActive(false);
     }
-    public void OpenBirdMenu()
+    public void OpenBirdMenu(Button button)
     {
         _BirdPanel.SetActive(true);
 
         _balloonAnimator.SetTrigger("EditingTrigger");
         _birdAnimator   .SetTrigger("EditingTrigger");
 
+        _animator.SetTrigger("Open");
+        StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
+
         _buttonFunctions.OpenMenu();
     }
-    public void CloseBirdMenu()
+    public void CloseBirdMenu(Button button)
     {
-        _BirdPanel.SetActive(false);
-
-        if(isOpen) BirdMenu();
+        if(isOpen) BirdMenu(true);
 
         _balloonAnimator.SetTrigger("NotEditingTrigger");
         _birdAnimator   .SetTrigger("NotEditingTrigger");
 
+       
+
         _buttonFunctions.CloseMenu();
     }
-    public void BirdMenu()
+    public void BirdMenu(bool close)
     {
         if (isOpen)
         {
@@ -94,6 +98,12 @@ public class BirdButton : MonoBehaviour
             _openedIcon.SetActive(true);
             _closedIcon.SetActive(false);
             isOpen = false;
+
+            if(close)
+            {
+                _animator.SetTrigger("Close");
+                StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _BirdPanel));
+            }
         }
         else
         {
