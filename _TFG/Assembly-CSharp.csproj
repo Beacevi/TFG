@@ -100,6 +100,7 @@
     <Compile Include="Assets\Resources\Scripts\Procedural Terrain\TileAStar.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\SimonDice\CircleButton.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\DontDestroyBallon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\ShopMenu.cs" />
     <Compile Include="Assets\Resources\Scripts\CSVReader\CSVReader.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Assets\Resources\Scripts\SimonDice\LevelIndicator.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Hour.cs" />
     <Compile Include="Assets\GoogleSignIn\Impl\SignInHelperObject.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\DontDestroyBird.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Effects\Clima\Weather.cs" />
