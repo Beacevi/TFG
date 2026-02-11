@@ -174,7 +174,7 @@ MonoBehaviour:
     m_Right: 25
     m_Top: 0
     m_Bottom: 25
-  m_ChildAlignment: 7
+  m_ChildAlignment: 8
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 60, y: 432.1943}
@@ -13128,6 +13128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _OptionMenu: {fileID: 3524322}
+  _HamburguerMenu: {fileID: 1273359575}
 --- !u!1 &584109687
 GameObject:
   m_ObjectHideFlags: 0
@@ -20375,6 +20376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _OptionMenu: {fileID: 3524322}
+  _HamburguerMenu: {fileID: 0}
 --- !u!1 &880890858
 GameObject:
   m_ObjectHideFlags: 0

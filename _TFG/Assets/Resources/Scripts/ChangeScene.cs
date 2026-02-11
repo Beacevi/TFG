@@ -1,22 +1,20 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
-    //public static ChangeScene Instance;
- /*   private void Awake()
+  
+    public void Cambiar_A_Escena(string nombreEscena)
     {
-        if (Instance == null)
+        string escenaActual = SceneManager.GetActiveScene().name;
+
+        if (nombreEscena == escenaActual)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            SceneManager.LoadScene("UI");
         }
         else
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(nombreEscena);
         }
-    }*/
-    public void Cambiar_A_Escena(string nombreEscena)
-    {
-        SceneManager.LoadScene(nombreEscena);
     }
 }

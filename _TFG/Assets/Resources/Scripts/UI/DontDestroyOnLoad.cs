@@ -7,6 +7,7 @@ public class DontDestroyOnLoad : MonoBehaviour
     private static DontDestroyOnLoad _instance;
 
     [SerializeField] private GameObject _OptionMenu;
+    [SerializeField] private GameObject _HamburguerMenu;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -29,14 +30,8 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         bool isSimonSays = sceneName == "SimonSays";
         bool isTerrein   = sceneName == "ProceduralTerrain";
-        if (isSimonSays)
-        {
-            _OptionMenu?.SetActive(!isSimonSays);
-        }
-        else
-        {
-            _OptionMenu?.SetActive(!isTerrein);
-        }
+        _OptionMenu?.SetActive(!isSimonSays);
+        _HamburguerMenu?.SetActive(!isTerrein);
     }
 
     private void OnDestroy()
