@@ -28,7 +28,15 @@ public class DontDestroyOnLoad : MonoBehaviour
     private void ApplyMenuVisibility(string sceneName)
     {
         bool isSimonSays = sceneName == "SimonSays";
-        _OptionMenu?.SetActive(!isSimonSays);
+        bool isTerrein   = sceneName == "ProceduralTerrain";
+        if (isSimonSays)
+        {
+            _OptionMenu?.SetActive(!isSimonSays);
+        }
+        else
+        {
+            _OptionMenu?.SetActive(!isTerrein);
+        }
     }
 
     private void OnDestroy()
