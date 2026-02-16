@@ -132,6 +132,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\Menus\HamburguerButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\ScenePersistentManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Procedural Terrain\TileClickDetector.cs" />
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\RealTimeLightController.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\BirdButton.cs" />
