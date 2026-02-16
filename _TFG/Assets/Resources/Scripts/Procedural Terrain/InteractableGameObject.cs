@@ -9,8 +9,9 @@ public class InteractableGameObject : MonoBehaviour
         Debug.Log("You interacted with me!");
 
         //LOGICA PARA LA INTERACCION CON LOS OBJETOS
-        //GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<ChangeScene>().Cambiar_A_Escena("SimonSays");
-        SceneManager.LoadScene("SimonSays", LoadSceneMode.Additive);
+        GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<ChangeScene>().LoadSceneAdditive("SimonSays");
+        //SceneManager.LoadSceneAdditive("SimonSays", LoadSceneMode.Additive);
+
         StopInteraction(script);
     }
 
