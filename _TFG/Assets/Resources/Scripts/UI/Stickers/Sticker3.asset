@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stickerName: 3
   sprite: {fileID: 21300006, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
-  amount: 16
+  unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
+  amount: 0
   discovered: 0

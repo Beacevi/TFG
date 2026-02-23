@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class StickerPlacer : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class StickerPlacer : MonoBehaviour
 
     private StickerData selectedSticker;
     private List<StickerButtonUI> buttonUIs = new List<StickerButtonUI>();
+
+    [Header("Delete Mode")]
+    public bool deleteMode = false;
 
     void Start()
     {
@@ -63,6 +67,9 @@ public class StickerPlacer : MonoBehaviour
 
     void Update()
     {
+        /*if (EventSystem.current.IsPointerOverGameObject())
+            return;*/
+        
         if (selectedSticker == null)
             return;
 
@@ -87,9 +94,10 @@ public class StickerPlacer : MonoBehaviour
 
             PlaceSticker(localPoint);
         }
+
     }
 
-    void PlaceSticker(Vector2 position)
+    /*void PlaceSticker(Vector2 position)
     {
         GameObject obj = Instantiate(placedStickerPrefab, blackboard);
         obj.GetComponent<Image>().sprite = selectedSticker.sprite;
@@ -102,5 +110,57 @@ public class StickerPlacer : MonoBehaviour
         // Re-enable buttons
         foreach (var btn in buttonUIs)
             btn.UpdateState();
+    }*/
+
+    void PlaceSticker(Vector2 position)
+    {
+        GameObject obj = Instantiate(placedStickerPrefab, blackboard);
+
+        RectTransform rect = obj.GetComponent<RectTransform>();
+        rect.anchoredPosition = position;
+
+        PlacedStickerUI placed = obj.GetComponent<PlacedStickerUI>();
+        placed.Setup(selectedSticker, this);
+
+        selectedSticker.UseOne();
+
+        selectedSticker = null;
+
+        foreach (var btn in buttonUIs)
+            btn.UpdateState();
+    }
+
+    public void ToggleDeleteMode()
+    {
+        deleteMode = !deleteMode;
+
+        // Cancel placement if entering delete mode
+        if (deleteMode)
+            selectedSticker = null;
+
+        Debug.Log("Delete Mode: " + deleteMode);
+    }
+
+    public bool IsDeleteMode()
+    {
+        return deleteMode;
+    }
+
+    public void DeleteSticker(PlacedStickerUI sticker)
+    {
+        StickerData data = sticker.GetData();
+
+        // Return sticker to inventory
+        data.AddAmount(1);
+
+        Destroy(sticker.gameObject);
+
+        foreach (var btn in buttonUIs)
+            btn.UpdateState();
+    }
+
+    public void ExitDeleteMode()
+    {
+        deleteMode = false;
     }
 }

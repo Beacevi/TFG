@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\stickers\\stickerplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\stickers\\stickerplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\stickers\\stickerbuttonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\stickers\\stickerbuttonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\stickers\\stickerbuttonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\stickers\\stickerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\stickers\\stickerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\stickers\\stickerplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\stickers\\stickerplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\stickers\\placedstickerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\stickers\\placedstickerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\collectionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,50 +58,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "PlacedStickerUI.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\PlacedStickerUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\PlacedStickerUI.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\PlacedStickerUI.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Stickers\\PlacedStickerUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T19:31:36.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "StickerPlacer.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerPlacer.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerPlacer.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerPlacer.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerPlacer.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAuwD0AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAADwv6QAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T17:58:22.706Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "StickerButtonUI.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerButtonUI.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerButtonUI.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerButtonUI.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerButtonUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwC4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T17:57:41.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "StickerData.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerData.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerData.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerData.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T17:55:06.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CollectionButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CollectionButton.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CollectionButton.cs",
@@ -108,12 +129,8 @@
               "WhenOpened": "2026-02-23T17:38:17.498Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ChangeScene.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\ChangeScene.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ChangeScene.cs",
@@ -125,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TileAStar.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
@@ -137,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "InteractableGameObject.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
@@ -149,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ScenePersistentManager.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
@@ -161,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TileClickDetector.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
@@ -173,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CustomMenu.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
@@ -185,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "BirdButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\BirdButton.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\BirdButton.cs",

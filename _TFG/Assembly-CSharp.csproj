@@ -79,6 +79,7 @@
     <Compile Include="Assets\GoogleSignIn\GoogleSignInStatusCode.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignInUser.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignInConfiguration.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Stickers\PlacedStickerUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\RealTimeLight.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\DontDestroyBird.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Stickers\UIFollowWorldObject.cs" />
     <Compile Include="Assets\Effects\Clima\Weather.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerButtonUI.cs" />
   </ItemGroup>

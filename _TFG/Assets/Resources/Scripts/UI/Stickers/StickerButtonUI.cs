@@ -16,7 +16,8 @@ public class StickerButtonUI : MonoBehaviour
         stickerData = data;
         placer = stickerPlacer;
 
-        icon.sprite = data.sprite;
+        /*icon.sprite = data.sprite;*/
+        icon.sprite = data.GetDisplaySprite();
         amountText.text = data.amount.ToString();
 
         button.onClick.AddListener(OnClicked);
@@ -38,7 +39,11 @@ public class StickerButtonUI : MonoBehaviour
 
     public void UpdateState()
     {
+        icon.sprite = stickerData.GetDisplaySprite();
         amountText.text = stickerData.amount.ToString();
+
         button.interactable = stickerData.CanUse();
+
+        icon.color = stickerData.discovered ? Color.white : Color.black;
     }
 }
