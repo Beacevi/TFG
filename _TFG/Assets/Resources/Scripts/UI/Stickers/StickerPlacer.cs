@@ -19,6 +19,9 @@ public class StickerPlacer : MonoBehaviour
     [Header("Delete Mode")]
     public bool deleteMode = false;
 
+    [Header("Delete Mode UI")]
+    public GameObject deleteModeIndicator;
+
     void Start()
     {
         GenerateGrid();
@@ -138,6 +141,8 @@ public class StickerPlacer : MonoBehaviour
         if (deleteMode)
             selectedSticker = null;
 
+        UpdateDeleteModeUI();
+
         Debug.Log("Delete Mode: " + deleteMode);
     }
 
@@ -162,5 +167,11 @@ public class StickerPlacer : MonoBehaviour
     public void ExitDeleteMode()
     {
         deleteMode = false;
+    }
+
+    void UpdateDeleteModeUI()
+    {
+        if (deleteModeIndicator != null)
+            deleteModeIndicator.SetActive(deleteMode);
     }
 }
