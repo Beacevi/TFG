@@ -95,14 +95,12 @@
     <Compile Include="Assets\Resources\Scripts\UI\Coins.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\ButtonFunctions.cs" />
     <Compile Include="Assets\Resources\Scripts\SimonDice\SimonGameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Procedural Terrain\TileAStar.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\SimonDice\CircleButton.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\DontDestroyBallon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\ShopMenu.cs" />
     <Compile Include="Assets\Resources\Scripts\CSVReader\CSVReader.cs" />
@@ -137,6 +135,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\ScenePersistentManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Procedural Terrain\TileClickDetector.cs" />
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\RealTimeLightController.cs" />
+    <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\BirdButton.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerPlacer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -149,7 +148,6 @@
     <Compile Include="Assets\Resources\Scripts\SimonDice\LevelIndicator.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Hour.cs" />
     <Compile Include="Assets\GoogleSignIn\Impl\SignInHelperObject.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\DontDestroyBird.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Stickers\UIFollowWorldObject.cs" />
@@ -761,12 +759,28 @@
       <HintPath>Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Apple.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.Apple.Extensions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Gradle">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

@@ -13,10 +13,12 @@ public class Coins : MonoBehaviour
 
     private const int _maxCoins = 1000;
     private const int _minCoins = 0;
-    
+
+    [SerializeField] private GameManager _gameManager;
+
     void Start()
     {
-        _actualCoins = GameManager.Instance.coins;
+        _actualCoins = _gameManager.GetMoney();
 
         ActualiceCoinsUI();
     }
@@ -29,9 +31,6 @@ public class Coins : MonoBehaviour
 
     private void ActualiceCoinsUI()
     {
-        GameManager.Instance.coins = _actualCoins;
-        GameManager.Instance.SaveGame();
-
         _textActualCoins.text  = _actualCoins.ToString();
     }
 }

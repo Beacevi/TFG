@@ -103,17 +103,33 @@ public class RewardsMenu : MonoBehaviour
 
     public void DailyStampClick(GameObject child)
     {
+        Debug.Log("Hola");
         Image image = child.GetComponent<Image>();
 
-        if (child.GetComponent<Image>().color != new Color32(255, 255, 255, 255))
+
+        if (image == null)
         {
-            child.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            Debug.Log("El objeto no tiene Image");
+            return;
+        }
+
+       
+
+        if (child.GetComponent<Image>().color != Color.white)
+        {
+            child.GetComponent<Image>().color = Color.white;
         }
         else
         {
-            Transform grandchildTransform = child.transform.GetChild(0);
-
-            grandchildTransform.gameObject.SetActive(true);
+            if (child.transform.childCount > 0)
+            {
+                Transform grandchildTransform = child.transform.GetChild(0);
+                grandchildTransform.gameObject.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("No hay hijo en índice 0");
+            }
         }
                     
     }

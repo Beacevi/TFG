@@ -28,10 +28,12 @@ public class Energy : MonoBehaviour
     [Header("Texts")]
     [SerializeField] private TextMeshProUGUI _textActualEnergy;        //> Se actualiza el texto de Energy de la UI
     //[SerializeField] private TextMeshProUGUI _textTimerEnergy;         //> Timer del tiempo que queda para que se actualice la siguiente energia
-    
+
+
+
     void Start()
     {
-        _actualEnergy = GameManager.Instance.energy;  //> Puesto a modificaciones, por ello es publica.
+        _actualEnergy = GameManager.Instance.GetEnergy();  //> Puesto a modificaciones, por ello es publica.
 
         slider.maxValue = _maxEnergy;
         slider.minValue = _minEnergy;
@@ -81,7 +83,7 @@ public class Energy : MonoBehaviour
     /// Actualiza en la UI  la energía que posee el usuario.
     private void ActualiceEnergyUI()
     {
-        GameManager.Instance.energy = _actualEnergy;
+        GameManager.Instance.SetEnergy(_actualEnergy);
         GameManager.Instance.SaveGame();
 
         _textActualEnergy.text = _actualEnergy.ToString();
