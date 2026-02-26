@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenePersistentManager : MonoBehaviour
 {
-    private static ScenePersistentManager _instance;
+    public static ScenePersistentManager instance;
 
     [Header("UI")]
     [SerializeField] private GameObject optionMenu;
@@ -12,16 +12,18 @@ public class ScenePersistentManager : MonoBehaviour
     [Header("World Objects")]
     [SerializeField] private GameObject bird;
     [SerializeField] private GameObject balloon;
+    public Bird interactedBird;
+
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        _instance = this;
+        instance = this;
         DontDestroyOnLoad(gameObject);
 
         SceneManager.sceneLoaded += OnSceneLoaded;

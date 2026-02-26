@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class CircleButton : MonoBehaviour, IPointerClickHandler
 {
@@ -18,12 +19,34 @@ public class CircleButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (SimonGameManager.Instance == null) return;
-        if (!SimonGameManager.Instance.CanPlayerPress()) return;
+        Scene simonScene = SceneManager.GetSceneByName("SimonSays");
+        Scene simonScene2 = SceneManager.GetSceneByName("SimonSaysPajaro");
 
-        SimonGameManager.Instance.OnCirclePressed(index);
+        if (simonScene.isLoaded)
+        {
+            if (SimonGameManager.Instance == null) return;
+            if (!SimonGameManager.Instance.CanPlayerPress()) return;
 
-        StartCoroutine(Flash(0.2f));
+            SimonGameManager.Instance.OnCirclePressed(index);
+
+            StartCoroutine(Flash(0.2f));
+
+            Debug.Log("SimonSays está cargada");
+        }
+
+        if (simonScene2.isLoaded)
+        {
+            if (SimonGameManagerPajaro.Instance == null) return;
+            if (!SimonGameManagerPajaro.Instance.CanPlayerPress()) return;
+
+            SimonGameManagerPajaro.Instance.OnCirclePressed(index);
+
+            StartCoroutine(Flash(0.2f));
+
+            Debug.Log("SimonSaysPajaro está cargada");
+        }
+
+
     }
 
     public IEnumerator Flash(float duration)

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SimonSays.unity
     guid: 1176a4eb3d5f32844a88212af33da295
   - enabled: 1
+    path: Assets/Scenes/SimonSaysPajaro.unity
+    guid: 9d86c3b85d7c86840aa14dc224f33611
+  - enabled: 1
     path: Assets/Scenes/ProceduralTerrain.unity
     guid: 7f1e10b6e45e73547abf61f79787f38b
   - enabled: 1

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class TileAStar : MonoBehaviour
@@ -30,6 +32,10 @@ public class TileAStar : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetSceneByName("SimonSaysPajaro").isLoaded)
+            return;
+
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 w = Camera.main.ScreenToWorldPoint(Input.mousePosition);

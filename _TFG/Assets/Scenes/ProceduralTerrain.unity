@@ -827,6 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actualCoins: 200
   _textActualCoins: {fileID: 244586920}
+  _gameManager: {fileID: 0}
 --- !u!114 &158557331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4300,10 +4301,10 @@ MonoBehaviour:
   coastRoughness: 0.2
   smoothingIterations: 2
   interactableGameObjects:
-  - {fileID: 926288913471853959, guid: 8198ab1b178ef2a408fac1b7ea419a87, type: 3}
-  - {fileID: 4595146617996938225, guid: 48bf3801890eb814793525cfe21b5402, type: 3}
-  - {fileID: 8457740664911959370, guid: f969d3a2d9a91d444ba1c268bd91788c, type: 3}
-  - {fileID: 5805991993125803581, guid: 8dc499cf6d2d9344d8348cd5d3cc5408, type: 3}
+  - {fileID: 11400000, guid: 2bfde60fb73fe934a8b6c3b0df3a4338, type: 2}
+  - {fileID: 11400000, guid: 5b3528046ac979c4aaf025f34a751087, type: 2}
+  - {fileID: 11400000, guid: 08486eb01c80ef9439115f6dfa513c98, type: 2}
+  - {fileID: 11400000, guid: fceebf9c9348fbb4eb691d9cc993b0b7, type: 2}
   interactableGameObjectsCount: 30
   grassObjects:
   - {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
@@ -7169,7 +7170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1580634802
 MonoBehaviour:
   m_ObjectHideFlags: 0

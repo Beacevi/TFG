@@ -40,7 +40,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
     [Header("Interactable Objects")]
     //[SerializeField] LayerMask interactableGameObjectsLayerMask;
-    [SerializeField] GameObject[] interactableGameObjects;
+    [SerializeField] Bird[] interactableGameObjects;
     [SerializeField] int interactableGameObjectsCount = 10;
     //[Range(0f, 1f)]
     //[SerializeField] float spawnChance = 0.1f;
@@ -252,13 +252,23 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
             if (currentTile == null)
                 continue;
 
-            GameObject prefab = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
+            //GameObject prefab = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
+            Bird birdSpawned = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
+            if (birdSpawned.birdPrefab == null)
+            {
+                Debug.LogWarning($"El prefab del bird {birdSpawned.name} no está asignado");
+                continue;
+            }
 
+            //Vector3 worldPos = tilemap.CellToWorld(cell);
             Vector3 worldPos = tilemap.CellToWorld(cell);
+            GameObject spawned = Instantiate(birdSpawned.birdPrefab, worldPos, Quaternion.identity, parent);
+            spawned.name = $"{birdSpawned.birdPrefab.name}_{pos.x}_{pos.y}";
+
             worldPos += new Vector3(0, 1.25f / 4, 0);
 
-            GameObject spawned = Instantiate(prefab, worldPos, Quaternion.identity, parent);
-            spawned.name = $"{prefab.name}_{pos.x}_{pos.y}";
+            //GameObject spawned = Instantiate(prefab, worldPos, Quaternion.identity, parent);
+            //spawned.name = $"{prefab.name}_{pos.x}_{pos.y}";
 
             int maxOrder = width + height;
             SpriteRenderer sr = spawned.GetComponent<SpriteRenderer>();
