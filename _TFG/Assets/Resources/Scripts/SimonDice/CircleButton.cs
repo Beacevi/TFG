@@ -19,33 +19,14 @@ public class CircleButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Scene simonScene = SceneManager.GetSceneByName("SimonSays");
-        Scene simonScene2 = SceneManager.GetSceneByName("SimonSaysPajaro");
+        if (SimonGameManager.Instance == null) return;
+        if (!SimonGameManager.Instance.CanPlayerPress()) return;
 
-        if (simonScene.isLoaded)
-        {
-            if (SimonGameManager.Instance == null) return;
-            if (!SimonGameManager.Instance.CanPlayerPress()) return;
+        SimonGameManager.Instance.OnCirclePressed(index);
 
-            SimonGameManager.Instance.OnCirclePressed(index);
+        StartCoroutine(Flash(0.2f));
 
-            StartCoroutine(Flash(0.2f));
-
-            Debug.Log("SimonSays está cargada");
-        }
-
-        if (simonScene2.isLoaded)
-        {
-            if (SimonGameManagerPajaro.Instance == null) return;
-            if (!SimonGameManagerPajaro.Instance.CanPlayerPress()) return;
-
-            SimonGameManagerPajaro.Instance.OnCirclePressed(index);
-
-            StartCoroutine(Flash(0.2f));
-
-            Debug.Log("SimonSaysPajaro está cargada");
-        }
-
+        Debug.Log("SimonSays está cargada");
 
     }
 

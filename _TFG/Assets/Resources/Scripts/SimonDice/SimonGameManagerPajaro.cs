@@ -9,7 +9,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
 {
     public static SimonGameManagerPajaro Instance { get; private set; }
 
-    public CircleButton[] circles;
+    public CircleButtonPajaro[] circles;
     public LevelIndicator levelIndicator;
     public AudioClip[] circleSounds;
     private AudioSource audioSource;
@@ -50,7 +50,12 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
     void Start()
     {
-        selectedBird = ScenePersistentManager.instance.interactedBird;
+        
+        if (ScenePersistentManager.instance.interactedBird != null)
+        {
+            selectedBird = ScenePersistentManager.instance.interactedBird;
+        }
+        
 
         isPlayerTurn = false;
         canPress = false;
@@ -201,7 +206,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
             
 
-            if (level >= selectedBird.rondasNecesarias)
+            if (level >= selectedBird.rondasNecesarias)//
             {
                 CompleteMiniGame();
                 yield break;

@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\circlebuttonpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\circlebuttonpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\scenepersistentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\scenepersistentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\tfg\\_tfg\\assets\\resources\\scriptableobjectsbirds\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scriptableobjectsbirds\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\simondice\\simongamemanagerpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\simongamemanagerpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\circlebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\circlebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\interactablegameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\scenepersistentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\scenepersistentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\assets\\resources\\scriptableobjectsbirds\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scriptableobjectsbirds\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +50,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CircleButtonPajaro.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwCgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:41:55.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SimonGameManagerPajaro.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAuwKoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T22:16:12.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CircleButton.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\CircleButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\CircleButton.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\CircleButton.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\CircleButton.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAcwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T22:52:20.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SimonGameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAUwMUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T19:47:25.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ScenePersistentManager.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
@@ -50,12 +114,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T22:10:10.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-26T22:10:10.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "PCGtiles_IsometricPerlin.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
@@ -63,63 +126,47 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
               "ViewState": "AgIAAAABAAAAAAAAAAAAAA4BAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T20:53:43.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-26T20:53:43.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TileAStar.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAwwEoAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAA9wCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T15:19:17.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-16T15:19:17.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "InteractableGameObject.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\InteractableGameObject.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAB6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T14:14:37.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-16T14:14:37.616Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Bird.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\ScriptableObjectsBirds\\Bird.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\ScriptableObjectsBirds\\Bird.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\ScriptableObjectsBirds\\Bird.cs",
               "RelativeToolTip": "Assets\\Resources\\ScriptableObjectsBirds\\Bird.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T20:50:29.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-26T20:50:29.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SimonGameManager.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T19:47:25.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",

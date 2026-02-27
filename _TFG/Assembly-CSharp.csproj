@@ -123,6 +123,7 @@
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CoinClick.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\Save\SaveManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Resources\Scripts\SimonDice\CircleButtonPajaro.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\BalloonManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\Save\SaveDataManager.cs" />
