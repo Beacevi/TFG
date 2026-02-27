@@ -24,7 +24,8 @@ public class TileAStar : MonoBehaviour
 
     private void Start()
     {
-        if(!tilemap)
+
+        if (!tilemap)
             tilemap = GameObject.FindGameObjectWithTag("MainTileMap").GetComponent<Tilemap>();
         if (!mapGenerator)
             mapGenerator = GameObject.FindGameObjectWithTag("MapGenerator").GetComponent<PCGtiles_IsometricPerlin>();
@@ -102,6 +103,24 @@ public class TileAStar : MonoBehaviour
                     path.Clear();
                 }
             }
+        }
+    }
+
+    // Llamar al terminar el minijuego para eliminar el pájaro del nodo actual
+    public void RemoveBirdAtLastNode()
+    {
+        if (lastPathNode == null) return;
+
+        if (lastPathNode.hasObject && lastPathNode.Interactable != null)
+        {
+            Destroy(lastPathNode.Interactable);   // destruye la instancia en escena
+            lastPathNode.Interactable = null;     // limpia la referencia
+            lastPathNode.hasObject = false;       // libera el nodo
+            Debug.Log("[TileAStar] Pájaro eliminado del nodo.");
+        }
+        else
+        {
+            Debug.Log("[TileAStar] No hay pájaro en lastPathNode.");
         }
     }
 

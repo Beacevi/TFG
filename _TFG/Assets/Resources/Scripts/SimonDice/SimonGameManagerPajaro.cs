@@ -50,7 +50,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
     void Start()
     {
-        
+
         if (ScenePersistentManager.instance.interactedBird != null)
         {
             selectedBird = ScenePersistentManager.instance.interactedBird;
@@ -247,8 +247,13 @@ public class SimonGameManagerPajaro : MonoBehaviour
         if (selectedBird != null)
         {
             selectedBird.obtenido = true;
+
+            selectedBird = null;
+            ScenePersistentManager.instance.interactedBird = null;
+
             Debug.Log("Pájaro marcado como conseguido");
         }
+        
 
         // Cerrar escena aditiva
         UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");

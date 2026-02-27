@@ -43,6 +43,13 @@ public class ScenePersistentManager : MonoBehaviour
         {
             RestoreAfterMiniGame();
         }
+
+        if (scene.name == "SimonSaysPajaro")
+        {
+           TileAStar tileAStar = GameObject.FindGameObjectWithTag("Player").GetComponent<TileAStar>();
+            tileAStar.RemoveBirdAtLastNode();
+        }
+
     }
 
     private void ApplyVisibility(string sceneName)
