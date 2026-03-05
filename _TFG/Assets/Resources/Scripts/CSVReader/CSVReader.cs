@@ -2,12 +2,13 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class CSVReader : MonoBehaviour
 {
     //URL 
     [SerializeField] private string url;
-
+    int[] niveles;
     void Start()
     {
         StartCoroutine(DownloadCSV());
@@ -31,19 +32,30 @@ public class CSVReader : MonoBehaviour
 
     void ParseCSV(string data)
     {
-        // Dividir el CSV por líneas
         string[] lines = data.Split('\n');
 
-        foreach (string line in lines)
+        //porque no vamos a usar la cabecera
+        niveles = new int[lines.Length - 1];
+
+        int indice = 0;
+
+        // empezamos en 1 para saltar la cabecera
+        for (int i = 1; i < lines.Length; i++)
         {
+            string line = lines[i];
+
             if (string.IsNullOrWhiteSpace(line)) continue;
 
-            // Dividir cada línea por comas o tabulación
             string[] columns = line.Split('\t');
 
-            //  Imprimir x columna
-            Debug.Log("Dato: " + columns[1]);
+            //niveles[indice] = int.Parse(columns[1]);
+
+            Debug.Log("Exp Siguiente Nivel: " + columns[1]);
+            //Debug.Log("Max Nivel Pj: " + columns[columns.Length - 1]);
+
+            indice++;
         }
+
         Debug.Log("CSV cargado con éxito");
     }
 }
