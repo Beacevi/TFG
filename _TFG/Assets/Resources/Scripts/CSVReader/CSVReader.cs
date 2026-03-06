@@ -2,13 +2,23 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 
 public class CSVReader : MonoBehaviour
 {
-    //URL 
     [SerializeField] private string url;
-    int[] niveles;
+
+    [System.Serializable]
+    public class BalloonLevel
+    {
+        public int level;
+        public int upgradeCost;
+        public string biome;
+        public int maxE;
+        public int maxCharacterLevel;
+    }
+
+    private List<BalloonLevel> levels = new List<BalloonLevel>();
+
     void Start()
     {
         StartCoroutine(DownloadCSV());
@@ -25,8 +35,7 @@ public class CSVReader : MonoBehaviour
         }
         else
         {
-            string csvData = www.downloadHandler.text;
-            ParseCSV(csvData);
+            ParseCSV(www.downloadHandler.text);
         }
     }
 
@@ -34,28 +43,76 @@ public class CSVReader : MonoBehaviour
     {
         string[] lines = data.Split('\n');
 
-        //porque no vamos a usar la cabecera
-        niveles = new int[lines.Length - 1];
-
-        int indice = 0;
-
-        // empezamos en 1 para saltar la cabecera
         for (int i = 1; i < lines.Length; i++)
         {
-            string line = lines[i];
+            if (string.IsNullOrWhiteSpace(lines[i])) continue;
 
-            if (string.IsNullOrWhiteSpace(line)) continue;
+            string[] columns = lines[i].Split('\t');
 
-            string[] columns = line.Split('\t');
+            BalloonLevel level = new BalloonLevel();
 
-            //niveles[indice] = int.Parse(columns[1]);
+            level.level = int.Parse(columns[0]);
+            level.upgradeCost = int.Parse(columns[1]);
+            level.biome = columns[2];
+            level.maxE = int.Parse(columns[3]);
+            level.maxCharacterLevel = int.Parse(columns[4]);
 
-            Debug.Log("Exp Siguiente Nivel: " + columns[1]);
-            //Debug.Log("Max Nivel Pj: " + columns[columns.Length - 1]);
-
-            indice++;
+            levels.Add(level);
         }
 
         Debug.Log("CSV cargado con éxito");
     }
+
+    // GETTERS
+
+    public BalloonLevel GetLevel(int level)
+    {
+        return levels[level - 1];
+    }
+
+    public int[] GetUpgradeCosts()
+    {
+        int[] result = new int[levels.Count];
+
+        for (int i = 0; i < levels.Count; i++)
+            result[i] = levels[i].upgradeCost;
+
+        return result;
+    }
+
+    public string[] GetBiomes()
+    {
+        string[] result = new string[levels.Count];
+
+        for (int i = 0; i < levels.Count; i++)
+            result[i] = levels[i].biome;
+
+        return result;
+    }
+
+    public int GetCostByLevel(int level)
+    {
+        return levels[level - 1].upgradeCost;
+    }
+
+    public string GetBiomeByLevel(int level)
+    {
+        return levels[level - 1].biome;
+    }
 }
+/* HOLA BEA SI QUIERES LLAMARLO DESDE OTRO SCRIPT, HAZLO ASÍ:
+ * public class GameManager : MonoBehaviour
+{
+    public CSVReader reader;
+
+    void Start()
+    {
+        int cost = reader.GetCostByLevel(3);
+        Debug.Log("Coste nivel 3: " + cost);
+
+        string biome = reader.GetBiomeByLevel(3);
+        Debug.Log("Bioma nivel 3: " + biome);
+    }
+}
+SI NO TE GUSTA TE JODES, DIGOOO...SI NO TE GUSTA ME DICES QUÉ QUIERES CAMBIAR
+ */ 
