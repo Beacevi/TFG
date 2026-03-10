@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int balloonLevel =   1;
 
     private string savePath;
+    public CSVReader reader;
 
     [Header("UI")]
     [SerializeField] private TMP_Text coins_ui;
@@ -100,17 +101,19 @@ public class GameManager : MonoBehaviour
 
 
 
-    public void AddMoney(int amount)
+    public bool AddMoney(int amount)
     {
         if (coins + amount < 0)
         {
             Debug.LogWarning("Not enough coins!");
-            return;
+            return false;
         }
         coins += amount;
         coins_ui.text = coins.ToString();
 
         SaveGame();
+
+        return true;
     }
     public int GetMoney()
     {
@@ -145,5 +148,17 @@ public class GameManager : MonoBehaviour
     public int GetEnergy()
     {
         return energy;
+    }
+
+    public int GetCurretLevel()
+    {
+        return currentLevel;
+    }   
+
+    public void SetANewCurrentLevel()
+    {
+        currentLevel += 1;
+
+        SaveGame();
     }
 }

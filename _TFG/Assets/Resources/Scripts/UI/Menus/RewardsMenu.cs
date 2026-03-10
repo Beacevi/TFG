@@ -133,5 +133,15 @@ public class RewardsMenu : MonoBehaviour
         }
                     
     }
+    public CSVReader reader;
+    public void BuyLevel()
+    {
+        int cost = reader.GetCostByLevel(GameManager.Instance.GetCurretLevel());
+        bool newlevel = GameManager.Instance.AddMoney(-cost);
 
+        if (newlevel)
+        {
+            GameManager.Instance.SetANewCurrentLevel();
+        }
+    }
 }
