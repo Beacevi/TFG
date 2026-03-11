@@ -262,6 +262,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
             //Vector3 worldPos = tilemap.CellToWorld(cell);
             Vector3 worldPos = tilemap.CellToWorld(cell);
+            worldPos.y += 0.75f;
             GameObject spawned = Instantiate(birdSpawned.birdPrefab, worldPos, Quaternion.identity, parent);
             spawned.name = $"{birdSpawned.birdPrefab.name}_{pos.x}_{pos.y}";
 

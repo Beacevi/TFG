@@ -51,7 +51,7 @@ MonoBehaviour:
   moveSpeed: 3
   mapGenerator: {fileID: 0}
   moving: 0
-  stepsAvailable: 30
+  stepsAvailable: 300
 --- !u!114 &5450207533382069928
 MonoBehaviour:
   m_ObjectHideFlags: 0

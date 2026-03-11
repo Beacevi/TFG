@@ -17,7 +17,7 @@ public class InteractableGameObject : MonoBehaviour
 
         //SceneManager.LoadSceneAdditive("SimonSays", LoadSceneMode.Additive);
 
-        StopInteraction(script);
+        //StopInteraction(script);
     }
 
     private void StopInteraction(TileAStar script)
