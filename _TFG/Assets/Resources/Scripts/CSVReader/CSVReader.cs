@@ -3,21 +3,21 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
+public class GlobeLevel
+{
+    public int level;
+    public int upgradeCost;
+    public string biome;
+    public int maxE;
+    public int maxCharacterLevel;
+}
+
 public class CSVReader : MonoBehaviour
 {
     [SerializeField] private string url;
 
-    [System.Serializable]
-    public class BalloonLevel
-    {
-        public int level;
-        public int upgradeCost;
-        public string biome;
-        public int maxE;
-        public int maxCharacterLevel;
-    }
-
-    private List<BalloonLevel> levels = new List<BalloonLevel>();
+    private List<GlobeLevel> levels = new List<GlobeLevel>();
 
     void Start()
     {
@@ -43,34 +43,61 @@ public class CSVReader : MonoBehaviour
     {
         string[] lines = data.Split('\n');
 
-        for (int i = 1; i < lines.Length; i++)
+        for (int i = 1; i < lines.Length; i++) // saltar header
         {
             if (string.IsNullOrWhiteSpace(lines[i])) continue;
 
-            string[] columns = lines[i].Split('\t');
+            string cleanLine = lines[i].Trim();
 
-            BalloonLevel level = new BalloonLevel();
+            // detectar separador
+            char separator = cleanLine.Contains("\t") ? '\t' : ',';
 
-            level.level = int.Parse(columns[0]);
-            level.upgradeCost = int.Parse(columns[1]);
-            level.biome = columns[2];
-            level.maxE = int.Parse(columns[3]);
-            level.maxCharacterLevel = int.Parse(columns[4]);
+            string[] columns = cleanLine.Split(separator);
 
-            levels.Add(level);
+            if (columns.Length < 5)
+            {
+                Debug.LogWarning("Línea inválida: " + cleanLine);
+                continue;
+            }
+
+            GlobeLevel levelData = new GlobeLevel();
+
+            int.TryParse(CleanNumber(columns[0]), out levelData.level);
+            int.TryParse(CleanNumber(columns[1]), out levelData.upgradeCost);
+
+            levelData.biome = columns[2].Trim();
+
+            int.TryParse(CleanNumber(columns[3]), out levelData.maxE);
+            int.TryParse(CleanNumber(columns[4]), out levelData.maxCharacterLevel);
+
+            levels.Add(levelData);
         }
 
-        Debug.Log("CSV cargado con éxito");
+        Debug.Log("CSV cargado correctamente. Niveles: " + levels.Count);
     }
 
-    // GETTERS
-
-    public BalloonLevel GetLevel(int level)
+    string CleanNumber(string value)
     {
+        return value.Replace(".", "").Replace("\r", "").Trim();
+    }
+
+    public GlobeLevel GetLevel(int level)
+    {
+        if (level - 1 < 0 || level - 1 >= levels.Count) return null;
         return levels[level - 1];
     }
 
-    public int[] GetUpgradeCosts()
+    public int GetUpgradeCost(int level)
+    {
+        return GetLevel(level)?.upgradeCost ?? 0;
+    }
+
+    public string GetBiome(int level)
+    {
+        return GetLevel(level)?.biome;
+    }
+
+    public int[] GetAllUpgradeCosts()
     {
         int[] result = new int[levels.Count];
 
@@ -80,7 +107,7 @@ public class CSVReader : MonoBehaviour
         return result;
     }
 
-    public string[] GetBiomes()
+    public string[] GetAllBiomes()
     {
         string[] result = new string[levels.Count];
 
@@ -89,35 +116,21 @@ public class CSVReader : MonoBehaviour
 
         return result;
     }
-
-    public int GetCostByLevel(int level)
-    {
-        return levels[level - 1].upgradeCost;
-    }
-
-    public int GetCostByShip(int level) //otro csv??
-    {
-        return levels[level - 1].upgradeCost;
-    }
-
-    public string GetBiomeByLevel(int level)
-    {
-        return levels[level - 1].biome;
-    }
 }
-/* HOLA BEA SI QUIERES LLAMARLO DESDE OTRO SCRIPT, HAZLO ASÍ:
- * public class GameManager : MonoBehaviour
+/* EJEMPLO:
+public class GameManager : MonoBehaviour
 {
     public CSVReader reader;
 
     void Start()
     {
-        int cost = reader.GetCostByLevel(3);
+        int cost = reader.GetUpgradeCost(3);
         Debug.Log("Coste nivel 3: " + cost);
 
-        string biome = reader.GetBiomeByLevel(3);
+        string biome = reader.GetBiome(3);
         Debug.Log("Bioma nivel 3: " + biome);
+
+        int[] allCosts = reader.GetAllUpgradeCosts();
     }
 }
-SI NO TE GUSTA TE JODES, DIGOOO...SI NO TE GUSTA ME DICES QUÉ QUIERES CAMBIAR
  */ 
