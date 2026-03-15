@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: ee6829ca23a5e787fa610cda0a2028c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4872681035470420627
+    second: XmasBottom_0
+  - first:
+      213: -2727742749364545656
+    second: XmasBottom_1
+  - first:
+      213: 5028455933145050931
+    second: XmasBottom_2
+  - first:
+      213: -734316258257233902
+    second: XmasBottom_3
+  - first:
+      213: 2892785975287296382
+    second: XmasBottom_4
+  - first:
+      213: -7073949325153086980
+    second: XmasBottom_5
+  - first:
+      213: -215085738628584715
+    second: XmasBottom_6
+  - first:
+      213: 1711785766912780693
+    second: XmasBottom_7
+  - first:
+      213: 7955762605264677799
+    second: XmasBottom_8
+  - first:
+      213: -3581667747508337806
+    second: XmasBottom_9
+  - first:
+      213: -7150324074068653387
+    second: XmasBottom_10
+  - first:
+      213: 9124249175357523243
+    second: XmasBottom_11
+  - first:
+      213: -1498833502319200784
+    second: XmasBottom_12
+  - first:
+      213: -81274250712941911
+    second: XmasBottom_13
+  - first:
+      213: 1873707014328119663
+    second: XmasBottom_14
+  - first:
+      213: -8261366226536580749
+    second: XmasBottom_15
+  - first:
+      213: 3258933915662970801
+    second: XmasBottom_16
+  - first:
+      213: -2996179851975938866
+    second: XmasBottom_17
+  - first:
+      213: 2429091826908050826
+    second: XmasBottom_18
+  - first:
+      213: 696594647973864909
+    second: XmasBottom_19
+  - first:
+      213: 7153437098880282453
+    second: XmasBottom_20
+  - first:
+      213: -201538119625635470
+    second: XmasBottom_21
+  - first:
+      213: 6329985633027065543
+    second: XmasBottom_22
+  - first:
+      213: -3355151828109511149
+    second: XmasBottom_23
+  - first:
+      213: -1727651379238839318
+    second: XmasBottom_24
+  - first:
+      213: -4735927275413522157
+    second: XmasBottom_25
+  - first:
+      213: -4623298697701247372
+    second: XmasBottom_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: XmasBottom_0
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1259
+        width: 397
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65c0013a62c06cb0800000000000000
+      internalID: -4872681035470420627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_1
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1205
+        width: 162
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8879a71fb6c152ad0800000000000000
+      internalID: -2727742749364545656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_2
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 1328
+        width: 63
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33fe0df770aa8c540800000000000000
+      internalID: 5028455933145050931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1222
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21898c1f04f2fc5f0800000000000000
+      internalID: -734316258257233902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_4
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1238
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e713b34948d352820800000000000000
+      internalID: 2892785975287296382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1164
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1d223719844dd90800000000000000
+      internalID: -7073949325153086980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_6
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1208
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa6ac809acd30df0800000000000000
+      internalID: -215085738628584715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_7
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1158
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599e768e51c71c710800000000000000
+      internalID: 1711785766912780693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_8
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 1154
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab232420fb886e60800000000000000
+      internalID: 7955762605264677799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1138
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273ca4ef82c5b4ec0800000000000000
+      internalID: -3581667747508337806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1146
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bac6308322f4cc90800000000000000
+      internalID: -7150324074068653387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_11
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1107
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25065b5848df9e70800000000000000
+      internalID: 9124249175357523243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_12
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1082
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f53fcceed2133be0800000000000000
+      internalID: -1498833502319200784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1046
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa7ed4ef714fdef0800000000000000
+      internalID: -81274250712941911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1016
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f617f2a2a9eb00a10800000000000000
+      internalID: 1873707014328119663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_15
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1011
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379b0e3003bb95d80800000000000000
+      internalID: -8261366226536580749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_16
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1004
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf6095312f0a3d20800000000000000
+      internalID: 3258933915662970801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_17
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 997
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eccaacf8c4e6b66d0800000000000000
+      internalID: -2996179851975938866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_18
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1000
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85b8ad852ed5b120800000000000000
+      internalID: 2429091826908050826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 973
+        width: 141
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5abe0442dcaa900800000000000000
+      internalID: 696594647973864909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_20
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 985
+        width: 33
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f2cd1142d164360800000000000000
+      internalID: 7153437098880282453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_21
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 993
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2798303e52ef33df0800000000000000
+      internalID: -201538119625635470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_22
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 967
+        width: 83
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c687e14560a8d750800000000000000
+      internalID: 6329985633027065543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_23
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 969
+        width: 119
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316b70e403b1071d0800000000000000
+      internalID: -3355151828109511149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_24
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 962
+        width: 61
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb51cc59362608e0800000000000000
+      internalID: -1727651379238839318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_25
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 823
+        width: 9
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319b4ea2c3b964eb0800000000000000
+      internalID: -4735927275413522157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XmasBottom_26
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 545
+        width: 737
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476bdf8645eb6dfb0800000000000000
+      internalID: -4623298697701247372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      XmasBottom_0: -4872681035470420627
+      XmasBottom_1: -2727742749364545656
+      XmasBottom_10: -7150324074068653387
+      XmasBottom_11: 9124249175357523243
+      XmasBottom_12: -1498833502319200784
+      XmasBottom_13: -81274250712941911
+      XmasBottom_14: 1873707014328119663
+      XmasBottom_15: -8261366226536580749
+      XmasBottom_16: 3258933915662970801
+      XmasBottom_17: -2996179851975938866
+      XmasBottom_18: 2429091826908050826
+      XmasBottom_19: 696594647973864909
+      XmasBottom_2: 5028455933145050931
+      XmasBottom_20: 7153437098880282453
+      XmasBottom_21: -201538119625635470
+      XmasBottom_22: 6329985633027065543
+      XmasBottom_23: -3355151828109511149
+      XmasBottom_24: -1727651379238839318
+      XmasBottom_25: -4735927275413522157
+      XmasBottom_26: -4623298697701247372
+      XmasBottom_3: -734316258257233902
+      XmasBottom_4: 2892785975287296382
+      XmasBottom_5: -7073949325153086980
+      XmasBottom_6: -215085738628584715
+      XmasBottom_7: 1711785766912780693
+      XmasBottom_8: 7955762605264677799
+      XmasBottom_9: -3581667747508337806
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

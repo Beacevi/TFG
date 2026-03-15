@@ -51,6 +51,7 @@
     <Compile Include="Assets/Resources/Scripts/CSVReader/GoogleSheetsForUnity.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/PlayButton.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
+    <Compile Include="Assets/Resources/Scripts/UI/Menus/Skins/CustomMenuSprites.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Resources/Scripts/KPIs/KPIsManager.cs" />
     <Compile Include="Assets/Resources/Scripts/Effects Scripts/Light2DPulse.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/ButtonFunctions.cs" />
     <Compile Include="Assets/Resources/Scripts/SimonDice/SimonGameManager.cs" />
+    <Compile Include="Assets/Resources/Scripts/UI/Menus/Skins/ChangeCustomMenu.cs" />
     <Compile Include="Assets/Resources/Scripts/Procedural Terrain/TileAStar.cs" />
     <Compile Include="Assets/Resources/Scripts/Background&amp;Anim/CloudsSpawner.cs" />
     <Compile Include="Assets/Resources/Scripts/SimonDice/CircleButton.cs" />
@@ -106,7 +108,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/GoogleSignIn/Impl/GoogleSignInImpl.cs" />
-    <Compile Include="Assets/Resources/Scripts/UI/Menus/Skins/BalloonSkins.cs" />
     <Compile Include="Assets/GoogleSignIn/GoogleSignIn.cs" />
     <Compile Include="Assets/Resources/Scripts/Background&amp;Anim/CoinClick.cs" />
     <Compile Include="Assets/Resources/Scripts/Managers/Save/SaveManager.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Assets/Resources/Scripts/ChangeScene.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/HamburguerButton.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
+    <Compile Include="Assets/Resources/Scripts/UI/Menus/Skins/OnClickCustomSprite.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/ScenePersistentManager.cs" />
     <Compile Include="Assets/Resources/Scripts/Procedural Terrain/TileClickDetector.cs" />

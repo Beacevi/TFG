@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2071b7ffe482099298ef664e0f1ed388
+guid: b7f62c560745aa3d0bb7edd2e04d23b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6821704611215802417
-    second: Copilot_20260314_215606_0
+      213: -534188880819879173
+    second: HalloweenMiddle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Copilot_20260314_215606_0
+      name: HalloweenMiddle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1536
+        x: 132
+        y: 674
+        width: 762
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 130892273309bae50800000000000000
-      internalID: 6821704611215802417
+      spriteID: bf284cb0b0e2698f0800000000000000
+      internalID: -534188880819879173
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Copilot_20260314_215606_0: 6821704611215802417
+      HalloweenMiddle_0: -534188880819879173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

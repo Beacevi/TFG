@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2f439dfaf1ba3a7049b86e4d952c3b3b
+guid: 4abcdfdffb9057c7ab8fea2a54ad12fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2354813253851115233
-    second: Copilot_20260314_215815_0
+      213: 5649035844634214093
+    second: HalloweenTop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Copilot_20260314_215815_0
+      name: HalloweenTop_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1536
+        x: 160
+        y: 952
+        width: 704
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ee6d249d2afda020800000000000000
-      internalID: 2354813253851115233
+      spriteID: dcefedabb28656e40800000000000000
+      internalID: 5649035844634214093
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Copilot_20260314_215815_0: 2354813253851115233
+      HalloweenTop_0: 5649035844634214093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
