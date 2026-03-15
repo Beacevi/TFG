@@ -159,6 +159,19 @@ public class GameManager : MonoBehaviour
     {
         currentLevel += 1;
 
+
+        SaveGame();
+    }
+
+    public int GetBalloonLevel()
+    {
+        return balloonLevel;
+    }
+
+    public void SetANewBalloonLevel()
+    {
+        balloonLevel += 1;
+
         SaveGame();
     }
 }

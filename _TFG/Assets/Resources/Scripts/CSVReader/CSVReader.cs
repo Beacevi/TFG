@@ -95,6 +95,11 @@ public class CSVReader : MonoBehaviour
         return levels[level - 1].upgradeCost;
     }
 
+    public int GetCostByShip(int level) //otro csv??
+    {
+        return levels[level - 1].upgradeCost;
+    }
+
     public string GetBiomeByLevel(int level)
     {
         return levels[level - 1].biome;

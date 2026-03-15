@@ -6,18 +6,19 @@ public class CustomMenuSprites : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Animator _balloonAnimator;
 
-    [Header("Custom Parts")]
+    [Header("Custom")]
     [SerializeField] private GameObject _TopPart;
     [SerializeField] private GameObject _MiddlePart;
     [SerializeField] private GameObject _BottomPart;
     [SerializeField] private GameObject _SupportPart;
 
-    [Header("Custom UI")]
     [SerializeField] private GameObject _TopCustom;
     [SerializeField] private GameObject _MiddleCustom;
     [SerializeField] private GameObject _BottomCustom;
     [SerializeField] private GameObject _SupportCustom;
+
     [SerializeField] private GameObject _CheckButtonCustom;
+    [SerializeField] private GameObject _CustomPanel;
 
     [Header("Sprites")]
     public Sprite[] topSprites;
@@ -25,120 +26,178 @@ public class CustomMenuSprites : MonoBehaviour
     public Sprite[] bottomSprites;
     public Sprite[] supportSprites;
 
-    private int currentTopIndex = 0;
-    private int currentMiddleIndex = 0;
-    private int currentBottomIndex = 0;
-    private int currentSupportIndex = 0;
+    private int currentTopIndex;
+    private int currentMiddleIndex;
+    private int currentBottomIndex;
+    private int currentSupportIndex;
 
-    // Guardar el estado "original" para saber si hay cambios
     private int _actualTopIndex;
     private int _actualMiddleIndex;
     private int _actualBottomIndex;
     private int _actualSupportIndex;
 
+    private bool check = false;
+
     void Start()
     {
+        _CustomPanel.SetActive(false);
         _CheckButtonCustom.SetActive(false);
 
-        // Inicializa índices según el sprite actual
-        currentTopIndex = System.Array.IndexOf(topSprites, _TopPart.GetComponent<SpriteRenderer>().sprite);
-        currentMiddleIndex = System.Array.IndexOf(middleSprites, _MiddlePart.GetComponent<SpriteRenderer>().sprite);
-        currentBottomIndex = System.Array.IndexOf(bottomSprites, _BottomPart.GetComponent<SpriteRenderer>().sprite);
-        currentSupportIndex = System.Array.IndexOf(supportSprites, _SupportPart.GetComponent<SpriteRenderer>().sprite);
+        currentTopIndex   = GetInitialIndex(_TopPart, topSprites);
+        currentMiddleIndex = GetInitialIndex(_MiddlePart, middleSprites);
+        currentBottomIndex = GetInitialIndex(_BottomPart, bottomSprites);
+        currentSupportIndex = GetInitialIndex(_SupportPart, supportSprites);
 
-        if (currentTopIndex < 0) currentTopIndex = 0;
-        if (currentMiddleIndex < 0) currentMiddleIndex = 0;
-        if (currentBottomIndex < 0) currentBottomIndex = 0;
-        if (currentSupportIndex < 0) currentSupportIndex = 0;
-
-        // Guardar el estado original
         _actualTopIndex = currentTopIndex;
         _actualMiddleIndex = currentMiddleIndex;
         _actualBottomIndex = currentBottomIndex;
         _actualSupportIndex = currentSupportIndex;
     }
 
+    int GetInitialIndex(GameObject part, Sprite[] array)
+    {
+        int index = System.Array.IndexOf(array, part.GetComponent<SpriteRenderer>().sprite);
+        return index < 0 ? 0 : index;
+    }
+
+    // ========= MENU =========
+
+    public void OpenCustomMenu()
+    {
+        _CustomPanel.SetActive(true);
+        _balloonAnimator.SetTrigger("EditingTrigger");
+        _animator.SetTrigger("OpenTrigger");
+    }
+
+    public void CloseCustomMenu()
+    {
+        if (!check)
+        {
+            RestoreOriginalSprites();
+            CheckSprites(); // igual que primer script
+        }
+
+        _balloonAnimator.SetTrigger("NotEditingTrigger");
+        _animator.SetTrigger("CloseTrigger");
+    }
+
+    void RestoreOriginalSprites()
+    {
+        currentTopIndex = _actualTopIndex;
+        currentMiddleIndex = _actualMiddleIndex;
+        currentBottomIndex = _actualBottomIndex;
+        currentSupportIndex = _actualSupportIndex;
+
+        _TopPart.GetComponent<SpriteRenderer>().sprite = topSprites[currentTopIndex];
+        _MiddlePart.GetComponent<SpriteRenderer>().sprite = middleSprites[currentMiddleIndex];
+        _BottomPart.GetComponent<SpriteRenderer>().sprite = bottomSprites[currentBottomIndex];
+        _SupportPart.GetComponent<SpriteRenderer>().sprite = supportSprites[currentSupportIndex];
+    }
+
+    // ========= CHANGE =========
+
     public void ChangePart(string part, bool isLeft)
     {
+        _CheckButtonCustom.SetActive(true);
+
         switch (part)
         {
             case "Top":
-                currentTopIndex = GetNextIndex(currentTopIndex, topSprites.Length, isLeft);
+                currentTopIndex = NextIndex(currentTopIndex, topSprites.Length, isLeft);
                 _TopPart.GetComponent<SpriteRenderer>().sprite = topSprites[currentTopIndex];
-                UpdateSelectedSquare(_TopCustom, currentTopIndex);
+
+                if (currentTopIndex == _actualTopIndex)
+                    ActivateSelectedSquare(_TopCustom);
+                else
+                    DesactivateSelectedSquare(_TopCustom);
                 break;
 
             case "Middle":
-                currentMiddleIndex = GetNextIndex(currentMiddleIndex, middleSprites.Length, isLeft);
+                currentMiddleIndex = NextIndex(currentMiddleIndex, middleSprites.Length, isLeft);
                 _MiddlePart.GetComponent<SpriteRenderer>().sprite = middleSprites[currentMiddleIndex];
-                UpdateSelectedSquare(_MiddleCustom, currentMiddleIndex);
+
+                if (currentMiddleIndex == _actualMiddleIndex)
+                    ActivateSelectedSquare(_MiddleCustom);
+                else
+                    DesactivateSelectedSquare(_MiddleCustom);
                 break;
 
             case "Bottom":
-                currentBottomIndex = GetNextIndex(currentBottomIndex, bottomSprites.Length, isLeft);
+                currentBottomIndex = NextIndex(currentBottomIndex, bottomSprites.Length, isLeft);
                 _BottomPart.GetComponent<SpriteRenderer>().sprite = bottomSprites[currentBottomIndex];
-                UpdateSelectedSquare(_BottomCustom, currentBottomIndex);
+
+                if (currentBottomIndex == _actualBottomIndex)
+                    ActivateSelectedSquare(_BottomCustom);
+                else
+                    DesactivateSelectedSquare(_BottomCustom);
                 break;
 
             case "Support":
-                currentSupportIndex = GetNextIndex(currentSupportIndex, supportSprites.Length, isLeft);
+                currentSupportIndex = NextIndex(currentSupportIndex, supportSprites.Length, isLeft);
                 _SupportPart.GetComponent<SpriteRenderer>().sprite = supportSprites[currentSupportIndex];
-                UpdateSelectedSquare(_SupportCustom, currentSupportIndex);
+
+                if (currentSupportIndex == _actualSupportIndex)
+                    ActivateSelectedSquare(_SupportCustom);
+                else
+                    DesactivateSelectedSquare(_SupportCustom);
                 break;
         }
 
-        // Activar o desactivar botón de guardar cambios
-        UpdateCheckButton();
+        NothingToCheck();
     }
 
-    private int GetNextIndex(int current, int length, bool isLeft)
+    int NextIndex(int current, int length, bool left)
     {
-        if (isLeft)
-        {
-            current--;
-            if (current < 0) current = length - 1;
-        }
-        else
-        {
-            current++;
-            if (current >= length) current = 0;
-        }
+        current += left ? -1 : 1;
+
+        if (current < 0) current = length - 1;
+        if (current >= length) current = 0;
+
         return current;
     }
 
-    private void UpdateSelectedSquare(GameObject parent, int index)
-    {
-        int i = 0;
-        foreach (Transform child in parent.transform)
-        {
-            child.gameObject.SetActive(i == index);
-            i++;
-        }
-    }
+    // ========= CHECK SYSTEM =========
 
-    private void UpdateCheckButton()
+    void NothingToCheck()
     {
-        if (currentTopIndex != _actualTopIndex ||
-            currentMiddleIndex != _actualMiddleIndex ||
-            currentBottomIndex != _actualBottomIndex ||
-            currentSupportIndex != _actualSupportIndex)
-        {
-            _CheckButtonCustom.SetActive(true);
-        }
-        else
+        if (currentTopIndex == _actualTopIndex &&
+            currentMiddleIndex == _actualMiddleIndex &&
+            currentBottomIndex == _actualBottomIndex &&
+            currentSupportIndex == _actualSupportIndex)
         {
             _CheckButtonCustom.SetActive(false);
         }
     }
 
-    // Llamar este método cuando se “guarden” los cambios para actualizar el estado original
     public void CheckSprites()
     {
         _actualTopIndex = currentTopIndex;
+        ActivateSelectedSquare(_TopCustom);
+
         _actualMiddleIndex = currentMiddleIndex;
+        ActivateSelectedSquare(_MiddleCustom);
+
         _actualBottomIndex = currentBottomIndex;
+        ActivateSelectedSquare(_BottomCustom);
+
         _actualSupportIndex = currentSupportIndex;
+        ActivateSelectedSquare(_SupportCustom);
 
         _CheckButtonCustom.SetActive(false);
+        check = true;
+    }
+
+    // ========= UI =========
+
+    void DesactivateSelectedSquare(GameObject parent)
+    {
+        foreach (Transform child in parent.transform)
+            child.gameObject.SetActive(false);
+    }
+
+    void ActivateSelectedSquare(GameObject parent)
+    {
+        foreach (Transform child in parent.transform)
+            child.gameObject.SetActive(true);
     }
 }

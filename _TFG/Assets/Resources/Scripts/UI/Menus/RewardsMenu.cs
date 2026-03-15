@@ -134,7 +134,34 @@ public class RewardsMenu : MonoBehaviour
                     
     }
     public CSVReader reader;
-    public void BuyLevel()
+
+    public void BuyUpgrade()
+    {
+        Debug.Log("BuyUpgrade called");
+        if (_characterUpgradesPanel.activeSelf)
+        {
+            UpgradeCharacter();
+        }
+        else if (_dailyStampsPanel.activeSelf)
+        {
+        }
+        else if (_shipUpgradesPanel.activeSelf)
+        {
+            UpgradeShip();
+        }
+    }
+    private void UpgradeCharacter()
+    {
+        int cost = reader.GetCostByLevel(GameManager.Instance.GetCurretLevel());
+        bool newlevel = GameManager.Instance.AddMoney(-cost);
+
+        if (newlevel)
+        {
+            GameManager.Instance.SetANewCurrentLevel();
+        }
+    }
+
+    private void UpgradeShip()
     {
         int cost = reader.GetCostByLevel(GameManager.Instance.GetCurretLevel());
         bool newlevel = GameManager.Instance.AddMoney(-cost);
