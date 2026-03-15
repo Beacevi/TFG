@@ -2912,6 +2912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 137319694}
+  - component: {fileID: 137319709}
   - component: {fileID: 137319708}
   - component: {fileID: 137319706}
   - component: {fileID: 137319705}
@@ -3243,6 +3244,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customMenuColors: {fileID: 157805872}
   customMenuSkins: {fileID: 996085980}
+--- !u!114 &137319709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137319692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c602bb6e9a36202c0bcef7b8c1389f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birds:
+  - {fileID: 11400000, guid: 2bfde60fb73fe934a8b6c3b0df3a4338, type: 2}
+  - {fileID: 11400000, guid: 5b3528046ac979c4aaf025f34a751087, type: 2}
+  - {fileID: 11400000, guid: 08486eb01c80ef9439115f6dfa513c98, type: 2}
+  - {fileID: 11400000, guid: fceebf9c9348fbb4eb691d9cc993b0b7, type: 2}
+  - {fileID: 11400000, guid: eff77edbcc3f08443a7a5ee07d0024b0, type: 2}
+  - {fileID: 11400000, guid: 2a6eaca41429508449b73bf90cdd2368, type: 2}
+  - {fileID: 11400000, guid: 70d1b5cfbccbaf547b117fd0eb2303b7, type: 2}
+  - {fileID: 11400000, guid: 8d3c6500079ab0b4895a52980a1ecd54, type: 2}
+  - {fileID: 11400000, guid: 82129d2e6d958d74ab8bdb73b5348844, type: 2}
+  botones:
+  - {fileID: 146341872}
+  - {fileID: 493476343}
+  - {fileID: 1673799780}
+  - {fileID: 2026538719}
+  - {fileID: 1514914517}
+  - {fileID: 1880775766}
+  - {fileID: 1898971746}
+  - {fileID: 880890862}
+  - {fileID: 1753589615}
 --- !u!1 &140025330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,7 +3713,7 @@ GameObject:
   - component: {fileID: 146341875}
   - component: {fileID: 146341876}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird1
   m_TagString: A
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13460,7 +13493,7 @@ GameObject:
   - component: {fileID: 493476342}
   - component: {fileID: 493476341}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird2
   m_TagString: D
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32865,7 +32898,7 @@ GameObject:
   - component: {fileID: 880890861}
   - component: {fileID: 880890860}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird8
   m_TagString: F
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48285,7 +48318,7 @@ GameObject:
   - component: {fileID: 1514914516}
   - component: {fileID: 1514914515}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird5
   m_TagString: E
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51724,7 +51757,7 @@ GameObject:
   - component: {fileID: 1673799779}
   - component: {fileID: 1673799778}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird3
   m_TagString: G
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52853,7 +52886,7 @@ GameObject:
   - component: {fileID: 1753589614}
   - component: {fileID: 1753589613}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird9
   m_TagString: I
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56389,7 +56422,7 @@ GameObject:
   - component: {fileID: 1880775765}
   - component: {fileID: 1880775764}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird6
   m_TagString: H
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56964,7 +56997,7 @@ GameObject:
   - component: {fileID: 1898971745}
   - component: {fileID: 1898971744}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird7
   m_TagString: C
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60569,7 +60602,7 @@ GameObject:
   - component: {fileID: 2026538718}
   - component: {fileID: 2026538717}
   m_Layer: 5
-  m_Name: ButtonImage
+  m_Name: Bird4
   m_TagString: B
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
