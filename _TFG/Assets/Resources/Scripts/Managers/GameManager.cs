@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int energy       =   6;
     [SerializeField] private int currentLevel =   1;
     [SerializeField] private int balloonLevel =   1;
+    public bool cloudsClosing = false; //Si es false, es que las nubes no cubren la escena, si es true, las nubes cubren la escena
 
     private string savePath;
     public CSVReader reader;
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             savePath = Application.persistentDataPath + "/save.json";
-            LoadGame();  
+            LoadGame();
         }
         else
         {

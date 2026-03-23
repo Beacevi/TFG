@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ProceduralTerrain.unity
     guid: 7f1e10b6e45e73547abf61f79787f38b
   - enabled: 1
-    path: Assets/Scenes/PruebasGuardado.unity
+    path: Assets/Scenes/Pruebas/PruebasGuardado.unity
     guid: 5e3df06ffd6bb3d48b324b765b5cdb10
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

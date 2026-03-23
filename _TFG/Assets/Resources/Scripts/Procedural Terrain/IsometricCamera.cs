@@ -15,6 +15,8 @@ public class IsometricCamera : MonoBehaviour
 
     private TileAStar tileAstar;
 
+    [SerializeField] private Animator animator;
+
     enum CameraState
     {
         Following,
@@ -27,6 +29,10 @@ public class IsometricCamera : MonoBehaviour
 
     void Start()
     {
+        // Reproducir hacia atras (abrir)
+        animator.speed = -1;
+        animator.Play("CloudsClosing", 0, 0f);
+
         Camera cam = GetComponent<Camera>();
         cam.orthographic = true;
         cam.orthographicSize = 10f;
