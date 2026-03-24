@@ -21,7 +21,29 @@ public class TileHoverDetector : MonoBehaviour
 
     void Update()
     {
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (!IsometricCamera.inputEnabled)
+            return;
+
+        if (Camera.main == null)
+            return;
+
+        if (Input.touchCount == 0 && !Input.GetMouseButton(0))
+            return;
+
+        Vector3 screenPos;
+
+        if (Input.touchCount > 0)
+            screenPos = Input.GetTouch(0).position;
+        else
+            screenPos = Input.mousePosition;
+
+        if (float.IsNaN(screenPos.x) || float.IsNaN(screenPos.y))
+            return;
+
+        if (float.IsInfinity(screenPos.x) || float.IsInfinity(screenPos.y))
+            return;
+
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(screenPos);
         mouseWorld.z = 0f;
 
         Vector3Int cellPos = mainTilemap.WorldToCell(mouseWorld);

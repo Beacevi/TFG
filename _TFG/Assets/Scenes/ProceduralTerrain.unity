@@ -646,6 +646,7 @@ MonoBehaviour:
   _shipUpgradesPanel: {fileID: 0}
   _characterUpgradesPanel: {fileID: 0}
   _dailyStampsPanel: {fileID: 0}
+  reader: {fileID: 0}
 --- !u!114 &158557321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,8 +1051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48bc910403bcbc4fa257f407ce5eb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OptionMenu: {fileID: 556183429}
-  _HamburguerMenu: {fileID: 0}
 --- !u!114 &166387210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2821,6 +2820,12 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -10}
   followSpeed: 1
   changeScene: {fileID: 1566654603}
+  animator: {fileID: 0}
+  dragSpeed: 0.005
+  zoomSpeed: 0.1
+  minZoom: 5
+  maxZoom: 20
+  maxDistanceFromTarget: 30
 --- !u!1 &520312476
 GameObject:
   m_ObjectHideFlags: 0
@@ -7078,6 +7083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!4 &1566654604
 Transform:
   m_ObjectHideFlags: 0
@@ -7170,7 +7176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1580634802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7609,6 +7615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!4 &1833063812
 Transform:
   m_ObjectHideFlags: 0
