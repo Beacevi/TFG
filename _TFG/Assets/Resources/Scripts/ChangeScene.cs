@@ -39,9 +39,12 @@ public class ChangeScene : MonoBehaviour
 
     public IEnumerator SceneTransition(string nombreEscena, bool additive)
     {
-        // Reproducir hacia delante (cerrar)
-        animator.speed = 1;
-        animator.Play("CloudsClosing", 0, 0f);
+        if (animator != null)
+        {
+            // Reproducir hacia delante (cerrar)
+            animator.speed = 1;
+            animator.Play("CloudsClosing", 0, 0f);
+        }
 
         yield return new WaitForSeconds(3);
 
@@ -103,7 +106,7 @@ public class ChangeScene : MonoBehaviour
     //            break;
     //    }
 
-    //    // Reproducir hacia atrás (abrir)
+    //    // Reproducir hacia atrï¿½s (abrir)
     //    animator.speed = -1;
     //    animator.Play("CloudsClosing", 0, 1f);
 
