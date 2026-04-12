@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using GUPS.AntiCheat.Protected;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -7,11 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Variables")]
-    [SerializeField] private int coins        = 200;
-    [SerializeField] private int gems         =  20;
-    [SerializeField] private int energy       =   6;
-    [SerializeField] private int currentLevel =   1;
-    [SerializeField] private int balloonLevel =   1;
+    [SerializeField] private ProtectedInt32 coins        = 200;
+    [SerializeField] private ProtectedInt32 gems         =  20;
+    [SerializeField] private ProtectedInt32 energy       =   6;
+    [SerializeField] private ProtectedInt32 currentLevel =   1;
+    [SerializeField] private ProtectedInt32 balloonLevel =   1;
     public bool cloudsClosing = false; //Si es false, es que las nubes no cubren la escena, si es true, las nubes cubren la escena
 
     private string savePath;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text coins_ui;
     [SerializeField] private TMP_Text gems_ui;
     //[SerializeField] private TMP_Text energy_ui;
+
 
     private void Awake()
     {
