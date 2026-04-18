@@ -51,6 +51,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Resources/Scripts/CSVReader/GoogleSheetsForUnity.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/PlayButton.cs" />
+    <Compile Include="Assets/Resources/Scripts/UI/BirdsReactions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/Skins/CustomMenuSprites.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Assets/Resources/ScriptableObjectsBirds/Bird.cs" />
     <Compile Include="Assets/Resources/Scripts/Background&amp;Anim/CloudsMovement.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+    <Compile Include="Assets/Resources/Scripts/UI/BirdReactionsManager.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Stickers/UIFollowWorldObject.cs" />
     <Compile Include="Assets/Effects/Clima/Weather.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Stickers/StickerButtonUI.cs" />
