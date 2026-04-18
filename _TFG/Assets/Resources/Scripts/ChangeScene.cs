@@ -6,7 +6,17 @@ public class ChangeScene : MonoBehaviour
 {
     private static UnityEngine.SceneManagement.Scene previousScene;
 
-   [SerializeField] private Animator animator;
+    [SerializeField] private Transform cloudsIzquierda;
+    [SerializeField] private Transform cloudsDerecha;
+
+    [SerializeField] private float distancia = 10f;
+    [SerializeField] private float duracion = 2f;
+
+    public void Start()
+    {
+        StartCoroutine(StartAnimation());
+    }
+
     public void Cambiar_A_Escena(string nombreEscena)
     {
         string escenaActual = SceneManager.GetActiveScene().name;
@@ -33,20 +43,23 @@ public class ChangeScene : MonoBehaviour
 
     public void UnloadScene(string nombreEscena)
     {
+        Debug.Log("El nombre de la escena anterior es: "+previousScene.name);
         SceneManager.SetActiveScene(previousScene);
         SceneManager.UnloadSceneAsync(nombreEscena);
     }
 
+    public IEnumerator StartAnimation()
+    {
+        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(AnimarNubes(true));
+    }
+
     public IEnumerator SceneTransition(string nombreEscena, bool additive)
     {
-        if (animator != null)
-        {
-            // Reproducir hacia delante (cerrar)
-            animator.speed = 1;
-            animator.Play("CloudsClosing", 0, 0f);
-        }
+        yield return StartCoroutine(AnimarNubes(false));
 
-        yield return new WaitForSeconds(3);
+        // pequeño margen por seguridad
+        yield return new WaitForSeconds(0.2f);
 
         if (!additive)
         {
@@ -57,7 +70,39 @@ public class ChangeScene : MonoBehaviour
             previousScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(nombreEscena, LoadSceneMode.Additive);
         }
+    }
 
+    IEnumerator AnimarNubes(bool abrir)
+    {
+        Vector3 inicioIzq = cloudsIzquierda.localPosition;
+        Vector3 inicioDer = cloudsDerecha.localPosition;
+
+        Vector3 destinoIzq;
+        Vector3 destinoDer;
+
+        if (abrir)
+        {
+            destinoIzq = inicioIzq + Vector3.left * distancia;
+            destinoDer = inicioDer + Vector3.right * distancia;
+        }
+        else
+        {
+            destinoIzq = inicioIzq + Vector3.right * distancia;
+            destinoDer = inicioDer + Vector3.left * distancia;
+        }
+
+        float t = 0;
+
+        while (t < duracion)
+        {
+            t += Time.deltaTime;
+            float progreso = Mathf.SmoothStep(0, 1, t / duracion);
+
+            cloudsIzquierda.localPosition = Vector3.Lerp(inicioIzq, destinoIzq, progreso);
+            cloudsDerecha.localPosition = Vector3.Lerp(inicioDer, destinoDer, progreso);
+
+            yield return null;
+        }
     }
 
     //public void CambiarEscena(string nombreEscena, int tipo)

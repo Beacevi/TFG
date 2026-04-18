@@ -14810,11 +14810,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8740940390487098537, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
   m_PrefabInstance: {fileID: 8884028272572707539}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &561735122 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3522941973169140776, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
-  m_PrefabInstance: {fileID: 8884028272572707539}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561920752
 GameObject:
   m_ObjectHideFlags: 0
@@ -27859,7 +27854,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ProceduralTerrain
+          m_StringArgument: PruebasProceduralTerrain
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &684723954
@@ -39545,14 +39540,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1780912822}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadSceneAdditive
+        m_MethodName: Cambiar_A_Escena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SimonSays
+          m_StringArgument: SimonSaysPrueba
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1182399700
@@ -50769,11 +50764,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fab949e8e084140a54e2383633a245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 200
-  gems: 20
-  energy: 6
-  currentLevel: 1
-  balloonLevel: 1
+  coins:
+    fakeValue: 200
+  gems:
+    fakeValue: 20
+  energy:
+    fakeValue: 6
+  currentLevel:
+    fakeValue: 1
+  balloonLevel:
+    fakeValue: 1
   cloudsClosing: 0
   reader: {fileID: 0}
   coins_ui: {fileID: 1439815934}
@@ -53678,7 +53678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 561735122}
+  cloudsIzquierda: {fileID: 8884028272572707541}
+  cloudsDerecha: {fileID: 8884028272572707540}
+  distancia: 10
+  duracion: 2
 --- !u!4 &1780912823
 Transform:
   m_ObjectHideFlags: 0
@@ -63828,6 +63831,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
+--- !u!224 &8884028272572707540 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2626307490981455422, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
+  m_PrefabInstance: {fileID: 8884028272572707539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8884028272572707541 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4266803079829530545, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
+  m_PrefabInstance: {fileID: 8884028272572707539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
