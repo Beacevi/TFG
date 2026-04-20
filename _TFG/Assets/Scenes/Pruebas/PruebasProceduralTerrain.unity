@@ -7330,8 +7330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudsIzquierda: {fileID: 0}
-  cloudsDerecha: {fileID: 0}
+  cloudsIzquierda: {fileID: 33814764}
+  cloudsDerecha: {fileID: 33814763}
   distancia: 10
   duracion: 2
 --- !u!4 &1566654604
