@@ -46,8 +46,8 @@ public class IsometricCamera : MonoBehaviour
 
     void Start()
     {
-        animator.speed = -1;
-        animator.Play("CloudsClosing", 0, 0f);
+        //animator.speed = -1;
+        //animator.Play("CloudsClosing", 0, 0f);
 
         cam = GetComponent<Camera>();
         cam.orthographic = true;

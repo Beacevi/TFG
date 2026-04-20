@@ -14,7 +14,10 @@ public class ChangeScene : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(StartAnimation());
+        if(cloudsIzquierda!= null &&  cloudsDerecha!= null)
+        {
+            StartCoroutine(StartAnimation());
+        }
     }
 
     public void Cambiar_A_Escena(string nombreEscena)
@@ -56,7 +59,10 @@ public class ChangeScene : MonoBehaviour
 
     public IEnumerator SceneTransition(string nombreEscena, bool additive)
     {
-        yield return StartCoroutine(AnimarNubes(false));
+        if (cloudsIzquierda != null && cloudsDerecha != null)
+        {
+            yield return StartCoroutine(AnimarNubes(false));
+        }
 
         // pequeño margen por seguridad
         yield return new WaitForSeconds(0.2f);
