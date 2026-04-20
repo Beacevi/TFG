@@ -232,6 +232,7 @@
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\Firebase\Plugins\Google.MiniJson.dll" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Cute_Birds(4 in 1)Mini\Documentation (Birds 4 in 1).txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Packages\Google.Apis.Core.1.72.0\lib\netstandard2.0\Google.Apis.Core.xml" />
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.App.dll" />
