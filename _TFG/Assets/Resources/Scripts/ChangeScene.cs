@@ -15,11 +15,11 @@ public class ChangeScene : MonoBehaviour
 
     private void Awake()
     {
-        EventSystem[] systems = FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
-        for (int i = 0; i < systems.Length; i++)
-        {
-            systems[i].gameObject.SetActive(i == 0);
-        }
+        //EventSystem[] systems = FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
+        //for (int i = 0; i < systems.Length; i++)
+        //{
+        //    systems[i].gameObject.SetActive(i == 0);
+        //}
     }
 
     public void Start()
@@ -120,59 +120,5 @@ public class ChangeScene : MonoBehaviour
             yield return null;
         }
     }
-
-    //public void CambiarEscena(string nombreEscena, int tipo)
-    //{
-    //    StartCoroutine(SceneTransition(nombreEscena,tipo));
-    //}
-
-
-
-    //public IEnumerator SceneTransition(string nombreEscena, int tipo)
-    //{
-    //    // Reproducir hacia delante (cerrar)
-    //    animator.speed = 1;
-    //    animator.Play("CloudsClosing", 0, 0f);
-
-    //    GameManager.Instance.cloudsClosing = true;
-
-    //    yield return new WaitForSeconds(3);
-
-    //    switch (tipo)
-    //    {
-    //        case 0://Cambiar_A_Escena
-    //            string escenaActual = SceneManager.GetActiveScene().name;
-
-    //            if (nombreEscena == escenaActual)
-    //            {
-    //                SceneManager.LoadScene("UI");
-    //            }
-    //            else
-    //            {
-    //                SceneManager.LoadScene(nombreEscena);
-    //            }
-    //            break;
-
-    //        case 1://LoadSceneAdditive
-    //            previousScene = SceneManager.GetActiveScene();
-    //            SceneManager.LoadScene(nombreEscena, LoadSceneMode.Additive);
-    //            break;
-
-    //        case 2://UnloadScene
-    //            SceneManager.SetActiveScene(previousScene);
-    //            SceneManager.UnloadSceneAsync(nombreEscena);
-    //            break;
-
-    //        default:
-    //            break;
-    //    }
-
-    //    // Reproducir hacia atr�s (abrir)
-    //    animator.speed = -1;
-    //    animator.Play("CloudsClosing", 0, 1f);
-
-    //    GameManager.Instance.cloudsClosing = false;
-
-    //}
 
 }
