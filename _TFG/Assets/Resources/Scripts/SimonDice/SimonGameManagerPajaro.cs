@@ -256,7 +256,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
         
 
         // Cerrar escena aditiva
-        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
+        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");//Aqui se cierra la escena
     }
 
 

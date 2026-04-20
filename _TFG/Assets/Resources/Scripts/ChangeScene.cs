@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class ChangeScene : MonoBehaviour
 
     [SerializeField] private float distancia = 10f;
     [SerializeField] private float duracion = 2f;
+
+    private void Awake()
+    {
+        EventSystem[] systems = FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
+        for (int i = 0; i < systems.Length; i++)
+        {
+            systems[i].gameObject.SetActive(i == 0);
+        }
+    }
 
     public void Start()
     {
