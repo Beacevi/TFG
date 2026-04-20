@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ad135d6faef36429e79d2f48a7b0e4, type: 3}
-  m_Name: Sticker5
+  m_Name: Sticker12
   m_EditorClassIdentifier: 
-  stickerName: Dotted
-  sprite: {fileID: -1905084232324680565, guid: d021ee1896c680b47b02debd2c504a69, type: 3}
+  stickerName: Pot3
+  sprite: {fileID: -3238342525302749815, guid: 18c04282d5aa0734290a4dfef428f86a, type: 3}
   unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
-  amount: 18
+  amount: 30
   discovered: 0

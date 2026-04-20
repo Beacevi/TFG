@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad135d6faef36429e79d2f48a7b0e4, type: 3}
   m_Name: Sticker1
   m_EditorClassIdentifier: 
-  stickerName: 1
-  sprite: {fileID: 21300000, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
-  amount: 137
+  stickerName: Bomba
+  sprite: {fileID: -4376231836577913517, guid: 0f8dd6484c056bb47bb2bf0ce2d9a922, type: 3}
+  unknownSprite: {fileID: 0}
+  amount: 10
   discovered: 1

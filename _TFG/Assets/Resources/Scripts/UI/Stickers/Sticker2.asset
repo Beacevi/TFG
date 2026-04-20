@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad135d6faef36429e79d2f48a7b0e4, type: 3}
   m_Name: Sticker2
   m_EditorClassIdentifier: 
-  stickerName: 2
-  sprite: {fileID: 21300004, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
-  amount: 179
+  stickerName: Bush
+  sprite: {fileID: 5558339180159872767, guid: a9e28615d370d3e4fb10eecd4b63519e, type: 3}
+  unknownSprite: {fileID: 0}
+  amount: 12
   discovered: 1

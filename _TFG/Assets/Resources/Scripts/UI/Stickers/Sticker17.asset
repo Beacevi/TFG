@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ad135d6faef36429e79d2f48a7b0e4, type: 3}
-  m_Name: Sticker5
+  m_Name: Sticker17
   m_EditorClassIdentifier: 
-  stickerName: Dotted
-  sprite: {fileID: -1905084232324680565, guid: d021ee1896c680b47b02debd2c504a69, type: 3}
+  stickerName: Wink
+  sprite: {fileID: -2616885524695416729, guid: d783402c8d362d541b73001ae7a042df, type: 3}
   unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
-  amount: 18
+  amount: 40
   discovered: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad135d6faef36429e79d2f48a7b0e4, type: 3}
   m_Name: Sticker4
   m_EditorClassIdentifier: 
-  stickerName: 3
-  sprite: {fileID: 21300006, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+  stickerName: Clown
+  sprite: {fileID: 1730239424323425247, guid: 5716c9dee0e54b849bf36c5b2996825f, type: 3}
   unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
-  amount: 0
+  amount: 16
   discovered: 0

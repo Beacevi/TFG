@@ -50759,11 +50759,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fab949e8e084140a54e2383633a245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 200
-  gems: 20
-  energy: 6
-  currentLevel: 1
-  balloonLevel: 1
+  coins:
+    fakeValue: 200
+  gems:
+    fakeValue: 20
+  energy:
+    fakeValue: 6
+  currentLevel:
+    fakeValue: 1
+  balloonLevel:
+    fakeValue: 1
+  cloudsClosing: 0
   reader: {fileID: 0}
   coins_ui: {fileID: 1439815934}
   gems_ui: {fileID: 1387437494}
@@ -53502,10 +53508,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 35706111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 47, y: -16.9375}
+  m_SizeDelta: {x: 20, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772263556
 MonoBehaviour:
@@ -53667,6 +53673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloudsIzquierda: {fileID: 0}
+  cloudsDerecha: {fileID: 0}
+  distancia: 10
+  duracion: 2
 --- !u!4 &1780912823
 Transform:
   m_ObjectHideFlags: 0

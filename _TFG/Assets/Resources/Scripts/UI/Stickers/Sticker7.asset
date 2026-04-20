@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ad135d6faef36429e79d2f48a7b0e4, type: 3}
-  m_Name: Sticker5
+  m_Name: Sticker7
   m_EditorClassIdentifier: 
-  stickerName: Dotted
-  sprite: {fileID: -1905084232324680565, guid: d021ee1896c680b47b02debd2c504a69, type: 3}
+  stickerName: Heart
+  sprite: {fileID: 4606908045521496030, guid: 1e1548e97a496e643b7a6f9fe266599d, type: 3}
   unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
-  amount: 18
+  amount: 22
   discovered: 0
