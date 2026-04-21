@@ -54,16 +54,27 @@ public class BirdButton : MonoBehaviour
         _buttonFunctions = GetComponent<ButtonFunctions>();
         _boostManager    = GetComponent<BoostsManager>();
 
-        _MyBird1.SetActive(false);
-        _MyBird2.SetActive(false);
-        _MyBird3.SetActive(false);
+        if(_MyBird1 != null && _MyBird2 != null && _MyBird3 != null)
+        {
+            _MyBird1.SetActive(false);
+            _MyBird2.SetActive(false);
+            _MyBird3.SetActive(false);
+        }
 
-        _openedIcon.SetActive(true); 
-        _closedIcon.SetActive(false);
+        if (_openedIcon != null && _closedIcon != null)
+        {
+            _openedIcon.SetActive(true); 
+            _closedIcon.SetActive(false);
+        }
 
-        _BirdPanel.SetActive(false);
-        _BoostImage.SetActive(false);
-        _Deletebirdbutton.gameObject.SetActive(false);
+        if (_BirdPanel != null && _BoostImage != null && _Deletebirdbutton != null)
+        {
+            _BirdPanel.SetActive(false);
+            _BoostImage.SetActive(false);
+            _Deletebirdbutton.gameObject.SetActive(false);
+        }
+
+        
     }
     public void OpenBirdMenu(Button button)
     {
@@ -200,7 +211,7 @@ public class BirdButton : MonoBehaviour
                 ChangeColorPanel(_panelBird3, false);
             }
 
-            BirdSelected.Enqueue(buttonTag); //< Añade el tag al principio del queu
+            BirdSelected.Enqueue(buttonTag); //< Aï¿½ade el tag al principio del queu
             TypeOfBoosts();
             if (BirdSelected.Count > 1)
             {

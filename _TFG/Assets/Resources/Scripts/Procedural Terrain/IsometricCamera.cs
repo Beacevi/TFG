@@ -226,6 +226,7 @@ public class IsometricCamera : MonoBehaviour
 
     void ReturnToStart()
     {
+        Debug.Log("Cambiando de escena");
         transform.position = Vector3.Lerp(
             transform.position,
             startPos,
@@ -235,7 +236,7 @@ public class IsometricCamera : MonoBehaviour
         if (Vector3.Distance(transform.position, startPos) < distanciaMinima)
         {
             state = CameraState.ChangingScene;
-            changeScene.Cambiar_A_Escena("UI");
+            changeScene.Cambiar_A_Escena("PruebasUI");
         }
 
         

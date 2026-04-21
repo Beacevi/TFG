@@ -34,8 +34,13 @@ public class CustomMenu : MonoBehaviour
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
 
-        _CustomPanel.SetActive(false);
-        _CheckButtonCustom.SetActive(false);
+        if(_CustomPanel != null && _CheckButtonCustom != null)
+        {
+            _CustomPanel.SetActive(false);
+            _CheckButtonCustom.SetActive(false);
+        }
+
+        
 
         _actualColorTop     = _TopPart.GetComponent<SpriteRenderer>().color;
         _actualColorMiddle  = _MiddlePart.GetComponent<SpriteRenderer>().color;

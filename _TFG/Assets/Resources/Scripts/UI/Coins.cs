@@ -18,7 +18,10 @@ public class Coins : MonoBehaviour
 
     void Start()
     {
-        _actualCoins = _gameManager.GetMoney();
+        if(_gameManager != null)
+        {
+            _actualCoins = _gameManager.GetMoney();
+        }
 
         ActualiceCoinsUI();
     }

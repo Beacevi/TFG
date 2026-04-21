@@ -40,7 +40,11 @@ public class ShopMenu : MonoBehaviour
 
         InvokeRepeating(nameof(UpdateTimerUI), 0f, 1f);
 
-        _storeMenu.SetActive(false);
+        if(_storeMenu != null)
+        {
+            _storeMenu.SetActive(false);
+        }
+
     }
 
     private void UpdateTimerUI()
@@ -58,12 +62,12 @@ public class ShopMenu : MonoBehaviour
 
         if (remaining.TotalHours < 1)
         {
-            // Última hora: mostrar horas:minutos:segundos
+            // ï¿½ltima hora: mostrar horas:minutos:segundos
             _timerText.text = $"{remaining.Minutes:D2}:{remaining.Seconds:D2}";
         }
         else
         {
-            // Más de una hora: mostrar solo horas:minutos
+            // Mï¿½s de una hora: mostrar solo horas:minutos
             _timerText.text = $"{(int)remaining.TotalHours:D2}:{remaining.Minutes:D2}";
         }
     }

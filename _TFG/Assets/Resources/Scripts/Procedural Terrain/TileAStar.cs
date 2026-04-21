@@ -108,6 +108,10 @@ public class TileAStar : MonoBehaviour
             moving = true;
             currentIndex = 0;
         }
+        else
+        {
+            Debug.Log("Ha pasado algo");//Cuando ocurre el bug se mete aqui porque el path es 0, muy posiblemente tenga que ver al mover la camara con el dedo
+        }
     }
     bool IsPointerOverUI(Vector3 screenPos)
     {
@@ -214,11 +218,11 @@ public class TileAStar : MonoBehaviour
             Destroy(lastPathNode.Interactable);  
             lastPathNode.Interactable = null;     
             lastPathNode.hasObject = false;       
-            Debug.Log("[TileAStar] Pájaro eliminado del nodo.");
+            Debug.Log("[TileAStar] Pï¿½jaro eliminado del nodo.");
         }
         else
         {
-            Debug.Log("[TileAStar] No hay pájaro en lastPathNode.");
+            Debug.Log("[TileAStar] No hay pï¿½jaro en lastPathNode.");
         }
     }
 

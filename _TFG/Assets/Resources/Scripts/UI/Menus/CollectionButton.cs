@@ -26,8 +26,11 @@ public class CollectionButton : MonoBehaviour
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
 
-        _CollectionPanel.SetActive(false);
-        _InfoCollection.SetActive(false);
+        if(_CollectionPanel != null && _InfoCollection != null)
+        {
+         _CollectionPanel.SetActive(false);
+         _InfoCollection.SetActive(false);
+        }
     }
 
     public void OpenCollectionMenu(Button button)

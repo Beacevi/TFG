@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Pruebas/PruebasUI.unity
+    guid: 4ca26b6c5e1ca2345b7bd0d3a4d74518
+  - enabled: 1
     path: Assets/Scenes/UI.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pruebas/SimonSaysPrueba.unity
     guid: 0e83d9bf6d56b2c2996f3e3690ada0e0
-  - enabled: 1
-    path: Assets/Scenes/Pruebas/PruebasUI.unity
-    guid: 4ca26b6c5e1ca2345b7bd0d3a4d74518
   - enabled: 1
     path: Assets/Scenes/Pruebas/PruebasProceduralTerrain.unity
     guid: 2e2a366fa50cd89438b7cd488d44b267
