@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1280
-    y: 30
+    x: 0
+    y: 43
     width: 1920
     height: 989
   m_ShowMode: 4
@@ -1288,7 +1288,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: de3b0100
     m_LastClickedID: 80862
-    m_ExpandedIDs: 00000000ded60000e0d60000e2d60000e4d60000e6d60000e8d60000ead60000ecd60000eed60000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1317,7 +1317,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ded60000e0d60000e2d60000e4d60000e6d60000e8d60000ead60000ecd60000eed60000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -218,11 +218,11 @@ public class TileAStar : MonoBehaviour
             Destroy(lastPathNode.Interactable);  
             lastPathNode.Interactable = null;     
             lastPathNode.hasObject = false;       
-            Debug.Log("[TileAStar] P�jaro eliminado del nodo.");
+            Debug.Log("[TileAStar] Pajaro eliminado del nodo.");
         }
         else
         {
-            Debug.Log("[TileAStar] No hay p�jaro en lastPathNode.");
+            Debug.Log("[TileAStar] No hay pajaro en lastPathNode.");
         }
     }
 
