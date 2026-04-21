@@ -9696,6 +9696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324415607}
   - component: {fileID: 324415608}
+  - component: {fileID: 324415609}
   m_Layer: 0
   m_Name: MidlePartBalloon
   m_TagString: Untagged
@@ -9773,6 +9774,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &324415609
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324415606}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.010883806, y: -0.030292993}
+  m_Size: {x: 2.3519711, y: 0.8002821}
+  m_Direction: 1
 --- !u!1 &330701932
 GameObject:
   m_ObjectHideFlags: 0
@@ -28795,7 +28833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &731771243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30416,6 +30454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791467096}
   - component: {fileID: 791467097}
+  - component: {fileID: 791467098}
   m_Layer: 0
   m_Name: BottomPartBalloon
   m_TagString: Untagged
@@ -30493,6 +30532,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &791467098
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791467095}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.062147845, y: -0.15980604}
+  m_Size: {x: 1.3234261, y: 0.5204017}
+  m_Direction: 1
 --- !u!1 &798739927
 GameObject:
   m_ObjectHideFlags: 0
@@ -37022,7 +37098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1079285603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37708,7 +37784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1098269343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42326,6 +42402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276258652}
   - component: {fileID: 1276258653}
+  - component: {fileID: 1276258654}
   m_Layer: 0
   m_Name: TopPartBalloon
   m_TagString: Untagged
@@ -42403,6 +42480,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1276258654
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276258651}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.017755933, y: -0.03995258}
+  m_Size: {x: 1.7462045, y: 0.97011185}
+  m_Direction: 1
 --- !u!1 &1276358876
 GameObject:
   m_ObjectHideFlags: 0
@@ -43432,7 +43546,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1312963382}
   uiToMove: {fileID: 1079285603}
-  canvas: {fileID: 731771246}
 --- !u!1 &1313238281
 GameObject:
   m_ObjectHideFlags: 0
@@ -61385,7 +61498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2035470817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62177,6 +62290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074205444}
   - component: {fileID: 2074205445}
+  - component: {fileID: 2074205446}
   m_Layer: 0
   m_Name: SupportPartBalloon
   m_TagString: Untagged
@@ -62254,6 +62368,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2074205446
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074205443}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.019975722, y: -0.5405393}
+  m_Size: {x: 0.70457923, y: 0.78892124}
+  m_Direction: 0
 --- !u!1 &2076468614
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ public class UIFollowWorldObject : MonoBehaviour
 {
     public Transform target;
     public RectTransform uiToMove;   // BlackboardRoot
-    public Canvas canvas;
+    //public Canvas canvas;
 
     Camera cam;
     RectTransform canvasRect;
@@ -12,7 +12,7 @@ public class UIFollowWorldObject : MonoBehaviour
     void Awake()
     {
         cam = Camera.main;
-        canvasRect = canvas.GetComponent<RectTransform>();
+        //canvasRect = canvas.GetComponent<RectTransform>();
     }
 
     void LateUpdate()
@@ -33,14 +33,14 @@ public class UIFollowWorldObject : MonoBehaviour
         uiToMove.gameObject.SetActive(true);
 
         // Screen → Canvas local
-        Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+        //Vector2 localPoint;
+        /*RectTransformUtility.ScreenPointToLocalPointInRectangle(
             canvasRect,
             screenPos,
             canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : cam,
             out localPoint
-        );
+        );*/
 
-        uiToMove.anchoredPosition = localPoint;
+        //uiToMove.anchoredPosition = localPoint;
     }
 }
