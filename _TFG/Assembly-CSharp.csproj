@@ -82,11 +82,12 @@
     <Compile Include="Assets\GoogleSignIn\GoogleSignInUser.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignInConfiguration.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\Skins\TrailtextureScroll.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\Stickers\PlacedStickerUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\RealTimeLight.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerReceiver.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerData.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\CollectionButton.cs" />
@@ -145,7 +146,6 @@
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\RealTimeLightController.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\BirdButton.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerPlacer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Resources\Scripts\Procedural Terrain\IsometricCamera.cs" />
@@ -158,11 +158,10 @@
     <Compile Include="Assets\GoogleSignIn\Impl\SignInHelperObject.cs" />
     <Compile Include="Assets\Resources\ScriptableObjectsBirds\Bird.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsMovement.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\BirdReactionsManager.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\Stickers\UIFollowWorldObject.cs" />
     <Compile Include="Assets\Effects\Clima\Weather.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerButtonUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\System.Management.7.0.2\useSharedDesignerContext.txt" />
