@@ -63,6 +63,14 @@ public class IsometricCamera : MonoBehaviour
 
         HandleInput();
 
+        // 🔹 Control de fin de movimiento (independiente de la cámara)
+        if (tileAstar.stepsAvailable <= 0 && state == CameraState.Following)
+        {
+            target = null;
+            state = CameraState.Waiting;
+            StartCoroutine(WaitBeforeReturn());
+        }
+
         switch (state)
         {
             case CameraState.Following:
@@ -120,6 +128,7 @@ public class IsometricCamera : MonoBehaviour
             }
             else
             {
+                isAttached = true;
                 tileAstar.SetCanMove(false);
             }
         }
@@ -143,7 +152,15 @@ public class IsometricCamera : MonoBehaviour
                 isAttached = false;
                 tileAstar.SetCanMove(false);
             }
+
+            if (t.phase == TouchPhase.Ended)
+            {
+                isAttached = true;
+                tileAstar.SetCanMove(true);
+            }
+
         }
+        
 
         if (Input.touchCount == 2)
         {
@@ -212,13 +229,6 @@ public class IsometricCamera : MonoBehaviour
             targetPosition,
             followSpeed * Time.deltaTime
         );
-
-        if (tileAstar.stepsAvailable <= 0)
-        {
-            target = null;
-            state = CameraState.Waiting;
-            StartCoroutine(WaitBeforeReturn());
-        }
     }
 
     IEnumerator WaitBeforeReturn()
