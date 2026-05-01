@@ -19,10 +19,13 @@ public class TileAStar : MonoBehaviour
     private const int INF = int.MaxValue / 4;
 
     private Node lastPathNode = null;
+    private Node interactableNode = null;
 
     public int stepsAvailable = 30;
 
     private bool canMove = false;
+
+    private static float inputBlockedUntil = 0f;
 
     private void Start()
     {
@@ -68,7 +71,9 @@ public class TileAStar : MonoBehaviour
 
                 if (interactable != null)
                 {
+                    interactableNode = lastPathNode;
                     interactable.Interact(this);
+
                 }
                 else
                 {
@@ -86,6 +91,9 @@ public class TileAStar : MonoBehaviour
 
     public void ProcessClick(Vector3 screenPos)
     {
+        // 🔥 BLOQUEO GLOBAL (CLAVE)
+        if (Time.time < inputBlockedUntil) return;
+
         if (!canMove) return;
 
         if (IsPointerOverUI(screenPos)) return;
@@ -107,10 +115,6 @@ public class TileAStar : MonoBehaviour
         {
             moving = true;
             currentIndex = 0;
-        }
-        else
-        {
-            Debug.Log("Ha pasado algo");//Cuando ocurre el bug se mete aqui porque el path es 0, muy posiblemente tenga que ver al mover la camara con el dedo
         }
     }
     bool IsPointerOverUI(Vector3 screenPos)
@@ -211,18 +215,18 @@ public class TileAStar : MonoBehaviour
 
     public void RemoveBirdAtLastNode()
     {
-        if (lastPathNode == null) return;
+        if (interactableNode == null) return;
 
-        if (lastPathNode.hasObject && lastPathNode.Interactable != null)
+        if (interactableNode.hasObject && interactableNode.Interactable != null)
         {
-            Destroy(lastPathNode.Interactable);  
-            lastPathNode.Interactable = null;     
-            lastPathNode.hasObject = false;       
+            Destroy(interactableNode.Interactable);  
+            interactableNode.Interactable = null;     
+            interactableNode.hasObject = false;       
             Debug.Log("[TileAStar] Pajaro eliminado del nodo.");
         }
         else
         {
-            Debug.Log("[TileAStar] No hay pajaro en lastPathNode.");
+            Debug.Log("[TileAStar] No hay pajaro en interactableNode.");
         }
     }
 
@@ -367,6 +371,11 @@ public class TileAStar : MonoBehaviour
         Gizmos.color = Color.yellow;
         for (int i = 0; i < path.Count - 1; i++)
             Gizmos.DrawLine(path[i], path[i + 1]);
+    }
+
+    public static void BlockInputForSeconds(float seconds)
+    {
+        inputBlockedUntil = Time.time + seconds;
     }
 
 }
