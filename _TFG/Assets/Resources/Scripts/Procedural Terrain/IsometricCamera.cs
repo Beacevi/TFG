@@ -223,7 +223,7 @@ public class IsometricCamera : MonoBehaviour
     {
         if (target == null) return;
 
-        //Vector3 targetPosition = target.position + offset;transform.position = Vector3.Lerp(transform.position,targetPosition,followSpeed * Time.deltaTime);
+        Vector3 targetPosition = target.position + offset;transform.position = Vector3.Lerp(transform.position,targetPosition,followSpeed * Time.deltaTime);
     }
 
     IEnumerator WaitBeforeReturn()
