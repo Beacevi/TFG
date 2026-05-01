@@ -83,20 +83,24 @@ public class Hour : MonoBehaviour
 
     private void UpdateIcon()
     {
-
-        int currentHour = DateTime.Now.Hour;
-
-        if (currentHour >= 18 || currentHour < 6)
+        if(_sunnyIcon != null && _background != null && _nightIcon != null)
         {
-            _sunnyIcon.SetActive(false);
-            _background.GetComponent<Renderer>().material = _night;
-            _nightIcon.SetActive(true);
+            int currentHour = DateTime.Now.Hour;
+
+            if (currentHour >= 18 || currentHour < 6)
+            {
+                _sunnyIcon.SetActive(false);
+                _background.GetComponent<Renderer>().material = _night;
+                _nightIcon.SetActive(true);
+            }
+            else
+            {
+                _sunnyIcon.SetActive(true);
+                _background.GetComponent<Renderer>().material = _day;
+                _nightIcon.SetActive(false);
+            }
         }
-        else
-        {
-            _sunnyIcon.SetActive(true);
-            _background.GetComponent<Renderer>().material = _day;
-            _nightIcon.SetActive(false);
-        }
+
+        
     }
 }

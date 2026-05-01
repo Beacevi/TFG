@@ -33,10 +33,13 @@ public class ShopMenu : MonoBehaviour
     private bool _isResetMessageOpen = false;
     void Start()
     {
-        _buttonFunctions = GetComponent<ButtonFunctions>();
+        if(_buttonFunctions != null && _normalColor != null && _nextResetTime != null)
+        {
+           _buttonFunctions = GetComponent<ButtonFunctions>();
 
-        _normalColor   = _timerText.color;
-        _nextResetTime = DateTime.Today.AddDays(1);
+            _normalColor   = _timerText.color;
+            _nextResetTime = DateTime.Today.AddDays(1); 
+        }
 
         InvokeRepeating(nameof(UpdateTimerUI), 0f, 1f);
 
@@ -49,27 +52,31 @@ public class ShopMenu : MonoBehaviour
 
     private void UpdateTimerUI()
     {
-        TimeSpan remaining = _nextResetTime - DateTime.Now;
+            if(_timerText != null)
+            {
+                TimeSpan remaining = _nextResetTime - DateTime.Now;
 
-        if (remaining.TotalSeconds <= 0)
-        {
-            // Reinicia el timer a la siguiente medianoche
-            _nextResetTime = DateTime.Today.AddDays(1);
-            remaining = _nextResetTime - DateTime.Now;
+            if (remaining.TotalSeconds <= 0)
+            {
+                // Reinicia el timer a la siguiente medianoche
+                _nextResetTime = DateTime.Today.AddDays(1);
+                remaining = _nextResetTime - DateTime.Now;
+            }
+
+            _timerText.color = remaining.TotalHours < 1 ? _lastHourColor : _normalColor;
+
+            if (remaining.TotalHours < 1)
+            {
+                // �ltima hora: mostrar horas:minutos:segundos
+                _timerText.text = $"{remaining.Minutes:D2}:{remaining.Seconds:D2}";
+            }
+            else
+            {
+                // M�s de una hora: mostrar solo horas:minutos
+                _timerText.text = $"{(int)remaining.TotalHours:D2}:{remaining.Minutes:D2}";
+            }
         }
 
-        _timerText.color = remaining.TotalHours < 1 ? _lastHourColor : _normalColor;
-
-        if (remaining.TotalHours < 1)
-        {
-            // �ltima hora: mostrar horas:minutos:segundos
-            _timerText.text = $"{remaining.Minutes:D2}:{remaining.Seconds:D2}";
-        }
-        else
-        {
-            // M�s de una hora: mostrar solo horas:minutos
-            _timerText.text = $"{(int)remaining.TotalHours:D2}:{remaining.Minutes:D2}";
-        }
     }
 
     public void OpenStoreMenu(Button button)

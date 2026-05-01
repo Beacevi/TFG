@@ -77,8 +77,11 @@ public class IsometricCamera : MonoBehaviour
     }
     void HandleInput()
     {
-        HandleMouse();
-        HandleTouch();
+        if(tileAstar != null)
+        {
+            HandleMouse();
+            HandleTouch();
+        }
     }
 
     void HandleMouse()

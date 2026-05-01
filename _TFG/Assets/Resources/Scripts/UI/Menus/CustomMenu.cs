@@ -40,12 +40,15 @@ public class CustomMenu : MonoBehaviour
             _CheckButtonCustom.SetActive(false);
         }
 
-        
+        if(_actualColorTop != null && _actualColorMiddle != null && _actualColorBottom != null && _actualColorSupport != null && _TopPart != null && _MiddlePart != null && _BottomPart != null && _SupportPart != null)
+        {
+            _actualColorTop     = _TopPart.GetComponent<SpriteRenderer>().color;
+            _actualColorMiddle  = _MiddlePart.GetComponent<SpriteRenderer>().color;
+            _actualColorBottom  = _BottomPart.GetComponent<SpriteRenderer>().color;
+            _actualColorSupport = _SupportPart.GetComponent<SpriteRenderer>().color;
+        }
 
-        _actualColorTop     = _TopPart.GetComponent<SpriteRenderer>().color;
-        _actualColorMiddle  = _MiddlePart.GetComponent<SpriteRenderer>().color;
-        _actualColorBottom  = _BottomPart.GetComponent<SpriteRenderer>().color;
-        _actualColorSupport = _SupportPart.GetComponent<SpriteRenderer>().color;
+        
     }
     public void OpenCustomMenu(UnityEngine.UI.Button button)
     {
