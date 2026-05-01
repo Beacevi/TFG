@@ -10,32 +10,27 @@ public class ChangeScene : MonoBehaviour
     [SerializeField] private Transform cloudsIzquierda;
     [SerializeField] private Transform cloudsDerecha;
 
-    [SerializeField] private float distancia = 10f;
-    [SerializeField] private float duracion = 2f;
+    // 🔥 NUEVO: control de velocidad desde Inspector
+    [SerializeField, Range(0.1f, 10f)]
+    private float velocidadNubes = 3f;
 
-    // 🔹 NUEVO: posiciones base para evitar offsets acumulados
     private Vector3 baseIzq;
     private Vector3 baseDer;
 
-    // 🔹 NUEVO: desplazamiento dinámico según pantalla
     private float desplazamiento;
     private Camera cam;
 
-    private void Awake()
-    {
-        //EventSystem[] systems = FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
-        //for (int i = 0; i < systems.Length; i++)
-        //{
-        //    systems[i].gameObject.SetActive(i == 0);
-        //}
-    }
+    private int lastW;
+    private int lastH;
 
-    public void Start()
+    private void Start()
     {
-        if(cloudsIzquierda!= null &&  cloudsDerecha!= null)
+        if (cloudsIzquierda != null && cloudsDerecha != null)
         {
-            // 🔹 NUEVO
             cam = Camera.main;
+
+            if (cam == null)
+                cam = FindFirstObjectByType<Camera>();
 
             baseIzq = cloudsIzquierda.localPosition;
             baseDer = cloudsDerecha.localPosition;
@@ -46,33 +41,42 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    // 🔹 NUEVO: calcula cuánto deben moverse según la cámara
+    private void Update()
+    {
+        if (Screen.width != lastW || Screen.height != lastH)
+        {
+            lastW = Screen.width;
+            lastH = Screen.height;
+
+            CalcularDesplazamiento();
+        }
+    }
+
     void CalcularDesplazamiento()
     {
         if (cam == null)
-        {
-            desplazamiento = distancia; // fallback
             return;
-        }
 
-        float altura = cam.orthographicSize * 2f;
-        float anchura = altura * cam.aspect;
+        Vector3 left = cam.ViewportToWorldPoint(new Vector3(0, 0.5f, cam.nearClipPlane));
+        Vector3 right = cam.ViewportToWorldPoint(new Vector3(1, 0.5f, cam.nearClipPlane));
 
-        desplazamiento = anchura * 0.6f;
+        float width = Mathf.Abs(right.x - left.x);
+
+        desplazamiento = width * 0.5f;
     }
 
     public void Cambiar_A_Escena(string nombreEscena)
     {
-        string escenaActual = SceneManager.GetActiveScene().name;
+        string actual = SceneManager.GetActiveScene().name;
 
-        if (nombreEscena == escenaActual)
+        if (nombreEscena == actual)
         {
             nombreEscena = "UI";
-            StartCoroutine(SceneTransition(nombreEscena,false));
+            StartCoroutine(SceneTransition(nombreEscena, false));
         }
         else
         {
-            StartCoroutine(SceneTransition(nombreEscena,false));
+            StartCoroutine(SceneTransition(nombreEscena, false));
         }
     }
 
@@ -83,7 +87,7 @@ public class ChangeScene : MonoBehaviour
 
     public void UnloadScene(string nombreEscena)
     {
-        Debug.Log("El nombre de la escena anterior es: "+previousScene.name);
+        Debug.Log("El nombre de la escena anterior es: " + previousScene.name);
         SceneManager.SetActiveScene(previousScene);
         SceneManager.UnloadSceneAsync(nombreEscena);
     }
@@ -116,12 +120,8 @@ public class ChangeScene : MonoBehaviour
 
     IEnumerator AnimarNubes(bool abrir)
     {
-        // 🔹 CAMBIADO: ya no usamos posiciones actuales ni distancia fija
-        Vector3 inicioIzq;
-        Vector3 destinoIzq;
-
-        Vector3 inicioDer;
-        Vector3 destinoDer;
+        Vector3 inicioIzq, destinoIzq;
+        Vector3 inicioDer, destinoDer;
 
         if (abrir)
         {
@@ -140,15 +140,17 @@ public class ChangeScene : MonoBehaviour
             destinoDer = baseDer;
         }
 
-        float t = 0;
+        float t = 0f;
 
-        while (t < duracion)
+        while (t < 1f)
         {
-            t += Time.deltaTime;
-            float progreso = Mathf.SmoothStep(0, 1, t / duracion);
+            // 🔥 velocidad controlable
+            t += Time.deltaTime * velocidadNubes;
 
-            cloudsIzquierda.localPosition = Vector3.Lerp(inicioIzq, destinoIzq, progreso);
-            cloudsDerecha.localPosition = Vector3.Lerp(inicioDer, destinoDer, progreso);
+            float p = Mathf.SmoothStep(0, 1, t);
+
+            cloudsIzquierda.localPosition = Vector3.Lerp(inicioIzq, destinoIzq, p);
+            cloudsDerecha.localPosition = Vector3.Lerp(inicioDer, destinoDer, p);
 
             yield return null;
         }

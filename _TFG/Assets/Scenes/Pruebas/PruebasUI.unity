@@ -15501,7 +15501,6 @@ RectTransform:
   - {fileID: 1906923089}
   - {fileID: 1470188927}
   - {fileID: 1235443062}
-  - {fileID: 1780912823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -54042,8 +54041,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudsIzquierda: {fileID: 8884028272572707541}
   cloudsDerecha: {fileID: 8884028272572707540}
-  distancia: 10
-  duracion: 2
 --- !u!4 &1780912823
 Transform:
   m_ObjectHideFlags: 0
@@ -54053,12 +54050,12 @@ Transform:
   m_GameObject: {fileID: 1780912821}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -152.36183, y: -305.25464, z: 0}
-  m_LocalScale: {x: 0.35711536, y: 0.35711536, z: 0.35711536}
+  m_LocalPosition: {x: -3, y: 1266, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 561735121}
-  m_Father: {fileID: 583425607}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792421553
 GameObject:
@@ -64464,6 +64461,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1780912823}
     m_Modifications:
+    - target: {fileID: 2626307490981455422, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266803079829530545, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4667454746358534952, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
       propertyPath: m_Name
       value: CloudsTransition
@@ -64530,11 +64535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8740940390487098537, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 426.64594
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8740940390487098537, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 854.7787
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8740940390487098537, guid: c93ccb95550cfe84eb13a31657e06982, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -64572,6 +64577,7 @@ SceneRoots:
   - {fileID: 1625128817}
   - {fileID: 1734473552}
   - {fileID: 1607316127}
+  - {fileID: 1780912823}
   - {fileID: 583425607}
   - {fileID: 613804842}
   - {fileID: 877973802}
