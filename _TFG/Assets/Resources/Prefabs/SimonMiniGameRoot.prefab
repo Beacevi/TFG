@@ -5825,6 +5825,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloudsIzquierda: {fileID: 0}
+  cloudsDerecha: {fileID: 0}
+  distancia: 10
+  duracion: 2
 --- !u!1 &7843629116930986423
 GameObject:
   m_ObjectHideFlags: 0
@@ -6751,7 +6755,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7402606442153783806}
   - {fileID: 4006565730009362518}
   - {fileID: 3112619625597590332}
   m_Father: {fileID: 8313047165602537957}
@@ -6769,7 +6772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weatherEffects:
-  - {fileID: 7402606442153783744}
+  - {fileID: 0}
   - {fileID: 4006565730009362536}
   - {fileID: 3112619625597590274}
   weatherChance: 0.75
@@ -7320,85 +7323,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5963227725500459769, guid: bc1b8a611880e084187b3c7f61ceab1f, type: 3}
   m_PrefabInstance: {fileID: 2470880194079037218}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3669632920827651130
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4287974185505145218}
-    m_Modifications:
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -348.94852
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -549.1983
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578693, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_Name
-      value: CFXR4 Rain Falling
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578693, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578746, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: ShapeModule.m_Scale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077168872989578747, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
---- !u!198 &7402606442153783744 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6077168872989578746, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-  m_PrefabInstance: {fileID: 3669632920827651130}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7402606442153783806 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6077168872989578692, guid: 26e26882afa3a1a46b175bd947a8d35c, type: 3}
-  m_PrefabInstance: {fileID: 3669632920827651130}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3989516228799954611
 PrefabInstance:

@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+
 public class ChangeScene : MonoBehaviour
 {
     private static UnityEngine.SceneManagement.Scene previousScene;
@@ -11,6 +12,14 @@ public class ChangeScene : MonoBehaviour
 
     [SerializeField] private float distancia = 10f;
     [SerializeField] private float duracion = 2f;
+
+    // 🔹 NUEVO: posiciones base para evitar offsets acumulados
+    private Vector3 baseIzq;
+    private Vector3 baseDer;
+
+    // 🔹 NUEVO: desplazamiento dinámico según pantalla
+    private float desplazamiento;
+    private Camera cam;
 
     private void Awake()
     {
@@ -25,8 +34,31 @@ public class ChangeScene : MonoBehaviour
     {
         if(cloudsIzquierda!= null &&  cloudsDerecha!= null)
         {
+            // 🔹 NUEVO
+            cam = Camera.main;
+
+            baseIzq = cloudsIzquierda.localPosition;
+            baseDer = cloudsDerecha.localPosition;
+
+            CalcularDesplazamiento();
+
             StartCoroutine(StartAnimation());
         }
+    }
+
+    // 🔹 NUEVO: calcula cuánto deben moverse según la cámara
+    void CalcularDesplazamiento()
+    {
+        if (cam == null)
+        {
+            desplazamiento = distancia; // fallback
+            return;
+        }
+
+        float altura = cam.orthographicSize * 2f;
+        float anchura = altura * cam.aspect;
+
+        desplazamiento = anchura * 0.6f;
     }
 
     public void Cambiar_A_Escena(string nombreEscena)
@@ -37,20 +69,16 @@ public class ChangeScene : MonoBehaviour
         {
             nombreEscena = "UI";
             StartCoroutine(SceneTransition(nombreEscena,false));
-            
         }
         else
         {
             StartCoroutine(SceneTransition(nombreEscena,false));
         }
     }
+
     public void LoadSceneAdditive(string nombreEscena)
     {
-        //previousScene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(nombreEscena, LoadSceneMode.Additive);
-
         StartCoroutine(SceneTransition(nombreEscena, true));
-
     }
 
     public void UnloadScene(string nombreEscena)
@@ -73,7 +101,6 @@ public class ChangeScene : MonoBehaviour
             yield return StartCoroutine(AnimarNubes(false));
         }
 
-        // pequeño margen por seguridad
         yield return new WaitForSeconds(0.2f);
 
         if (!additive)
@@ -89,21 +116,28 @@ public class ChangeScene : MonoBehaviour
 
     IEnumerator AnimarNubes(bool abrir)
     {
-        Vector3 inicioIzq = cloudsIzquierda.localPosition;
-        Vector3 inicioDer = cloudsDerecha.localPosition;
-
+        // 🔹 CAMBIADO: ya no usamos posiciones actuales ni distancia fija
+        Vector3 inicioIzq;
         Vector3 destinoIzq;
+
+        Vector3 inicioDer;
         Vector3 destinoDer;
 
         if (abrir)
         {
-            destinoIzq = inicioIzq + Vector3.left * distancia;
-            destinoDer = inicioDer + Vector3.right * distancia;
+            inicioIzq = baseIzq;
+            destinoIzq = baseIzq + Vector3.left * desplazamiento;
+
+            inicioDer = baseDer;
+            destinoDer = baseDer + Vector3.right * desplazamiento;
         }
         else
         {
-            destinoIzq = inicioIzq + Vector3.right * distancia;
-            destinoDer = inicioDer + Vector3.left * distancia;
+            inicioIzq = baseIzq + Vector3.left * desplazamiento;
+            destinoIzq = baseIzq;
+
+            inicioDer = baseDer + Vector3.right * desplazamiento;
+            destinoDer = baseDer;
         }
 
         float t = 0;
@@ -119,5 +153,4 @@ public class ChangeScene : MonoBehaviour
             yield return null;
         }
     }
-
 }

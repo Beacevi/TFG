@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pruebas/SimonSaysPrueba.unity
     guid: 0e83d9bf6d56b2c2996f3e3690ada0e0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Pruebas/PruebasProceduralTerrain.unity
     guid: 2e2a366fa50cd89438b7cd488d44b267
   m_configObjects: {}
