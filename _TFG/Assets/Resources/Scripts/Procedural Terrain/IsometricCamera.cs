@@ -223,12 +223,7 @@ public class IsometricCamera : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 targetPosition = target.position + offset;
-        transform.position = Vector3.Lerp(
-            transform.position,
-            targetPosition,
-            followSpeed * Time.deltaTime
-        );
+        //Vector3 targetPosition = target.position + offset;transform.position = Vector3.Lerp(transform.position,targetPosition,followSpeed * Time.deltaTime);
     }
 
     IEnumerator WaitBeforeReturn()
@@ -240,17 +235,15 @@ public class IsometricCamera : MonoBehaviour
     void ReturnToStart()
     {
         Debug.Log("Cambiando de escena");
-        transform.position = Vector3.Lerp(
-            transform.position,
-            startPos,
-            followSpeed * Time.deltaTime
-        );
-
+        //transform.position = Vector3.Lerp(transform.position,startPos,followSpeed * Time.deltaTime);
+        state = CameraState.ChangingScene;
+        changeScene.Cambiar_A_Escena("PruebasUI");
+        /*
         if (Vector3.Distance(transform.position, startPos) < distanciaMinima)
         {
             state = CameraState.ChangingScene;
             changeScene.Cambiar_A_Escena("PruebasUI");
-        }
+        }*/
 
         
     }
@@ -258,10 +251,10 @@ public class IsometricCamera : MonoBehaviour
 
     public void AssingPlayer(GameObject _player)
     {
-
         target = _player.transform;
         tileAstar = target.gameObject.GetComponent<TileAStar>();
         isAttached = true;
         tileAstar.SetCanMove(true);
+        transform.position = target.position + offset;
     }
 }

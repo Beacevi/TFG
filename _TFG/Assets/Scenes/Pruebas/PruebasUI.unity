@@ -54041,6 +54041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudsIzquierda: {fileID: 8884028272572707541}
   cloudsDerecha: {fileID: 8884028272572707540}
+  velocidadNubes: 1
 --- !u!4 &1780912823
 Transform:
   m_ObjectHideFlags: 0
