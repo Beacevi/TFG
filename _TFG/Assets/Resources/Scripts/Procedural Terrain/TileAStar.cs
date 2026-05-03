@@ -91,7 +91,7 @@ public class TileAStar : MonoBehaviour
 
     public void ProcessClick(Vector3 screenPos)
     {
-        // 🔥 BLOQUEO GLOBAL (CLAVE)
+        //BLOQUEO GLOBAL
         if (Time.time < inputBlockedUntil) return;
 
         if (!canMove) return;

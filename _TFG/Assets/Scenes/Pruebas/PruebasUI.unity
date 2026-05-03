@@ -1303,9 +1303,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2349,6 +2361,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 97320360}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustom
@@ -2928,6 +2952,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319707}
         m_TargetAssemblyTypeName: CustomMenuSprites, Assembly-CSharp
         m_MethodName: CheckSprites
@@ -3420,6 +3456,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319708}
         m_TargetAssemblyTypeName: ChangeCustomMenu, Assembly-CSharp
         m_MethodName: ActivarMenuSkins
@@ -3516,6 +3564,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319704}
         m_TargetAssemblyTypeName: CustomMenu, Assembly-CSharp
         m_MethodName: CloseCustomMenu
@@ -3746,14 +3806,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1684674713}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -3761,15 +3829,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: StickerButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -3959,6 +4043,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 146341876}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -4131,9 +4227,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5285,7 +5393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 187728513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &187728513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5567,6 +5687,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: BuyArticle
@@ -6256,9 +6388,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6739,6 +6883,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: ResetStorePanel
@@ -7444,6 +7600,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -9343,6 +9511,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -9677,6 +9857,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 309013440}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustomSprite
@@ -10213,6 +10405,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 338586980}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustomSprite
@@ -11259,6 +11463,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: OpenStoreMenu
@@ -11430,6 +11646,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319708}
         m_TargetAssemblyTypeName: ChangeCustomMenu, Assembly-CSharp
         m_MethodName: ActivarMenuColors
@@ -12310,9 +12538,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12472,6 +12712,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 438507786}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustom
@@ -12951,7 +13203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460597777}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460597777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13311,6 +13575,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: BuyArticle
@@ -13833,6 +14109,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 493476341}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -13967,7 +14255,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 496349514}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &496349514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15246,6 +15546,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -15730,6 +16042,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 584109689}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -20698,6 +21022,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 591827681}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustomSprite
@@ -21499,9 +21835,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21990,9 +22338,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22658,6 +23018,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 652481725}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickTakeBirdOff
@@ -27766,6 +28138,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -28185,6 +28569,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1780912822}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: Cambiar_A_Escena
@@ -31750,6 +32146,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1607316128}
         m_TargetAssemblyTypeName: GoogleFirebaseLogin, Assembly-CSharp
         m_MethodName: SaveUserDataKPIs
@@ -32811,6 +33219,7 @@ GameObject:
   - component: {fileID: 870708643}
   - component: {fileID: 870708645}
   - component: {fileID: 870708646}
+  - component: {fileID: 870708647}
   m_Layer: 0
   m_Name: Bird1
   m_TagString: Untagged
@@ -32942,6 +33351,103 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 5
+--- !u!82 &870708647
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870708641}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 952121038667909289, guid: 20a2c23b7ecabb8faab8bc68b9d30da7, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &876744097
 GameObject:
   m_ObjectHideFlags: 0
@@ -33289,6 +33795,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 880890860}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -33761,6 +34279,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319704}
         m_TargetAssemblyTypeName: CustomMenu, Assembly-CSharp
         m_MethodName: OpenCustomMenu
@@ -34008,7 +34538,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 911929572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &911929572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34482,9 +35024,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35208,6 +35762,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 969642487}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustom
@@ -35517,6 +36083,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 987529849}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickTakeBirdOff
@@ -36770,6 +37348,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319704}
         m_TargetAssemblyTypeName: CustomMenu, Assembly-CSharp
         m_MethodName: CloseCustomMenu
@@ -36963,9 +37553,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37450,6 +38052,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319702}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: OpenCollectionMenu
@@ -38149,6 +38763,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1121882705}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustomSprite
@@ -38323,6 +38949,7 @@ GameObject:
   - component: {fileID: 1126918661}
   - component: {fileID: 1126918663}
   - component: {fileID: 1126918664}
+  - component: {fileID: 1126918665}
   m_Layer: 0
   m_Name: Bird2
   m_TagString: Untagged
@@ -38454,6 +39081,103 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 5
+--- !u!82 &1126918665
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126918659}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 952121038667909289, guid: 20a2c23b7ecabb8faab8bc68b9d30da7, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1131861840
 GameObject:
   m_ObjectHideFlags: 0
@@ -39511,13 +40235,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137319702}
-        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
-        m_MethodName: CloseCollectionMenu
-        m_Mode: 2
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1168092685}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: StickerPlacer, Assembly-CSharp
+        m_MethodName: ExitDeleteMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -39743,6 +40479,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1780912822}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: Cambiar_A_Escena
@@ -40004,6 +40752,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1187380210}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustomSprite
@@ -40272,6 +41032,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: OpenAnimation
@@ -40443,6 +41215,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1198386292}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: UpgradeLevel
@@ -40538,9 +41322,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41060,40 +41856,180 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1607316128}
     - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: aumentarCoins
       objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GoogleFirebaseLogin, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1607316128}
     - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SaveUserData
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GoogleFirebaseLogin, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1607316128}
     - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnGoogleButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GoogleFirebaseLogin, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1607316128}
     - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SignOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GoogleFirebaseLogin, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7260584637103593118, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_Pivot.x
@@ -41327,6 +42263,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: BuyArticle
@@ -41604,6 +42552,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -41889,6 +42849,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1265459700}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustomSprite
@@ -43950,9 +44922,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44180,6 +45164,7 @@ GameObject:
   - component: {fileID: 1358193902}
   - component: {fileID: 1358193904}
   - component: {fileID: 1358193905}
+  - component: {fileID: 1358193906}
   m_Layer: 0
   m_Name: Bird3
   m_TagString: Untagged
@@ -44311,6 +45296,103 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 5
+--- !u!82 &1358193906
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358193900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 952121038667909289, guid: 20a2c23b7ecabb8faab8bc68b9d30da7, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1361250311
 GameObject:
   m_ObjectHideFlags: 0
@@ -45151,14 +46233,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2052499661}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -45166,15 +46256,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: StickerButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -45824,9 +46930,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46070,6 +47188,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -46556,6 +47686,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1414204272}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustom
@@ -46728,9 +47870,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -47788,6 +48942,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319700}
         m_TargetAssemblyTypeName: BirdButton, Assembly-CSharp
         m_MethodName: OpenBirdMenu
@@ -48245,6 +49411,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319702}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: CloseInfo
@@ -48479,6 +49657,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1504669525}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustom
@@ -48865,6 +50055,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1514914515}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -50966,6 +52168,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -51163,6 +52377,7 @@ GameObject:
   - component: {fileID: 1625128817}
   - component: {fileID: 1625128818}
   - component: {fileID: 1625128819}
+  - component: {fileID: 1625128820}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51223,6 +52438,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c60ffd53ed23daa197dcc639bfa6547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  src: {fileID: 1625128820}
+  sonidoInterfazBoton: {fileID: 8300000, guid: a47072d2adf2f98409e73eff8b26b69c, type: 3}
+  sonidoRecolectarPajaro: {fileID: 8300000, guid: 881336cd124333d69a0d0c98bcd1c2b1, type: 3}
+  sonidoTocarPajaro: {fileID: 8300000, guid: eb9d9b86a6f58772d804e20dce51fe8f, type: 3}
+--- !u!82 &1625128820
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625128815}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 952121038667909289, guid: 20a2c23b7ecabb8faab8bc68b9d30da7, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1634400986
 GameObject:
   m_ObjectHideFlags: 0
@@ -52149,6 +53465,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StickerPlacer, Assembly-CSharp
         m_MethodName: ToggleDeleteMode
@@ -52323,6 +53651,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1673799778}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -52469,6 +53809,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1681249973}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustomSprite
@@ -53072,6 +54424,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1731851178}
         m_TargetAssemblyTypeName: OnClickCustomSprite, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustomSprite
@@ -53463,6 +54827,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1753589613}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -54515,6 +55891,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: OpenAnimation
@@ -54709,6 +56097,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1799327733}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickTakeBirdOff
@@ -55070,9 +56470,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55255,6 +56667,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: CloseAnimation
@@ -55465,6 +56889,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1817644986}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickRightChangeCustom
@@ -55984,6 +57420,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319697}
         m_TargetAssemblyTypeName: HamburguerButton, Assembly-CSharp
         m_MethodName: HamburguerMenu
@@ -56280,6 +57728,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1858168840}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustom
@@ -56728,6 +58188,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319700}
         m_TargetAssemblyTypeName: BirdButton, Assembly-CSharp
         m_MethodName: BirdMenu
@@ -56991,6 +58463,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1880775764}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -57566,6 +59050,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1898971744}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -57760,9 +59256,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -58977,14 +60485,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1946138080}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -58992,15 +60508,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: StickerButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -59475,6 +61007,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319700}
         m_TargetAssemblyTypeName: BirdButton, Assembly-CSharp
         m_MethodName: CloseBirdMenu
@@ -59981,6 +61525,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319706}
         m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
         m_MethodName: ResetStore
@@ -60971,6 +62527,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2017519926}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickLeftChangeCustom
@@ -61320,6 +62888,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2026538717}
         m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
         m_MethodName: OnButtonClickBird
@@ -61800,6 +63380,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: OpenAnimation
@@ -62138,14 +63730,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625128819}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2044146540}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -62153,15 +63753,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: StickerButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -62634,9 +64250,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41320916}
-        m_TargetAssemblyTypeName: OnClickCollection, Assembly-CSharp
-        m_MethodName: OnButtonClickCollection
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: OpenInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63157,6 +64785,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319704}
         m_TargetAssemblyTypeName: CustomMenu, Assembly-CSharp
         m_MethodName: CkeckColors
@@ -63338,6 +64978,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick
@@ -64328,6 +65980,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1625128819}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 137319705}
         m_TargetAssemblyTypeName: RewardsMenu, Assembly-CSharp
         m_MethodName: DailyStampClick

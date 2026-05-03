@@ -5,11 +5,11 @@ public class BirdsReactions : MonoBehaviour
 {
     public BirdReactionsManager manager;
 
-    private AudioSource audioSource;
+    private AudioSource src;
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        src = GetComponent<AudioSource>();
     }
 
     void OnMouseDown()
@@ -19,8 +19,11 @@ public class BirdsReactions : MonoBehaviour
 
     public void PlaySound()
     {
-        if (audioSource != null)
-            audioSource.Play();
+        if (src != null)
+        {
+            GameManager.Instance.GetComponent<Sounds>().SonidoTocarPajaro(src);
+        }
+            
     }
 
     public void MoveRandom(float range, float duration)
