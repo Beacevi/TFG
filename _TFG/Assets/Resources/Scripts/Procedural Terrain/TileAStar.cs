@@ -223,6 +223,7 @@ public class TileAStar : MonoBehaviour
             interactableNode.Interactable = null;     
             interactableNode.hasObject = false;       
             Debug.Log("[TileAStar] Pajaro eliminado del nodo.");
+            GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
         }
         else
         {

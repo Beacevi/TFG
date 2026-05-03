@@ -90,7 +90,6 @@ public class ChangeScene : MonoBehaviour
         Debug.Log("El nombre de la escena anterior es: " + previousScene.name);
         SceneManager.SetActiveScene(previousScene);
         SceneManager.UnloadSceneAsync(nombreEscena);
-        GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
     }
 
     public IEnumerator StartAnimation()
