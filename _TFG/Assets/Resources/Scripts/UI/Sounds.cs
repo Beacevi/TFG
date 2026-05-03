@@ -6,12 +6,6 @@ public class Sounds : MonoBehaviour
     {
         
     }
-
-    public void SonidoMonedaEstrella()
-    {
-        
-    }
-
     public void SonidoRecolectarPajaro()
     {
         
