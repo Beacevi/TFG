@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sticker: {fileID: 0}
+  cantidadTexto: {fileID: 3933635533218081711}
 --- !u!1 &8548401151629157911
 GameObject:
   m_ObjectHideFlags: 0

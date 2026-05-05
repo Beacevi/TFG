@@ -24,6 +24,9 @@ TagManager:
   - MainTileMap
   - SceneChanger
   - Tree
+  - FxTemporaire
+  - GemsText
+  - CoinsText
   layers:
   - Default
   - TransparentFX

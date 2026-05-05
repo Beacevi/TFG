@@ -36838,6 +36838,7 @@ RectTransform:
   - {fileID: 1082353801}
   - {fileID: 1928323050}
   - {fileID: 1313238282}
+  - {fileID: 1672653449}
   - {fileID: 1391871520}
   - {fileID: 1164488955}
   - {fileID: 2035470817}
@@ -37216,7 +37217,7 @@ GameObject:
   - component: {fileID: 1030682415}
   - component: {fileID: 1030682418}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37280,7 +37281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -40247,25 +40248,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StickerPlacer, Assembly-CSharp
-        m_MethodName: ExitDeleteMode
-        m_Mode: 1
+      - m_Target: {fileID: 137319702}
+        m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
+        m_MethodName: CloseCollectionMenu
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StickerPlacer, Assembly-CSharp
-        m_MethodName: ExitDeleteMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1168092685}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -46724,7 +46713,7 @@ GameObject:
   - component: {fileID: 1387437494}
   m_Layer: 5
   m_Name: NumberGemsText
-  m_TagString: Untagged
+  m_TagString: GemsText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48169,7 +48158,7 @@ GameObject:
   - component: {fileID: 1439815934}
   m_Layer: 5
   m_Name: TopCoinText
-  m_TagString: Untagged
+  m_TagString: CoinsText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53406,7 +53395,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672653448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -53414,7 +53403,7 @@ RectTransform:
   - {fileID: 876744098}
   - {fileID: 931789525}
   - {fileID: 1807970472}
-  m_Father: {fileID: 2035470817}
+  m_Father: {fileID: 1011420085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -63438,7 +63427,6 @@ RectTransform:
   - {fileID: 1098269343}
   - {fileID: 1767096680}
   - {fileID: 309396098}
-  - {fileID: 1672653449}
   m_Father: {fileID: 1011420085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

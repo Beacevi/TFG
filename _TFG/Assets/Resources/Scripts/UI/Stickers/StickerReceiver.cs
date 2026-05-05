@@ -9,30 +9,34 @@ public class StickerReceiver : MonoBehaviour
 
     void PlaceSticker()
     {
-        var sticker = StickerManager.Instance.selectedSticker;
+        if(StickerManager.Instance != null)
+        {
+            var sticker = StickerManager.Instance.selectedSticker;
 
-        if (sticker == null || sticker.amount <= 0)
-            return;
 
-        // Crear objeto sticker
-        GameObject stickerGO = new GameObject("Sticker");
-        stickerGO.transform.SetParent(transform);
+            if (sticker == null || sticker.amount <= 0)
+                return;
 
-        // Posición donde hiciste click
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        worldPos.z = 0;
-        stickerGO.transform.position = worldPos;
+            // Crear objeto sticker
+            GameObject stickerGO = new GameObject("Sticker");
+            stickerGO.transform.SetParent(transform);
 
-        // Añadir sprite
-        var sr = stickerGO.AddComponent<SpriteRenderer>();
-        sr.sprite = sticker.sprite;
+            // Posición donde hiciste click
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPos.z = 0;
+            stickerGO.transform.position = worldPos;
 
-        sr.sortingOrder = 4;
+            // Añadir sprite
+            var sr = stickerGO.AddComponent<SpriteRenderer>();
+            sr.sprite = sticker.sprite;
 
-        // Opcional: ajustar tamaño
-        stickerGO.transform.localScale = Vector3.one * 0.5f;
+            sr.sortingOrder = 4;
 
-        // Gastar sticker
-        StickerManager.Instance.UseSticker();
+            // Opcional: ajustar tamaño
+            stickerGO.transform.localScale = Vector3.one * 0.5f;
+
+            // Gastar sticker
+            StickerManager.Instance.UseSticker();
+        }
     }
 }
