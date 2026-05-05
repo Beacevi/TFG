@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8935805075436979809}
   - component: {fileID: 4528569158877497932}
-  - component: {fileID: 8725921388316052681}
+  - component: {fileID: 8720088051187332406}
+  - component: {fileID: 6098675464694644253}
   - component: {fileID: 3098835559051429123}
-  - component: {fileID: 7527887727539570308}
   m_Layer: 5
   m_Name: StickerButton
   m_TagString: Untagged
@@ -48,7 +48,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4636226495564998424}
   m_CullTransparentMesh: 1
---- !u!114 &8725921388316052681
+--- !u!114 &8720088051187332406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,6 +78,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6098675464694644253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4636226495564998424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2923578b56a1501d99daabd041c1616d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sticker: {fileID: 0}
+  cantidadTexto: {fileID: 3933635533218081711}
 --- !u!114 &3098835559051429123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,24 +132,22 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 8725921388316052681}
+  m_TargetGraphic: {fileID: 8720088051187332406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7527887727539570308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4636226495564998424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2a9c6e17fcb968478b1f80c9509ac30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sticker: {fileID: 0}
-  cantidadTexto: {fileID: 3933635533218081711}
+      m_Calls:
+      - m_Target: {fileID: 6098675464694644253}
+        m_TargetAssemblyTypeName: StickerUIButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8548401151629157911
 GameObject:
   m_ObjectHideFlags: 0

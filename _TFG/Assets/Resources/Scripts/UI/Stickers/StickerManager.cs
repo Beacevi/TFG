@@ -1,11 +1,15 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StickerManager : MonoBehaviour
 {
     public static StickerManager Instance;
 
     public StickerData selectedSticker;
+
+    public List<GameObject>listaSticker;
 
     private void Awake()
     {
@@ -25,6 +29,52 @@ public class StickerManager : MonoBehaviour
         if (selectedSticker != null && selectedSticker.amount > 0)
         {
             selectedSticker.amount--;
+        }
+
+        for (int i = 0; i < listaSticker.Count; i++)
+        {
+            GameObject boton = listaSticker[i];
+
+            StickerUIButton datosBoton = boton.GetComponent<StickerUIButton>();
+
+            StickerData sticker = datosBoton.sticker;
+
+            if (selectedSticker != null && sticker.id == selectedSticker.id)
+            {
+                datosBoton.cantidadTexto.text = sticker.amount.ToString();
+            }
+
+        }
+
+    }
+
+    public void CargarStickers()
+    {
+        for (int i = 0; i < listaSticker.Count; i++)
+        {
+
+            GameObject boton = listaSticker[i];
+
+            StickerUIButton datosBoton = boton.GetComponent<StickerUIButton>();
+
+            StickerData sticker = datosBoton.sticker;
+
+            if (sticker.discovered)
+            {
+                listaSticker[i].SetActive(true);
+                datosBoton.cantidadTexto.text = sticker.amount.ToString();
+                boton.GetComponent<Image>().sprite = sticker.sprite;
+            }
+            else
+            {
+                listaSticker[i].SetActive(true);
+                boton.GetComponent<Image>().sprite = sticker.unknownSprite;
+                datosBoton.cantidadTexto.enabled = false;
+                //listaSticker[i].SetActive(false);
+            }
+
+            
+
         }
     }
 
@@ -54,7 +104,7 @@ public class StickerManager : MonoBehaviour
     //        TMP_Text txt = boton.GetComponentInChildren<TMP_Text>();
     //        txt.text = item.amount.ToString();
 
-    //        //AQUÍ ESTÁ LA CLAVE
+    //        //AQUï¿½ ESTï¿½ LA CLAVE
     //        RuneButton rune = boton.GetComponent<RuneButton>();
     //        rune.Init(item.resource);
     //    }

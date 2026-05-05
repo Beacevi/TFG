@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sticker7
   m_EditorClassIdentifier: 
   stickerName: Heart
+  id: 7
   sprite: {fileID: 4606908045521496030, guid: 1e1548e97a496e643b7a6f9fe266599d, type: 3}
-  unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
+  unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   amount: 22
   discovered: 0

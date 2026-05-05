@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sticker18
   m_EditorClassIdentifier: 
   stickerName: Yawn
+  id: 18
   sprite: {fileID: 2957986895499944204, guid: 8c4e6a903b2247e468ab87931072f32a, type: 3}
-  unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
+  unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   amount: 42
   discovered: 0

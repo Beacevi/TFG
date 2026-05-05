@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sticker10
   m_EditorClassIdentifier: 
   stickerName: Pot1
+  id: 10
   sprite: {fileID: -6923820423618416078, guid: 2267b0b8f40711d48a80fb8fa7bbb292, type: 3}
-  unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
+  unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   amount: 26
   discovered: 0

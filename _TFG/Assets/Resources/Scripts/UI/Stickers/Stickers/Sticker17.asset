@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sticker17
   m_EditorClassIdentifier: 
   stickerName: Wink
+  id: 17
   sprite: {fileID: -2616885524695416729, guid: d783402c8d362d541b73001ae7a042df, type: 3}
-  unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
+  unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   amount: 40
   discovered: 0

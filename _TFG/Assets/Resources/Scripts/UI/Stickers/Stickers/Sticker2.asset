@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sticker2
   m_EditorClassIdentifier: 
   stickerName: Bush
+  id: 2
   sprite: {fileID: 5558339180159872767, guid: a9e28615d370d3e4fb10eecd4b63519e, type: 3}
-  unknownSprite: {fileID: 0}
-  amount: 3
+  unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  amount: 5
   discovered: 1

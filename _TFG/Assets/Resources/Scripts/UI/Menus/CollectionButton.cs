@@ -40,6 +40,8 @@ public class CollectionButton : MonoBehaviour
         _animator.SetTrigger("OpenTrigger");
         StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
 
+        StickerManager.Instance.CargarStickers();
+
         _buttonFunctions.OpenMenu();
     }
 

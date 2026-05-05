@@ -21,18 +21,18 @@ public class StickerReceiver : MonoBehaviour
             GameObject stickerGO = new GameObject("Sticker");
             stickerGO.transform.SetParent(transform);
 
-            // Posición donde hiciste click
+            // Posicion donde hiciste click
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0;
             stickerGO.transform.position = worldPos;
 
-            // Añadir sprite
+            // AÃ±adir sprite
             var sr = stickerGO.AddComponent<SpriteRenderer>();
             sr.sprite = sticker.sprite;
 
             sr.sortingOrder = 4;
 
-            // Opcional: ajustar tamaño
+            // Opcional: ajustar tamaÃ±o
             stickerGO.transform.localScale = Vector3.one * 0.5f;
 
             // Gastar sticker

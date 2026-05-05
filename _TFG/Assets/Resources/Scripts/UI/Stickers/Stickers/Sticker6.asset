@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sticker6
   m_EditorClassIdentifier: 
   stickerName: Spiral
+  id: 6
   sprite: {fileID: 4441290551563271495, guid: 282fd0f81a8f6fa42820bf549b31040d, type: 3}
-  unknownSprite: {fileID: 7352581923096171039, guid: 88c5beade1c969d48a46da48c35e0c9a, type: 3}
+  unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   amount: 20
   discovered: 0
