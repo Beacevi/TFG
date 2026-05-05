@@ -62,6 +62,7 @@ public class StickerManager : MonoBehaviour
             if (sticker.discovered)
             {
                 listaSticker[i].SetActive(true);
+                datosBoton.cantidadTexto.enabled = true;
                 datosBoton.cantidadTexto.text = sticker.amount.ToString();
                 boton.GetComponent<Image>().sprite = sticker.sprite;
             }
