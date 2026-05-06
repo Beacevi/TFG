@@ -28,11 +28,12 @@ TagManager:
   - GemsText
   - CoinsText
   - SoundManager
+  - Sticker
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Stickers
   - Water
   - UI
   - 

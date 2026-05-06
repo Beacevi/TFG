@@ -10,6 +10,7 @@ public class StickerManager : MonoBehaviour
     public StickerData selectedSticker;
 
     public List<GameObject>listaSticker;
+    public bool modoActual = false;//False es colocar, true es borrar
 
     private void Awake()
     {
@@ -47,6 +48,11 @@ public class StickerManager : MonoBehaviour
         }
         selectedSticker = null;
 
+    }
+
+    public void CambiarModo()
+    {
+        modoActual = !modoActual;
     }
 
     public void CargarStickers()
