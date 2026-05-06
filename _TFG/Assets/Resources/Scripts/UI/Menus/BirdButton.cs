@@ -49,6 +49,21 @@ public class BirdButton : MonoBehaviour
 
     Button button;
 
+    private Dictionary<string, Vector2Int> birdGrid = new Dictionary<string, Vector2Int>()
+    {
+        { "A", new Vector2Int(0, 2) },
+        { "B", new Vector2Int(1, 2) },
+        { "C", new Vector2Int(2, 2) },
+
+        { "D", new Vector2Int(0, 1) },
+        { "E", new Vector2Int(1, 1) },
+        { "F", new Vector2Int(2, 1) },
+
+        { "G", new Vector2Int(0, 0) },
+        { "H", new Vector2Int(1, 0) },
+        { "I", new Vector2Int(2, 0) },
+    };
+
 
     [Header("Feedback")]
     [SerializeField] private AudioSource _audioSource;
@@ -100,6 +115,45 @@ public class BirdButton : MonoBehaviour
 
         
     }
+    
+    private bool IsValidCombo(Queue<string> queue)
+    {
+        string[] tags = queue.ToArray();
+
+        if (tags.Length != 3)
+            return false;
+
+        // Obtener posiciones en grid
+        Vector2Int a = birdGrid[tags[0]];
+        Vector2Int b = birdGrid[tags[1]];
+        Vector2Int c = birdGrid[tags[2]];
+
+        Vector2Int ab = b - a;
+        Vector2Int bc = c - b;
+
+        // Normalizar dirección (evita problemas de magnitud)
+        Vector2Int dirAB = new Vector2Int(
+            Mathf.Clamp(ab.x, -1, 1),
+            Mathf.Clamp(ab.y, -1, 1)
+        );
+
+        Vector2Int dirBC = new Vector2Int(
+            Mathf.Clamp(bc.x, -1, 1),
+            Mathf.Clamp(bc.y, -1, 1)
+        );
+
+        // Deben seguir la misma dirección
+        if (dirAB != dirBC)
+            return false;
+
+        // Debe ser línea recta (horizontal, vertical o diagonal)
+        bool horizontal = dirAB.y == 0 && dirAB.x != 0;
+        bool vertical   = dirAB.x == 0 && dirAB.y != 0;
+        bool diagonal   = Mathf.Abs(dirAB.x) == 1 && Mathf.Abs(dirAB.y) == 1;
+
+        return horizontal || vertical || diagonal;
+    }
+
     public void OpenBirdMenu(Button button)
     {
         _BirdPanel.SetActive(true);
@@ -162,6 +216,13 @@ public class BirdButton : MonoBehaviour
     }
     private void TypeOfBoosts()
     {
+        if (BirdSelected.Count != 3)
+        {
+            _BoostText.text = "No Boost";
+            _BoostImage.SetActive(false);
+            return;
+        }
+
         var boost = _boostManager.GetBoostFromSelection(BirdSelected);
 
         if (boost != null)
@@ -224,65 +285,84 @@ public class BirdButton : MonoBehaviour
         if(!_Deletebirdbutton.gameObject.activeSelf)
             _Deletebirdbutton.gameObject.SetActive(true);
     }
-    public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
+public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
+{
+    if (BirdSelected.Contains(buttonTag))
+        return;
+
+    if (BirdSelected.Count >= 3)
+        return;
+
+    BirdSelected.Enqueue(buttonTag);
+
+    TypeOfBoosts();
+
+    // =========================
+    // SLOT 1
+    // =========================
+    if (BirdSelected.Count == 1)
     {
-        if(BirdSelected.Contains(buttonTag)) return;
-        else
-        {
-            if (BirdSelected.Count >= 3)
-            {
-                BirdSelected.Dequeue(); //< Expulsa del queu el ultimo tag que hay en el queu
-                ChangeColorPanel(_panelBird3, false);
-            }
+        SetBird(_Bird1, buttonTitle, buttonUpdate, buttonTag, buttonImage.sprite);
 
-            BirdSelected.Enqueue(buttonTag); //< A�ade el tag al principio del queu
-            TypeOfBoosts();
-            if (BirdSelected.Count > 1)
-            {
-                SwapTagImage();
-            }
+        _panelBird1 = panel;
+        ChangeColorPanel(_panelBird1, true);
 
-            SetBird(_Bird1, buttonTitle, buttonUpdate, buttonTag, buttonImage.sprite);
-
-            _panelBird1 = panel;
-            ChangeColorPanel(_panelBird1, true);
-
-            if (BirdSelected.Count == 1)
-            {
-                _MyBird1.SetActive(true);
-            }
-            else if (BirdSelected.Count == 2)
-            {
-                _MyBird2.SetActive(true);
-                SetImage(_Bird2, _MyBird2);
-            }
-            else
-            {
-                _MyBird3.SetActive(true);
-
-                SetImage(_Bird3, _MyBird3);
-                SetImage(_Bird2, _MyBird2);
-
-                if (_audioSource != null)
-                {
-                    // Sonido
-                    //GameManager.Instance.GetComponent<Sounds>().SonidoAlinearPajaros(_audioSource);
-                    _audioSource.Play();
-                }
-
-                StartCoroutine(ScalePop(_panelBird1.transform));
-                StartCoroutine(ScalePop(_panelBird2.transform));
-                StartCoroutine(ScalePop(_panelBird3.transform));
-
-                UpdateFrameColors();
-
-            }
-
-            SetImage(_Bird1, _MyBird1);
-
-        }
-        
+        _MyBird1.SetActive(true);
+        SetImage(_Bird1, _MyBird1);
+        return;
     }
+
+    // =========================
+    // SLOT 2
+    // =========================
+    if (BirdSelected.Count == 2)
+    {
+        SetBird(_Bird2, buttonTitle, buttonUpdate, buttonTag, buttonImage.sprite);
+
+        _panelBird2 = panel;
+        ChangeColorPanel(_panelBird2, true);
+
+        _MyBird2.SetActive(true);
+        SetImage(_Bird2, _MyBird2);
+
+        return;
+    }
+
+    // =========================
+    // SLOT 3
+    // =========================
+    if (BirdSelected.Count == 3)
+    {
+        // VALIDAR ANTES DE APLICAR UI FINAL
+        if (!IsValidCombo(BirdSelected))
+        {
+            CleanMyBirds();
+            return;
+        }
+
+        SetBird(_Bird3, buttonTitle, buttonUpdate, buttonTag, buttonImage.sprite);
+
+        _panelBird3 = panel;
+        ChangeColorPanel(_panelBird3, true);
+
+        _MyBird3.SetActive(true);
+        SetImage(_Bird3, _MyBird3);
+
+        SetImage(_Bird2, _MyBird2);
+
+        if (_audioSource != null)
+            _audioSource.Play();
+
+        StartCoroutine(ScalePop(_panelBird1.transform));
+        StartCoroutine(ScalePop(_panelBird2.transform));
+        StartCoroutine(ScalePop(_panelBird3.transform));
+
+        UpdateFrameColors();
+
+        TypeOfBoosts();
+    }
+
+}
 
     private void SwapTagImage()
     {
@@ -455,50 +535,42 @@ public class BirdButton : MonoBehaviour
     }
     public void CleanMyBirds()
     {
-        
-        if (BirdSelected.Count() >= 2)
-        {
-            //QuitInfoOfBird(_Bird2);
-            //_MyBird2.SetActive(false);
-            //ChangeColorPanel(_panelBird2, false);
-            //_panelBird2 = null;
-            //_MyBird2.GetComponent<SpriteRenderer>().sprite = _NoBird;
+        // Limpiar datos primero
+        BirdSelected.Clear();
 
-            Clean(_MyBird2, _Bird2, _panelBird2);
+        // Reset UI slots
+        Clean(_MyBird1, _Bird1, ref _panelBird1);
+        Clean(_MyBird2, _Bird2, ref _panelBird2);
+        Clean(_MyBird3, _Bird3, ref _panelBird3);
 
-            if (BirdSelected.Count() == 3)
-            {
-                //QuitInfoOfBird(_Bird3);
-                //_MyBird3.SetActive(false);
-                //ChangeColorPanel(_panelBird3, false);
-                //_panelBird3 = null;
-                //_MyBird3.GetComponent<SpriteRenderer>().sprite = _NoBird;
-
-                Clean(_MyBird3, _Bird3, _panelBird3);
-            }
-        }
-
-        //QuitInfoOfBird(_Bird1);
-        //BirdSelected.Clear();
-        //_MyBird1.SetActive(false);
-        //ChangeColorPanel(_panelBird1, false); 
-        //_panelBird1 = null;
-        //_MyBird1.GetComponent<SpriteRenderer>().sprite = _NoBird;
-        Clean(_MyBird1, _Bird1, _panelBird1);
+        _MyBird1.SetActive(false);
+        _MyBird2.SetActive(false);
+        _MyBird3.SetActive(false);
 
         _Deletebirdbutton.gameObject.SetActive(false);
 
-        UpdateFrameColors();
+        // Reset frames
+        _frameBird1.color = _defaultFrameColor;
+        _frameBird2.color = _defaultFrameColor;
+        _frameBird3.color = _defaultFrameColor;
 
         TypeOfBoosts();
     }
-    private void Clean(GameObject MyBird, GameObject Bird,Image PanelBird)
+    private void Clean(GameObject MyBird, GameObject Bird, ref Image PanelBird)
     {
-        QuitInfoOfBird(Bird);
-        MyBird.SetActive(false);
-        ChangeColorPanel(PanelBird, false);
+        if (Bird != null)
+        {
+            QuitInfoOfBird(Bird);
+            Bird.GetComponent<Image>().sprite = _NoBird;
+        }
+
+        if (MyBird != null)
+            MyBird.SetActive(false);
+
+        if (PanelBird != null)
+            ChangeColorPanel(PanelBird, false);
+
         PanelBird = null;
-        Bird.GetComponent<Image>().sprite = _NoBird;
     }
 
     private IEnumerator ScalePop(Transform target)
@@ -549,19 +621,19 @@ public class BirdButton : MonoBehaviour
     }
 
     private void UpdateFrameColors()
-{
-    if (BirdSelected.Count == 3)
     {
-        _frameBird1.color = Color.yellow;
-        _frameBird2.color = Color.yellow;
-        _frameBird3.color = Color.yellow;
+        if (BirdSelected.Count == 3)
+        {
+            _frameBird1.color = Color.yellow;
+            _frameBird2.color = Color.yellow;
+            _frameBird3.color = Color.yellow;
+        }
+        else
+        {
+            _frameBird1.color = _defaultFrameColor;
+            _frameBird2.color = _defaultFrameColor;
+            _frameBird3.color = _defaultFrameColor;
+        }
     }
-    else
-    {
-        _frameBird1.color = _defaultFrameColor;
-        _frameBird2.color = _defaultFrameColor;
-        _frameBird3.color = _defaultFrameColor;
-    }
-}
 
 }
