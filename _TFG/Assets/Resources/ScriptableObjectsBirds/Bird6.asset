@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Bird6
   m_EditorClassIdentifier: 
   obtenido: 0
-  birdPrefab: {fileID: 0}
-  birdName: 
-  rondasNecesarias: 2
+  birdPrefab: {fileID: 5805991993125803581, guid: cc912e5546e2e0776954256619f271cd, type: 3}
+  birdName: Pajaro6
+  rondasTotales: 1
+  notasPorTurno: 2
+  maxFallos: 3
