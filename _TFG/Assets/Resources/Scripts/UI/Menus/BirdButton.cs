@@ -49,10 +49,34 @@ public class BirdButton : MonoBehaviour
 
     Button button;
 
+
+    [Header("Feedback")]
+    [SerializeField] private AudioSource _audioSource;
+
+    [SerializeField] private float _scaleDuration;
+    [SerializeField] private float _scaleMultiplier;
+
+    [SerializeField] private Image _imageBird1;
+    [SerializeField] private Image _imageBird2;
+    [SerializeField] private Image _imageBird3;
+
+    [SerializeField] private Image _frameBird1;
+    [SerializeField] private Image _frameBird2;
+    [SerializeField] private Image _frameBird3;
+    private Color _defaultFrameColor;
+
     private void Start()
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
         _boostManager    = GetComponent<BoostsManager>();
+        _audioSource = GetComponent<AudioSource>();
+
+
+    if (_frameBird1 != null)
+        {
+            _defaultFrameColor = _frameBird1.color;
+        }
+        
 
         if(_MyBird1 != null && _MyBird2 != null && _MyBird3 != null)
         {
@@ -235,8 +259,23 @@ public class BirdButton : MonoBehaviour
             else
             {
                 _MyBird3.SetActive(true);
+
                 SetImage(_Bird3, _MyBird3);
                 SetImage(_Bird2, _MyBird2);
+
+                if (_audioSource != null)
+                {
+                    // Sonido
+                    //GameManager.Instance.GetComponent<Sounds>().SonidoAlinearPajaros(_audioSource);
+                    _audioSource.Play();
+                }
+
+                StartCoroutine(ScalePop(_panelBird1.transform));
+                StartCoroutine(ScalePop(_panelBird2.transform));
+                StartCoroutine(ScalePop(_panelBird3.transform));
+
+                UpdateFrameColors();
+
             }
 
             SetImage(_Bird1, _MyBird1);
@@ -410,6 +449,8 @@ public class BirdButton : MonoBehaviour
         SetImage(_Bird2, _MyBird2);
         SetImage(_Bird3, _MyBird3);
 
+        UpdateFrameColors();
+
         TypeOfBoosts();
     }
     public void CleanMyBirds()
@@ -447,6 +488,8 @@ public class BirdButton : MonoBehaviour
 
         _Deletebirdbutton.gameObject.SetActive(false);
 
+        UpdateFrameColors();
+
         TypeOfBoosts();
     }
     private void Clean(GameObject MyBird, GameObject Bird,Image PanelBird)
@@ -457,4 +500,68 @@ public class BirdButton : MonoBehaviour
         PanelBird = null;
         Bird.GetComponent<Image>().sprite = _NoBird;
     }
+
+    private IEnumerator ScalePop(Transform target)
+    {
+        if (target == null) yield break;
+
+        Vector3 startScale = target.localScale;
+        Vector3 endScale = startScale * _scaleMultiplier;
+
+        GameObject clone = Instantiate(target.gameObject, target.position, target.rotation, target.root);
+
+        clone.transform.SetAsLastSibling();
+
+        LayoutElement le = clone.GetComponent<LayoutElement>();
+        if (le != null)
+            le.ignoreLayout = true;
+
+        RectTransform rt = clone.GetComponent<RectTransform>();
+        rt.localScale = startScale;
+
+        float time = 0f;
+
+        while (time < _scaleDuration)
+        {
+            float t = time / _scaleDuration;
+            rt.localScale = Vector3.Lerp(startScale, endScale, t);
+
+            time += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        rt.localScale = endScale;
+
+        time = 0f;
+
+        while (time < _scaleDuration)
+        {
+            float t = time / _scaleDuration;
+            rt.localScale = Vector3.Lerp(endScale, startScale, t);
+
+            time += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        rt.localScale = startScale;
+
+        Destroy(clone);
+    }
+
+    private void UpdateFrameColors()
+{
+    if (BirdSelected.Count == 3)
+    {
+        _frameBird1.color = Color.yellow;
+        _frameBird2.color = Color.yellow;
+        _frameBird3.color = Color.yellow;
+    }
+    else
+    {
+        _frameBird1.color = _defaultFrameColor;
+        _frameBird2.color = _defaultFrameColor;
+        _frameBird3.color = _defaultFrameColor;
+    }
+}
+
 }

@@ -3001,6 +3001,7 @@ GameObject:
   - component: {fileID: 137319700}
   - component: {fileID: 137319701}
   - component: {fileID: 137319702}
+  - component: {fileID: 137319710}
   m_Layer: 0
   m_Name: CanvasManger
   m_TagString: Untagged
@@ -3149,6 +3150,15 @@ MonoBehaviour:
   _openedIcon: {fileID: 1240793823}
   _closedIcon: {fileID: 1295408420}
   _buttonExpandBird: {fileID: 1866283462}
+  _audioSource: {fileID: 137319710}
+  _scaleDuration: 0.5
+  _scaleMultiplier: 2
+  _imageBird1: {fileID: 987529847}
+  _imageBird2: {fileID: 652481723}
+  _imageBird3: {fileID: 1799327731}
+  _frameBird1: {fileID: 995342044}
+  _frameBird2: {fileID: 1543646194}
+  _frameBird3: {fileID: 2076468617}
 --- !u!114 &137319701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,6 +3360,103 @@ MonoBehaviour:
   - {fileID: 1898971746}
   - {fileID: 880890862}
   - {fileID: 1753589615}
+--- !u!82 &137319710
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137319692}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 952121038667909289, guid: 20a2c23b7ecabb8faab8bc68b9d30da7, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 750860eda85306a27bfe8a5ac8c711ed, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &140025330
 GameObject:
   m_ObjectHideFlags: 0
@@ -53754,6 +53861,7 @@ MonoBehaviour:
   src: {fileID: 1625128820}
   sonidoInterfazBoton: {fileID: 8300000, guid: a47072d2adf2f98409e73eff8b26b69c, type: 3}
   sonidoRecolectarPajaro: {fileID: 8300000, guid: 881336cd124333d69a0d0c98bcd1c2b1, type: 3}
+  sonidoAlinearPajaros: {fileID: 0}
   sonidoTocarPajaro: {fileID: 8300000, guid: eb9d9b86a6f58772d804e20dce51fe8f, type: 3}
 --- !u!82 &1625128820
 AudioSource:
@@ -64704,6 +64812,7 @@ MonoBehaviour:
   src: {fileID: 1625128820}
   sonidoInterfazBoton: {fileID: 8300000, guid: a47072d2adf2f98409e73eff8b26b69c, type: 3}
   sonidoRecolectarPajaro: {fileID: 8300000, guid: 881336cd124333d69a0d0c98bcd1c2b1, type: 3}
+  sonidoAlinearPajaros: {fileID: 8300000, guid: 750860eda85306a27bfe8a5ac8c711ed, type: 3}
   sonidoTocarPajaro: {fileID: 8300000, guid: eb9d9b86a6f58772d804e20dce51fe8f, type: 3}
 --- !u!4 &2048763032
 Transform:
