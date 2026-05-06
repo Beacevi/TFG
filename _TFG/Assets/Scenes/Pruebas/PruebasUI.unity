@@ -36894,22 +36894,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2048763031}
-    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SonidoInterfazBoton
-      objectReference: {fileID: 0}
-    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Sounds, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton1
       objectReference: {fileID: 0}
-    - target: {fileID: 6098675464694644253, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
-      propertyPath: sticker
-      value: 
-      objectReference: {fileID: 11400000, guid: 78556d67fde461848877bb34d8f18d2b, type: 2}
     - target: {fileID: 8935805075436979809, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

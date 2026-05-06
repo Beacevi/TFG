@@ -16,5 +16,5 @@ MonoBehaviour:
   id: 1
   sprite: {fileID: -4376231836577913517, guid: 0f8dd6484c056bb47bb2bf0ce2d9a922, type: 3}
   unknownSprite: {fileID: 21300144, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
-  amount: 5
+  amount: 500
   discovered: 1

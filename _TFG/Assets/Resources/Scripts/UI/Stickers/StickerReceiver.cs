@@ -21,22 +21,22 @@ public class StickerReceiver : MonoBehaviour
                 
 
             // Crear objeto sticker
-            GameObject stickerGO = new GameObject("Sticker");
-            stickerGO.transform.SetParent(transform);
+            GameObject newSticker = new GameObject("Sticker");
+            newSticker.transform.SetParent(transform);
 
             // Posicion donde hiciste click
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0;
-            stickerGO.transform.position = worldPos;
+            newSticker.transform.position = worldPos;
 
             // Añadir sprite
-            var sr = stickerGO.AddComponent<SpriteRenderer>();
+            var sr = newSticker.AddComponent<SpriteRenderer>();
             sr.sprite = sticker.sprite;
 
             sr.sortingOrder = 4;
 
             // Opcional: ajustar tamaño
-            stickerGO.transform.localScale = Vector3.one * 0.5f;
+            newSticker.transform.localScale = Vector3.one * 0.5f;
 
             // Gastar sticker
             StickerManager.Instance.UseSticker();

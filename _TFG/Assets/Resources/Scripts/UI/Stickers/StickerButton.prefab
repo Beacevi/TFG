@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2923578b56a1501d99daabd041c1616d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sticker: {fileID: 0}
+  sticker: {fileID: 11400000, guid: 78556d67fde461848877bb34d8f18d2b, type: 2}
   cantidadTexto: {fileID: 3933635533218081711}
 --- !u!114 &3098835559051429123
 MonoBehaviour:
@@ -136,6 +136,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: SonidoInterfazBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6098675464694644253}
         m_TargetAssemblyTypeName: StickerUIButton, Assembly-CSharp
         m_MethodName: OnClick
