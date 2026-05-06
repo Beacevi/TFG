@@ -15,7 +15,10 @@ public class StickerReceiver : MonoBehaviour
 
 
             if (sticker == null || sticker.amount <= 0)
+            {
                 return;
+            }
+                
 
             // Crear objeto sticker
             GameObject stickerGO = new GameObject("Sticker");

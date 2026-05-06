@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -2361,7 +2361,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -3456,7 +3456,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -3564,7 +3564,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -4065,7 +4065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -5232,7 +5232,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -5525,7 +5525,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -6226,7 +6226,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -6721,7 +6721,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -7443,7 +7443,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -9423,7 +9423,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -9774,7 +9774,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -10333,7 +10333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -11466,7 +11466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -11775,7 +11775,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -12672,7 +12672,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -12846,7 +12846,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -13338,7 +13338,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -13709,7 +13709,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -14243,7 +14243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -14390,7 +14390,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -15680,7 +15680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -16176,7 +16176,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -21156,7 +21156,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -21263,6 +21263,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton4
@@ -21531,6 +21543,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton2
@@ -21641,6 +21665,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton8
@@ -22291,7 +22327,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -22794,7 +22830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -23474,7 +23510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -28599,7 +28635,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -29030,7 +29066,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -31143,6 +31179,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton3
@@ -32722,7 +32770,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -34461,7 +34509,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -34945,7 +34993,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -35205,7 +35253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -35690,7 +35738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -36039,6 +36087,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton7
@@ -36660,7 +36720,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -36830,6 +36890,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton1
@@ -37087,7 +37159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -38353,7 +38425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -38558,7 +38630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -38905,6 +38977,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton6
@@ -39163,7 +39247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -39874,7 +39958,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -41351,7 +41435,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -41583,7 +41667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -41856,7 +41940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -42136,7 +42220,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -42319,7 +42403,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -42426,7 +42510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -42970,7 +43054,7 @@ PrefabInstance:
     - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1625128819}
+      objectReference: {fileID: 2048763031}
     - target: {fileID: 1396075377411365269, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -43014,7 +43098,7 @@ PrefabInstance:
     - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1625128819}
+      objectReference: {fileID: 2048763031}
     - target: {fileID: 4364603124614635446, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -43058,7 +43142,7 @@ PrefabInstance:
     - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1625128819}
+      objectReference: {fileID: 2048763031}
     - target: {fileID: 5339429416755306717, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -43102,7 +43186,7 @@ PrefabInstance:
     - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1625128819}
+      objectReference: {fileID: 2048763031}
     - target: {fileID: 6043984905179355187, guid: 87fa36b076251ce728ea9a58dec1242d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -43367,7 +43451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -43656,7 +43740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -43953,7 +44037,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -44060,6 +44144,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton9
@@ -46138,7 +46234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -47989,7 +48085,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -48247,7 +48343,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -48745,7 +48841,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -48934,7 +49030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -50006,7 +50102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -50475,7 +50571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -50757,7 +50853,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -51155,7 +51251,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -53377,7 +53473,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -53635,6 +53731,7 @@ MonoBehaviour:
   reader: {fileID: 0}
   coins_ui: {fileID: 1439815934}
   gems_ui: {fileID: 1387437494}
+  soundManager: {fileID: 0}
 --- !u!114 &1625128819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54674,7 +54771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -54860,7 +54957,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -55018,7 +55115,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -55622,7 +55719,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -56025,7 +56122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -57099,7 +57196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -57305,7 +57402,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -57678,7 +57775,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -57875,7 +57972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -58133,7 +58230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -58664,7 +58761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -58972,7 +59069,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -59432,7 +59529,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -59707,7 +59804,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -60294,7 +60391,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -60500,7 +60597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -62078,7 +62175,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -62596,7 +62693,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -63598,7 +63695,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -63959,7 +64056,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -64451,7 +64548,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -64789,6 +64886,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038634907}
   m_CullTransparentMesh: 1
+--- !u!1 &2048763030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2048763032}
+  - component: {fileID: 2048763031}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: SoundManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2048763031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048763030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c60ffd53ed23daa197dcc639bfa6547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1625128820}
+  sonidoInterfazBoton: {fileID: 8300000, guid: a47072d2adf2f98409e73eff8b26b69c, type: 3}
+  sonidoRecolectarPajaro: {fileID: 8300000, guid: 881336cd124333d69a0d0c98bcd1c2b1, type: 3}
+  sonidoTocarPajaro: {fileID: 8300000, guid: eb9d9b86a6f58772d804e20dce51fe8f, type: 3}
+--- !u!4 &2048763032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048763030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 154.01186, y: 301.6825, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2051132339
 GameObject:
   m_ObjectHideFlags: 0
@@ -65135,7 +65280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -65670,7 +65815,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -65863,7 +66008,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -66865,7 +67010,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625128819}
+      - m_Target: {fileID: 2048763031}
         m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
         m_MethodName: SonidoInterfazBoton
         m_Mode: 1
@@ -66935,6 +67080,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266815652}
     m_Modifications:
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2048763031}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SonidoInterfazBoton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098835559051429123, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sounds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
       propertyPath: m_Name
       value: StickerButton5
@@ -67288,6 +67445,7 @@ SceneRoots:
   - {fileID: 2133455332}
   - {fileID: 1625128817}
   - {fileID: 1734473552}
+  - {fileID: 2048763032}
   - {fileID: 1607316127}
   - {fileID: 1767096680}
   - {fileID: 1780912823}

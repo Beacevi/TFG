@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TMP_Text coins_ui;
     [SerializeField] private TMP_Text gems_ui;
+    [SerializeField] private GameObject soundManager;
+
     //[SerializeField] private TMP_Text energy_ui;
 
 
@@ -56,6 +58,8 @@ public class GameManager : MonoBehaviour
         {
             coins_ui = GameObject.FindGameObjectWithTag("CoinsText").GetComponent<TMP_Text>();
             gems_ui = GameObject.FindGameObjectWithTag("GemsText").GetComponent<TMP_Text>();
+            soundManager = GameObject.FindGameObjectWithTag("SoundManager");
+            soundManager.GetComponent<Sounds>().src = GetComponent<AudioSource>();
 
             UpdateUI();
         }
