@@ -219,6 +219,7 @@ public class TileAStar : MonoBehaviour
 
         if (interactableNode.hasObject && interactableNode.Interactable != null)
         {
+            ScenePersistentManager.instance.interactedBird.obtenido = true;
             Destroy(interactableNode.Interactable);  
             interactableNode.Interactable = null;     
             interactableNode.hasObject = false;       
