@@ -47,6 +47,9 @@ public class BirdButton : MonoBehaviour
     private Image _panelBird2;
     private Image _panelBird3;
 
+    public List<GameObject> _listOfAvailableBirds;
+    public List<Bird> _listOfScriptableObjectBirds;
+
     Button button;
 
     private Dictionary<string, Vector2Int> birdGrid = new Dictionary<string, Vector2Int>()
@@ -159,12 +162,12 @@ public class BirdButton : MonoBehaviour
         _BirdPanel.SetActive(true);
 
         _balloonAnimator.SetTrigger("EditingTrigger");
-        _birdAnimator   .SetTrigger("EditingTrigger");
+        _birdAnimator.SetTrigger("EditingTrigger");
 
         _animator.SetTrigger("Open");
         StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
 
-        _buttonFunctions.OpenMenu();
+        _buttonFunctions.OpenBirdMenu(_listOfAvailableBirds,_listOfScriptableObjectBirds);
     }
     public void CloseBirdMenu(Button button)
     {

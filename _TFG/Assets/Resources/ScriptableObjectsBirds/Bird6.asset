@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97d281e56f091f4792c90b958d5e763, type: 3}
   m_Name: Bird6
   m_EditorClassIdentifier: 
-  obtenido: 0
+  obtenido: 1
   birdPrefab: {fileID: 5805991993125803581, guid: cc912e5546e2e0776954256619f271cd, type: 3}
   birdName: Pajaro6
   rondasTotales: 1

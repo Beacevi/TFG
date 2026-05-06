@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ButtonFunctions : MonoBehaviour
 {
@@ -43,13 +44,56 @@ public class ButtonFunctions : MonoBehaviour
 
         _cloudPrefab.SetActive(true);
     }
+    public void OpenBirdMenu(List<GameObject> listAvailableBirds, List<Bird>listScriptableObjectBirds)
+    {
+        _cloudPrefab.SetActive(false);
+
+        _hamburguerButtonScript.HamburguerMenu();
+
+        if (_playButtonScript.isOpen)
+        {
+            _playButtonScript.PlayMenu();
+        }
+
+        for (int i = 0; i < listScriptableObjectBirds.Count; i++)
+        {
+            if (listScriptableObjectBirds[i].obtenido)
+            {
+                //listAvailableBirds[i].SetActive(true);
+                listAvailableBirds[i].GetComponent<Button>().interactable = true;
+
+                SpriteRenderer imageBird = listScriptableObjectBirds[i].birdPrefab.GetComponent<SpriteRenderer>();
+
+                listAvailableBirds[i].GetComponent<Image>().sprite = imageBird.sprite;
+            }
+
+            if (!listScriptableObjectBirds[i].obtenido)
+            {
+                //listAvailableBirds[i].SetActive(true);
+                listAvailableBirds[i].GetComponent<Button>().interactable = false;
+
+                Image imageBird = listAvailableBirds[i].GetComponent<Image>();
+
+                imageBird = listScriptableObjectBirds[i].birdPrefab.GetComponent<Image>();
+
+                //listAvailableBirds[i].GetComponent<Image>().sprite = null;
+            }
+
+        }
+
+        _OptionMenuPanel.SetActive(true);
+    }
+
     public void OpenMenu()
     {
         _cloudPrefab.SetActive(false);
 
         _hamburguerButtonScript.HamburguerMenu();
-        if(_playButtonScript.isOpen)
+
+        if (_playButtonScript.isOpen)
+        {
             _playButtonScript.PlayMenu();
+        }
 
         _OptionMenuPanel.SetActive(true);
     }
