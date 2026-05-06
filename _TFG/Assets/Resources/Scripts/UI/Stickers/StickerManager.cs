@@ -45,6 +45,7 @@ public class StickerManager : MonoBehaviour
             }
 
         }
+        selectedSticker = null;
 
     }
 
