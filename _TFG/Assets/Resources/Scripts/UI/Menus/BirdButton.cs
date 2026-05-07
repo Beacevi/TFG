@@ -15,12 +15,12 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private Animator _birdAnimator; 
 
     [Header("BirdSelected & Boost")]
-    [SerializeField] private GameObject _Bird1;
-    [SerializeField] private GameObject _Bird2;
-    [SerializeField] private GameObject _Bird3;
-    [SerializeField] private GameObject _MyBird1;
-    [SerializeField] private GameObject _MyBird2;
-    [SerializeField] private GameObject _MyBird3;
+    [SerializeField] private GameObject _Bird1;//Bird 1 UI
+    [SerializeField] private GameObject _Bird2;//Bird 2 UI
+    [SerializeField] private GameObject _Bird3;//Bird 3 UI
+    [SerializeField] private GameObject _MyBird1;//Equipped bird 1
+    [SerializeField] private GameObject _MyBird2;//Equipped bird 1
+    [SerializeField] private GameObject _MyBird3;//Equipped bird 1
     [SerializeField] private TMP_Text   _BoostText;
     [SerializeField] private GameObject _BoostImage;
     [SerializeField] private Sprite     _NoBird;
@@ -288,7 +288,7 @@ public class BirdButton : MonoBehaviour
         if(!_Deletebirdbutton.gameObject.activeSelf)
             _Deletebirdbutton.gameObject.SetActive(true);
     }
-public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
+public void UpdateTextBasedOnTag(Bird birdData, string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
 {
     if (BirdSelected.Contains(buttonTag))
         return;
@@ -311,6 +311,7 @@ public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string but
         ChangeColorPanel(_panelBird1, true);
 
         _MyBird1.SetActive(true);
+        _MyBird1.GetComponent<BirdsReactions>().birdData = birdData;
         SetImage(_Bird1, _MyBird1);
         return;
     }
@@ -326,6 +327,7 @@ public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string but
         ChangeColorPanel(_panelBird2, true);
 
         _MyBird2.SetActive(true);
+        _MyBird2.GetComponent<BirdsReactions>().birdData = birdData;
         SetImage(_Bird2, _MyBird2);
 
         return;
@@ -349,6 +351,8 @@ public void UpdateTextBasedOnTag(string buttonTag, Image buttonImage, string but
         ChangeColorPanel(_panelBird3, true);
 
         _MyBird3.SetActive(true);
+        _MyBird3.GetComponent<BirdsReactions>().birdData = birdData;
+
         SetImage(_Bird3, _MyBird3);
 
         SetImage(_Bird2, _MyBird2);

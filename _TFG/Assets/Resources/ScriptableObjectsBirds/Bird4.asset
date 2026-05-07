@@ -18,3 +18,6 @@ MonoBehaviour:
   rondasTotales: 0
   notasPorTurno: 0
   maxFallos: 3
+  movementType: 3
+  moveRange: 1
+  moveDuration: 0.5

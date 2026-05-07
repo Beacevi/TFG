@@ -1392,6 +1392,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &42367739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,6 +2463,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &100670072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4109,6 +4111,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 2bfde60fb73fe934a8b6c3b0df3a4338, type: 2}
 --- !u!1 &146999231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,6 +4284,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &148909746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6442,6 +6446,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &222422136
 GameObject:
   m_ObjectHideFlags: 0
@@ -12949,6 +12954,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &438507780
 GameObject:
   m_ObjectHideFlags: 0
@@ -13135,6 +13141,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &442798679
 GameObject:
   m_ObjectHideFlags: 0
@@ -14363,6 +14370,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 5b3528046ac979c4aaf025f34a751087, type: 2}
 --- !u!114 &493476342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16296,6 +16304,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &584109690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22604,6 +22613,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &619029016
 GameObject:
   m_ObjectHideFlags: 0
@@ -23107,6 +23117,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &639986215
 GameObject:
   m_ObjectHideFlags: 0
@@ -23629,7 +23640,7 @@ GameObject:
   - component: {fileID: 652481722}
   - component: {fileID: 652481725}
   m_Layer: 5
-  m_Name: Bird2
+  m_Name: Bird2 UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23775,6 +23786,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &656065091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -34123,7 +34135,7 @@ GameObject:
   - component: {fileID: 870708646}
   - component: {fileID: 870708647}
   m_Layer: 0
-  m_Name: Bird1
+  m_Name: EquippedBird1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34493,6 +34505,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 8d3c6500079ab0b4895a52980a1ecd54, type: 2}
 --- !u!114 &880890861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35804,6 +35817,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &932245886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35819,6 +35833,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &941225630
 GameObject:
   m_ObjectHideFlags: 0
@@ -36798,6 +36813,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &971556343
 GameObject:
   m_ObjectHideFlags: 0
@@ -37055,7 +37071,7 @@ GameObject:
   - component: {fileID: 987529849}
   - component: {fileID: 987529850}
   m_Layer: 5
-  m_Name: Bird1
+  m_Name: Bird1 UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37201,6 +37217,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &987529850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38684,6 +38701,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1049605536
 GameObject:
   m_ObjectHideFlags: 0
@@ -40116,7 +40134,7 @@ GameObject:
   - component: {fileID: 1126918664}
   - component: {fileID: 1126918665}
   m_Layer: 0
-  m_Name: Bird2
+  m_Name: EquippedBird2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42564,6 +42582,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1208769643
 GameObject:
   m_ObjectHideFlags: 0
@@ -46288,6 +46307,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1330524440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46303,6 +46323,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1341391479
 GameObject:
   m_ObjectHideFlags: 0
@@ -46448,7 +46469,7 @@ GameObject:
   - component: {fileID: 1358193905}
   - component: {fileID: 1358193906}
   m_Layer: 0
-  m_Name: Bird3
+  m_Name: EquippedBird3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48139,6 +48160,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1391871519
 GameObject:
   m_ObjectHideFlags: 0
@@ -48907,6 +48929,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1421560709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -49084,6 +49107,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1430489606
 GameObject:
   m_ObjectHideFlags: 0
@@ -50919,6 +50943,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1512689837
 GameObject:
   m_ObjectHideFlags: 0
@@ -51148,6 +51173,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: eff77edbcc3f08443a7a5ee07d0024b0, type: 2}
 --- !u!114 &1514914516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54877,6 +54903,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 08486eb01c80ef9439115f6dfa513c98, type: 2}
 --- !u!114 &1673799779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56042,6 +56069,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 82129d2e6d958d74ab8bdb73b5348844, type: 2}
 --- !u!114 &1753589614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57322,7 +57350,7 @@ GameObject:
   - component: {fileID: 1799327730}
   - component: {fileID: 1799327733}
   m_Layer: 5
-  m_Name: Bird3
+  m_Name: Bird3 UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57468,6 +57496,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1800870662
 GameObject:
   m_ObjectHideFlags: 0
@@ -57778,6 +57807,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1814638027
 GameObject:
   m_ObjectHideFlags: 0
@@ -58245,6 +58275,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1831075080
 GameObject:
   m_ObjectHideFlags: 0
@@ -59084,6 +59115,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1859236146
 GameObject:
   m_ObjectHideFlags: 0
@@ -59159,7 +59191,7 @@ GameObject:
   - component: {fileID: 1865822481}
   - component: {fileID: 1865822480}
   m_Layer: 0
-  m_Name: Clouds Destroller
+  m_Name: Clouds Destroyer
   m_TagString: CloudObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59650,6 +59682,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 2a6eaca41429508449b73bf90cdd2368, type: 2}
 --- !u!114 &1880775765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60237,6 +60270,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: 70d1b5cfbccbaf547b117fd0eb2303b7, type: 2}
 --- !u!114 &1898971745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60600,6 +60634,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1906285915
 GameObject:
   m_ObjectHideFlags: 0
@@ -63710,6 +63745,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &2020234765
 GameObject:
   m_ObjectHideFlags: 0
@@ -63902,6 +63938,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 11400000, guid: fceebf9c9348fbb4eb691d9cc993b0b7, type: 2}
 --- !u!114 &2026538718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65284,6 +65321,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &2073577522
 GameObject:
   m_ObjectHideFlags: 0
@@ -66418,7 +66456,7 @@ GameObject:
   - component: {fileID: 2137237200}
   - component: {fileID: 2137237201}
   m_Layer: 5
-  m_Name: EquipatedBirds
+  m_Name: EquippedBirds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
