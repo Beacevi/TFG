@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class TileAStar : MonoBehaviour
 {
@@ -23,7 +23,9 @@ public class TileAStar : MonoBehaviour
     private Node lastPathNode = null;
     private Node interactableNode = null;
 
+    [SerializeField] private Image pasosBar;
     public int stepsAvailable = 30;
+    private int initialSteps;
 
     private bool canMove = false;
 
@@ -47,6 +49,20 @@ public class TileAStar : MonoBehaviour
         {
             cambiaEscenas = GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<ChangeScene>();
         }
+
+        initialSteps = stepsAvailable;
+        UpdateStepsUI();
+
+    }
+
+    private void UpdateStepsUI()
+    {
+        if (pasosBar == null)
+        {
+            pasosBar = GameObject.FindGameObjectWithTag("PasosBar").GetComponent<Image>();
+        } 
+
+        pasosBar.fillAmount = (float)stepsAvailable / initialSteps;
     }
 
     void Update()
@@ -97,6 +113,8 @@ public class TileAStar : MonoBehaviour
 
         stepsAvailable -= path.Count;
         stepsAvailable = Mathf.Max(0, stepsAvailable);
+
+        UpdateStepsUI();
 
         moving = false;
         path.Clear();

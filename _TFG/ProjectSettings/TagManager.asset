@@ -29,6 +29,7 @@ TagManager:
   - CoinsText
   - SoundManager
   - Sticker
+  - PasosBar
   layers:
   - Default
   - TransparentFX
