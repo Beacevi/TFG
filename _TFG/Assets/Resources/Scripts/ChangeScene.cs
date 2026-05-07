@@ -10,7 +10,7 @@ public class ChangeScene : MonoBehaviour
     [SerializeField] private Transform cloudsIzquierda;
     [SerializeField] private Transform cloudsDerecha;
 
-    // 🔥 NUEVO: control de velocidad desde Inspector
+    //NUEVO: control de velocidad desde Inspector
     [SerializeField, Range(0.1f, 10f)]
     private float velocidadNubes = 3f;
 
@@ -144,7 +144,7 @@ public class ChangeScene : MonoBehaviour
 
         while (t < 1f)
         {
-            // 🔥 velocidad controlable
+            // velocidad controlable
             t += Time.deltaTime * velocidadNubes;
 
             float p = Mathf.SmoothStep(0, 1, t);

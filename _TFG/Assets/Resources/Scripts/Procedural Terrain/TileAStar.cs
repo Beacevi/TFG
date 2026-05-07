@@ -12,6 +12,8 @@ public class TileAStar : MonoBehaviour
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] PCGtiles_IsometricPerlin mapGenerator;
 
+    public ChangeScene cambiaEscenas;
+
     private List<Vector3> path = new List<Vector3>();
     private int currentIndex = 0;
     public bool moving = false;
@@ -31,9 +33,20 @@ public class TileAStar : MonoBehaviour
     {
 
         if (!tilemap)
+        {
             tilemap = GameObject.FindGameObjectWithTag("MainTileMap").GetComponent<Tilemap>();
+        }
+            
         if (!mapGenerator)
+        {
             mapGenerator = GameObject.FindGameObjectWithTag("MapGenerator").GetComponent<PCGtiles_IsometricPerlin>();
+        }
+            
+
+        if (!cambiaEscenas)
+        {
+            cambiaEscenas = GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<ChangeScene>();
+        }
     }
 
     void Update()
@@ -220,6 +233,7 @@ public class TileAStar : MonoBehaviour
         if (interactableNode.hasObject && interactableNode.Interactable != null)
         {
             ScenePersistentManager.instance.interactedBird.obtenido = true;
+            cambiaEscenas.StartCoroutine("StartAnimation");
             Destroy(interactableNode.Interactable);  
             interactableNode.Interactable = null;     
             interactableNode.hasObject = false;       

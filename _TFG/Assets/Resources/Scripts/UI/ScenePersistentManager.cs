@@ -47,7 +47,7 @@ public class ScenePersistentManager : MonoBehaviour
         if (scene.name == "SimonSaysPajaro")
         {
            TileAStar tileAStar = GameObject.FindGameObjectWithTag("Player").GetComponent<TileAStar>();
-            tileAStar.RemoveBirdAtLastNode();
+           tileAStar.RemoveBirdAtLastNode();
         }
 
     }
