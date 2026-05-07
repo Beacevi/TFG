@@ -18,3 +18,13 @@ MonoBehaviour:
   rondasTotales: 0
   notasPorTurno: 0
   maxFallos: 3
+  movementType: 0
+  moveRange: 1
+  moveDuration: 0.5
+  idleMovementType: 4
+  idleAmplitude: 1
+  idleSpeed: 1
+  idleShakeIntensity: 0.2
+  idleCircleRadius: 1
+  idleCircleSpeed: 2
+  idleHoverOffset: 2

@@ -36,8 +36,7 @@ public class BirdsReactions : MonoBehaviour
             return;
         }
 
-        GameManager.Instance.GetComponent<Sounds>()
-            .SonidoTocarPajaro(src);
+        GameManager.Instance.GetComponent<Sounds>().SonidoTocarPajaro(src); //Sustituir por birdData.PlaySound(); o algo
     }
 
     public void PlayMovement()

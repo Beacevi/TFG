@@ -212,8 +212,6 @@ public class BirdButton : MonoBehaviour
             _closedIcon.SetActive(true);
             _openedIcon.SetActive(false);
             isOpen = true;
-
-            
         }
 
     }
@@ -312,6 +310,7 @@ public void UpdateTextBasedOnTag(Bird birdData, string buttonTag, Image buttonIm
 
         _MyBird1.SetActive(true);
         _MyBird1.GetComponent<BirdsReactions>().birdData = birdData;
+        _MyBird1.GetComponent<BirdIdleMovement>().birdData = birdData;
         SetImage(_Bird1, _MyBird1);
         return;
     }
@@ -328,6 +327,7 @@ public void UpdateTextBasedOnTag(Bird birdData, string buttonTag, Image buttonIm
 
         _MyBird2.SetActive(true);
         _MyBird2.GetComponent<BirdsReactions>().birdData = birdData;
+        _MyBird2.GetComponent<BirdIdleMovement>().birdData = birdData;
         SetImage(_Bird2, _MyBird2);
 
         return;
@@ -352,6 +352,7 @@ public void UpdateTextBasedOnTag(Bird birdData, string buttonTag, Image buttonIm
 
         _MyBird3.SetActive(true);
         _MyBird3.GetComponent<BirdsReactions>().birdData = birdData;
+        _MyBird3.GetComponent<BirdIdleMovement>().birdData = birdData;
 
         SetImage(_Bird3, _MyBird3);
 
