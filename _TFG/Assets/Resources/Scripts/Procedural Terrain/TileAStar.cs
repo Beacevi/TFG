@@ -111,10 +111,10 @@ public class TileAStar : MonoBehaviour
             }
         }
 
-        stepsAvailable -= path.Count;
+        /*stepsAvailable -= path.Count;
         stepsAvailable = Mathf.Max(0, stepsAvailable);
 
-        UpdateStepsUI();
+        UpdateStepsUI();*/
 
         moving = false;
         path.Clear();
@@ -144,6 +144,11 @@ public class TileAStar : MonoBehaviour
 
         if (path.Count > 0)
         {
+            stepsAvailable -= path.Count;
+            stepsAvailable = Mathf.Max(0, stepsAvailable);
+
+            UpdateStepsUI();
+            
             moving = true;
             currentIndex = 0;
         }
