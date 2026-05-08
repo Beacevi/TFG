@@ -2721,6 +2721,17 @@ MonoBehaviour:
   _openedIcon: {fileID: 0}
   _closedIcon: {fileID: 0}
   _buttonExpandBird: {fileID: 0}
+  _listOfAvailableBirds: []
+  _listOfScriptableObjectBirds: []
+  _audioSource: {fileID: 0}
+  _scaleDuration: 0
+  _scaleMultiplier: 0
+  _imageBird1: {fileID: 0}
+  _imageBird2: {fileID: 0}
+  _imageBird3: {fileID: 0}
+  _frameBird1: {fileID: 0}
+  _frameBird2: {fileID: 0}
+  _frameBird3: {fileID: 0}
 --- !u!114 &694060118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2813,6 +2824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actualCoins: 200
   _textActualCoins: {fileID: 841777660}
+  _gameManager: {fileID: 0}
 --- !u!114 &694060124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,6 +5106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70155e8eaa2126458a46262de00acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloudsIzquierda: {fileID: 0}
+  cloudsDerecha: {fileID: 0}
+  velocidadNubes: 3
 --- !u!4 &1220969187
 Transform:
   m_ObjectHideFlags: 0
@@ -6984,7 +6999,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.306
+  m_Volume: 0.652
   m_Pitch: 1
   Loop: 0
   Mute: 0

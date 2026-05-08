@@ -12,6 +12,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
     public CircleButtonPajaro[] circles;
     public LevelIndicator levelIndicator;
     public AudioClip[] circleSounds;
+    public Sprite[] letterSprites;
     private AudioSource audioSource;
     public TextMeshProUGUI contadorText;
 
@@ -55,26 +56,27 @@ public class SimonGameManagerPajaro : MonoBehaviour
     void Start()
     {
         // Obtener pájaro seleccionado
-        if (ScenePersistentManager.instance.interactedBird != null)
-        {
-            selectedBird = ScenePersistentManager.instance.interactedBird;
-        }
-        
+        /* COMENTADO HASTA QUE HAYA PAJARO
+         if (ScenePersistentManager.instance.interactedBird != null)
+         {
+             selectedBird = ScenePersistentManager.instance.interactedBird;
+         }
+         */
 
         isPlayerTurn = false;
         canPress = false;
 
-        SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
+       /* SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
         if (sr != null)
         {
-             pajaro.sprite = sr.sprite;  // Aquí está el sprite que ves en la escena
+            pajaro.sprite = sr.sprite;  // Aquí está el sprite que ves en la escena
             Debug.Log("Sprite actual: " + pajaro.name);
         }
         else
         {
             Debug.LogWarning("No hay SpriteRenderer en este objeto.");
         }
-
+       */
 
         if (startButton != null)
         {
@@ -151,9 +153,19 @@ public class SimonGameManagerPajaro : MonoBehaviour
         canPress = false;
         StartCoroutine(HandlePlayerPress(index));
     }
+
+    private void ShowLetter(int index)
+    {
+        if (index < letterSprites.Length)
+        {
+            LetterDisplayUI.Instance.ShowLetter(letterSprites[index]);
+        }
+    }
+
     IEnumerator HandlePlayerPress(int index)
     {
         PlaySound(index);
+        ShowLetter(index);
         StartCoroutine(circles[index].Flash(0.2f));
 
         playerInput.Add(index);
@@ -265,7 +277,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
     private void CompleteMiniGame()
     {
         Debug.Log("MINIJUEGO COMPLETADO");
-
+        /* COMENTADO HASTA QUE HAYA PAJARO
         if (selectedBird != null)
         {
             selectedBird.obtenido = true;
@@ -274,7 +286,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
             ScenePersistentManager.instance.interactedBird = null;
 
             Debug.Log("Pájaro marcado como conseguido");
-        }
+        }*/
 
         //int energiaGanada = level;
         //Debug.Log($"Energía ganada: {energiaGanada}");

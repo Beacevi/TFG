@@ -202,6 +202,7 @@ public class SimonGameManager : MonoBehaviour
         if (audioSource != null && circleIndex < circleSounds.Length && circleSounds[circleIndex] != null)
         {
             audioSource.PlayOneShot(circleSounds[circleIndex]);
+            //Debug.Log("Reproduciendo sonido para círculo " + circleIndex);
         }
     }
 
