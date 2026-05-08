@@ -34,8 +34,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
     private int failCount = 0;
     public int maxFails = 3;
 
-    public Color failColor = Color.red; // Color del flash de fallo
-    public int failFlashes = 2;         // Cuántas veces parpadea
+    public Color failColor = Color.red; // Color flash fallo
+    public Color successColor = Color.green; // Color flash acierto
+    public int circleFlashes = 2;         // Cuántas veces parpadea
 
     public Image pajaro;
     private Bird selectedBird;
@@ -107,7 +108,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        for (int i = 0; i < selectedBird.notasPorTurno; i++)
+        for (int i = 0; i < 4 /*i < selectedBird.notasPorTurno*/; i++)
         {
             int newIndex = Random.Range(0, circles.Length);
             pattern.Add(newIndex);
@@ -117,7 +118,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
         //Debug.Log($"Nivel {level}");
         contadorText.enabled = true;
-        contadorText.text = $"Level {level}";
+        contadorText.text = $"Round {level}";
 
         flashDuration = Mathf.Max(0.05f, flashDuration - 0.08f); // Aumenta la dificultad reduciendo el tiempo de flash
         timeBetweenFlashes = Mathf.Max(0.05f, timeBetweenFlashes - 0.06f); // Aumenta la dificultad reduciendo el tiempo entre flashes
@@ -140,6 +141,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
         foreach (int index in pattern)
         {
             PlaySound(index);
+            ShowLetter(index); // QUITAR ESTO PARA PONERSELO AL PAJARO
             yield return StartCoroutine(circles[index].Flash(flashDuration));
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
@@ -176,9 +178,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
         if (playerInput[currentStep] != pattern[currentStep])
         {
             failCount++;
-            Debug.Log($"Fallo {failCount}/{selectedBird.maxFallos}");
+            Debug.Log($"Fallo {failCount}/{3/*selectedBird.maxFallos*/}");
 
-            if (failCount >= selectedBird.maxFallos)
+            if (failCount >= 3/*selectedBird.maxFallos*/)
             {
                 EndGameFail();
                 yield break;
@@ -206,9 +208,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
             //}
 
             //hasFailedCurrentLevel = false;
-            yield return new WaitForSeconds(0.5f);
+            yield return StartCoroutine(HandleSuccess());
 
-            if (level >= selectedBird.rondasTotales)
+            if (level >= 2/*selectedBird.rondasTotales*/)
             {
                 CompleteMiniGame();
                 yield break;
@@ -222,13 +224,35 @@ public class SimonGameManagerPajaro : MonoBehaviour
         canPress = true;
     }
 
+    IEnumerator HandleSuccess()
+    {
+        isPlayerTurn = false;
+        canPress = false;
+
+        for (int i = 0; i < circleFlashes; i++)
+        {
+            foreach (var circle in circles)
+            {
+                circle.SetColorInstant(successColor);
+            }
+
+            yield return new WaitForSeconds(0.2f);
+
+            foreach (var circle in circles)
+            {
+                circle.RestoreOriginalColor();
+            }
+
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
     IEnumerator HandleFail()
     {
         isPlayerTurn = false;
         canPress = false;
         playerInput.Clear();
 
-        for (int i = 0; i < failFlashes; i++)
+        for (int i = 0; i < circleFlashes; i++)
         {
             foreach (var circle in circles)
             {
@@ -310,6 +334,3 @@ public class SimonGameManagerPajaro : MonoBehaviour
         return isPlayerTurn && canPress;
     }
 }
-
-
-

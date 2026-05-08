@@ -28,6 +28,10 @@ public class LetterDisplayUI : MonoBehaviour
     IEnumerator ShowRoutine(Sprite sprite)
     {
         letterImage.sprite = sprite;
+
+        letterImage.SetNativeSize();
+        letterImage.rectTransform.sizeDelta = new Vector2(100, 100);
+
         letterImage.enabled = true;
 
         // Reset estado

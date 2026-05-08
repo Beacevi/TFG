@@ -15,10 +15,6 @@
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\letterdisplayui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\levelindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\levelindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\stickers\\stickerreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\stickers\\stickerreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,34 +37,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LetterDisplayUI.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:04:07.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LevelIndicator.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LevelIndicator.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\LevelIndicator.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LevelIndicator.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\LevelIndicator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:02:48.286Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -77,7 +47,7 @@
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
               "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\CircleButtonPajaro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T17:02:28.188Z",
               "EditorCaption": ""
@@ -90,14 +60,27 @@
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
               "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAADsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T15:50:34.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "LetterDisplayUI.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwCAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T17:04:07.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "StickerReceiver.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerReceiver.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerReceiver.cs",
@@ -109,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "StickerButton.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerButton.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerButton.cs",
@@ -119,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "StickerManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerManager.cs",
@@ -131,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "StickerData.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Stickers\\StickerData.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Stickers\\StickerData.cs",
