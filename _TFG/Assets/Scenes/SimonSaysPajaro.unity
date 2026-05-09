@@ -6461,7 +6461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1534043051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7551,7 +7551,8 @@ MonoBehaviour:
   startButton: {fileID: 2045130779}
   maxFails: 3
   failColor: {r: 1, g: 0, b: 0, a: 1}
-  failFlashes: 3
+  successColor: {r: 0, g: 1, b: 0, a: 1}
+  circleFlashes: 2
   pajaro: {fileID: 271871102}
 --- !u!1 &1884031529
 GameObject:

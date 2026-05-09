@@ -15,8 +15,8 @@ MonoBehaviour:
   obtenido: 1
   birdPrefab: {fileID: 926288913471853959, guid: 8198ab1b178ef2a408fac1b7ea419a87, type: 3}
   birdName: Pajaro1
-  rondasTotales: 0
-  notasPorTurno: 0
+  rondasTotales: 4
+  notasPorTurno: 1
   maxFallos: 3
   movementType: 0
   moveRange: 1

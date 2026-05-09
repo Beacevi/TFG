@@ -56,18 +56,17 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
     void Start()
     {
-        // Obtener pájaro seleccionado
-        /* COMENTADO HASTA QUE HAYA PAJARO
+         // Obtener pájaro seleccionado
          if (ScenePersistentManager.instance.interactedBird != null)
          {
              selectedBird = ScenePersistentManager.instance.interactedBird;
          }
-         */
+         
 
         isPlayerTurn = false;
         canPress = false;
 
-       /* SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
+        SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
         if (sr != null)
         {
             pajaro.sprite = sr.sprite;  // Aquí está el sprite que ves en la escena
@@ -77,7 +76,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
         {
             Debug.LogWarning("No hay SpriteRenderer en este objeto.");
         }
-       */
+       
 
         if (startButton != null)
         {
@@ -108,7 +107,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        for (int i = 0; i < 4 /*i < selectedBird.notasPorTurno*/; i++)
+        for (int i = 0; i < selectedBird.notasPorTurno; i++)
         {
             int newIndex = Random.Range(0, circles.Length);
             pattern.Add(newIndex);
@@ -116,7 +115,6 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
         level++;
 
-        //Debug.Log($"Nivel {level}");
         contadorText.enabled = true;
         contadorText.text = $"Round {level}";
 
@@ -178,9 +176,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
         if (playerInput[currentStep] != pattern[currentStep])
         {
             failCount++;
-            Debug.Log($"Fallo {failCount}/{3/*selectedBird.maxFallos*/}");
+            Debug.Log($"Fallo {failCount}/{selectedBird.maxFallos}");
 
-            if (failCount >= 3/*selectedBird.maxFallos*/)
+            if (failCount >= selectedBird.maxFallos)
             {
                 EndGameFail();
                 yield break;
@@ -210,7 +208,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
             //hasFailedCurrentLevel = false;
             yield return StartCoroutine(HandleSuccess());
 
-            if (level >= 2/*selectedBird.rondasTotales*/)
+            if (level >= selectedBird.rondasTotales)
             {
                 CompleteMiniGame();
                 yield break;
@@ -301,7 +299,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
     private void CompleteMiniGame()
     {
         Debug.Log("MINIJUEGO COMPLETADO");
-        /* COMENTADO HASTA QUE HAYA PAJARO
+
         if (selectedBird != null)
         {
             selectedBird.obtenido = true;
@@ -310,10 +308,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
             ScenePersistentManager.instance.interactedBird = null;
 
             Debug.Log("Pájaro marcado como conseguido");
-        }*/
+        }
 
-        //int energiaGanada = level;
-        //Debug.Log($"Energía ganada: {energiaGanada}");
+        int energiaGanada = level;
+        Debug.Log($"Energía ganada: {energiaGanada}");
 
         // Cerrar escena aditiva
         UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");//Aqui se cierra la escena
