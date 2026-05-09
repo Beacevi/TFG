@@ -265,19 +265,6 @@ public class SimonGameManagerPajaro : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
-        //if (levelIndicator != null)
-        //{
-        //    levelIndicator.SetLevelFail(level - 1);
-        //}
-
-        //failCount++;
-
-        //if (failCount >= maxFails)
-        //{
-        //    EndGameFail();
-        //    yield break;
-        //}
-
         // Repite el mismo patrón
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(PlayPattern());
@@ -298,6 +285,11 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
     private void CompleteMiniGame()
     {
+        StartCoroutine(CompleteRoutine());
+    }
+
+    IEnumerator CompleteRoutine()
+    {
         Debug.Log("MINIJUEGO COMPLETADO");
 
         if (selectedBird != null)
@@ -311,22 +303,28 @@ public class SimonGameManagerPajaro : MonoBehaviour
         }
 
         int energiaGanada = level;
-        Debug.Log($"Energía ganada: {energiaGanada}");
+        LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
 
+        yield return new WaitForSeconds(2f);
         // Cerrar escena aditiva
-        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");//Aqui se cierra la escena
+        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
+    }
+    private void EndGameFail()
+    {
+        StartCoroutine(FailRoutine());
     }
 
-    private void EndGameFail()
+    IEnumerator FailRoutine()
     {
         Debug.Log("MINIJUEGO FALLADO");
 
-        //int energiaGanada = level;
-        //Debug.Log($"Energía ganada: {energiaGanada}");
+        int energiaGanada = level-1;
+        LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
+
+        yield return new WaitForSeconds(2f);
 
         UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
     }
-
     public bool CanPlayerPress()
     {
         return isPlayerTurn && canPress;

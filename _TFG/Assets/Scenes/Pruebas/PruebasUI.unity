@@ -2757,7 +2757,7 @@ MonoBehaviour:
   hamburgerMenu: {fileID: 1273359575}
   bird: {fileID: 613804840}
   balloon: {fileID: 1312963380}
-  interactedBird: {fileID: 0}
+  interactedBird: {fileID: 11400000, guid: 2bfde60fb73fe934a8b6c3b0df3a4338, type: 2}
 --- !u!4 &110150679
 Transform:
   m_ObjectHideFlags: 0

@@ -1,12 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 
 public class LetterDisplayUI : MonoBehaviour
 {
     public static LetterDisplayUI Instance;
 
+    [Header("UI")]
     public Image letterImage;
+    public TextMeshProUGUI energyText;
+
+    [Header("Animation")]
     public float displayTime = 0.6f;
 
     private Coroutine currentRoutine;
@@ -14,7 +19,9 @@ public class LetterDisplayUI : MonoBehaviour
     void Awake()
     {
         Instance = this;
+
         letterImage.enabled = false;
+        energyText.enabled = false;
     }
 
     public void ShowLetter(Sprite sprite)
@@ -22,11 +29,13 @@ public class LetterDisplayUI : MonoBehaviour
         if (currentRoutine != null)
             StopCoroutine(currentRoutine);
 
-        currentRoutine = StartCoroutine(ShowRoutine(sprite));
+        currentRoutine = StartCoroutine(ShowLetterRoutine(sprite));
     }
 
-    IEnumerator ShowRoutine(Sprite sprite)
+    IEnumerator ShowLetterRoutine(Sprite sprite)
     {
+        energyText.enabled = false;
+
         letterImage.sprite = sprite;
 
         letterImage.SetNativeSize();
@@ -34,19 +43,22 @@ public class LetterDisplayUI : MonoBehaviour
 
         letterImage.enabled = true;
 
-        // Reset estado
+        // Reset visual
         letterImage.color = new Color(1, 1, 1, 1);
         letterImage.transform.localScale = Vector3.zero;
 
-        // Animación de escala manual (pop)
+        // Animación pop
         float scaleTime = 0.2f;
         float t = 0;
 
         while (t < scaleTime)
         {
             t += Time.deltaTime;
+
             float scale = Mathf.Lerp(0, 1, t / scaleTime);
+
             letterImage.transform.localScale = Vector3.one * scale;
+
             yield return null;
         }
 
@@ -56,17 +68,60 @@ public class LetterDisplayUI : MonoBehaviour
 
         // Fade out
         float fadeTime = 0.3f;
+
         t = 0;
+
         Color c = letterImage.color;
 
         while (t < fadeTime)
         {
             t += Time.deltaTime;
+
             c.a = Mathf.Lerp(1, 0, t / fadeTime);
+
             letterImage.color = c;
+
             yield return null;
         }
 
         letterImage.enabled = false;
+    }
+
+    public void ShowEnergy(int energy)
+    {
+        if (currentRoutine != null)
+            StopCoroutine(currentRoutine);
+
+        StartCoroutine(ShowEnergyRoutine(energy));
+    }
+
+    IEnumerator ShowEnergyRoutine(int energy)
+    {
+        letterImage.enabled = false;
+
+        energyText.enabled = true;
+
+        energyText.text = $"+{energy} Energy";
+
+        energyText.color = new Color(1, 1, 1, 1);
+
+        energyText.transform.localScale = Vector3.zero;
+
+        // Animación
+        float scaleTime = 0.25f;
+        float t = 0;
+
+        while (t < scaleTime)
+        {
+            t += Time.deltaTime;
+
+            float scale = Mathf.Lerp(0, 1, t / scaleTime);
+
+            energyText.transform.localScale = Vector3.one * scale;
+
+            yield return null;
+        }
+
+        energyText.transform.localScale = Vector3.one;
     }
 }
