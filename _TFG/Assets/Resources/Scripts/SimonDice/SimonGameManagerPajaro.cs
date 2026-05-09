@@ -23,9 +23,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
     private List<int> playerInput = new List<int>();
 
     private bool isPlayerTurn = false;
-    private bool hasFailed = false;
     private bool canPress = false;
-    private bool hasFailedCurrentLevel = false;
     private bool gameStarted = false;
 
     public Button startButton;
