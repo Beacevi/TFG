@@ -3,44 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\save\\savedatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\save\\savedatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\documentos\\github\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\csvreader\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\skins\\custommenusprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\skins\\custommenusprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,15 +74,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SaveDataManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T17:31:46.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Store.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAmwFYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T16:21:43.742Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "ShopMenu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwE4AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T16:19:55.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "EconomyAuthority.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
@@ -78,12 +129,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAQwBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:56:26.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T10:56:26.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "GameManagerAuthority.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
@@ -91,12 +141,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
               "ViewState": "AgIAAK4AAAAAAAAAAAAiwNAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:51:08.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T10:51:08.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "GameManagerLogic.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
@@ -109,31 +158,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAkwJcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAlwKkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T10:20:47.538Z"
+              "WhenOpened": "2026-04-12T10:20:47.538Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Energy.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAwwGoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T10:23:30.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "ChangeScene.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\ChangeScene.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ChangeScene.cs",
@@ -145,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "TileClickDetector.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
@@ -157,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "TileAStar.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
@@ -169,31 +219,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IsometricCamera.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAcwCIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T09:56:51.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "RewardsMenu.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAwKoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T12:10:03.374Z"
+              "WhenOpened": "2026-03-16T12:10:03.374Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "CSVReader.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
@@ -205,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "CustomMenuSprites.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
@@ -217,15 +268,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "CustomMenu.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Documentos\\GitHub\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAiwGcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T10:48:52.391Z"
+              "WhenOpened": "2026-02-11T10:48:52.391Z",
+              "EditorCaption": ""
             }
           ]
         }

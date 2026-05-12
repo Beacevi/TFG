@@ -40,15 +40,14 @@ public class CustomMenu : MonoBehaviour
             _CheckButtonCustom.SetActive(false);
         }
 
-        if(_actualColorTop != null && _actualColorMiddle != null && _actualColorBottom != null && _actualColorSupport != null && _TopPart != null && _MiddlePart != null && _BottomPart != null && _SupportPart != null)
-        {
-            _actualColorTop     = _TopPart.GetComponent<SpriteRenderer>().color;
-            _actualColorMiddle  = _MiddlePart.GetComponent<SpriteRenderer>().color;
-            _actualColorBottom  = _BottomPart.GetComponent<SpriteRenderer>().color;
-            _actualColorSupport = _SupportPart.GetComponent<SpriteRenderer>().color;
-        }
+        _actualColorTop = _TopPart.GetComponent<SpriteRenderer>().color;
+        _actualColorMiddle = _MiddlePart.GetComponent<SpriteRenderer>().color;
+        _actualColorBottom = _BottomPart.GetComponent<SpriteRenderer>().color;
+        _actualColorSupport = _SupportPart.GetComponent<SpriteRenderer>().color;
 
-        
+        customChange = new List<Color32>(baseColors);
+
+
     }
     public void OpenCustomMenu(UnityEngine.UI.Button button)
     {
@@ -81,71 +80,119 @@ public class CustomMenu : MonoBehaviour
 
         _buttonFunctions.CloseMenu();
     }
+
+
     // Update is called once per frame
-
-    Dictionary<int, Color32> customChange = new Dictionary<int, Color32>
+    private List<Color32> baseColors = new List<Color32>()
     {
-        { 1, new Color32(230, 199, 255, 255) }, // #E6C7FF
-        { 2, new Color32(255, 217, 199, 255) }, // #FFD9C7
-        { 3, new Color32(199, 255, 228, 255) }, // #C7FFE4
-        { 4, new Color32(199, 213, 255, 255) }, // #C7D5FF
-        { 5, new Color32( 99,  89, 124, 255) }, // #63597C
+        new Color32(230, 199, 255, 255),
+        new Color32(255, 217, 199, 255),
+        new Color32(199, 255, 228, 255),
+        new Color32(199, 213, 255, 255),
+        new Color32(99, 89, 124, 255)
     };
-    private Color32 ChangeLeftColorPanel(GameObject panel)
-    {
-        SpriteRenderer renderer = panel.GetComponent<SpriteRenderer>();
-        if (renderer == null) return renderer.color;
 
-        int currentIndex = -1;
-        foreach (var combo in customChange)
+    public void SetUnlockedColors(List<Color32> colors)
+    {
+        customChange = new List<Color32>(baseColors);
+
+        foreach (var c in colors)
         {
-            if (renderer.color.Equals(combo.Value))
+            if (!customChange.Contains(c))
+                customChange.Add(c);
+        }
+    }
+    public List<Color32> GetUnlockedColors()
+    {
+        List<Color32> result = new List<Color32>();
+
+        for (int i = baseColors.Count; i < customChange.Count; i++)
+        {
+            result.Add(customChange[i]);
+        }
+
+        return result;
+    }
+    public List<Color32> customChange { get; private set; }
+    public List<string> GetColors()
+    {
+        List<string> result = new List<string>();
+
+        foreach (Color32 c in customChange)
+        {
+            string hex = ColorUtility.ToHtmlStringRGBA(c);
+            result.Add(hex);
+        }
+
+        return result;
+    }
+    public void SetColors(List<string> colors)
+    {
+        customChange.Clear();
+
+        foreach (string hex in colors)
+        {
+            if (ColorUtility.TryParseHtmlString("#" + hex, out Color c))
             {
-                currentIndex = combo.Key;
-                break;
+                customChange.Add(c);
+            }
+        }
+    }
+    public void AddColor(Color32 color)
+    {
+        if (!customChange.Contains(color))
+            customChange.Add(color);
+    }
+    private int GetColorIndex(Color32 color)
+    {
+        for (int i = 0; i < customChange.Count; i++)
+        {
+            Color32 c = customChange[i];
+
+            if (c.r == color.r &&
+                c.g == color.g &&
+                c.b == color.b &&
+                c.a == color.a)
+            {
+                return i;
             }
         }
 
-        if (currentIndex == -1) //In case it doesnt find the color that the balloon have
-        {
-            //renderer.color = customChange[1];
-            return customChange[1];
-        }
+        return -1;
+    }
+    private Color32 ChangeLeftColorPanel(GameObject panel)
+    {
+        SpriteRenderer renderer = panel.GetComponent<SpriteRenderer>();
+        if (renderer == null) return Color.white;
+
+        int currentIndex = GetColorIndex((Color32)renderer.color);
+
+        if (currentIndex == -1)
+            return customChange[0];
 
         int nextIndex = currentIndex - 1;
-        if (nextIndex < 1)
-            nextIndex = customChange.Count;
 
-        //renderer.color = customChange[nextIndex]; 
+        if (nextIndex < 0)
+            nextIndex = customChange.Count - 1;
+
         return customChange[nextIndex];
     }
     private Color32 ChangeRightColorPanel(GameObject panel)
     {
         SpriteRenderer renderer = panel.GetComponent<SpriteRenderer>();
-        if (renderer == null) return renderer.color;
+        if (renderer == null) return Color.white;
 
-        int currentIndex = -1;
-        foreach (var combo in customChange)
-        {
-            if (renderer.color.Equals(combo.Value))
-            {
-                currentIndex = combo.Key;
-                break;
-            }
-        }
+        int currentIndex = GetColorIndex((Color32)renderer.color);
 
-        if (currentIndex == -1) //In case it doesnt find the color that the balloon have
-        {
-            renderer.color = customChange[1];
-            return customChange[customChange.Count];
-        }
+        if (currentIndex == -1)
+            return customChange[0];
 
         int nextIndex = currentIndex + 1;
-        if (nextIndex > customChange.Count)
-            nextIndex = 1;
+
+        if (nextIndex >= customChange.Count)
+            nextIndex = 0;
 
         return customChange[nextIndex];
-
     }
     public void ChangeColor(string part, bool isLeft)
     {
