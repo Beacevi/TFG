@@ -1,4 +1,5 @@
 ﻿using GUPS.AntiCheat.Protected;
+using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -24,24 +25,34 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text gems_ui;
     [SerializeField] private GameObject soundManager;
 
+
+    Store store;
+
+
+    CustomMenu customMenu;
     //[SerializeField] private TMP_Text energy_ui;
 
 
     private void Awake()
     {
+
+
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
             savePath = Application.persistentDataPath + "/save.json";
+            store = FindObjectOfType<Store>();
+            customMenu = FindObjectOfType<CustomMenu>();
             LoadGame();
         }
         else
         {
             Destroy(gameObject);
         }
-    }
 
+        
+    }
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -88,6 +99,18 @@ public class GameManager : MonoBehaviour
         data.currentLevel    = currentLevel;
         data.balloonLevel    = balloonLevel;
 
+
+        if (store != null)
+        {
+            data.shopItems = store.GetShopItems();
+            Debug.LogWarning($"Saving shop items: {data.shopItems.Count}");
+        }
+
+        if (customMenu != null)
+        {
+            data.unlockedColors = customMenu.GetUnlockedColors();
+        }
+
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(savePath, json);
 
@@ -108,6 +131,16 @@ public class GameManager : MonoBehaviour
                 energy = data.energy;
                 currentLevel = data.currentLevel;
                 balloonLevel = data.balloonLevel;
+
+                if (store != null && data.shopItems != null)
+                {
+                    Debug.LogWarning($"Loading shop items: {data.shopItems.Count}");
+                    store.SetShopItems(data.shopItems);
+                }
+                if (customMenu != null && data.unlockedColors != null)
+                {
+                    customMenu.SetUnlockedColors(data.unlockedColors);
+                }
             }
             catch
             {
@@ -139,20 +172,34 @@ public class GameManager : MonoBehaviour
 
 
 
-    public bool AddMoney(int amount)
+    public void AddMoney(int amount)
     {
-        if (coins + amount < 0)
+        coins += amount;
+        coins_ui.text = coins.ToString();
+        SaveGame();
+    }
+
+    public bool SpendMoney(int amount)
+    {
+        int currentCoins = coins;
+
+        Debug.LogWarning($"Amount ! {amount} {currentCoins}");
+        if (currentCoins < amount)
         {
             Debug.LogWarning("Not enough coins!");
             return false;
         }
-        coins += amount;
+
+        coins = currentCoins - amount;
         coins_ui.text = coins.ToString();
+
+        Debug.LogWarning($"BUY ! {amount} {coins}");
 
         SaveGame();
 
         return true;
     }
+
     public int GetMoney()
     {
         return coins; 
@@ -165,6 +212,22 @@ public class GameManager : MonoBehaviour
 
         SaveGame();
     }
+
+    public bool SpendGems(int amount)
+    {
+        if (gems < amount)
+        {
+            Debug.LogWarning($"Not enough coins! {gems}");
+            return false;
+        }
+
+        gems -= amount;
+        gems_ui.text = gems.ToString();
+        SaveGame();
+
+        return true;
+    }
+
     public int GetGems()
     {
         return gems;

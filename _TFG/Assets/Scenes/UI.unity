@@ -1380,6 +1380,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &42367739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2439,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &100670072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,6 +2915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137319694}
   - component: {fileID: 137319709}
+  - component: {fileID: 137319710}
   - component: {fileID: 137319708}
   - component: {fileID: 137319706}
   - component: {fileID: 137319705}
@@ -3076,6 +3079,17 @@ MonoBehaviour:
   _openedIcon: {fileID: 1240793823}
   _closedIcon: {fileID: 1295408420}
   _buttonExpandBird: {fileID: 1866283462}
+  _listOfAvailableBirds: []
+  _listOfScriptableObjectBirds: []
+  _audioSource: {fileID: 0}
+  _scaleDuration: 0
+  _scaleMultiplier: 0
+  _imageBird1: {fileID: 0}
+  _imageBird2: {fileID: 0}
+  _imageBird3: {fileID: 0}
+  _frameBird1: {fileID: 0}
+  _frameBird2: {fileID: 0}
+  _frameBird3: {fileID: 0}
 --- !u!114 &137319701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3184,11 +3198,7 @@ MonoBehaviour:
   _animator: {fileID: 1470188929}
   _storeMenu: {fileID: 1470188926}
   _resetStorePanel: {fileID: 2142141415}
-  _timerText: {fileID: 1557004731}
   _lastHourColor: {r: 1, g: 0, b: 0, a: 1}
-  _Article1: {fileID: 198117103}
-  _Article2: {fileID: 473410384}
-  _Article3: {fileID: 1240260736}
   _balloon: {fileID: 1312963380}
   _birds: {fileID: 613804840}
 --- !u!114 &137319707
@@ -3277,6 +3287,33 @@ MonoBehaviour:
   - {fileID: 1898971746}
   - {fileID: 880890862}
   - {fileID: 1753589615}
+--- !u!114 &137319710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137319692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52254553408756a4f9c2216cae0d01b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item1Button: {fileID: 198117105}
+  item2Button: {fileID: 473410386}
+  item3Button: {fileID: 1240260737}
+  item1Image: {fileID: 1570588440}
+  item2Image: {fileID: 987613216}
+  item3Image: {fileID: 962181514}
+  item1Price: {fileID: 1909066998}
+  item2Price: {fileID: 996932019}
+  item3Price: {fileID: 2030676814}
+  baseTopSprite: {fileID: -9107306080795259410, guid: f15f691eb2d9566408618fb6733422b9, type: 3}
+  baseMidSprite: {fileID: 4866365652579605290, guid: 0240c74556d06be4dbf41c84a491374d, type: 3}
+  baseBotSprite: {fileID: 3861242963364035955, guid: d69af27a93020974a8874eed06dd3820, type: 3}
+  baseCestaSprite: {fileID: -381257876468597353, guid: e4106b8f657dabd4ea4ec03a073320e8, type: 3}
+  colorPool: []
+  timerText: {fileID: 1557004731}
 --- !u!1 &140025330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +3910,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &146999231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4033,6 +4071,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &148909746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5322,7 +5361,7 @@ GameObject:
   - component: {fileID: 198117106}
   - component: {fileID: 198117105}
   m_Layer: 5
-  m_Name: Item (1)
+  m_Name: Item (1)(Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5392,13 +5431,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137319706}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: BuyArticle
-        m_Mode: 3
+      - m_Target: {fileID: 137319710}
+        m_TargetAssemblyTypeName: Store, Assembly-CSharp
+        m_MethodName: OnItemSelected
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 198117105}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6158,6 +6197,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &222422136
 GameObject:
   m_ObjectHideFlags: 0
@@ -12157,6 +12197,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &438507780
 GameObject:
   m_ObjectHideFlags: 0
@@ -12331,6 +12372,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &442798679
 GameObject:
   m_ObjectHideFlags: 0
@@ -13011,7 +13053,7 @@ GameObject:
   - component: {fileID: 473410387}
   - component: {fileID: 473410386}
   m_Layer: 5
-  m_Name: Item (2)
+  m_Name: Item (2)(Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13081,13 +13123,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137319706}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: BuyArticle
-        m_Mode: 3
+      - m_Target: {fileID: 137319710}
+        m_TargetAssemblyTypeName: Store, Assembly-CSharp
+        m_MethodName: OnItemSelected
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 473410386}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13535,6 +13577,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &493476342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15330,6 +15373,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &584109690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21231,6 +21275,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &619029016
 GameObject:
   m_ObjectHideFlags: 0
@@ -21399,6 +21444,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1909066996}
+  - {fileID: 985007712}
   m_Father: {fileID: 1469261317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -21428,7 +21474,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 43, y: 20}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
+  m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!1 &633140510
 GameObject:
@@ -21722,6 +21768,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &639986215
 GameObject:
   m_ObjectHideFlags: 0
@@ -22378,6 +22425,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &657905106
 GameObject:
   m_ObjectHideFlags: 0
@@ -32940,6 +32988,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &880890861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33941,6 +33990,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2030676812}
+  - {fileID: 1318838394}
   m_Father: {fileID: 684723955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -33970,7 +34020,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 43, y: 20}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
+  m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!1 &931021667
 GameObject:
@@ -34278,6 +34328,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &932245886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34293,6 +34344,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &941225630
 GameObject:
   m_ObjectHideFlags: 0
@@ -34704,7 +34756,7 @@ GameObject:
   - component: {fileID: 957069520}
   - component: {fileID: 957069519}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34717,12 +34769,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957069517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 996932017}
+  m_Father: {fileID: 1717942849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -34779,7 +34831,7 @@ GameObject:
   - component: {fileID: 962181515}
   - component: {fileID: 962181514}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35016,6 +35068,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &971556343
 GameObject:
   m_ObjectHideFlags: 0
@@ -35089,7 +35142,7 @@ GameObject:
   - component: {fileID: 985007714}
   - component: {fileID: 985007713}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35102,12 +35155,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985007711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1909066996}
+  m_Father: {fileID: 629389293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -35301,6 +35354,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &987529850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35337,7 +35391,7 @@ GameObject:
   - component: {fileID: 987613217}
   - component: {fileID: 987613216}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35605,8 +35659,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 957069518}
+  m_Children: []
   m_Father: {fileID: 1717942849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -36759,6 +36812,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1049605536
 GameObject:
   m_ObjectHideFlags: 0
@@ -40405,6 +40459,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1208769643
 GameObject:
   m_ObjectHideFlags: 0
@@ -41067,7 +41122,7 @@ GameObject:
   - component: {fileID: 1240260738}
   - component: {fileID: 1240260737}
   m_Layer: 5
-  m_Name: Item (3)
+  m_Name: Item (3)(Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41117,13 +41172,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137319706}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: BuyArticle
-        m_Mode: 3
+      - m_Target: {fileID: 137319710}
+        m_TargetAssemblyTypeName: Store, Assembly-CSharp
+        m_MethodName: OnItemSelected
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1240260737}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
@@ -43543,7 +43598,7 @@ GameObject:
   - component: {fileID: 1318838396}
   - component: {fileID: 1318838395}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43556,12 +43611,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318838393}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2030676812}
+  m_Father: {fileID: 929304937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -43767,6 +43822,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1330524440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43782,6 +43838,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1341391479
 GameObject:
   m_ObjectHideFlags: 0
@@ -45448,6 +45505,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1391871519
 GameObject:
   m_ObjectHideFlags: 0
@@ -46192,6 +46250,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1426545006
 GameObject:
   m_ObjectHideFlags: 0
@@ -46352,6 +46411,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1430489606
 GameObject:
   m_ObjectHideFlags: 0
@@ -48115,6 +48175,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1512689837
 GameObject:
   m_ObjectHideFlags: 0
@@ -48344,6 +48405,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1514914516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49318,7 +49380,7 @@ GameObject:
   - component: {fileID: 1570588441}
   - component: {fileID: 1570588440}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50757,6 +50819,7 @@ MonoBehaviour:
   reader: {fileID: 0}
   coins_ui: {fileID: 1439815934}
   gems_ui: {fileID: 1387437494}
+  soundManager: {fileID: 0}
 --- !u!1 &1634400986
 GameObject:
   m_ObjectHideFlags: 0
@@ -51789,6 +51852,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1673799779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52343,6 +52407,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 996932017}
+  - {fileID: 957069518}
   m_Father: {fileID: 1584714329}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -52372,7 +52437,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 43, y: 20}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
+  m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!1 &1720601135
 GameObject:
@@ -52918,6 +52983,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1753589614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53633,8 +53699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudsIzquierda: {fileID: 0}
   cloudsDerecha: {fileID: 0}
-  distancia: 10
-  duracion: 2
+  velocidadNubes: 3
 --- !u!4 &1780912823
 Transform:
   m_ObjectHideFlags: 0
@@ -54283,6 +54348,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1800870662
 GameObject:
   m_ObjectHideFlags: 0
@@ -54656,6 +54722,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1814638027
 GameObject:
   m_ObjectHideFlags: 0
@@ -55063,6 +55130,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1831075080
 GameObject:
   m_ObjectHideFlags: 0
@@ -55878,6 +55946,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &1859236146
 GameObject:
   m_ObjectHideFlags: 0
@@ -56432,6 +56501,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1880775765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57007,6 +57077,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &1898971745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57346,6 +57417,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &1906285915
 GameObject:
   m_ObjectHideFlags: 0
@@ -57700,8 +57772,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 985007712}
+  m_Children: []
   m_Father: {fileID: 629389293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -59341,9 +59412,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137319706}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: ResetStore
+      - m_Target: {fileID: 137319710}
+        m_TargetAssemblyTypeName: Store, Assembly-CSharp
+        m_MethodName: ForceRefreshShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -60420,6 +60491,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
+  _birdData: {fileID: 0}
 --- !u!1 &2020234765
 GameObject:
   m_ObjectHideFlags: 0
@@ -60612,6 +60684,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 0}
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!114 &2026538718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60821,8 +60894,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1318838394}
+  m_Children: []
   m_Father: {fileID: 929304937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -61911,6 +61983,7 @@ MonoBehaviour:
   _canvasManagerCollection: {fileID: 137319702}
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
+  _birdData: {fileID: 0}
 --- !u!1 &2073577522
 GameObject:
   m_ObjectHideFlags: 0

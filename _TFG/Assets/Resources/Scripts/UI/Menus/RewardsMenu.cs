@@ -157,7 +157,7 @@ public class RewardsMenu : MonoBehaviour
     private void UpgradeCharacter()
     {
         int cost = reader.GetUpgradeCost(GameManager.Instance.GetCurretLevel());
-        bool newlevel = GameManager.Instance.AddMoney(-cost);
+        bool newlevel = GameManager.Instance.SpendMoney(cost);
 
         if (newlevel)
         {
@@ -168,7 +168,7 @@ public class RewardsMenu : MonoBehaviour
     private void UpgradeShip()
     {
         int cost = reader.GetUpgradeCost(GameManager.Instance.GetCurretLevel());
-        bool newlevel = GameManager.Instance.AddMoney(-cost);
+        bool newlevel = GameManager.Instance.SpendMoney(cost);
 
         if (newlevel)
         {
