@@ -120,10 +120,12 @@
     <Compile Include="Assets\Resources\Scripts\UI\Menus\OnClickGetTag.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Resources\Scripts\Managers\GameManagerAuthority.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\GoogleSignIn\Impl\GoogleSignInImpl.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignIn.cs" />
+    <Compile Include="Assets\Resources\Scripts\Managers\EconomyAuthority.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CoinClick.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\Save\SaveManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -155,6 +157,7 @@
     <Compile Include="Assets\Resources\Scripts\SimonDice\LevelIndicator.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Hour.cs" />
     <Compile Include="Assets\GoogleSignIn\Impl\SignInHelperObject.cs" />
+    <Compile Include="Assets\Resources\Scripts\Managers\GameManagerLogic.cs" />
     <Compile Include="Assets\Resources\ScriptableObjectsBirds\Bird.cs" />
     <Compile Include="Assets\Resources\Scripts\Background&amp;Anim\CloudsMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />

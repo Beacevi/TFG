@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
         coins_ui.text = coins.ToString();
         gems_ui.text  =  gems.ToString();
     }
+
     public void SaveGame()
     {
         SaveDataManager data = new SaveDataManager();
