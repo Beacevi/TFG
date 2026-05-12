@@ -12,6 +12,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
     public CircleButtonPajaro[] circles;
     public LevelIndicator levelIndicator;
     public AudioClip[] circleSounds;
+    public Sprite[] letterSprites;
     private AudioSource audioSource;
     public TextMeshProUGUI contadorText;
 
@@ -22,15 +23,18 @@ public class SimonGameManagerPajaro : MonoBehaviour
     private List<int> playerInput = new List<int>();
 
     private bool isPlayerTurn = false;
-    private bool hasFailed = false;
     private bool canPress = false;
-    private bool hasFailedCurrentLevel = false;
     private bool gameStarted = false;
-    public Button startButton;
-    private int level = 0;
 
-    public Color failColor = Color.red; // Color del flash de fallo
-    public int failFlashes = 2;         // Cuántas veces parpadea
+    public Button startButton;
+
+    private int level = 0;
+    private int failCount = 0;
+    public int maxFails = 3;
+
+    public Color failColor = Color.red; // Color flash fallo
+    public Color successColor = Color.green; // Color flash acierto
+    public int circleFlashes = 2;         // Cuántas veces parpadea
 
     public Image pajaro;
     private Bird selectedBird;
@@ -50,12 +54,12 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
     void Start()
     {
-
-        if (ScenePersistentManager.instance.interactedBird != null)
-        {
-            selectedBird = ScenePersistentManager.instance.interactedBird;
-        }
-        
+         // Obtener pájaro seleccionado
+         if (ScenePersistentManager.instance.interactedBird != null)
+         {
+             selectedBird = ScenePersistentManager.instance.interactedBird;
+         }
+         
 
         isPlayerTurn = false;
         canPress = false;
@@ -63,14 +67,14 @@ public class SimonGameManagerPajaro : MonoBehaviour
         SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
         if (sr != null)
         {
-             pajaro.sprite = sr.sprite;  // Aquí está el sprite que ves en la escena
+            pajaro.sprite = sr.sprite;  // Aquí está el sprite que ves en la escena
             Debug.Log("Sprite actual: " + pajaro.name);
         }
         else
         {
             Debug.LogWarning("No hay SpriteRenderer en este objeto.");
         }
-
+       
 
         if (startButton != null)
         {
@@ -79,35 +83,45 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
     }
 
+    public void OnStartButtonPressed()
+    {
+        if (gameStarted) return; // Evita doble click
+
+        gameStarted = true;
+
+        if (startButton != null)
+        {
+            startButton.gameObject.SetActive(false);
+        }
+
+        StartCoroutine(StartNewRound());
+    }
+
     IEnumerator StartNewRound()
     {
         isPlayerTurn = false;
+        canPress = false; //
         playerInput.Clear();  
+
         yield return new WaitForSeconds(1f);
 
-        // Solo añadir nuevo paso si no hubo fallo
-        if (!hasFailed)
+        for (int i = 0; i < selectedBird.notasPorTurno; i++)
         {
             int newIndex = Random.Range(0, circles.Length);
             pattern.Add(newIndex);
-            level++;
-            //Debug.Log($"Nivel {level}");
-            contadorText.enabled = true;
-            contadorText.text = $"Level {level}";
+        }
 
-            flashDuration = Mathf.Max(0.05f, flashDuration - 0.08f); // Aumenta la dificultad reduciendo el tiempo de flash
-            timeBetweenFlashes = Mathf.Max(0.05f, timeBetweenFlashes - 0.06f); // Aumenta la dificultad reduciendo el tiempo entre flashes
+        level++;
+
+        contadorText.enabled = true;
+        contadorText.text = $"Round {level}";
+
+        flashDuration = Mathf.Max(0.05f, flashDuration - 0.08f); // Aumenta la dificultad reduciendo el tiempo de flash
+        timeBetweenFlashes = Mathf.Max(0.05f, timeBetweenFlashes - 0.06f); // Aumenta la dificultad reduciendo el tiempo entre flashes
                 
-            //flashDuration = Mathf.Clamp(flashDuration, 0.05f, 1f);
-            //timeBetweenFlashes = Mathf.Clamp(timeBetweenFlashes, 0.05f, 1f);
+        //flashDuration = Mathf.Clamp(flashDuration, 0.05f, 1f);
+        //timeBetweenFlashes = Mathf.Clamp(timeBetweenFlashes, 0.05f, 1f);
             
-        }
-        else
-        {
-            Debug.Log("Repitiendo patrón");
-            hasFailed = false;
-        }
-
         
         // Mostrar el patrón
         yield return StartCoroutine(PlayPattern());
@@ -116,13 +130,125 @@ public class SimonGameManagerPajaro : MonoBehaviour
         canPress = true;
     }
 
+    IEnumerator PlayPattern()
+    {
+        canPress = false;
+
+        foreach (int index in pattern)
+        {
+            PlaySound(index);
+            ShowLetter(index); // QUITAR ESTO PARA PONERSELO AL PAJARO
+            yield return StartCoroutine(circles[index].Flash(flashDuration));
+            yield return new WaitForSeconds(timeBetweenFlashes);
+        }
+
+        canPress = true;
+    }
+    public void OnCirclePressed(int index)
+    {
+        if (!isPlayerTurn || !canPress) return;
+
+        canPress = false;
+        StartCoroutine(HandlePlayerPress(index));
+    }
+
+    private void ShowLetter(int index)
+    {
+        if (index < letterSprites.Length)
+        {
+            LetterDisplayUI.Instance.ShowLetter(letterSprites[index]);
+        }
+    }
+
+    IEnumerator HandlePlayerPress(int index)
+    {
+        PlaySound(index);
+        ShowLetter(index);
+        StartCoroutine(circles[index].Flash(0.2f));
+
+        playerInput.Add(index);
+
+        int currentStep = playerInput.Count - 1;
+
+        // Fallo
+        if (playerInput[currentStep] != pattern[currentStep])
+        {
+            failCount++;
+            Debug.Log($"Fallo {failCount}/{selectedBird.maxFallos}");
+
+            if (failCount >= selectedBird.maxFallos)
+            {
+                EndGameFail();
+                yield break;
+            }
+
+            yield return StartCoroutine(HandleFail());
+            yield break;
+        }
+
+        // Si completó correctamente la secuencia
+        if (playerInput.Count == pattern.Count)
+        {
+            Debug.Log($"Ronda completada: {level}");
+
+            //if (levelIndicator != null)
+            //{
+            //    if (!hasFailedCurrentLevel)
+            //    {
+            //        levelIndicator.SetLevelSuccess(level - 1);
+            //    }
+            //    else
+            //    {
+            //        levelIndicator.SetLevelFail(level - 1);
+            //    }
+            //}
+
+            //hasFailedCurrentLevel = false;
+            yield return StartCoroutine(HandleSuccess());
+
+            if (level >= selectedBird.rondasTotales)
+            {
+                CompleteMiniGame();
+                yield break;
+            }
+
+            StartCoroutine(StartNewRound());
+            yield break;
+        }
+
+        yield return new WaitForSeconds(0.2f);
+        canPress = true;
+    }
+
+    IEnumerator HandleSuccess()
+    {
+        isPlayerTurn = false;
+        canPress = false;
+
+        for (int i = 0; i < circleFlashes; i++)
+        {
+            foreach (var circle in circles)
+            {
+                circle.SetColorInstant(successColor);
+            }
+
+            yield return new WaitForSeconds(0.2f);
+
+            foreach (var circle in circles)
+            {
+                circle.RestoreOriginalColor();
+            }
+
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
     IEnumerator HandleFail()
     {
         isPlayerTurn = false;
         canPress = false;
         playerInput.Clear();
 
-        for (int i = 0; i < failFlashes; i++)
+        for (int i = 0; i < circleFlashes; i++)
         {
             foreach (var circle in circles)
             {
@@ -137,101 +263,16 @@ public class SimonGameManagerPajaro : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
-        if (levelIndicator != null)
-        {
-            levelIndicator.SetLevelFail(level - 1);
-        }
-
         // Repite el mismo patrón
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(PlayPattern());
 
         isPlayerTurn = true;
         canPress = true;
-        hasFailed = false;
+        //hasFailed = false;
     }
 
-
-    IEnumerator PlayPattern()
-    {
-        canPress = false;
-
-        foreach (int index in pattern)
-        {
-            PlaySound(index);
-            yield return StartCoroutine(circles[index].Flash(flashDuration));
-            
-            yield return new WaitForSeconds(timeBetweenFlashes);
-        }
-
-        canPress = true;
-    }
-
-    IEnumerator HandlePlayerPress(int index)
-    {
-        PlaySound(index);
-        StartCoroutine(circles[index].Flash(0.2f));
-
-        playerInput.Add(index);
-        int currentStep = playerInput.Count - 1;
-
-        if (playerInput[currentStep] != pattern[currentStep])
-        {
-            Debug.Log("Eres un maula");
-            hasFailed = true;
-            hasFailedCurrentLevel = true;
-            StartCoroutine(HandleFail());
-            yield break;
-        }
-      
-        // Si completó correctamente la secuencia
-        if (playerInput.Count == pattern.Count)
-        {
-            Debug.Log("El nivel que llevas es: " + level);
-            Debug.Log("Las rondas necesarias son: " + selectedBird.rondasNecesarias);
-            Debug.Log("Oleeeeeeeeeee");
-            if (levelIndicator != null)
-            {
-                if (!hasFailedCurrentLevel)
-                {
-                    levelIndicator.SetLevelSuccess(level - 1);
-                }
-                else
-                {
-                    levelIndicator.SetLevelFail(level - 1);
-                }
-            }
-
-            hasFailedCurrentLevel = false;
-
-            
-
-            if (level >= selectedBird.rondasNecesarias)//
-            {
-                CompleteMiniGame();
-                yield break;
-            }
-
-            yield return new WaitForSeconds(0.3f);
-
-            
-
-            StartCoroutine(StartNewRound());
-            yield break;
-        }
-
-        // Delay
-        yield return new WaitForSeconds(0.2f);
-        canPress = true;
-    }
-
-    public void OnCirclePressed(int index)
-    {
-        if (!isPlayerTurn || !canPress) return;
-
-        canPress = false;
-        StartCoroutine(HandlePlayerPress(index));     
-    }
+ 
     private void PlaySound(int circleIndex)
     {
         if (audioSource != null && circleIndex < circleSounds.Length && circleSounds[circleIndex] != null)
@@ -241,6 +282,11 @@ public class SimonGameManagerPajaro : MonoBehaviour
     }
 
     private void CompleteMiniGame()
+    {
+        StartCoroutine(CompleteRoutine());
+    }
+
+    IEnumerator CompleteRoutine()
     {
         Debug.Log("MINIJUEGO COMPLETADO");
 
@@ -253,34 +299,32 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
             Debug.Log("Pájaro marcado como conseguido");
         }
-        
 
+        int energiaGanada = level;
+        LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
+
+        yield return new WaitForSeconds(2f);
         // Cerrar escena aditiva
         UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
     }
+    private void EndGameFail()
+    {
+        StartCoroutine(FailRoutine());
+    }
 
+    IEnumerator FailRoutine()
+    {
+        Debug.Log("MINIJUEGO FALLADO");
 
+        int energiaGanada = level-1;
+        LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
+
+        yield return new WaitForSeconds(2f);
+
+        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
+    }
     public bool CanPlayerPress()
     {
         return isPlayerTurn && canPress;
     }
-
-    public void OnStartButtonPressed()
-    {
-        if (gameStarted) return; // Evita doble click
-
-        gameStarted = true;
-
-        if (startButton != null)
-        {
-            startButton.gameObject.SetActive(false);
-        }
-  
-        StartCoroutine(StartNewRound());
-    }
-
-
 }
-
-
-

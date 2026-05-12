@@ -46,8 +46,8 @@ public class IsometricCamera : MonoBehaviour
 
     void Start()
     {
-        animator.speed = -1;
-        animator.Play("CloudsClosing", 0, 0f);
+        //animator.speed = -1;
+        //animator.Play("CloudsClosing", 0, 0f);
 
         cam = GetComponent<Camera>();
         cam.orthographic = true;
@@ -63,6 +63,14 @@ public class IsometricCamera : MonoBehaviour
 
         HandleInput();
 
+        // 🔹 Control de fin de movimiento (independiente de la cámara)
+        if (tileAstar.stepsAvailable <= 0 && state == CameraState.Following)
+        {
+            target = null;
+            state = CameraState.Waiting;
+            StartCoroutine(WaitBeforeReturn());
+        }
+
         switch (state)
         {
             case CameraState.Following:
@@ -77,8 +85,11 @@ public class IsometricCamera : MonoBehaviour
     }
     void HandleInput()
     {
-        HandleMouse();
-        HandleTouch();
+        if(tileAstar != null)
+        {
+            HandleMouse();
+            HandleTouch();
+        }
     }
 
     void HandleMouse()
@@ -117,6 +128,7 @@ public class IsometricCamera : MonoBehaviour
             }
             else
             {
+                isAttached = true;
                 tileAstar.SetCanMove(false);
             }
         }
@@ -140,7 +152,15 @@ public class IsometricCamera : MonoBehaviour
                 isAttached = false;
                 tileAstar.SetCanMove(false);
             }
+
+            if (t.phase == TouchPhase.Ended)
+            {
+                isAttached = true;
+                tileAstar.SetCanMove(true);
+            }
+
         }
+        
 
         if (Input.touchCount == 2)
         {
@@ -203,19 +223,7 @@ public class IsometricCamera : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 targetPosition = target.position + offset;
-        transform.position = Vector3.Lerp(
-            transform.position,
-            targetPosition,
-            followSpeed * Time.deltaTime
-        );
-
-        if (tileAstar.stepsAvailable <= 0)
-        {
-            target = null;
-            state = CameraState.Waiting;
-            StartCoroutine(WaitBeforeReturn());
-        }
+        Vector3 targetPosition = target.position + offset;transform.position = Vector3.Lerp(transform.position,targetPosition,followSpeed * Time.deltaTime);
     }
 
     IEnumerator WaitBeforeReturn()
@@ -226,17 +234,16 @@ public class IsometricCamera : MonoBehaviour
 
     void ReturnToStart()
     {
-        transform.position = Vector3.Lerp(
-            transform.position,
-            startPos,
-            followSpeed * Time.deltaTime
-        );
-
+        Debug.Log("Cambiando de escena");
+        //transform.position = Vector3.Lerp(transform.position,startPos,followSpeed * Time.deltaTime);
+        state = CameraState.ChangingScene;
+        changeScene.Cambiar_A_Escena("PruebasUI");
+        /*
         if (Vector3.Distance(transform.position, startPos) < distanciaMinima)
         {
             state = CameraState.ChangingScene;
-            changeScene.Cambiar_A_Escena("UI");
-        }
+            changeScene.Cambiar_A_Escena("PruebasUI");
+        }*/
 
         
     }
@@ -244,10 +251,10 @@ public class IsometricCamera : MonoBehaviour
 
     public void AssingPlayer(GameObject _player)
     {
-
         target = _player.transform;
         tileAstar = target.gameObject.GetComponent<TileAStar>();
         isAttached = true;
         tileAstar.SetCanMove(true);
+        transform.position = target.position + offset;
     }
 }

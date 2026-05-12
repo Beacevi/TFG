@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97d281e56f091f4792c90b958d5e763, type: 3}
   m_Name: Bird8
   m_EditorClassIdentifier: 
-  obtenido: 0
-  birdPrefab: {fileID: 0}
-  birdName: 
-  rondasNecesarias: 2
+  obtenido: 1
+  birdPrefab: {fileID: 5805991993125803581, guid: 1fb9247236366ee9badc715c35546b30, type: 3}
+  birdName: Pajaro8
+  rondasTotales: 6
+  notasPorTurno: 3
+  maxFallos: 3
+  movementType: 3
+  moveRange: 1
+  moveDuration: 0.5
+  idleMovementType: 3
+  idleAmplitude: 1
+  idleSpeed: 1
+  idleShakeIntensity: 0.2
+  idleCircleRadius: 1
+  idleCircleSpeed: 2
+  idleHoverOffset: 2

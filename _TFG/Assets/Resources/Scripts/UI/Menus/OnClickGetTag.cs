@@ -6,6 +6,7 @@ public class OnClickCollection : MonoBehaviour
     [SerializeField] private CollectionButton _canvasManagerCollection;
     [SerializeField] private BirdButton       _canvasManagerBird;
     [SerializeField] private CustomMenu       _canvasCustom;
+    [SerializeField] private Bird _birdData;
 
     public void OnButtonClickCollection()
     {
@@ -32,7 +33,7 @@ public class OnClickCollection : MonoBehaviour
         
         Debug.Log("Tag del boton pulsado: " + buttonTag);
 
-        _canvasManagerBird.UpdateTextBasedOnTag(buttonTag, _myButtonImage, _myButtonTitle, _myButtonUpdate, fatherPanel);
+        _canvasManagerBird.UpdateTextBasedOnTag(_birdData, buttonTag, _myButtonImage, _myButtonTitle, _myButtonUpdate, fatherPanel);
     }
 
     public void OnButtonClickTakeBirdOff()

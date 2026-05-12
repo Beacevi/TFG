@@ -26,8 +26,11 @@ public class CollectionButton : MonoBehaviour
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
 
-        _CollectionPanel.SetActive(false);
-        _InfoCollection.SetActive(false);
+        if(_CollectionPanel != null && _InfoCollection != null)
+        {
+         _CollectionPanel.SetActive(false);
+         _InfoCollection.SetActive(false);
+        }
     }
 
     public void OpenCollectionMenu(Button button)
@@ -36,6 +39,8 @@ public class CollectionButton : MonoBehaviour
 
         _animator.SetTrigger("OpenTrigger");
         StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
+
+        StickerManager.Instance.CargarStickers();
 
         _buttonFunctions.OpenMenu();
     }

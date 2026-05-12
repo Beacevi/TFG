@@ -21,8 +21,13 @@ public class HamburguerButton : MonoBehaviour
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
 
-        _openedIcon.SetActive(true);
-        _closedIcon.SetActive(false);
+        if(_openedIcon != null && _closedIcon != null)
+        {
+            _openedIcon.SetActive(true);
+            _closedIcon.SetActive(false);
+        }
+
+        
     }
     public void HamburguerMenu()
     {

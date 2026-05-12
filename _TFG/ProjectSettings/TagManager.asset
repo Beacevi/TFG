@@ -23,11 +23,18 @@ TagManager:
   - MapGenerator
   - MainTileMap
   - SceneChanger
+  - Tree
+  - FxTemporaire
+  - GemsText
+  - CoinsText
+  - SoundManager
+  - Sticker
+  - PasosBar
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Stickers
   - Water
   - UI
   - 
@@ -60,8 +67,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: TerrainTrees
+  - name: Background
     uniqueID: 912733509
+    locked: 0
+  - name: World
+    uniqueID: 3946521283
+    locked: 0
+  - name: Characters
+    uniqueID: 556140305
     locked: 0
   m_RenderingLayers:
   - Default

@@ -3,35 +3,42 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.Rendering;
 
 public class SimonGameManager : MonoBehaviour
 {
     public static SimonGameManager Instance { get; private set; }
 
     public CircleButton[] circles;
-    public LevelIndicator levelIndicator;
     public AudioClip[] circleSounds;
-    private AudioSource audioSource;
+    public Sprite[] letterSprites;
+
     public TextMeshProUGUI contadorText;
+    public Button startButton;
 
     public float flashDuration = 1f;
     public float timeBetweenFlashes = 1f;
+
+    public int maxFails = 3;
+    public int circleFlashes = 2;
+
+    public Color failColor = Color.red;
+    public Color successColor = Color.green;
+
+    public int notesPerRound = 3;
+
+    private AudioSource audioSource;
 
     private List<int> pattern = new List<int>();
     private List<int> playerInput = new List<int>();
 
     private bool isPlayerTurn = false;
-    private bool hasFailed = false;
     private bool canPress = false;
-    private bool hasFailedCurrentLevel = false;
     private bool gameStarted = false;
-    public Button startButton;
-    private int level = 0;
 
-    public Color failColor = Color.red; // Color del flash de fallo
-    public int failFlashes = 2;         // Cuántas veces parpadea
-    
+    private int level = 0;
+    private int failCount = 0;
+
+    private const int MaxStoredGames = 5;
 
     void Awake()
     {
@@ -40,8 +47,8 @@ public class SimonGameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        Instance = this;
 
+        Instance = this;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -50,86 +57,66 @@ public class SimonGameManager : MonoBehaviour
         isPlayerTurn = false;
         canPress = false;
 
+        if (startButton != null)
+        {
+            startButton.gameObject.SetActive(true);
+        }
+    }
+
+    public void OnStartButtonPressed()
+    {
+        if (gameStarted) return;
+
+        gameStarted = true;
 
         if (startButton != null)
         {
-            startButton.gameObject.SetActive(true);       
+            startButton.gameObject.SetActive(false);
         }
 
+        // Calcular ronda inicial
+        level = CalculateStartingRound();
+
+        Debug.Log("Ronda inicial calculada: " + level);
+
+        // Generar patrón previo
+        GenerateInitialPattern();
+
+        StartCoroutine(StartNewRound());
     }
 
     IEnumerator StartNewRound()
     {
         isPlayerTurn = false;
-        playerInput.Clear();  
+        canPress = false;
+
+        playerInput.Clear();
+
         yield return new WaitForSeconds(1f);
 
-        // Solo añadir nuevo paso si no hubo fallo
-        if (!hasFailed)
+        // Añadir nuevas notas
+        for (int i = 0; i < notesPerRound; i++)
         {
             int newIndex = Random.Range(0, circles.Length);
             pattern.Add(newIndex);
-            level++;
-            //Debug.Log($"Nivel {level}");
-            contadorText.enabled = true;
-            contadorText.text = $"Level {level}";
-
-            flashDuration = Mathf.Max(0.05f, flashDuration - 0.08f); // Aumenta la dificultad reduciendo el tiempo de flash
-            timeBetweenFlashes = Mathf.Max(0.05f, timeBetweenFlashes - 0.06f); // Aumenta la dificultad reduciendo el tiempo entre flashes
-                
-            //flashDuration = Mathf.Clamp(flashDuration, 0.05f, 1f);
-            //timeBetweenFlashes = Mathf.Clamp(timeBetweenFlashes, 0.05f, 1f);
-            
-        }
-        else
-        {
-            Debug.Log("Repitiendo patrón");
-            hasFailed = false;
         }
 
-        
-        // Mostrar el patrón
+        level++;
+
+        contadorText.enabled = true;
+        contadorText.text = $"Round {level}";
+
+        // Incrementar dificultad
+        flashDuration = Mathf.Max(0.05f, flashDuration - 0.08f);
+
+        timeBetweenFlashes = Mathf.Max(0.05f, timeBetweenFlashes - 0.06f);
+
+        // Mostrar patrón
         yield return StartCoroutine(PlayPattern());
 
         isPlayerTurn = true;
         canPress = true;
     }
-
-    IEnumerator HandleFail()
-    {
-        isPlayerTurn = false;
-        canPress = false;
-        playerInput.Clear();
-
-        for (int i = 0; i < failFlashes; i++)
-        {
-            foreach (var circle in circles)
-            {
-                circle.SetColorInstant(failColor);
-            }
-            yield return new WaitForSeconds(0.2f);
-
-            foreach (var circle in circles)
-            {
-                circle.RestoreOriginalColor();
-            }
-            yield return new WaitForSeconds(0.2f);
-        }
-
-        if (levelIndicator != null)
-        {
-            levelIndicator.SetLevelFail(level - 1);
-        }
-
-        // Repite el mismo patrón
-        yield return new WaitForSeconds(1f);
-        yield return StartCoroutine(PlayPattern());
-
-        isPlayerTurn = true;
-        canPress = true;
-        hasFailed = false;
-    }
-
 
     IEnumerator PlayPattern()
     {
@@ -138,55 +125,14 @@ public class SimonGameManager : MonoBehaviour
         foreach (int index in pattern)
         {
             PlaySound(index);
+
+            ShowLetter(index);
+
             yield return StartCoroutine(circles[index].Flash(flashDuration));
-            
+
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
 
-        canPress = true;
-    }
-
-    IEnumerator HandlePlayerPress(int index)
-    {
-        PlaySound(index);
-        StartCoroutine(circles[index].Flash(0.2f));
-
-        playerInput.Add(index);
-        int currentStep = playerInput.Count - 1;
-
-        if (playerInput[currentStep] != pattern[currentStep])
-        {
-            Debug.Log("ERES UN MAULA");
-            hasFailed = true;
-            hasFailedCurrentLevel = true;
-            StartCoroutine(HandleFail());
-            yield break;
-        }
-      
-        // Si completó correctamente la secuencia
-        if (playerInput.Count == pattern.Count)
-        {
-            Debug.Log("OLEEEEEEE");
-            if (levelIndicator != null)
-            {
-                if (!hasFailedCurrentLevel)
-                {
-                    levelIndicator.SetLevelSuccess(level - 1);
-                }
-                else
-                {
-                    levelIndicator.SetLevelFail(level - 1);
-                }
-            }
-
-            hasFailedCurrentLevel = false;
-            yield return new WaitForSeconds(0.3f);
-            StartCoroutine(StartNewRound());
-            yield break;
-        }
-
-        // Delay
-        yield return new WaitForSeconds(0.2f);
         canPress = true;
     }
 
@@ -195,38 +141,235 @@ public class SimonGameManager : MonoBehaviour
         if (!isPlayerTurn || !canPress) return;
 
         canPress = false;
-        StartCoroutine(HandlePlayerPress(index));     
+
+        StartCoroutine(HandlePlayerPress(index));
     }
+
+    IEnumerator HandlePlayerPress(int index)
+    {
+        PlaySound(index);
+
+        ShowLetter(index);
+
+        StartCoroutine(circles[index].Flash(0.2f));
+
+        playerInput.Add(index);
+
+        int currentStep = playerInput.Count - 1;
+
+        if (playerInput[currentStep] != pattern[currentStep])
+        {
+            failCount++;
+
+            Debug.Log($"Fallo {failCount}/{maxFails}");
+
+            if (failCount >= maxFails)
+            {
+                EndGameFail();
+                yield break;
+            }
+
+            yield return StartCoroutine(HandleFail());
+
+            yield break;
+        }
+
+        if (playerInput.Count == pattern.Count)
+        {
+            Debug.Log($"Ronda completada: {level}");
+
+            yield return StartCoroutine(HandleSuccess());
+
+            StartCoroutine(StartNewRound());
+
+            yield break;
+        }
+
+        yield return new WaitForSeconds(0.2f);
+
+        canPress = true;
+    }
+
+    IEnumerator HandleSuccess()
+    {
+        isPlayerTurn = false;
+        canPress = false;
+
+        for (int i = 0; i < circleFlashes; i++)
+        {
+            foreach (var circle in circles)
+            {
+                circle.SetColorInstant(successColor);
+            }
+
+            yield return new WaitForSeconds(0.2f);
+
+            foreach (var circle in circles)
+            {
+                circle.RestoreOriginalColor();
+            }
+
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+
+    IEnumerator HandleFail()
+    {
+        isPlayerTurn = false;
+        canPress = false;
+
+        playerInput.Clear();
+
+        for (int i = 0; i < circleFlashes; i++)
+        {
+            foreach (var circle in circles)
+            {
+                circle.SetColorInstant(failColor);
+            }
+
+            yield return new WaitForSeconds(0.2f);
+
+            foreach (var circle in circles)
+            {
+                circle.RestoreOriginalColor();
+            }
+
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        // Repetir patrón
+        yield return new WaitForSeconds(1f);
+
+        yield return StartCoroutine(PlayPattern());
+
+        isPlayerTurn = true;
+        canPress = true;
+    }
+
+
+    private void ShowLetter(int index)
+    {
+        if (index < letterSprites.Length)
+        {
+            LetterDisplayUI.Instance.ShowLetter(letterSprites[index]);
+        }
+    }
+
     private void PlaySound(int circleIndex)
     {
-        if (audioSource != null && circleIndex < circleSounds.Length && circleSounds[circleIndex] != null)
+        if (audioSource != null &&
+            circleIndex < circleSounds.Length &&
+            circleSounds[circleIndex] != null)
         {
             audioSource.PlayOneShot(circleSounds[circleIndex]);
         }
     }
 
 
+    private void EndGameFail()
+    {
+        StartCoroutine(FailRoutine());
+    }
+
+    IEnumerator FailRoutine()
+    {
+        Debug.Log("FIN MINIJUEGO ENTRENAMIENTO");
+
+        int energiaGanada = level - 1;
+
+        // Guardar score
+        SaveGameResult(energiaGanada);
+
+        // Mostrar energía
+        LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
+
+        yield return new WaitForSeconds(2f);
+    }
+
+
+    //Guardar partidas
+    private void SaveGameResult(int roundReached)
+    {
+        List<int> scores = LoadRecentGames();
+
+        scores.Add(roundReached);
+
+        // Mantener solo últimas 5
+        while (scores.Count > MaxStoredGames)
+        {
+            scores.RemoveAt(0);
+        }
+
+        string saveData = string.Join(",", scores);
+
+        PlayerPrefs.SetString("RecentSimonGames", saveData);
+
+        PlayerPrefs.Save();
+
+        Debug.Log("Partidas guardadas: " + saveData);
+    }
+
+    private List<int> LoadRecentGames()
+    {
+        List<int> scores = new List<int>();
+
+        string saveData = PlayerPrefs.GetString("RecentSimonGames", "");
+
+        if (string.IsNullOrEmpty(saveData))
+            return scores;
+
+        string[] split = saveData.Split(',');
+
+        foreach (string value in split)
+        {
+            if (int.TryParse(value, out int result))
+            {
+                scores.Add(result);
+            }
+        }
+
+        return scores;
+    }
+
+    private int CalculateStartingRound()
+    {
+        List<int> scores = LoadRecentGames();
+
+        if (scores.Count == 0)
+            return 0;
+
+        float total = 0;
+
+        foreach (int score in scores)
+        {
+            total += score;
+        }
+
+        float average = total / scores.Count;
+
+        // Reducir 20%
+        float reduced = average * 0.8f;
+
+        return Mathf.FloorToInt(reduced);
+    }
+
+    private void GenerateInitialPattern()
+    {
+        pattern.Clear();
+
+        for (int round = 0; round < level; round++)
+        {
+            for (int i = 0; i < notesPerRound; i++)
+            {
+                int newIndex = Random.Range(0, circles.Length);
+
+                pattern.Add(newIndex);
+            }
+        }
+    }
+
     public bool CanPlayerPress()
     {
         return isPlayerTurn && canPress;
     }
-
-    public void OnStartButtonPressed()
-    {
-        if (gameStarted) return; // Evita doble click
-
-        gameStarted = true;
-
-        if (startButton != null)
-        {
-            startButton.gameObject.SetActive(false);
-        }
-  
-        StartCoroutine(StartNewRound());
-    }
-
-
 }
-
-
-

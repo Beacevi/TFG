@@ -50,4 +50,3 @@ public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
         image.color = originalColor;
     }
 }
-

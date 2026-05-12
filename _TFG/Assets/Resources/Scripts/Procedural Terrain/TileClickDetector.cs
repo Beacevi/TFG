@@ -7,6 +7,8 @@ public class TileHoverDetector : MonoBehaviour
     [SerializeField] Tilemap mainTilemap;
     [SerializeField] Tilemap highlightTilemap;
     [SerializeField] Tile highlightTile;
+    public GameObject silhouette;
+    public GameObject normalSprite;
 
     private Vector3Int previousCell = new Vector3Int(int.MinValue, int.MinValue, 0);
 
@@ -63,4 +65,25 @@ public class TileHoverDetector : MonoBehaviour
             }
         }
     }
+
+
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Tree"))
+        {
+            silhouette.SetActive(true);
+            normalSprite.SetActive(false);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Tree"))
+        {
+            silhouette.SetActive(false);
+            normalSprite.SetActive(true);
+        }
+    }
+
 }

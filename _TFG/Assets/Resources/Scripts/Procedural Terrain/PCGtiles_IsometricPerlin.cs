@@ -32,7 +32,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
     [Header("Island Shape Settings")]
     [SerializeField] float islandFalloffPower = 2.5f;   //cuanto mas alto, mas suave el borde
-    [SerializeField] float islandSizeFactor = 0.75f;    //cuanto mas bajo, mas pequeña la isla
+    [SerializeField] float islandSizeFactor = 0.75f;    //cuanto mas bajo, mas pequeï¿½a la isla
     [SerializeField] float coastRoughness = 0.25f;      //cuanto mas alto, mas irregular el contorno
 
     [Header("Cellular Automata")]
@@ -256,7 +256,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
             Bird birdSpawned = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
             if (birdSpawned.birdPrefab == null)
             {
-                Debug.LogWarning($"El prefab del bird {birdSpawned.name} no está asignado");
+                Debug.LogWarning($"El prefab del bird {birdSpawned.name} no esta asignado");
                 continue;
             }
 
@@ -363,7 +363,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     {
         if (player == null)
         {
-            Debug.LogWarning("No se asignó el prefab del jugador en el inspector.");
+            Debug.LogWarning("No se asignï¿½ el prefab del jugador en el inspector.");
             return;
         }
 
@@ -385,7 +385,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
         if (validPositions.Count == 0)
         {
-            Debug.LogWarning("No se encontraron posiciones válidas para el jugador.");
+            Debug.LogWarning("No se encontraron posiciones vï¿½lidas para el jugador.");
             return;
         }
 

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class TileAStar : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class TileAStar : MonoBehaviour
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] PCGtiles_IsometricPerlin mapGenerator;
 
+    public ChangeScene cambiaEscenas;
+
     private List<Vector3> path = new List<Vector3>();
     private int currentIndex = 0;
     public bool moving = false;
@@ -19,18 +21,48 @@ public class TileAStar : MonoBehaviour
     private const int INF = int.MaxValue / 4;
 
     private Node lastPathNode = null;
+    private Node interactableNode = null;
 
+    [SerializeField] private Image pasosBar;
     public int stepsAvailable = 30;
+    private int initialSteps;
 
     private bool canMove = false;
+
+    private static float inputBlockedUntil = 0f;
 
     private void Start()
     {
 
         if (!tilemap)
+        {
             tilemap = GameObject.FindGameObjectWithTag("MainTileMap").GetComponent<Tilemap>();
+        }
+            
         if (!mapGenerator)
+        {
             mapGenerator = GameObject.FindGameObjectWithTag("MapGenerator").GetComponent<PCGtiles_IsometricPerlin>();
+        }
+            
+
+        if (!cambiaEscenas)
+        {
+            cambiaEscenas = GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<ChangeScene>();
+        }
+
+        initialSteps = stepsAvailable;
+        UpdateStepsUI();
+
+    }
+
+    private void UpdateStepsUI()
+    {
+        if (pasosBar == null)
+        {
+            pasosBar = GameObject.FindGameObjectWithTag("PasosBar").GetComponent<Image>();
+        } 
+
+        pasosBar.fillAmount = (float)stepsAvailable / initialSteps;
     }
 
     void Update()
@@ -68,7 +100,9 @@ public class TileAStar : MonoBehaviour
 
                 if (interactable != null)
                 {
+                    interactableNode = lastPathNode;
                     interactable.Interact(this);
+
                 }
                 else
                 {
@@ -77,8 +111,10 @@ public class TileAStar : MonoBehaviour
             }
         }
 
-        stepsAvailable -= path.Count;
+        /*stepsAvailable -= path.Count;
         stepsAvailable = Mathf.Max(0, stepsAvailable);
+
+        UpdateStepsUI();*/
 
         moving = false;
         path.Clear();
@@ -86,6 +122,9 @@ public class TileAStar : MonoBehaviour
 
     public void ProcessClick(Vector3 screenPos)
     {
+        //BLOQUEO GLOBAL
+        if (Time.time < inputBlockedUntil) return;
+
         if (!canMove) return;
 
         if (IsPointerOverUI(screenPos)) return;
@@ -105,6 +144,11 @@ public class TileAStar : MonoBehaviour
 
         if (path.Count > 0)
         {
+            stepsAvailable -= path.Count;
+            stepsAvailable = Mathf.Max(0, stepsAvailable);
+
+            UpdateStepsUI();
+            
             moving = true;
             currentIndex = 0;
         }
@@ -207,18 +251,21 @@ public class TileAStar : MonoBehaviour
 
     public void RemoveBirdAtLastNode()
     {
-        if (lastPathNode == null) return;
+        if (interactableNode == null) return;
 
-        if (lastPathNode.hasObject && lastPathNode.Interactable != null)
+        if (interactableNode.hasObject && interactableNode.Interactable != null)
         {
-            Destroy(lastPathNode.Interactable);  
-            lastPathNode.Interactable = null;     
-            lastPathNode.hasObject = false;       
-            Debug.Log("[TileAStar] Pájaro eliminado del nodo.");
+            ScenePersistentManager.instance.interactedBird.obtenido = true;
+            cambiaEscenas.StartCoroutine("StartAnimation");
+            Destroy(interactableNode.Interactable);  
+            interactableNode.Interactable = null;     
+            interactableNode.hasObject = false;       
+            Debug.Log("[TileAStar] Pajaro eliminado del nodo.");
+            GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
         }
         else
         {
-            Debug.Log("[TileAStar] No hay pájaro en lastPathNode.");
+            Debug.Log("[TileAStar] No hay pajaro en interactableNode.");
         }
     }
 
@@ -363,6 +410,11 @@ public class TileAStar : MonoBehaviour
         Gizmos.color = Color.yellow;
         for (int i = 0; i < path.Count - 1; i++)
             Gizmos.DrawLine(path[i], path[i + 1]);
+    }
+
+    public static void BlockInputForSeconds(float seconds)
+    {
+        inputBlockedUntil = Time.time + seconds;
     }
 
 }

@@ -1,7 +1,8 @@
-using UnityEngine;
+﻿using GUPS.AntiCheat.Protected;
 using System.IO;
-using GUPS.AntiCheat.Protected;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TMP_Text coins_ui;
     [SerializeField] private TMP_Text gems_ui;
+    [SerializeField] private GameObject soundManager;
+
     //[SerializeField] private TMP_Text energy_ui;
 
 
@@ -39,10 +42,41 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "PruebasUI")
+        {
+            coins_ui = GameObject.FindGameObjectWithTag("CoinsText").GetComponent<TMP_Text>();
+            gems_ui = GameObject.FindGameObjectWithTag("GemsText").GetComponent<TMP_Text>();
+            soundManager = GameObject.FindGameObjectWithTag("SoundManager");
+            soundManager.GetComponent<Sounds>().src = GetComponent<AudioSource>();
+
+            UpdateUI();
+        }
+    }
+
+    void UpdateUI()
+    {
+        if (coins_ui != null)
+            coins_ui.text = coins.ToString();
+
+        if (gems_ui != null)
+            gems_ui.text = gems.ToString();
+    }
+
     public void Start()
     {
-        coins_ui.text = coins.ToString();
-        gems_ui.text  =  gems.ToString();
+        UpdateUI();
     }
 
     public void SaveGame()

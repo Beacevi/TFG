@@ -27,9 +27,13 @@ public class RewardsMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if(_RewardsMenu!= null)
+        {
         _RewardsMenu.SetActive(false);
         _buttonFunctions = GetComponent<ButtonFunctions>();
         isOpen = false;
+        }
+
     }
 
     public void OpenAnimation(int num)
@@ -128,7 +132,7 @@ public class RewardsMenu : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("No hay hijo en índice 0");
+                Debug.LogWarning("No hay hijo en ï¿½ndice 0");
             }
         }
                     

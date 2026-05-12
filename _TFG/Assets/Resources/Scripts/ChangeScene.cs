@@ -1,52 +1,111 @@
 using System.Collections;
-using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+
 public class ChangeScene : MonoBehaviour
 {
     private static UnityEngine.SceneManagement.Scene previousScene;
 
-   [SerializeField] private Animator animator;
+    [SerializeField] private Transform cloudsIzquierda;
+    [SerializeField] private Transform cloudsDerecha;
+
+    //NUEVO: control de velocidad desde Inspector
+    [SerializeField, Range(0.1f, 10f)]
+    private float velocidadNubes = 3f;
+
+    private Vector3 baseIzq;
+    private Vector3 baseDer;
+
+    private float desplazamiento;
+    private Camera cam;
+
+    private int lastW;
+    private int lastH;
+
+    private void Start()
+    {
+        if (cloudsIzquierda != null && cloudsDerecha != null)
+        {
+            cam = Camera.main;
+
+            if (cam == null)
+                cam = FindFirstObjectByType<Camera>();
+
+            baseIzq = cloudsIzquierda.localPosition;
+            baseDer = cloudsDerecha.localPosition;
+
+            CalcularDesplazamiento();
+
+            StartCoroutine(StartAnimation());
+        }
+    }
+
+    private void Update()
+    {
+        if (Screen.width != lastW || Screen.height != lastH)
+        {
+            lastW = Screen.width;
+            lastH = Screen.height;
+
+            CalcularDesplazamiento();
+        }
+    }
+
+    void CalcularDesplazamiento()
+    {
+        if (cam == null)
+            return;
+
+        Vector3 left = cam.ViewportToWorldPoint(new Vector3(0, 0.5f, cam.nearClipPlane));
+        Vector3 right = cam.ViewportToWorldPoint(new Vector3(1, 0.5f, cam.nearClipPlane));
+
+        float width = Mathf.Abs(right.x - left.x);
+
+        desplazamiento = width * 0.5f;
+    }
+
     public void Cambiar_A_Escena(string nombreEscena)
     {
-        string escenaActual = SceneManager.GetActiveScene().name;
+        string actual = SceneManager.GetActiveScene().name;
 
-        if (nombreEscena == escenaActual)
+        if (nombreEscena == actual)
         {
             nombreEscena = "UI";
-            StartCoroutine(SceneTransition(nombreEscena,false));
-            
+            StartCoroutine(SceneTransition(nombreEscena, false));
         }
         else
         {
-            StartCoroutine(SceneTransition(nombreEscena,false));
+            StartCoroutine(SceneTransition(nombreEscena, false));
         }
     }
+
     public void LoadSceneAdditive(string nombreEscena)
     {
-        //previousScene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(nombreEscena, LoadSceneMode.Additive);
-
         StartCoroutine(SceneTransition(nombreEscena, true));
-
     }
 
     public void UnloadScene(string nombreEscena)
     {
+        Debug.Log("El nombre de la escena anterior es: " + previousScene.name);
         SceneManager.SetActiveScene(previousScene);
         SceneManager.UnloadSceneAsync(nombreEscena);
     }
 
+    public IEnumerator StartAnimation()
+    {
+        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(AnimarNubes(true));
+    }
+
     public IEnumerator SceneTransition(string nombreEscena, bool additive)
     {
-        if (animator != null)
+        if (cloudsIzquierda != null && cloudsDerecha != null)
         {
-            // Reproducir hacia delante (cerrar)
-            animator.speed = 1;
-            animator.Play("CloudsClosing", 0, 0f);
+            yield return StartCoroutine(AnimarNubes(false));
         }
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.2f);
 
         if (!additive)
         {
@@ -57,61 +116,43 @@ public class ChangeScene : MonoBehaviour
             previousScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(nombreEscena, LoadSceneMode.Additive);
         }
-
     }
 
-    //public void CambiarEscena(string nombreEscena, int tipo)
-    //{
-    //    StartCoroutine(SceneTransition(nombreEscena,tipo));
-    //}
+    IEnumerator AnimarNubes(bool abrir)
+    {
+        Vector3 inicioIzq, destinoIzq;
+        Vector3 inicioDer, destinoDer;
 
+        if (abrir)
+        {
+            inicioIzq = baseIzq;
+            destinoIzq = baseIzq + Vector3.left * desplazamiento;
 
+            inicioDer = baseDer;
+            destinoDer = baseDer + Vector3.right * desplazamiento;
+        }
+        else
+        {
+            inicioIzq = baseIzq + Vector3.left * desplazamiento;
+            destinoIzq = baseIzq;
 
-    //public IEnumerator SceneTransition(string nombreEscena, int tipo)
-    //{
-    //    // Reproducir hacia delante (cerrar)
-    //    animator.speed = 1;
-    //    animator.Play("CloudsClosing", 0, 0f);
+            inicioDer = baseDer + Vector3.right * desplazamiento;
+            destinoDer = baseDer;
+        }
 
-    //    GameManager.Instance.cloudsClosing = true;
+        float t = 0f;
 
-    //    yield return new WaitForSeconds(3);
+        while (t < 1f)
+        {
+            // velocidad controlable
+            t += Time.deltaTime * velocidadNubes;
 
-    //    switch (tipo)
-    //    {
-    //        case 0://Cambiar_A_Escena
-    //            string escenaActual = SceneManager.GetActiveScene().name;
+            float p = Mathf.SmoothStep(0, 1, t);
 
-    //            if (nombreEscena == escenaActual)
-    //            {
-    //                SceneManager.LoadScene("UI");
-    //            }
-    //            else
-    //            {
-    //                SceneManager.LoadScene(nombreEscena);
-    //            }
-    //            break;
+            cloudsIzquierda.localPosition = Vector3.Lerp(inicioIzq, destinoIzq, p);
+            cloudsDerecha.localPosition = Vector3.Lerp(inicioDer, destinoDer, p);
 
-    //        case 1://LoadSceneAdditive
-    //            previousScene = SceneManager.GetActiveScene();
-    //            SceneManager.LoadScene(nombreEscena, LoadSceneMode.Additive);
-    //            break;
-
-    //        case 2://UnloadScene
-    //            SceneManager.SetActiveScene(previousScene);
-    //            SceneManager.UnloadSceneAsync(nombreEscena);
-    //            break;
-
-    //        default:
-    //            break;
-    //    }
-
-    //    // Reproducir hacia atr�s (abrir)
-    //    animator.speed = -1;
-    //    animator.Play("CloudsClosing", 0, 1f);
-
-    //    GameManager.Instance.cloudsClosing = false;
-
-    //}
-
+            yield return null;
+        }
+    }
 }
