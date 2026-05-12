@@ -22,6 +22,7 @@ public class BirdButton : MonoBehaviour
     [SerializeField] private GameObject _MyBird2;//Equipped bird 1
     [SerializeField] private GameObject _MyBird3;//Equipped bird 1
     [SerializeField] private TMP_Text   _BoostText;
+    [SerializeField] private TMP_Text   _BoostInfoText;
     [SerializeField] private GameObject _BoostImage;
     [SerializeField] private Sprite     _NoBird;
     [SerializeField] private Button     _Deletebirdbutton;
@@ -204,7 +205,12 @@ public class BirdButton : MonoBehaviour
         if (BirdSelected.Count != 3)
         {
             _BoostText.text = "No Boost";
+            _BoostInfoText.text = "No boost info available";
             _BoostImage.SetActive(false);
+
+            GameManager.Instance.buffMoneyActive = false;
+            GameManager.Instance.buffEnergyActive = false;
+            GameManager.Instance.buffBothActive = false;
             return;
         }
 
@@ -212,16 +218,34 @@ public class BirdButton : MonoBehaviour
 
         if (boost != null)
         {
-            _BoostText.text = boost.name;
             _BoostImage.SetActive(true);
+
+            if (boost.coinMultiplier > 0 && boost.energyMultiplier > 0)
+            {
+                _BoostText.text = "Money + Energy";
+                _BoostInfoText.text = "+10% Money & Energy";
+                //_BoostImage.SetActive(false);
+            }
+            else if (boost.coinMultiplier > 0)
+            {
+                _BoostText.text = "Money";
+                _BoostInfoText.text = "+10% Money";
+                //_BoostImage.SetActive(false);
+            }
+            else if (boost.energyMultiplier > 0)
+            {
+                _BoostText.text = "Energy";
+                _BoostInfoText.text = "+10% Energy";
+                //_BoostImage.SetActive(false);
+            }
         }
         else
         {
             _BoostText.text = "No Boost";
+            _BoostInfoText.text = "No boost info available";
             _BoostImage.SetActive(false);
         }
     }
-
     /// <summary>
     /// Add Birds
     /// </summary>

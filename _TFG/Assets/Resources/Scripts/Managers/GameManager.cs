@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ProtectedInt32 balloonLevel =   1;
     public bool cloudsClosing = false; //Si es false, es que las nubes no cubren la escena, si es true, las nubes cubren la escena
 
+    public bool buffMoneyActive;
+    public bool buffEnergyActive;
+    public bool buffBothActive;
+
     private string savePath;
     public CSVReader reader;
 
@@ -174,6 +178,10 @@ public class GameManager : MonoBehaviour
 
     public void AddMoney(int amount)
     {
+        if(buffBothActive|| buffMoneyActive)
+        {
+            amount = amount *2; //TODO: Cambiar a que sea por el valor real
+        }
         coins += amount;
         coins_ui.text = coins.ToString();
         SaveGame();
@@ -235,6 +243,12 @@ public class GameManager : MonoBehaviour
 
     public void AddEnergy(int amount)
     {
+
+        if(buffBothActive || buffEnergyActive)
+        {
+            amount = amount *2; //TODO: Añadir que sea el valor del buffo
+        }
+
         energy += amount;
 
         SaveGame();
