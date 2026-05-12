@@ -41712,7 +41712,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SimonSaysPrueba
+          m_StringArgument: SimonSays
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1182399700
@@ -53944,6 +53944,9 @@ MonoBehaviour:
   balloonLevel:
     fakeValue: 1
   cloudsClosing: 0
+  buffMoneyActive: 0
+  buffEnergyActive: 0
+  buffBothActive: 0
   reader: {fileID: 0}
   coins_ui: {fileID: 1439815934}
   gems_ui: {fileID: 1387437494}
