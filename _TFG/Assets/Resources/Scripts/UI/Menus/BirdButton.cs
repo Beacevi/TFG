@@ -126,35 +126,19 @@ public class BirdButton : MonoBehaviour
         if (tags.Length != 3)
             return false;
 
-        // Obtener posiciones en grid
         Vector2Int a = birdGrid[tags[0]];
         Vector2Int b = birdGrid[tags[1]];
         Vector2Int c = birdGrid[tags[2]];
 
-        Vector2Int ab = b - a;
-        Vector2Int bc = c - b;
-
-        // Normalizar dirección (evita problemas de magnitud)
-        Vector2Int dirAB = new Vector2Int(
-            Mathf.Clamp(ab.x, -1, 1),
-            Mathf.Clamp(ab.y, -1, 1)
-        );
-
-        Vector2Int dirBC = new Vector2Int(
-            Mathf.Clamp(bc.x, -1, 1),
-            Mathf.Clamp(bc.y, -1, 1)
-        );
-
-        // Deben seguir la misma dirección
-        if (dirAB != dirBC)
+        // Solo misma columna (vertical)
+        if (a.x != b.x || b.x != c.x)
             return false;
 
-        // Debe ser línea recta (horizontal, vertical o diagonal)
-        bool horizontal = dirAB.y == 0 && dirAB.x != 0;
-        bool vertical   = dirAB.x == 0 && dirAB.y != 0;
-        bool diagonal   = Mathf.Abs(dirAB.x) == 1 && Mathf.Abs(dirAB.y) == 1;
+        // Deben estar consecutivos en Y (ordenados o no)
+        int minY = Mathf.Min(a.y, Mathf.Min(b.y, c.y));
+        int maxY = Mathf.Max(a.y, Mathf.Max(b.y, c.y));
 
-        return horizontal || vertical || diagonal;
+        return (maxY - minY) == 2;
     }
 
     public void OpenBirdMenu(Button button)

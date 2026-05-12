@@ -214,6 +214,30 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         tilemap.CompressBounds();
     }
 
+    private Bird GetRandomBirdByChance()
+    {
+        float totalChance = 0f;
+
+        foreach (Bird bird in interactableGameObjects)
+        {
+            totalChance += bird.spawnChance;
+        }
+
+        float randomValue = Random.Range(0f, totalChance);
+
+        float currentChance = 0f;
+
+        foreach (Bird bird in interactableGameObjects)
+        {
+            currentChance += bird.spawnChance;
+
+            if (randomValue <= currentChance)
+                return bird;
+        }
+
+        return interactableGameObjects[0];
+    }
+
     private void SpawnInteractablesObjectsFromNodes()
     {
         Transform parent = transform.Find("SpawnedInteractableObjects");
@@ -253,7 +277,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
                 continue;
 
             //GameObject prefab = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
-            Bird birdSpawned = interactableGameObjects[Random.Range(0, interactableGameObjects.Length)];
+            Bird birdSpawned = GetRandomBirdByChance();
             if (birdSpawned.birdPrefab == null)
             {
                 Debug.LogWarning($"El prefab del bird {birdSpawned.name} no esta asignado");

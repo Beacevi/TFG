@@ -35,6 +35,8 @@ public class Bird : ScriptableObject
     public float idleCircleSpeed = 1f;
 
     public float idleHoverOffset = 0.2f;
+
+    public float spawnChance;
 }
 public enum BirdMovementType
 {

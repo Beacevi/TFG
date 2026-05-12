@@ -28,3 +28,4 @@ MonoBehaviour:
   idleCircleRadius: 1
   idleCircleSpeed: 2
   idleHoverOffset: 2
+  spawnChance: 6

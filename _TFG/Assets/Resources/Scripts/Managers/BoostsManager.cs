@@ -11,35 +11,26 @@ public class Boost
 
 public class BoostsManager : MonoBehaviour
 {
-
-    private Dictionary<string[], Boost> boostCombinations;
-
-    private void Awake()
-    {
-        boostCombinations = new Dictionary<string[], Boost>
-        {
-            { new[] { "A", "B", "C" }, new Boost { name = "A+B+C", power = 1.5f, description = "Ataque triple"            } },
-            { new[] { "D", "E", "F" }, new Boost { name = "D+E+F", power = 2.0f, description = "Defensa total"            } },
-            { new[] { "G", "H", "I" }, new Boost { name = "G+H+I", power = 1.8f, description = "Velocidad m�xima"         } },
-            { new[] { "A", "D", "G" }, new Boost { name = "A+D+G", power = 1.2f, description = "Combo vertical"           } },
-            { new[] { "B", "E", "H" }, new Boost { name = "B+E+H", power = 1.3f, description = "Combo central"            } },
-            { new[] { "C", "F", "I" }, new Boost { name = "C+F+I", power = 1.4f, description = "Combo diagonal derecha"   } },
-            { new[] { "A", "E", "I" }, new Boost { name = "A+E+I", power = 2.5f, description = "Combo diagonal principal" } },
-            { new[] { "C", "E", "G" }, new Boost { name = "C+E+G", power = 2.2f, description = "Combo diagonal inversa"   } }
-        };
-    }
-
     public Boost GetBoostFromSelection(Queue<string> birdSelected)
     {
-        var selectedSet = new HashSet<string>(birdSelected);
+        if (birdSelected.Count != 3)
+            return null;
 
-        foreach (var combo in boostCombinations)
-        {
-            if (combo.Key.All(selectedSet.Contains))
-            {
-                return combo.Value;
-            }
-        }
+        string a = birdSelected.ElementAt(0);
+        string b = birdSelected.ElementAt(1);
+        string c = birdSelected.ElementAt(2);
+
+        // ADG → monedas
+        if (a == "A" && b == "D" && c == "G")
+            return new Boost { name = "Monedas", power = 1.2f, description = "Bonus de monedas" };
+
+        // BEH → energía
+        if (a == "B" && b == "E" && c == "H")
+            return new Boost { name = "Energía", power = 1.3f, description = "Bonus de energía" };
+
+        // CFI → ambos
+        if (a == "C" && b == "F" && c == "I")
+            return new Boost { name = "Monedas + Energía", power = 1.4f, description = "Bonus mixto" };
 
         return null;
     }
