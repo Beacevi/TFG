@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,11 +74,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "SimonGameManager.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAuwHYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T10:47:08.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SaveDataManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
@@ -90,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Store.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Store.cs",
@@ -102,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ShopMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
@@ -114,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "EconomyAuthority.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
@@ -126,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "GameManagerAuthority.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
@@ -138,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GameManagerLogic.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
@@ -150,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
@@ -163,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Energy.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
@@ -172,18 +185,6 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAGoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T10:23:30.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ChangeScene.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\ChangeScene.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ChangeScene.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\ChangeScene.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\ChangeScene.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA5wHAAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:22:53.629Z"
             },
             {
               "$type": "Document",
@@ -211,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IsometricCamera.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
@@ -223,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RewardsMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
@@ -259,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CustomMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",

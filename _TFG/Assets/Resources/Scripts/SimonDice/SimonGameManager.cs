@@ -12,8 +12,11 @@ public class SimonGameManager : MonoBehaviour
     public AudioClip[] circleSounds;
     public Sprite[] letterSprites;
 
+    public Canvas canvas;
     public TextMeshProUGUI contadorText;
-    public Button startButton;
+    public Button startButton, backButton;
+
+    public Image globo;
 
     public float flashDuration = 1f;
     public float timeBetweenFlashes = 1f;
@@ -50,17 +53,16 @@ public class SimonGameManager : MonoBehaviour
 
         Instance = this;
         audioSource = GetComponent<AudioSource>();
+
+        StartCoroutine(SetActiveObjects());
+
     }
 
     void Start()
     {
         isPlayerTurn = false;
         canPress = false;
-
-        if (startButton != null)
-        {
-            startButton.gameObject.SetActive(true);
-        }
+       
     }
 
     public void OnStartButtonPressed()
@@ -85,6 +87,62 @@ public class SimonGameManager : MonoBehaviour
         StartCoroutine(StartNewRound());
     }
 
+    public void OnBackButtonPressed()
+    {
+
+        //if (startButton != null && backButton != null)
+        //{
+        //    startButton.gameObject.SetActive(false);
+        //    backButton.gameObject.SetActive(false);
+        //}
+        //if (globo != null)
+        //{
+        //    globo.gameObject.SetActive(false);
+        //}
+
+        //for (int i = 0; i < circles.Length; i++)
+        //{
+        //    if (circles[i] != null)
+        //    {
+        //        circles[i].gameObject.SetActive(false);
+        //    }
+        //}
+
+        StopAllCoroutines();
+        StartCoroutine(wait());
+       
+    }
+    IEnumerator SetActiveObjects()
+    {
+       
+
+        yield return new WaitForSeconds(1.263f);
+
+        //if (startButton != null && backButton != null)
+        //{
+        //    startButton.gameObject.SetActive(true);
+        //    backButton.gameObject.SetActive(true);
+        //}
+        //if (globo != null)
+        //{
+        //    globo.gameObject.SetActive(true);
+        //}
+
+        //for (int i = 0; i < circles.Length; i++)
+        //{
+        //    if (circles[i] != null)
+        //    {
+        //        circles[i].gameObject.SetActive(true);
+        //    }
+        //}
+        canvas.gameObject.SetActive(true);
+
+    }
+    IEnumerator wait() 
+    {
+        yield return new WaitForSeconds(0.47f);
+        canvas.gameObject.SetActive(false);
+    }
     IEnumerator StartNewRound()
     {
         isPlayerTurn = false;
