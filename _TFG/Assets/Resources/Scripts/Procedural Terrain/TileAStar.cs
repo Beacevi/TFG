@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -67,7 +66,7 @@ public class TileAStar : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetSceneByName("SimonSaysPajaro").isLoaded)
+        if (SimonGameManagerPajaro.IsActive)
             return;
 
         HandleMovement();
@@ -136,6 +135,16 @@ public class TileAStar : MonoBehaviour
         Vector3Int start = tilemap.WorldToCell(player.position);
 
         path = FindPath(start, clicked);
+
+        // Si el tile destino tiene un pájaro, el jugador se para en el tile adyacente
+        // (lastPathNode sigue apuntando al nodo del pájaro para disparar la interacción)
+        if (path.Count > 1
+            && mapGenerator.nodes != null
+            && InBounds(clicked, mapGenerator.width, mapGenerator.height)
+            && mapGenerator.nodes[clicked.x, clicked.y].hasObject)
+        {
+            path.RemoveAt(path.Count - 1);
+        }
 
         if (path.Count > stepsAvailable)
         {
@@ -255,11 +264,12 @@ public class TileAStar : MonoBehaviour
 
         if (interactableNode.hasObject && interactableNode.Interactable != null)
         {
-            ScenePersistentManager.instance.interactedBird.obtenido = true;
+            if (ScenePersistentManager.instance.interactedBird != null)
+                ScenePersistentManager.instance.interactedBird.obtenido = true;
             cambiaEscenas.StartCoroutine("StartAnimation");
-            Destroy(interactableNode.Interactable);  
-            interactableNode.Interactable = null;     
-            interactableNode.hasObject = false;       
+            Destroy(interactableNode.Interactable);
+            interactableNode.Interactable = null;
+            interactableNode.hasObject = false;
             Debug.Log("[TileAStar] Pajaro eliminado del nodo.");
             GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
         }
@@ -267,6 +277,18 @@ public class TileAStar : MonoBehaviour
         {
             Debug.Log("[TileAStar] No hay pajaro en interactableNode.");
         }
+    }
+
+    public void DisableBirdInteraction()
+    {
+        if (interactableNode == null) return;
+
+        if (interactableNode.Interactable != null)
+        {
+            var interactable = interactableNode.Interactable.GetComponent<InteractableGameObject>();
+            if (interactable != null) interactable.enabled = false;
+        }
+        interactableNode.hasObject = false;
     }
 
     List<Vector3> FindPath(Vector3Int startCell, Vector3Int targetCell)

@@ -705,6 +705,7 @@ MonoBehaviour:
   _MyBird2: {fileID: 0}
   _MyBird3: {fileID: 0}
   _BoostText: {fileID: 0}
+  _BoostInfoText: {fileID: 0}
   _BoostImage: {fileID: 0}
   _NoBird: {fileID: -3551287784963028691, guid: d4423ecef5239034591878ca201cb0d3, type: 3}
   _Deletebirdbutton: {fileID: 0}
@@ -775,7 +776,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158557319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8be3fc7faf58f1d4289609dd47c3e8c9, type: 3}
   m_Name: 
@@ -871,11 +872,7 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _storeMenu: {fileID: 0}
   _resetStorePanel: {fileID: 0}
-  _timerText: {fileID: 0}
   _lastHourColor: {r: 1, g: 0, b: 0, a: 1}
-  _Article1: {fileID: 0}
-  _Article2: {fileID: 0}
-  _Article3: {fileID: 0}
   _balloon: {fileID: 0}
   _birds: {fileID: 0}
 --- !u!4 &158557333

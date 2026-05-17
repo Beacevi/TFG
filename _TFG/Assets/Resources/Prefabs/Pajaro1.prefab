@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdData: {fileID: 11400000, guid: 2bfde60fb73fe934a8b6c3b0df3a4338, type: 2}
+  simonMinigamePrefab: {fileID: 1526808233990887436, guid: c261781d13d70e044b2b7b1e5452dcb5, type: 3}
 --- !u!95 &4666069444805186059
 Animator:
   serializedVersion: 7

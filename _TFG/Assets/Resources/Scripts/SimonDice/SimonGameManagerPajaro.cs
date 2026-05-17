@@ -8,6 +8,7 @@ using UnityEngine.Rendering;
 public class SimonGameManagerPajaro : MonoBehaviour
 {
     public static SimonGameManagerPajaro Instance { get; private set; }
+    public static bool IsActive = false;
 
     public CircleButtonPajaro[] circles;
     public LevelIndicator levelIndicator;
@@ -27,6 +28,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
     private bool gameStarted = false;
 
     public Button startButton;
+    public Button backButton;
 
     private int level = 0;
     private int failCount = 0;
@@ -67,20 +69,19 @@ public class SimonGameManagerPajaro : MonoBehaviour
         SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
         if (sr != null)
         {
-            pajaro.sprite = sr.sprite;  // Aquí está el sprite que ves en la escena
+            pajaro.sprite = sr.sprite;
             Debug.Log("Sprite actual: " + pajaro.name);
         }
         else
         {
             Debug.LogWarning("No hay SpriteRenderer en este objeto.");
         }
-       
 
-        if (startButton != null)
-        {
-            startButton.gameObject.SetActive(true);       
-        }
+        // Ocultar botones — el minijuego arranca automáticamente
+        if (startButton != null) startButton.gameObject.SetActive(false);
+        if (backButton != null)  backButton.gameObject.SetActive(false);
 
+        OnStartButtonPressed();
     }
 
     public void OnStartButtonPressed()
@@ -88,6 +89,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
         if (gameStarted) return; // Evita doble click
 
         gameStarted = true;
+        IsActive = true;
 
         if (startButton != null)
         {
@@ -290,23 +292,25 @@ public class SimonGameManagerPajaro : MonoBehaviour
     {
         Debug.Log("MINIJUEGO COMPLETADO");
 
+        // Eliminar pájaro del mapa y reproducir animación de nubes
+        TileAStar tileAstar = GameObject.FindGameObjectWithTag("Player")?.GetComponent<TileAStar>();
+        if (tileAstar != null) tileAstar.RemoveBirdAtLastNode();
+
         if (selectedBird != null)
         {
-            selectedBird.obtenido = true;
-
             selectedBird = null;
             ScenePersistentManager.instance.interactedBird = null;
-
-            Debug.Log("Pájaro marcado como conseguido");
         }
 
         int energiaGanada = level;
         LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
 
         yield return new WaitForSeconds(2f);
-        // Cerrar escena aditiva
-        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
+
+        IsActive = false;
+        Destroy(transform.root.gameObject);
     }
+
     private void EndGameFail()
     {
         StartCoroutine(FailRoutine());
@@ -316,12 +320,17 @@ public class SimonGameManagerPajaro : MonoBehaviour
     {
         Debug.Log("MINIJUEGO FALLADO");
 
-        int energiaGanada = level-1;
+        // Desactivar interacción del pájaro (ya no es interactuable)
+        TileAStar tileAstar = GameObject.FindGameObjectWithTag("Player")?.GetComponent<TileAStar>();
+        if (tileAstar != null) tileAstar.DisableBirdInteraction();
+
+        int energiaGanada = level - 1;
         LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
 
         yield return new WaitForSeconds(2f);
 
-        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("SimonSaysPajaro");
+        IsActive = false;
+        Destroy(transform.root.gameObject);
     }
     public bool CanPlayerPress()
     {

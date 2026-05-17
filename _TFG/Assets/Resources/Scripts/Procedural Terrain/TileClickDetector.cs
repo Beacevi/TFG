@@ -26,6 +26,9 @@ public class TileHoverDetector : MonoBehaviour
         if (!IsometricCamera.inputEnabled)
             return;
 
+        if (SimonGameManagerPajaro.IsActive)
+            return;
+
         if (Camera.main == null)
             return;
 

@@ -34,6 +34,12 @@ public class IsometricCamera : MonoBehaviour
 
     public static bool inputEnabled = true;
 
+    [Header("Minigame Zoom")]
+    [SerializeField] float minigameZoom = 6f;
+    [SerializeField] float zoomLerpSpeed = 3f;
+    private float targetZoom;
+    private bool simonWasLoaded = false;
+
     enum CameraState
     {
         Following,
@@ -54,6 +60,7 @@ public class IsometricCamera : MonoBehaviour
         cam.orthographicSize = 10f;
 
         initialZoom = cam.orthographicSize;
+        targetZoom = initialZoom;
         startPos = transform.position;
     }
 
@@ -62,6 +69,13 @@ public class IsometricCamera : MonoBehaviour
         if (tileAstar == null) return;
 
         HandleInput();
+
+        // Zoom suave al entrar/salir del minijuego del pájaro
+        bool simonLoaded = SimonGameManagerPajaro.IsActive;
+        if (simonLoaded && !simonWasLoaded) targetZoom = minigameZoom;
+        else if (!simonLoaded && simonWasLoaded) targetZoom = initialZoom;
+        simonWasLoaded = simonLoaded;
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, zoomLerpSpeed * Time.deltaTime);
 
         // 🔹 Control de fin de movimiento (independiente de la cámara)
         if (tileAstar.stepsAvailable <= 0 && state == CameraState.Following)
@@ -85,6 +99,8 @@ public class IsometricCamera : MonoBehaviour
     }
     void HandleInput()
     {
+        if (SimonGameManagerPajaro.IsActive) return;
+
         if(tileAstar != null)
         {
             HandleMouse();

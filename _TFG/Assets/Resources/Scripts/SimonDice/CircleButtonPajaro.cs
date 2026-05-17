@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
 {
@@ -25,9 +24,6 @@ public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
         SimonGameManagerPajaro.Instance.OnCirclePressed(index);
 
         StartCoroutine(Flash(0.2f));
-
-        Debug.Log("SimonSaysPajaro está cargada");
-
     }
 
     public IEnumerator Flash(float duration)
