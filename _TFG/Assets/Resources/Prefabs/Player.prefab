@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 430403007239774279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.4013, z: 0}
+  m_LocalScale: {x: 1, y: 0.7174, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6653276345740888729}
@@ -139,7 +139,9 @@ MonoBehaviour:
   player: {fileID: 7689724769078886363}
   moveSpeed: 3
   mapGenerator: {fileID: 0}
+  cambiaEscenas: {fileID: 0}
   moving: 0
+  pasosBar: {fileID: 0}
   stepsAvailable: 300
 --- !u!114 &5450207533382069928
 MonoBehaviour:
@@ -248,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 3622752894501330974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
