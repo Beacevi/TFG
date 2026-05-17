@@ -27,7 +27,7 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] private GameObject _birds;
 
     [Header("Scripts")]
-    private ButtonFunctions _buttonFunctions;
+    [SerializeField] private ButtonFunctions _buttonFunctions;
 
     private bool _isResetMessageOpen = false;
     void Start()
@@ -83,7 +83,7 @@ public class ShopMenu : MonoBehaviour
     }
     private void Close()
     {
-        _resetStorePanel.SetActive(false);
+        //_resetStorePanel.SetActive(false);
 
         _birds.SetActive(true);
         _balloon.SetActive(true);

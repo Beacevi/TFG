@@ -69,7 +69,7 @@ public class Store : MonoBehaviour
     {
         ColorItem item;
 
-        // Saber qué slot corresponde al botón pulsado
+        // Saber que slot corresponde al boton pulsado
         if (button == item1Button)
         {
             item = shopSlot1;
@@ -84,11 +84,11 @@ public class Store : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Botón no reconocido");
+            Debug.LogWarning("Boton no reconocido");
             return;
         }
 
-        // TODO: DIFERENCIAR DE STICKER O COLOR, SI ES STICKER EN VEZ DE AÑADIR COLOR AL CUSTOMMENU, AÑADIR EL STICKER EN LA SECCIÓN CORRESPONDIENTE(COLLECTION, para que sea mas facil hacer una función de añadir sticker en el prpio menu de colleccion collectionMenu.AddSticker()).
+        // TODO: DIFERENCIAR DE STICKER O COLOR, SI ES STICKER EN VEZ DE ANADIR COLOR AL CUSTOMMENU, ANADIR EL STICKER EN LA SECCION CORRESPONDIENTE(COLLECTION, para que sea mas facil hacer una funcion de anadir sticker en el prpio menu de colleccion collectionMenu.AddSticker()).
 
      
         // Restar monedas
@@ -184,7 +184,7 @@ public class Store : MonoBehaviour
     }
     void UpdateUI()
     {
-        // TODO: Lo de abajo seria si el item es un color, si hay stickers, habría que diferenciarlo y poner la imagen del sticker en vez de la base.
+        // TODO: Lo de abajo seria si el item es un color, si hay stickers, habria que diferenciarlo y poner la imagen del sticker en vez de la base.
         item1Image.sprite = GetBaseSprite(shopSlot1.section);
         item2Image.sprite = GetBaseSprite(shopSlot2.section);
         item3Image.sprite = GetBaseSprite(shopSlot3.section);
@@ -211,7 +211,7 @@ public class Store : MonoBehaviour
 
     List<ColorItem> GetThreeRandom()
     {
-        // TODO: Unir las dos queue en una y sacar de ahí los 3 items random. 
+        // TODO: Unir las dos queue en una y sacar de ahi los 3 items random. 
 
         List<ColorItem> pool = new List<ColorItem>(colorPool);
         List<ColorItem> result = new List<ColorItem>();
