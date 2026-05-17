@@ -3200,6 +3200,7 @@ MonoBehaviour:
   _SupportCustom: {fileID: 1447846279}
   _CheckButtonCustom: {fileID: 2076871294}
   _CustomPanel: {fileID: 87084549}
+  _PlayPanel: {fileID: 2051132339}
 --- !u!114 &137319705
 MonoBehaviour:
   m_ObjectHideFlags: 0

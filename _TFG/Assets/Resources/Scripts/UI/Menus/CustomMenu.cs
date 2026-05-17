@@ -25,6 +25,7 @@ public class CustomMenu : MonoBehaviour
 
     [Header("Panels")]
     [SerializeField] private GameObject _CustomPanel;
+    [SerializeField] private GameObject _PlayPanel;
 
     private bool check = false;
     private Color _actualColorTop;
@@ -52,6 +53,7 @@ public class CustomMenu : MonoBehaviour
     }
     public void OpenCustomMenu(UnityEngine.UI.Button button)
     {
+        _PlayPanel.SetActive(false);
         _CustomPanel.SetActive(true);
         _balloonAnimator.SetTrigger("EditingTrigger");
 
@@ -63,7 +65,7 @@ public class CustomMenu : MonoBehaviour
 
     public void CloseCustomMenu(UnityEngine.UI.Button button)
     {
-
+        _PlayPanel.SetActive(true);
         if(!check)
         {
             _TopPart.GetComponent<SpriteRenderer>().color = _actualColorTop;
