@@ -7,6 +7,7 @@ public class OnClickCollection : MonoBehaviour
     [SerializeField] private BirdButton       _canvasManagerBird;
     [SerializeField] private CustomMenu       _canvasCustom;
     [SerializeField] private Bird _birdData;
+    [SerializeField] Image _targetImage;
 
     public void OnButtonClickCollection()
     {
@@ -45,14 +46,13 @@ public class OnClickCollection : MonoBehaviour
     public void OnButtonClickLeftChangeCustom()
     {
         string buttonTag = gameObject.tag;
-
-        _canvasCustom.ChangeColor(buttonTag, true);   
+        _canvasCustom.ChangeColor(buttonTag, true, _targetImage);
     }
+
     public void OnButtonClickRightChangeCustom()
     {
         string buttonTag = gameObject.tag;
-
-        _canvasCustom.ChangeColor(buttonTag, false);
+        _canvasCustom.ChangeColor(buttonTag, false, _targetImage);
     }
 
 }

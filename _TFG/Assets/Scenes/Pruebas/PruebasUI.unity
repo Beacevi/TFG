@@ -1398,6 +1398,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &42367739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,6 +2408,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 769135848}
 --- !u!1 &100670072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,6 +4014,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 2bfde60fb73fe934a8b6c3b0df3a4338, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!1 &146999231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,6 +4188,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &155655392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,14 +4726,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.99215686, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 109892971174709098, guid: a7bc6d202ae1abe479c372750265f563, type: 3}
+  m_Sprite: {fileID: -5269975648552528959, guid: 6ff4aab0f8afd1268a3a744211147737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6102,6 +6106,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &225981061
 GameObject:
   m_ObjectHideFlags: 0
@@ -12241,6 +12246,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &438507780
 GameObject:
   m_ObjectHideFlags: 0
@@ -12428,6 +12434,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 769135848}
 --- !u!1 &442798679
 GameObject:
   m_ObjectHideFlags: 0
@@ -13487,6 +13494,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 5b3528046ac979c4aaf025f34a751087, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &493476342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15421,6 +15429,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!114 &584109690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21730,6 +21739,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &626549391
 GameObject:
   m_ObjectHideFlags: 0
@@ -22098,6 +22108,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &639986215
 GameObject:
   m_ObjectHideFlags: 0
@@ -22767,6 +22778,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &656065091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -30562,14 +30574,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.47058824, b: 0.94509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 109892971174709098, guid: a7bc6d202ae1abe479c372750265f563, type: 3}
+  m_Sprite: {fileID: -5269975648552528959, guid: 6ff4aab0f8afd1268a3a744211147737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32285,7 +32297,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836230581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -33620,6 +33632,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 8d3c6500079ab0b4895a52980a1ecd54, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &880890861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34796,6 +34809,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!114 &932245886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34812,6 +34826,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &941225630
 GameObject:
   m_ObjectHideFlags: 0
@@ -34829,7 +34844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &941225631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35642,6 +35657,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 2017131930}
 --- !u!1 &971556343
 GameObject:
   m_ObjectHideFlags: 0
@@ -35971,6 +35987,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!114 &987529850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37218,6 +37235,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1049605536
 GameObject:
   m_ObjectHideFlags: 0
@@ -41114,6 +41132,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1208769643
 GameObject:
   m_ObjectHideFlags: 0
@@ -44433,6 +44452,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!114 &1330524440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44449,6 +44469,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1341391479
 GameObject:
   m_ObjectHideFlags: 0
@@ -46301,6 +46322,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1391871519
 GameObject:
   m_ObjectHideFlags: 0
@@ -46906,6 +46928,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 166321948}
 --- !u!1 &1421560709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4636226495564998424, guid: 268fddbdf4ebeb049831f2e37b980a8a, type: 3}
@@ -47084,6 +47107,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1430489606
 GameObject:
   m_ObjectHideFlags: 0
@@ -47617,14 +47641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.74509805, b: 0.60784316, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 109892971174709098, guid: a7bc6d202ae1abe479c372750265f563, type: 3}
+  m_Sprite: {fileID: -5269975648552528959, guid: 6ff4aab0f8afd1268a3a744211147737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48774,6 +48798,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 2017131930}
 --- !u!1 &1512689837
 GameObject:
   m_ObjectHideFlags: 0
@@ -48901,6 +48926,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: eff77edbcc3f08443a7a5ee07d0024b0, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &1514914516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52260,6 +52286,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 08486eb01c80ef9439115f6dfa513c98, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &1673799779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53365,6 +53392,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 82129d2e6d958d74ab8bdb73b5348844, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &1753589614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54691,6 +54719,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1800870662
 GameObject:
   m_ObjectHideFlags: 0
@@ -55002,6 +55031,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1816037134
 GameObject:
   m_ObjectHideFlags: 0
@@ -55300,6 +55330,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 1447846282}
 --- !u!1 &1831075080
 GameObject:
   m_ObjectHideFlags: 0
@@ -56140,6 +56171,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 166321948}
 --- !u!1 &1865822479
 GameObject:
   m_ObjectHideFlags: 0
@@ -56646,6 +56678,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 2a6eaca41429508449b73bf90cdd2368, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &1880775765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57234,6 +57267,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: 70d1b5cfbccbaf547b117fd0eb2303b7, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &1898971745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57598,6 +57632,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &1906285915
 GameObject:
   m_ObjectHideFlags: 0
@@ -60041,14 +60076,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.99215686, g: 0.19215687, b: 0.19215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 109892971174709098, guid: a7bc6d202ae1abe479c372750265f563, type: 3}
+  m_Sprite: {fileID: -5269975648552528959, guid: 6ff4aab0f8afd1268a3a744211147737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -60253,6 +60288,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 137319704}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 1447846282}
 --- !u!1 &2020234765
 GameObject:
   m_ObjectHideFlags: 0
@@ -60446,6 +60482,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 137319700}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 11400000, guid: fceebf9c9348fbb4eb691d9cc993b0b7, type: 2}
+  _targetImage: {fileID: 0}
 --- !u!114 &2026538718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61667,6 +61704,7 @@ MonoBehaviour:
   _canvasManagerBird: {fileID: 0}
   _canvasCustom: {fileID: 0}
   _birdData: {fileID: 0}
+  _targetImage: {fileID: 0}
 --- !u!1 &2073577522
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
 
 public class CustomMenu : MonoBehaviour
@@ -160,12 +161,9 @@ public class CustomMenu : MonoBehaviour
 
         return -1;
     }
-    private Color32 ChangeLeftColorPanel(GameObject panel)
+    private Color32 ChangeLeftColorPanel(Color32 currentColor)
     {
-        SpriteRenderer renderer = panel.GetComponent<SpriteRenderer>();
-        if (renderer == null) return Color.white;
-
-        int currentIndex = GetColorIndex((Color32)renderer.color);
+        int currentIndex = GetColorIndex(currentColor);
 
         if (currentIndex == -1)
             return customChange[0];
@@ -177,12 +175,10 @@ public class CustomMenu : MonoBehaviour
 
         return customChange[nextIndex];
     }
-    private Color32 ChangeRightColorPanel(GameObject panel)
-    {
-        SpriteRenderer renderer = panel.GetComponent<SpriteRenderer>();
-        if (renderer == null) return Color.white;
 
-        int currentIndex = GetColorIndex((Color32)renderer.color);
+    private Color32 ChangeRightColorPanel(Color32 currentColor)
+    {
+        int currentIndex = GetColorIndex(currentColor);
 
         if (currentIndex == -1)
             return customChange[0];
@@ -194,62 +190,43 @@ public class CustomMenu : MonoBehaviour
 
         return customChange[nextIndex];
     }
-    public void ChangeColor(string part, bool isLeft)
+    public void ChangeColor(string part, bool isLeft, Image targetImage)
     {
         _CheckButtonCustom.SetActive(true);
 
         switch (part)
         {
             case "Top":
-
-                _TopPart.GetComponent<SpriteRenderer>().color = isLeft ? ChangeLeftColorPanel (_TopPart) : ChangeRightColorPanel(_TopPart);
-
-                if (_actualColorTop == _TopPart.GetComponent<SpriteRenderer>().color)
-                    ActivateSelectedSquare(_TopCustom);
-                else
-                    DesactivateSelectedSquare(_TopCustom);
-
+                ApplyColorChange(targetImage, _TopPart, isLeft, _actualColorTop, _TopCustom);
                 break;
 
             case "Middle":
-
-                _MiddlePart.GetComponent<SpriteRenderer>().color = isLeft ? ChangeLeftColorPanel(_MiddlePart) : ChangeRightColorPanel(_MiddlePart);
-
-                if (_actualColorMiddle == _MiddlePart.GetComponent<SpriteRenderer>().color)
-                    ActivateSelectedSquare(_MiddleCustom);
-                else
-                    DesactivateSelectedSquare(_MiddleCustom);
-
+                ApplyColorChange(targetImage, _MiddlePart, isLeft, _actualColorMiddle, _MiddleCustom);
                 break;
 
             case "Bottom":
-
-                _BottomPart.GetComponent<SpriteRenderer>().color = isLeft ? ChangeLeftColorPanel(_BottomPart) : ChangeRightColorPanel(_BottomPart);
-
-                if (_actualColorBottom == _BottomPart.GetComponent<SpriteRenderer>().color)
-                    ActivateSelectedSquare(_BottomCustom);
-                else
-                    DesactivateSelectedSquare(_BottomCustom);
-
+                ApplyColorChange(targetImage, _BottomPart, isLeft, _actualColorBottom, _BottomCustom);
                 break;
 
             case "Support":
-
-                _SupportPart.GetComponent<SpriteRenderer>().color = isLeft ? ChangeLeftColorPanel(_SupportPart) : ChangeRightColorPanel(_SupportPart);
-
-                if (_actualColorSupport == _SupportPart.GetComponent<SpriteRenderer>().color)
-                    ActivateSelectedSquare(_SupportCustom);
-                else
-                    DesactivateSelectedSquare(_SupportCustom);
-
+                ApplyColorChange(targetImage, _SupportPart, isLeft, _actualColorSupport, _SupportCustom);
                 break;
-
-            default:
-                break;
-
         }
 
         NothingToCheck();
+    }
+
+    private void ApplyColorChange(Image image, GameObject spritePart, bool isLeft, Color actualColor, GameObject customIndicator)
+    {
+        Color32 newColor = isLeft ? ChangeLeftColorPanel((Color32)image.color) : ChangeRightColorPanel((Color32)image.color);
+
+        image.color = newColor;
+        spritePart.GetComponent<SpriteRenderer>().color = newColor;
+
+        if (actualColor == image.color)
+            ActivateSelectedSquare(customIndicator);
+        else
+            DesactivateSelectedSquare(customIndicator);
     }
     private void DesactivateSelectedSquare(GameObject parent)
     {
