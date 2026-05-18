@@ -251,6 +251,7 @@ public class IsometricCamera : MonoBehaviour
     void ReturnToStart()
     {
         Debug.Log("Cambiando de escena");
+        //ScenePersistentManager.instance.canSimon = false;
         //transform.position = Vector3.Lerp(transform.position,startPos,followSpeed * Time.deltaTime);
         state = CameraState.ChangingScene;
         changeScene.Cambiar_A_Escena("UI");
