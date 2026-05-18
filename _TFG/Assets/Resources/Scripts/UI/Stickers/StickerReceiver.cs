@@ -78,7 +78,7 @@ public class StickerReceiver : MonoBehaviour
         sr.sortingOrder = 4;
 
         // Escala
-        newSticker.transform.localScale = Vector3.one * 0.5f;
+        newSticker.transform.localScale = Vector3.one * 3f;
 
         // Gastar sticker
         StickerManager.Instance.UseSticker();
