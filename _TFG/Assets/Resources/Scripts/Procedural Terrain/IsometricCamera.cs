@@ -253,12 +253,12 @@ public class IsometricCamera : MonoBehaviour
         Debug.Log("Cambiando de escena");
         //transform.position = Vector3.Lerp(transform.position,startPos,followSpeed * Time.deltaTime);
         state = CameraState.ChangingScene;
-        changeScene.Cambiar_A_Escena("PruebasUI");
+        changeScene.Cambiar_A_Escena("UI");
         /*
         if (Vector3.Distance(transform.position, startPos) < distanciaMinima)
         {
             state = CameraState.ChangingScene;
-            changeScene.Cambiar_A_Escena("PruebasUI");
+            changeScene.Cambiar_A_Escena("UI");
         }*/
 
         

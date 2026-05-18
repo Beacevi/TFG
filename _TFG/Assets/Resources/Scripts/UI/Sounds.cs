@@ -8,6 +8,11 @@ public class Sounds : MonoBehaviour
     public AudioClip sonidoAlinearPajaros;
 
     public AudioClip sonidoTocarPajaro;
+
+    public void Start()
+    {
+        src = GameManager.Instance.GetComponent<AudioSource>();
+    }
     public void SonidoInterfazBoton()
     {
         src.clip = sonidoInterfazBoton;

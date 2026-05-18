@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "PruebasUI")
+        if (scene.name == "UI")
         {
             coins_ui = GameObject.FindGameObjectWithTag("CoinsText").GetComponent<TMP_Text>();
             gems_ui = GameObject.FindGameObjectWithTag("GemsText").GetComponent<TMP_Text>();
