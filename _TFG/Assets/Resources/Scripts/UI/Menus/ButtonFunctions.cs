@@ -59,24 +59,20 @@ public class ButtonFunctions : MonoBehaviour
         {
             if (listScriptableObjectBirds[i].obtenido)
             {
-                //listAvailableBirds[i].SetActive(true);
                 listAvailableBirds[i].GetComponent<Button>().interactable = true;
 
-                SpriteRenderer imageBird = listScriptableObjectBirds[i].birdPrefab.GetComponent<SpriteRenderer>();
-
-                listAvailableBirds[i].GetComponent<Image>().sprite = imageBird.sprite;
+                // El SpriteRenderer está en el hijo "Normal", no en la raíz del prefab
+                SpriteRenderer imageBird = listScriptableObjectBirds[i].birdPrefab.GetComponentInChildren<SpriteRenderer>();
+                if (imageBird != null)
+                    listAvailableBirds[i].GetComponent<Image>().sprite = imageBird.sprite;
+                else
+                    Debug.LogWarning($"No se encontró SpriteRenderer en el prefab de {listScriptableObjectBirds[i].birdName}");
             }
 
             if (!listScriptableObjectBirds[i].obtenido)
             {
-                //listAvailableBirds[i].SetActive(true);
                 listAvailableBirds[i].GetComponent<Button>().interactable = false;
-
-                Image imageBird = listAvailableBirds[i].GetComponent<Image>();
-
-                imageBird = listScriptableObjectBirds[i].birdPrefab.GetComponent<Image>();
-
-                //listAvailableBirds[i].GetComponent<Image>().sprite = null;
+                // El sprite del botón queda con el valor por defecto asignado en el Inspector
             }
 
         }
