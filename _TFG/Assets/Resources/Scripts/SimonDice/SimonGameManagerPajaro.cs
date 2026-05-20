@@ -66,15 +66,15 @@ public class SimonGameManagerPajaro : MonoBehaviour
         isPlayerTurn = false;
         canPress = false;
 
-        SpriteRenderer sr = selectedBird.birdPrefab.GetComponent<SpriteRenderer>();
+        // GetComponentInChildren busca en hijos (el sprite real está en el hijo "Normal", no en la raíz)
+        SpriteRenderer sr = selectedBird.birdPrefab.GetComponentInChildren<SpriteRenderer>();
         if (sr != null)
         {
             pajaro.sprite = sr.sprite;
-            Debug.Log("Sprite actual: " + pajaro.name);
         }
         else
         {
-            Debug.LogWarning("No hay SpriteRenderer en este objeto.");
+            Debug.LogWarning("No se encontró SpriteRenderer en el prefab del pájaro ni en sus hijos.");
         }
 
         // Ocultar botones — el minijuego arranca automáticamente
