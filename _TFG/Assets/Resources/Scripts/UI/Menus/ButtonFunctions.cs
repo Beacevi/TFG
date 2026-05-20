@@ -18,13 +18,19 @@ public class ButtonFunctions : MonoBehaviour
 
     public IEnumerator InteractibleButton(Button button, Animator animator)
     {
-        if(button)
+        if (button)
+        {
             button.interactable = false;
+        }
+            
         yield return null;
         float duration = animator.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(duration);
         if (button)
+        {
             button.interactable = true;
+        }
+            
     }
     public IEnumerator CloseInteractibleButton(Button button, Animator animator, GameObject panel)
     {

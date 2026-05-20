@@ -6564,7 +6564,7 @@ GameObject:
   - component: {fileID: 234606656}
   - component: {fileID: 234606655}
   m_Layer: 5
-  m_Name: GameImage
+  m_Name: BirdImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6609,7 +6609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6670951836468672335, guid: 6c4bb924bd415c64bb05013ad7e59376, type: 3}
+  m_Sprite: {fileID: 170912805055401693, guid: 285c6f30891e2a64aa5c0161d97550d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38456,7 +38456,7 @@ GameObject:
   - component: {fileID: 1180011087}
   - component: {fileID: 1180011090}
   m_Layer: 5
-  m_Name: GameButton
+  m_Name: BirdButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38584,7 +38584,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1180011088}
+  m_TargetGraphic: {fileID: 1465179190}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -38600,16 +38600,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1780912822}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: Cambiar_A_Escena
-        m_Mode: 5
+      - m_Target: {fileID: 137319700}
+        m_TargetAssemblyTypeName: BirdButton, Assembly-CSharp
+        m_MethodName: OpenBirdMenu
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1180011090}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SimonSays
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1182399700
@@ -45971,7 +45971,7 @@ GameObject:
   - component: {fileID: 1465179188}
   - component: {fileID: 1465179192}
   m_Layer: 5
-  m_Name: BirdButton
+  m_Name: SimonButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46077,16 +46077,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 137319700}
-        m_TargetAssemblyTypeName: BirdButton, Assembly-CSharp
-        m_MethodName: OpenBirdMenu
-        m_Mode: 2
+      - m_Target: {fileID: 1780912822}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: Cambiar_A_Escena
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 1465179189}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SimonSays
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1465179190
@@ -53216,7 +53216,7 @@ GameObject:
   - component: {fileID: 1849089779}
   - component: {fileID: 1849089780}
   m_Layer: 5
-  m_Name: GameGrid
+  m_Name: BirdGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60848,7 +60848,7 @@ GameObject:
   - component: {fileID: 2139461238}
   - component: {fileID: 2139461237}
   m_Layer: 5
-  m_Name: BirdsIcon
+  m_Name: SimonIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60893,7 +60893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 170912805055401693, guid: 285c6f30891e2a64aa5c0161d97550d4, type: 3}
+  m_Sprite: {fileID: 6670951836468672335, guid: 6c4bb924bd415c64bb05013ad7e59376, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
