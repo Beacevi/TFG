@@ -10,24 +10,13 @@ public class BirdReactionsManager : MonoBehaviour
             return;
         }
 
-        int r = Random.Range(0, 3);
+        int r = 0;
 
         switch (r)
         {
             case 0:
-                Debug.Log("Se ha movido");
-                bird.PlayMovement();
-                break;
-
-            case 1:
                 Debug.Log("Se ha emitido un sonido");
                 bird.PlaySound();
-                break;
-
-            case 2:
-                Debug.Log("Se ha movido y emitido un sonido");
-                bird.PlaySound();
-                bird.PlayMovement();
                 break;
         }
     }

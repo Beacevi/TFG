@@ -21,7 +21,7 @@ MonoBehaviour:
   movementType: 2
   moveRange: 1
   moveDuration: 0.5
-  idleMovementType: 1
+  idleMovementType: 2
   idleAmplitude: 0.5
   idleSpeed: 3
   idleShakeIntensity: 0.2

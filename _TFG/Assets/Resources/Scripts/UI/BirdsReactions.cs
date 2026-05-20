@@ -46,7 +46,7 @@ public class BirdsReactions : MonoBehaviour
             Debug.LogWarning("BirdData es null en " + gameObject.name);
             return;
         }
-
+        /*
         switch (birdData.movementType)
         {
             case BirdMovementType.Random:
@@ -64,7 +64,7 @@ public class BirdsReactions : MonoBehaviour
             case BirdMovementType.Circle:
                 StartCoroutine(CircleRoutine());
                 break;
-        }
+        }*/
     }
 
     IEnumerator RandomMoveRoutine()
