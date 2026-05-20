@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: grass_02_iso_tile_road_256_13_0
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300088, guid: a07735877a3bd644094331b137b71878, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Transform:
     e00: 1
     e01: 0

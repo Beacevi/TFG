@@ -27,9 +27,17 @@ public class InteractableGameObject : MonoBehaviour
                 Debug.LogError("InteractableGameObject: simonMinigamePrefab no asignado en el Inspector o no se pudo llegar.");
             }
         }
+
         else
         {
             Debug.Log("Es otro interactuable o birdData esta vacio");
+        }
+
+        if (CompareTag("Coin"))
+        {
+            GameManager.Instance.AddMoney(1);
+            script.RemoveCoinAtLastNode();
+            //TODO: Añadir al final de la isla
         }
     }
 

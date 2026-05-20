@@ -8,6 +8,7 @@ public class TileAStar : MonoBehaviour
 {
     [SerializeField] Tilemap tilemap;
     [SerializeField] Transform player;
+    [SerializeField] IsometricCamera isometricCamera;
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] PCGtiles_IsometricPerlin mapGenerator;
 
@@ -32,7 +33,13 @@ public class TileAStar : MonoBehaviour
 
     private void Start()
     {
+        inputBlockedUntil = 0f; // reset al cargar escena
 
+        if (!isometricCamera)
+        {
+            isometricCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<IsometricCamera>();
+        }
+        
         if (!tilemap)
         {
             tilemap = GameObject.FindGameObjectWithTag("MainTileMap").GetComponent<Tilemap>();
@@ -110,11 +117,6 @@ public class TileAStar : MonoBehaviour
             }
         }
 
-        /*stepsAvailable -= path.Count;
-        stepsAvailable = Mathf.Max(0, stepsAvailable);
-
-        UpdateStepsUI();*/
-
         moving = false;
         path.Clear();
     }
@@ -164,98 +166,29 @@ public class TileAStar : MonoBehaviour
     }
     bool IsPointerOverUI(Vector3 screenPos)
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return true;
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = screenPos;
 
-        if (Input.touchCount > 0)
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+
+        foreach (RaycastResult result in results)
         {
-            Touch touch = Input.GetTouch(0);
-            if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
-                return true;
+            if (result.gameObject.CompareTag("MainTileMap"))
+            {
+                return false; // tocó el tilemap → movimiento válido
+            }
+            // Si antes de llegar al tilemap hay otro objeto, es UI
+            return true;
         }
 
-        return false;
+        return false; // no tocó nada
     }
 
     public void SetCanMove(bool b)
     {
         canMove = b;
     }
-
-    //void Update()
-    //{
-    //    if (SceneManager.GetSceneByName("SimonSaysPajaro").isLoaded)
-    //        return;
-
-
-    //    if (Input.GetMouseButtonDown(0) && canMove)
-    //    {
-    //        Vector3 w = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //        w.z = 0;
-    //        Vector3Int clicked = tilemap.WorldToCell(w);
-    //        Vector3Int start = tilemap.WorldToCell(player.position);
-
-    //        path = FindPath(start, clicked);
-
-    //        if (path.Count > stepsAvailable)
-    //        {
-    //            path = path.GetRange(0, stepsAvailable);
-    //        }
-
-
-    //        if (path.Count > 0)
-    //        {
-    //            moving = true;
-    //            currentIndex = 0;
-    //        }
-    //    }
-
-    //    if (moving && path.Count > 0)
-    //    {
-    //        var target = path[currentIndex];
-    //        player.position = Vector3.MoveTowards(player.position, target, moveSpeed * Time.deltaTime);
-
-    //        if (Vector3.Distance(player.position, target) < 0.05f)
-    //        {
-    //            currentIndex++;
-    //            if (currentIndex >= path.Count)
-    //            {
-    //                if (lastPathNode != null)
-    //                {
-    //                    if (lastPathNode.hasObject)
-    //                    {
-    //                        var interactable = lastPathNode.Interactable?.GetComponent<InteractableGameObject>();
-    //                        if (interactable != null)
-    //                        {
-    //                            interactable.Interact(this);
-    //                        }
-    //                        else
-    //                        {
-    //                            Debug.Log("el nodo tiene objeto pero InteractableGameObject no existe en el prefab.");
-    //                            moving = false;
-    //                        }
-    //                    }
-    //                    else
-    //                    {
-    //                        Debug.Log("lastPathNode no tiene objeto.");
-    //                        moving = false;
-    //                    }
-    //                }
-    //                else
-    //                {
-    //                    Debug.Log("lastPathNode es NULL.");
-    //                    moving = false;
-    //                }
-
-    //                stepsAvailable -= path.Count;
-    //                stepsAvailable = Mathf.Max(0, stepsAvailable);
-
-    //                moving = false;
-    //                path.Clear();
-    //            }
-    //        }
-    //    }
-    //}
 
 
     public void RemoveBirdAtLastNode()
@@ -275,11 +208,29 @@ public class TileAStar : MonoBehaviour
             interactableNode.hasObject = false;
             Debug.Log("[TileAStar] Pajaro eliminado del nodo.");
             GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
+
+            isometricCamera.cantidadPajaros++;
         }
         else
         {
             Debug.Log("[TileAStar] No hay pajaro en interactableNode.");
         }
+    }
+
+    public void RemoveCoinAtLastNode()
+    {
+        if (interactableNode == null)
+        {
+            return;
+        }
+        Destroy(interactableNode.Interactable);
+        interactableNode.Interactable = null;
+        interactableNode.hasObject = false;
+
+        isometricCamera.cantidadMonedas++;
+
+        Debug.Log("[TileAStar] Moneda eliminada del nodo.");
+        GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
     }
 
     public void DisableBirdInteraction()

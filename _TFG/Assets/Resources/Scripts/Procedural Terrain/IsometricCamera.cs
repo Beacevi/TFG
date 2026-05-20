@@ -1,6 +1,8 @@
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using System.Collections;
+using Unity.VisualScripting;
+using TMPro;
 
 public class IsometricCamera : MonoBehaviour
 {
@@ -40,6 +42,13 @@ public class IsometricCamera : MonoBehaviour
     private float targetZoom;
     private bool simonWasLoaded = false;
 
+    [Header("Resumen Isla")]
+    public GameObject panelResumenIsla;
+    public int cantidadMonedas;
+    public int cantidadPajaros;
+    public TextMeshProUGUI textoBirds;
+    public TextMeshProUGUI textoCoins;
+
     enum CameraState
     {
         Following,
@@ -52,9 +61,6 @@ public class IsometricCamera : MonoBehaviour
 
     void Start()
     {
-        //animator.speed = -1;
-        //animator.Play("CloudsClosing", 0, 0f);
-
         cam = GetComponent<Camera>();
         cam.orthographic = true;
         cam.orthographicSize = 10f;
@@ -93,7 +99,10 @@ public class IsometricCamera : MonoBehaviour
                 break;
 
             case CameraState.Returning:
-                ReturnToStart();
+                //ReturnToStart();
+                panelResumenIsla.SetActive(true);
+                textoBirds.text = string.Format("{0} + birds", cantidadPajaros);
+                textoCoins.text = string.Format("{0} + coins", cantidadMonedas);
                 break;
         }
     }
@@ -248,19 +257,11 @@ public class IsometricCamera : MonoBehaviour
         state = CameraState.Returning;
     }
 
-    void ReturnToStart()
+    public void ReturnToStart()
     {
         Debug.Log("Cambiando de escena");
-        //ScenePersistentManager.instance.canSimon = false;
-        //transform.position = Vector3.Lerp(transform.position,startPos,followSpeed * Time.deltaTime);
         state = CameraState.ChangingScene;
         changeScene.Cambiar_A_Escena("UI");
-        /*
-        if (Vector3.Distance(transform.position, startPos) < distanciaMinima)
-        {
-            state = CameraState.ChangingScene;
-            changeScene.Cambiar_A_Escena("UI");
-        }*/
 
         
     }

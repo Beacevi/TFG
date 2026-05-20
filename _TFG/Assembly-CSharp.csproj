@@ -129,6 +129,7 @@
     <Compile Include="Assets/Resources/Scripts/Effects Scripts/RealTimeDayNightGradient.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/RewardsMenu.cs" />
     <Compile Include="Assets/GoogleSignIn/Impl/NativeFuture.cs" />
+    <Compile Include="Assets/Resources/Scripts/Procedural Terrain/Coin.cs" />
     <Compile Include="Assets/Resources/Scripts/ChangeScene.cs" />
     <Compile Include="Assets/Resources/Scripts/UI/Menus/HamburguerButton.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />

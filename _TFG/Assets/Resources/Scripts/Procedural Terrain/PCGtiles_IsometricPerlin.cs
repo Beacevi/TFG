@@ -60,6 +60,10 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     private int[,] terrainGrid;
 
     public Node[,] nodes;
+    [Header("Coins")]
+    [SerializeField] Coin[] coins;
+    [SerializeField] int coinsCount = 15;
+    [SerializeField] bool coinsOnGrassOnly = false; // o filtra por bioma que quieras
 
 
     private void Start()
@@ -79,6 +83,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     {
         GenerateMap();
         SpawnInteractablesObjectsFromNodes();
+        SpawnCoinsFromNodes();
         SpawnDecorationFromNodes();
         SpawnPlayer(10);
     }
@@ -316,6 +321,91 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
             node.Interactable = spawned;
 
 
+        }
+    }
+
+    private Coin GetRandomCoinByChance()
+    {
+        float total = coins.Sum(c => c.spawnChance);
+        float roll = Random.Range(0f, total);
+        float current = 0f;
+
+        foreach (Coin coin in coins)
+        {
+            current += coin.spawnChance;
+            if (roll <= current) return coin;
+        }
+
+        return coins[0];
+    }
+
+    private void SpawnCoinsFromNodes()
+    {
+        Transform parent = transform.Find("SpawnedCoins");
+        if (parent != null) DestroyImmediate(parent.gameObject);
+
+        parent = new GameObject("SpawnedCoins").transform;
+        parent.parent = transform;
+
+        if (coins == null || coins.Length == 0) return;
+
+        List<Vector2Int> validNodes = new List<Vector2Int>();
+
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                Node node = nodes[x, y];
+                if (!node.walkable || node.hasObject) continue;
+
+                TileBase tile = tilemap.GetTile(new Vector3Int(x, y, 0));
+
+                bool validBiome = coinsOnGrassOnly ? tile == ruleGrass
+                                                : (tile == ruleGrass || tile == ruleSand);
+                if (validBiome)
+                    validNodes.Add(new Vector2Int(x, y));
+            }
+        }
+
+        int amountToSpawn = Mathf.Min(coinsCount, validNodes.Count);
+        validNodes = validNodes.OrderBy(_ => Random.value).ToList();
+
+        for (int i = 0; i < amountToSpawn; i++)
+        {
+            Vector2Int pos = validNodes[i];
+            Node node = nodes[pos.x, pos.y];
+
+            Coin coinData = GetRandomCoinByChance();
+            if (coinData.coinPrefab == null)
+            {
+                Debug.LogWarning($"El prefab de la moneda '{coinData.name}' no está asignado.");
+                continue;
+            }
+
+            Vector3Int cell = new Vector3Int(pos.x, pos.y, 0);
+            Vector3 worldPos = tilemap.CellToWorld(cell);
+            worldPos.y += 0.75f;
+
+            GameObject spawned = Instantiate(coinData.coinPrefab, worldPos, Quaternion.identity, parent);
+            spawned.name = $"{coinData.coinPrefab.name}_{pos.x}_{pos.y}";
+
+            int maxOrder = width + height;
+            SpriteRenderer sr = spawned.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sortingOrder = maxOrder - (pos.x + pos.y);
+            }
+            else
+            {
+                foreach (Transform child in spawned.transform)
+                {
+                    sr = child.GetComponent<SpriteRenderer>();
+                    if (sr != null) sr.sortingOrder = maxOrder - (pos.x + pos.y);
+                }
+            }
+
+            node.hasObject = true;
+            node.Interactable = spawned;
         }
     }
 

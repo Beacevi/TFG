@@ -30,6 +30,7 @@ TagManager:
   - SoundManager
   - Sticker
   - PasosBar
+  - Coin
   layers:
   - Default
   - TransparentFX
