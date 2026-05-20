@@ -149,7 +149,7 @@ public class BirdButton : MonoBehaviour
         _balloonAnimator.SetTrigger("EditingTrigger");
         _birdAnimator.SetTrigger("EditingTrigger");
 
-        _animator.SetTrigger("Open");
+        _animator.SetTrigger("Open");//Esto abre el menu
         StartCoroutine(_buttonFunctions.InteractibleButton(button, _animator));
 
         _buttonFunctions.OpenBirdMenu(_listOfAvailableBirds,_listOfScriptableObjectBirds);

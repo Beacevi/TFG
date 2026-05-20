@@ -54,7 +54,7 @@ public class ButtonFunctions : MonoBehaviour
     {
         _cloudPrefab.SetActive(false);
 
-        _hamburguerButtonScript.HamburguerMenu();
+        //_hamburguerButtonScript.HamburguerMenu();
 
         if (_playButtonScript.isOpen)
         {
