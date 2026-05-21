@@ -48,12 +48,12 @@ public enum BirdMovementType
 
 public enum BirdIdleMovementType
 {
-    None,
     Float,
     Hover,
     Shake,
     Circle,
-    Sway
+    Sway,
+    FreeRoam
 }
 
 
