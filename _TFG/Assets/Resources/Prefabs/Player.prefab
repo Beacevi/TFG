@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 5450207533382069928}
   - component: {fileID: -5934949172116457245}
   - component: {fileID: 4584146414273414777}
+  - component: {fileID: 6927287820171877480}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -137,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 0}
   player: {fileID: 7689724769078886363}
+  isometricCamera: {fileID: 0}
   moveSpeed: 3
   mapGenerator: {fileID: 0}
   cambiaEscenas: {fileID: 0}
@@ -224,6 +226,36 @@ CapsuleCollider2D:
   m_Offset: {x: -0.000000029802322, y: 1.0773411}
   m_Size: {x: 0.71779543, y: 1.2761955}
   m_Direction: 0
+--- !u!114 &6927287820171877480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807121335253516542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c67141013c08c46a50afef3bc03dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7689724769078886363}
+  birdScale: 0.2
+  sortingLayerName: Default
+  sortingOrder: 10
+  defaultFacingRight: 0
+  minRadius: 0.4
+  maxRadius: 5
+  verticalBias: 5
+  wanderInterval: 1.1
+  wanderVariance: 0.8
+  maxSpeed: 2
+  steerStrength: 4
+  pullStrength: 6
+  drag: 0.97
+  separationRadius: 0.35
+  separationStrength: 5
+  bobAmplitude: 0.08
+  bobFrequency: 2.5
 --- !u!1 &3622752894501330974
 GameObject:
   m_ObjectHideFlags: 0

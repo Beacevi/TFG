@@ -1,14 +1,10 @@
 ﻿// BirdFollower.cs
 // ─────────────────────────────────────────────────────────────────────────────
-// Attach this script to the PLAYER GameObject in the exploration scene.
-//
-// It reads EquippedBirdsData (filled by BirdButton in the main menu) and
-// spawns up to 3 follower-bird sprites that trail the player using a
-// position-history queue — each bird follows the path the player already
-// walked, creating a natural chained-trail effect.
+// Attach to the Player GameObject in the exploration scene.
+// Birds wander freely around the player within a configurable radius,
+// steering toward random targets, avoiding each other, and bobbing gently.
 // ─────────────────────────────────────────────────────────────────────────────
 
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BirdFollower : MonoBehaviour
@@ -16,50 +12,59 @@ public class BirdFollower : MonoBehaviour
     // ── Inspector ─────────────────────────────────────────────────────────────
 
     [Header("References")]
-    [Tooltip("The player Transform to follow. Auto-found via 'Player' tag if left empty.")]
+    [Tooltip("Auto-found via 'Player' tag if left empty.")]
     [SerializeField] private Transform player;
 
-    [Header("Trail Settings")]
-    [Tooltip("How often (seconds) the player's position is recorded into history.")]
-    [SerializeField] private float recordInterval = 0.08f;
-
-    [Tooltip("How many recorded steps behind each successive bird sits. " +
-             "Bird 1 = delay*1, Bird 2 = delay*2, Bird 3 = delay*3.")]
-    [SerializeField] private int stepsPerBird = 6;
-
-    [Tooltip("How fast each follower moves toward its target position.")]
-    [SerializeField] private float followSpeed = 6f;
-
     [Header("Appearance")]
-    [Tooltip("Scale applied to each follower sprite. Tune to match your tile size.")]
-    [SerializeField] private float birdScale = 0.45f;
-
-    [Tooltip("Sorting layer name used for follower sprites.")]
+    [Tooltip("Scale of each follower sprite. Reduce if birds appear too large.")]
+    [SerializeField] private float birdScale = 0.25f;
     [SerializeField] private string sortingLayerName = "Default";
-
-    [Tooltip("Sorting order for follower sprites (should render above tiles).")]
     [SerializeField] private int sortingOrder = 10;
+    [Tooltip("Enable if your bird sprite naturally faces RIGHT. " +
+             "Disable if it naturally faces LEFT. Toggle this if birds always look backwards.")]
+    [SerializeField] private bool defaultFacingRight = true;
 
-    [Tooltip("Vertical offset so birds float slightly above the ground plane.")]
-    [SerializeField] private float heightOffset = 0.35f;
+    [Header("Wander Orbit")]
+    [Tooltip("Minimum distance from player. Birds never get closer than this.")]
+    [SerializeField] private float minRadius = 0.4f;
+    [Tooltip("Maximum distance from player. Birds are pulled back beyond this.")]
+    [SerializeField] private float maxRadius = 1.2f;
+    [Tooltip("How many units above the player the wander zone is centered. " +
+             "Increase this to push birds higher above the character's head.")]
+    [SerializeField] private float verticalBias = 0.6f;
+    [Tooltip("How often (seconds) each bird picks a new wander destination.")]
+    [SerializeField] private float wanderInterval = 2.2f;
+    [Tooltip("Random +/- seconds added to wanderInterval so birds don't sync up.")]
+    [SerializeField] private float wanderVariance = 0.8f;
 
-    [Header("Bob Animation")]
-    [Tooltip("Vertical bob amplitude (world units).")]
+    [Header("Movement")]
+    [Tooltip("Top speed of each bird (world units/sec).")]
+    [SerializeField] private float maxSpeed = 2.0f;
+    [Tooltip("Acceleration toward the current wander target.")]
+    [SerializeField] private float steerStrength = 4.0f;
+    [Tooltip("Extra pull force applied when a bird exceeds maxRadius.")]
+    [SerializeField] private float pullStrength = 6.0f;
+    [Tooltip("Drag applied each frame so birds decelerate naturally (0-1).")]
+    [SerializeField][Range(0f, 1f)] private float drag = 0.97f;
+
+    [Header("Separation")]
+    [Tooltip("Birds push each other away when closer than this.")]
+    [SerializeField] private float separationRadius = 0.35f;
+    [SerializeField] private float separationStrength = 5.0f;
+
+    [Header("Bob")]
     [SerializeField] private float bobAmplitude = 0.08f;
-
-    [Tooltip("Bob speed (cycles per second).")]
-    [SerializeField] private float bobFrequency = 2.5f;
+    [SerializeField] private float bobFrequency = 1.4f;
 
     // ── Private State ─────────────────────────────────────────────────────────
 
-    private const int MaxHistory = 120;   // Enough for any reasonable stepsPerBird*3
     private const int BirdCount = 3;
 
     private GameObject[] _birdGOs = new GameObject[BirdCount];
     private SpriteRenderer[] _renderers = new SpriteRenderer[BirdCount];
-
-    private List<Vector3> _posHistory = new List<Vector3>(MaxHistory + 4);
-    private float _recordTimer;
+    private Vector3[] _velocities = new Vector3[BirdCount];
+    private Vector3[] _wanderTargets = new Vector3[BirdCount];
+    private float[] _wanderTimers = new float[BirdCount];
 
     // ─────────────────────────────────────────────────────────────────────────
 
@@ -78,33 +83,13 @@ public class BirdFollower : MonoBehaviour
             return;
         }
 
-        // Pre-fill history so birds don't snap from world origin on first frame
-        for (int i = 0; i < MaxHistory; i++)
-            _posHistory.Add(player.position);
-
         CreateFollowerObjects();
-        RefreshFromRegistry();         // Read EquippedBirdsData right away
+        RefreshFromRegistry();
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // Called every frame — advance the trail and move followers
-    // ─────────────────────────────────────────────────────────────────────────
+    // ── Public API ────────────────────────────────────────────────────────────
 
-    private void Update()
-    {
-        RecordPlayerPosition();
-        MoveFollowers();
-    }
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // Public API — call this from BirdButton whenever the lineup changes so
-    // that the followers update immediately if the scene is already loaded.
-    // ─────────────────────────────────────────────────────────────────────────
-
-    /// <summary>
-    /// Re-reads EquippedBirdsData and updates follower sprites / visibility.
-    /// Safe to call at any time (Start, or whenever the player equips birds).
-    /// </summary>
+    /// <summary>Re-reads EquippedBirdsData and refreshes sprites/visibility.</summary>
     public void RefreshFromRegistry()
     {
         for (int i = 0; i < BirdCount; i++)
@@ -120,82 +105,158 @@ public class BirdFollower : MonoBehaviour
         }
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // Helpers
-    // ─────────────────────────────────────────────────────────────────────────
+    // ── Main Loop ─────────────────────────────────────────────────────────────
 
-    private void CreateFollowerObjects()
+    private void Update()
     {
-        for (int i = 0; i < BirdCount; i++)
-        {
-            var go = new GameObject($"BirdFollower_{i + 1}");
-            go.transform.position = player.position;
-            go.transform.localScale = Vector3.one * birdScale;
-            // NOTE: not parented to player — it moves independently via script
-
-            var sr = go.AddComponent<SpriteRenderer>();
-            sr.sortingLayerName = sortingLayerName;
-            sr.sortingOrder = sortingOrder - i; // Bird 1 renders in front
-
-            go.SetActive(false);
-
-            _birdGOs[i] = go;
-            _renderers[i] = sr;
-        }
-    }
-
-    private void RecordPlayerPosition()
-    {
-        _recordTimer += Time.deltaTime;
-        if (_recordTimer < recordInterval) return;
-        _recordTimer = 0f;
-
-        _posHistory.Insert(0, player.position);
-
-        if (_posHistory.Count > MaxHistory)
-            _posHistory.RemoveAt(_posHistory.Count - 1);
-    }
-
-    private void MoveFollowers()
-    {
-        // Horizontal direction from recent history — used for sprite flipping
-        float recentDx = 0f;
-        if (_posHistory.Count > 4)
-            recentDx = _posHistory[0].x - _posHistory[4].x;
+        if (player == null) return;
 
         for (int i = 0; i < BirdCount; i++)
         {
             if (!_birdGOs[i].activeSelf) continue;
 
-            // Each bird targets a different point in the history trail
-            int histIndex = Mathf.Min((i + 1) * stepsPerBird, _posHistory.Count - 1);
-            Vector3 target = _posHistory[histIndex];
-            target.y += heightOffset;
+            TickWanderTimer(i);
+            ApplyForces(i);
+            ApplyMovement(i);
+        }
+    }
 
-            // Gentle bob per bird (phase-shifted so they don't all bob together)
-            float phase = i * (Mathf.PI * 2f / BirdCount);
-            target.y += Mathf.Sin(Time.time * bobFrequency * Mathf.PI * 2f + phase) * bobAmplitude;
+    // ── Per-Bird Logic ────────────────────────────────────────────────────────
 
-            // Smooth movement
-            _birdGOs[i].transform.position = Vector3.Lerp(
-                _birdGOs[i].transform.position,
-                target,
-                followSpeed * Time.deltaTime
+    private void TickWanderTimer(int i)
+    {
+        _wanderTimers[i] -= Time.deltaTime;
+        if (_wanderTimers[i] <= 0f)
+            PickNewWanderTarget(i);
+    }
+
+    private void PickNewWanderTarget(int i)
+    {
+        // Random point inside an annulus (ring) around the player.
+        // Y is halved to respect the isometric perspective.
+        float angle = Random.Range(0f, Mathf.PI * 2f);
+        float radius = Random.Range(minRadius, maxRadius);
+
+        Vector3 offset = new Vector3(
+            Mathf.Cos(angle) * radius,
+            Mathf.Sin(angle) * radius * 0.5f + verticalBias, // flatten for isometric + bias upward
+            0f
+        );
+
+        _wanderTargets[i] = player.position + offset;
+        _wanderTimers[i] = wanderInterval + Random.Range(-wanderVariance, wanderVariance);
+    }
+
+    private void ApplyForces(int i)
+    {
+        // Strip the bob offset to get the logical position for physics
+        Vector3 pos = _birdGOs[i].transform.position;
+        pos.y -= GetBob(i); // remove bob before force calculations
+
+        // ── 1. Steer toward wander target ──
+        Vector3 toTarget = _wanderTargets[i] - pos;
+        _velocities[i] += toTarget.normalized * (steerStrength * Time.deltaTime);
+
+        // ── 2. Pull back if beyond maxRadius ──
+        Vector3 toPlayer = player.position - pos;
+        float dist = toPlayer.magnitude;
+        if (dist > maxRadius)
+        {
+            float excess = dist - maxRadius;
+            _velocities[i] += toPlayer.normalized * (excess * pullStrength * Time.deltaTime);
+        }
+
+        // ── 3. Separation from other birds ──
+        for (int j = 0; j < BirdCount; j++)
+        {
+            if (i == j || !_birdGOs[j].activeSelf) continue;
+
+            Vector3 away = pos - _birdGOs[j].transform.position;
+            float awayDist = away.magnitude;
+
+            if (awayDist < separationRadius && awayDist > 0.001f)
+            {
+                float strength = separationStrength * (1f - awayDist / separationRadius);
+                _velocities[i] += away.normalized * (strength * Time.deltaTime);
+            }
+        }
+
+        // ── 4. Drag + speed clamp ──
+        _velocities[i] *= drag;
+
+        if (_velocities[i].magnitude > maxSpeed)
+            _velocities[i] = _velocities[i].normalized * maxSpeed;
+
+        _velocities[i].z = 0f;
+    }
+
+    private void ApplyMovement(int i)
+    {
+        // Advance logical position
+        Vector3 pos = _birdGOs[i].transform.position;
+        pos.y -= GetBob(i);          // strip old bob
+        pos += _velocities[i] * Time.deltaTime;
+        pos.z = 0f;
+
+        // Re-apply fresh bob
+        pos.y += GetBob(i);
+
+        _birdGOs[i].transform.position = pos;
+
+        // Flip sprite to face direction of travel.
+        // defaultFacingRight=true  → flip when moving left  (velocity.x < 0)
+        // defaultFacingRight=false → flip when moving right (velocity.x > 0)
+        if (Mathf.Abs(_velocities[i].x) > 0.05f)
+            _renderers[i].flipX = defaultFacingRight ? _velocities[i].x < 0f
+                                                     : _velocities[i].x > 0f;
+    }
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+
+    private float GetBob(int i)
+    {
+        float phase = i * (Mathf.PI * 2f / BirdCount);
+        return Mathf.Sin(Time.time * bobFrequency * Mathf.PI * 2f + phase) * bobAmplitude;
+    }
+
+    private void CreateFollowerObjects()
+    {
+        float angleStep = 360f / BirdCount;
+
+        for (int i = 0; i < BirdCount; i++)
+        {
+            // Spread birds evenly around player at start
+            float angle = i * angleStep * Mathf.Deg2Rad;
+            float radius = (minRadius + maxRadius) * 0.5f;
+            Vector3 startPos = player.position + new Vector3(
+                Mathf.Cos(angle) * radius,
+                Mathf.Sin(angle) * radius * 0.5f + verticalBias,
+                0f
             );
 
-            // Flip to face direction of travel
-            if (Mathf.Abs(recentDx) > 0.01f)
-                _renderers[i].flipX = recentDx < 0f;
+            var go = new GameObject($"BirdFollower_{i + 1}");
+            go.transform.position = startPos;
+            go.transform.localScale = Vector3.one * birdScale;
+
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sortingLayerName = sortingLayerName;
+            sr.sortingOrder = sortingOrder - i;
+
+            go.SetActive(false);
+
+            _birdGOs[i] = go;
+            _renderers[i] = sr;
+            _velocities[i] = Vector3.zero;
+            _wanderTargets[i] = startPos;
+
+            // Stagger timers so birds don't all pick new targets at the same time
+            _wanderTimers[i] = Random.Range(0f, wanderInterval);
         }
     }
 
     private void OnDestroy()
     {
-        // Clean up spawned GameObjects when the player is destroyed
         for (int i = 0; i < BirdCount; i++)
-        {
-            if (_birdGOs[i] != null)
-                Destroy(_birdGOs[i]);
-        }
+            if (_birdGOs[i] != null) Destroy(_birdGOs[i]);
     }
 }

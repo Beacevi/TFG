@@ -32627,6 +32627,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 839681127873234233, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 842133001338141309, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -35031,6 +35035,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6558573812032489550, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1780912822}
+    - target: {fileID: 6558573812032489550, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Cambiar_A_Escena
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558573812032489550, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6804228413507304507, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -35137,7 +35153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6890236099552473075, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6909979555029792460, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
       propertyPath: m_AnchorMax.y
