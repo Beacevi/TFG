@@ -82,6 +82,7 @@
     <Compile Include="Assets\Resources\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Sounds.cs" />
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\DayNightCycle.cs" />
+    <Compile Include="Assets\Resources\Scripts\Procedural Terrain\EquippedBirdsData.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignInStatusCode.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignInUser.cs" />
     <Compile Include="Assets\GoogleSignIn\GoogleSignInConfiguration.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Resources\Scripts\Effects Scripts\RealTimeLight.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerReceiver.cs" />
+    <Compile Include="Assets\Resources\Scripts\Procedural Terrain\BirdFollower.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Stickers\StickerData.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Menus\CollectionButton.cs" />
