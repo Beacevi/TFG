@@ -61,7 +61,7 @@ public class TileAStar : MonoBehaviour
 
     }
 
-    private void UpdateStepsUI()
+    public void UpdateStepsUI()
     {
         if (pasosBar == null)
         {
@@ -391,6 +391,12 @@ public class TileAStar : MonoBehaviour
     public static void BlockInputForSeconds(float seconds)
     {
         inputBlockedUntil = Time.time + seconds;
+    }
+
+    public void AddSteps(int amount)
+    {
+        stepsAvailable += amount;
+        UpdateStepsUI();
     }
 
 }
