@@ -4910,9 +4910,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807121335253516542, guid: 84a427d9c7740ae40ad1ae5839ee8906, type: 3}
   tilemap: {fileID: 2077797750}
-  ruleGrass: {fileID: 11400000, guid: 42f4e3746426aa64690da15603721e53, type: 2}
-  ruleSand: {fileID: 11400000, guid: 54eeb0ad215d4c24eb543f02b4f58875, type: 2}
-  ruleWater: {fileID: 11400000, guid: 7a99bbc068cccc4409d6386205d7df0e, type: 2}
+  ruleGrass: {fileID: 11400000, guid: 17e73acb39cc1b84f8c079a9cca51a01, type: 2}
+  ruleSand: {fileID: 11400000, guid: e8a39d968dce86b4f8b62c7207819889, type: 2}
+  ruleWater: {fileID: 11400000, guid: ef98f63dee57aa8439c2a3e4630c3a1b, type: 2}
   width: 100
   height: 100
   noiseScale: 25
@@ -4958,7 +4958,10 @@ MonoBehaviour:
   - {fileID: 2055102311959635369, guid: 7277dd75e907b27448ec1de08238d0bb, type: 3}
   - {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
   sandObjects: []
-  spawnChance: 1
+  spawnChance: 0.5
+  beachMinWidth: 1
+  beachMaxWidth: 6
+  beachNoiseScale: 6
   coins:
   - name: Moneda
     coinPrefab: {fileID: 7899624229605756167, guid: 08a9a570d9ff8a51787052428cdc5498, type: 3}
@@ -8865,7 +8868,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717359291}
   m_Enabled: 1
-  m_CellSize: {x: 2.5, y: 1.25, z: 0}
+  m_CellSize: {x: 3, y: 1.5, z: 1}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 2
   m_CellSwizzle: 0

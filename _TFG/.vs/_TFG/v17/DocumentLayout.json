@@ -1,77 +1,81 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
+  "WorkspaceRootPath": "C:\\Github\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\simongamemanagerpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\github\\tfg\\_tfg\\assets\\resources\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\pcgtiles_isometricperlin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|c:\\github\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\simongamemanagerpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\simongamemanagerpajaro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\letterdisplayui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\simondice\\letterdisplayui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\letterdisplayui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\simondice\\simongamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\save\\savedatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\save\\savedatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\save\\savedatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\economyauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanagerauthority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanagerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileclickdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\tileastar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\procedural terrain\\isometriccamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\rewardsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\csvreader\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\csvreader\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\csvreader\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\skins\\custommenusprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\skins\\custommenusprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\skins\\custommenusprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|C:\\Github\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\custommenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -82,241 +86,241 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PCGtiles_IsometricPerlin.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\PCGtiles_IsometricPerlin.cs",
+              "ViewState": "AgIAAMEBAAAAAAAAAAAwwEcCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:01:41.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SimonGameManagerPajaro.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManagerPajaro.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAADwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAIBJwDwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-20T15:38:40.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LetterDisplayUI.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\LetterDisplayUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T14:15:42.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SimonGameManager.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T10:47:08.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-17T14:15:42.506Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SaveDataManager.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAXAAAAAAAAAA==",
+              "Title": "SimonGameManager.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SimonDice\\SimonGameManager.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T17:31:46.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:47:08.225Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Store.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Store.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Store.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAmwFYAAAA0AAAAAAAAAA==",
+              "Title": "SaveDataManager.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T16:21:43.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:31:46.24Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ShopMenu.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAcwE4AAABgAAAAAAAAAA==",
+              "Title": "Store.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Store.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAmwFYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T16:19:55.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T16:21:43.742Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "EconomyAuthority.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAQwBQAAAABAAAAAAAAAA==",
+              "Title": "ShopMenu.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwE4AAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:56:26.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T16:19:55.422Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "GameManagerAuthority.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAiwNAAAAABAAAAAAAAAA==",
+              "Title": "EconomyAuthority.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:51:08.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T10:56:26.465Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GameManagerLogic.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
+              "Title": "GameManagerAuthority.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAiwNAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T11:05:00.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T10:51:08.691Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAlwKkAAAAAAAAAAAAAAA==",
+              "Title": "GameManagerLogic.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T10:20:47.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T11:05:00.865Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Energy.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGoAAAAFAAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAlwKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:23:30.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T10:20:47.538Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "TileClickDetector.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "Energy.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:19:24.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T10:23:30.333Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "TileAStar.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAcwFsAAAAAAAAAAAAAAA==",
+              "Title": "TileClickDetector.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileClickDetector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:00:00.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T10:19:24.051Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "IsometricCamera.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAjAAAAAAAAAA==",
+              "Title": "TileAStar.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\TileAStar.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAcwFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:56:51.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T10:00:00.783Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "RewardsMenu.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAAwKoAAAA4AAAAAAAAAA==",
+              "Title": "IsometricCamera.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T12:10:03.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T09:56:51.002Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "CSVReader.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAkwFkAAAAZAAAAAAAAAA==",
+              "Title": "RewardsMenu.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAwKoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T16:17:51.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T12:10:03.374Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "CustomMenuSprites.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAQwC0AAAAaAAAAAAAAAA==",
+              "Title": "CSVReader.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\CSVReader\\CSVReader.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwFkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T13:56:50.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-15T16:17:51.383Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "CustomMenuSprites.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwC0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:56:50.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "CustomMenu.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "DocumentMoniker": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
+              "ToolTip": "C:\\Github\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAiwGcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T10:48:52.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T10:48:52.391Z"
             }
           ]
         }

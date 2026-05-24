@@ -1,0 +1,2899 @@
+fileFormatVersion: 2
+guid: d7fad2adab0cf834097f3858256f27a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4749913113538005048
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_0
+  - first:
+      213: 7716885732642586686
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_1
+  - first:
+      213: -561570754486710043
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_2
+  - first:
+      213: -498350181247604746
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_3
+  - first:
+      213: -5920104581694824551
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_4
+  - first:
+      213: 8004013154535710159
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_5
+  - first:
+      213: 3045540922513455215
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_6
+  - first:
+      213: 1865252531874246283
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_7
+  - first:
+      213: 6440780322845399801
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_8
+  - first:
+      213: -870590198291324019
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_9
+  - first:
+      213: -6847620177364884342
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_10
+  - first:
+      213: -1920904640756425101
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_11
+  - first:
+      213: 2547776863071976890
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_12
+  - first:
+      213: 5030346526729226927
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_13
+  - first:
+      213: 3398406824959051924
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_14
+  - first:
+      213: -2196841148909385963
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_15
+  - first:
+      213: 7014134544457203317
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_16
+  - first:
+      213: -5497654061674914829
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_17
+  - first:
+      213: 8131483640734071707
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_18
+  - first:
+      213: -5827717105569175813
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_19
+  - first:
+      213: -3369595542375672425
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_20
+  - first:
+      213: 8679461898754770583
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_21
+  - first:
+      213: -5666109814778435311
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_22
+  - first:
+      213: 6024575231323153751
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_23
+  - first:
+      213: 6003476583701305649
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_24
+  - first:
+      213: -3139065198916126821
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_25
+  - first:
+      213: 2766208722549854097
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_26
+  - first:
+      213: -7501931629169112701
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_27
+  - first:
+      213: 8554406523350508073
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_28
+  - first:
+      213: 8613810010980214410
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_29
+  - first:
+      213: 6896887072754831625
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_30
+  - first:
+      213: 4782529835844122158
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_31
+  - first:
+      213: -4504996475727357348
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_32
+  - first:
+      213: 1720841528645693885
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_33
+  - first:
+      213: -3892971788419889298
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_34
+  - first:
+      213: 4981038286330404816
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_35
+  - first:
+      213: 2192015224406465689
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_36
+  - first:
+      213: 4708268607289081500
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_37
+  - first:
+      213: -3328279562638464042
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_38
+  - first:
+      213: -1301010692516679533
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_39
+  - first:
+      213: 5114217058524022766
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_40
+  - first:
+      213: 7578649773784215666
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_41
+  - first:
+      213: 7034144747724001315
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_42
+  - first:
+      213: -7925175203264184654
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_43
+  - first:
+      213: -878473724083645326
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_44
+  - first:
+      213: 3284463885234909117
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_45
+  - first:
+      213: -5346791365506187251
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_46
+  - first:
+      213: -5021569433872477003
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_47
+  - first:
+      213: 7214747790231782718
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_48
+  - first:
+      213: -8344174112957460270
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_49
+  - first:
+      213: 4357224780908553551
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_50
+  - first:
+      213: 2082885924180057931
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_51
+  - first:
+      213: -6142439760202949803
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_52
+  - first:
+      213: 1954465999015214693
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_53
+  - first:
+      213: -1326282551594212909
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_54
+  - first:
+      213: -4816149872353653976
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_55
+  - first:
+      213: 811199335193380308
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_56
+  - first:
+      213: 8630120697060777716
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_57
+  - first:
+      213: -9054732694008366566
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_58
+  - first:
+      213: 2777452730439792590
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_59
+  - first:
+      213: -2356751210252746085
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_60
+  - first:
+      213: -8434969019446373457
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_61
+  - first:
+      213: 6965129381294177669
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_62
+  - first:
+      213: 7750021235063548179
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_63
+  - first:
+      213: 4813445541418300943
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_64
+  - first:
+      213: 6135837507432205551
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_65
+  - first:
+      213: 2104411335968613691
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_66
+  - first:
+      213: 8832635664507517017
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_67
+  - first:
+      213: 8041367567615417387
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_68
+  - first:
+      213: 2071904566865928647
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_69
+  - first:
+      213: 8944002348313284879
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_70
+  - first:
+      213: 2226092999544269304
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_71
+  - first:
+      213: 7297889794313032533
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_72
+  - first:
+      213: -4417948436639292925
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_73
+  - first:
+      213: -9103076873201742276
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_74
+  - first:
+      213: 7864955616417709058
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_75
+  - first:
+      213: -7287977308437335679
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_76
+  - first:
+      213: 7928690879515627575
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_77
+  - first:
+      213: -4444097509860628929
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_78
+  - first:
+      213: 2937377998017292404
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_79
+  - first:
+      213: -1871109473537801568
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_80
+  - first:
+      213: -1109958842779963154
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_81
+  - first:
+      213: 6535575890179342596
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_82
+  - first:
+      213: 8902828236263277388
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_83
+  - first:
+      213: -1767276117768797454
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_84
+  - first:
+      213: 1784640542080331052
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_85
+  - first:
+      213: 4427514634894373635
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_86
+  - first:
+      213: -8457648283358040550
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_87
+  - first:
+      213: 1151711267054071152
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_88
+  - first:
+      213: -4413217438624360583
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_89
+  - first:
+      213: -7671933239622656910
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_90
+  - first:
+      213: -6536807826242731316
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_91
+  - first:
+      213: -2087400108687578233
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_92
+  - first:
+      213: 9080117758470888206
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_93
+  - first:
+      213: -7525581596416886337
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_94
+  - first:
+      213: -6007515980190493029
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_95
+  - first:
+      213: 5293194141157731825
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_96
+  - first:
+      213: 8297602492816326430
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_97
+  - first:
+      213: -957591133395878442
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_98
+  - first:
+      213: 8116688941203986381
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_99
+  - first:
+      213: -8948937200724368724
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_100
+  - first:
+      213: -1417326709483178421
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_101
+  - first:
+      213: -7558831549012125326
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_102
+  - first:
+      213: -5631570341560551645
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_103
+  - first:
+      213: -7521481005756899271
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_104
+  - first:
+      213: -4141752721391531484
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_105
+  - first:
+      213: 6375894188458201511
+    second: ESTE SI Isometric Assets (Con Aguas) (1)_106
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2310
+        width: 236
+        height: 249
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83807668fc41be140800000000000000
+      internalID: 4749913113538005048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 2310
+        width: 236
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30017220b2e71b60800000000000000
+      internalID: 7716885732642586686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 2310
+        width: 234
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e05296cf56e438f0800000000000000
+      internalID: -561570754486710043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_3
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2310
+        width: 237
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f72cf886218519f0800000000000000
+      internalID: -498350181247604746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2310
+        width: 234
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fdaeebf3097dda0800000000000000
+      internalID: -5920104581694824551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 2310
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd97a59e87f31f60800000000000000
+      internalID: 8004013154535710159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 2310
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f687453455fe34a20800000000000000
+      internalID: 3045540922513455215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 2310
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e23c29b45b2e910800000000000000
+      internalID: 1865252531874246283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_8
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 2310
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa9683349f326950800000000000000
+      internalID: 6440780322845399801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_9
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 2310
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83a8e5c3da0be3f0800000000000000
+      internalID: -870590198291324019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2052
+        width: 237
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a846e5b9abd58f0a0800000000000000
+      internalID: -6847620177364884342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_11
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2052
+        width: 237
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e505818639755e0800000000000000
+      internalID: -1920904640756425101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_12
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 2052
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd3d5aee858b5320800000000000000
+      internalID: 2547776863071976890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_13
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2053
+        width: 236
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faac0de93816fc540800000000000000
+      internalID: 5030346526729226927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2051
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49882f37001992f20800000000000000
+      internalID: 3398406824959051924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 2053
+        width: 236
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5178b4b4d904381e0800000000000000
+      internalID: -2196841148909385963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 2052
+        width: 239
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57efa29a436375160800000000000000
+      internalID: 7014134544457203317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 2053
+        width: 236
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb12eb32c864b3b0800000000000000
+      internalID: -5497654061674914829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_18
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 2053
+        width: 234
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9bbadee945d8d070800000000000000
+      internalID: 8131483640734071707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_19
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 2053
+        width: 237
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6e4174b2acf1fa0800000000000000
+      internalID: -5827717105569175813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_20
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1796
+        width: 234
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79555f305bacc31d0800000000000000
+      internalID: -3369595542375672425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_21
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1796
+        width: 237
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796c0d47c94a37870800000000000000
+      internalID: 8679461898754770583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_22
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1796
+        width: 237
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119e6cfc42fed51b0800000000000000
+      internalID: -5666109814778435311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_23
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1796
+        width: 237
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75522a9d0479b9350800000000000000
+      internalID: 6024575231323153751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_24
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 1796
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13954e42522a05350800000000000000
+      internalID: 6003476583701305649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_25
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1796
+        width: 237
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9730d345dccf64d0800000000000000
+      internalID: -3139065198916126821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1796
+        width: 237
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fcb2a5d2c836620800000000000000
+      internalID: 2766208722549854097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_27
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1796
+        width: 237
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3898b122ee8c3e790800000000000000
+      internalID: -7501931629169112701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_28
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1796
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9226798e86b57b670800000000000000
+      internalID: 8554406523350508073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_29
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 1795
+        width: 236
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86ed2b21966a8770800000000000000
+      internalID: 8613810010980214410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_30
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1544
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901198b504aa6bf50800000000000000
+      internalID: 6896887072754831625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_31
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1541
+        width: 236
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e263239fb85fe5240800000000000000
+      internalID: 4782529835844122158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_32
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1543
+        width: 239
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a52e5e2990b71c0800000000000000
+      internalID: -4504996475727357348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_33
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1543
+        width: 235
+        height: 249
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1baadb048a1e710800000000000000
+      internalID: 1720841528645693885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1543
+        width: 235
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e678d96c8c269f9c0800000000000000
+      internalID: -3892971788419889298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 1543
+        width: 235
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df18554ee3302540800000000000000
+      internalID: 4981038286330404816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_36
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1543
+        width: 235
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cdef89b3a9b6e10800000000000000
+      internalID: 2192015224406465689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_37
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1544
+        width: 241
+        height: 249
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9eb6945a51275140800000000000000
+      internalID: 4708268607289081500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_38
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 1542
+        width: 224
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbedbb2f539fc1d0800000000000000
+      internalID: -3328279562638464042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_39
+      rect:
+        serializedVersion: 2
+        x: 2323
+        y: 1542
+        width: 223
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390fe8f0ba1e1fde0800000000000000
+      internalID: -1301010692516679533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_40
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1282
+        width: 232
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee74195815959f640800000000000000
+      internalID: 5114217058524022766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_41
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1279
+        width: 236
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270b08bd0d5cc2960800000000000000
+      internalID: 7578649773784215666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_42
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1284
+        width: 233
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320d4ca216d4e9160800000000000000
+      internalID: 7034144747724001315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_43
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1280
+        width: 244
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be34ba542f140290800000000000000
+      internalID: -7925175203264184654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_44
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1281
+        width: 232
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274da736dc80fc3f0800000000000000
+      internalID: -878473724083645326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_45
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1284
+        width: 236
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbfa6057082c49d20800000000000000
+      internalID: 3284463885234909117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_46
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1284
+        width: 240
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00c0e2e4916cc5b0800000000000000
+      internalID: -5346791365506187251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_47
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 1284
+        width: 234
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4521f843dcf4ab0800000000000000
+      internalID: -5021569433872477003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_48
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 1287
+        width: 221
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35ccccc3eeef1460800000000000000
+      internalID: 7214747790231782718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_49
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 1284
+        width: 220
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d019258ad9833c80800000000000000
+      internalID: -8344174112957460270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_50
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1025
+        width: 230
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4565984ad8f77c30800000000000000
+      internalID: 4357224780908553551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_51
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1023
+        width: 234
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fd96266b5e7ec10800000000000000
+      internalID: 2082885924180057931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_52
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1025
+        width: 230
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b1ed6059ba1caa0800000000000000
+      internalID: -6142439760202949803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_53
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1020
+        width: 234
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e71ec8878af1b10800000000000000
+      internalID: 1954465999015214693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_54
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1025
+        width: 230
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1ad68db09189de0800000000000000
+      internalID: -1326282551594212909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_55
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1023
+        width: 237
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b41594539992db0800000000000000
+      internalID: -4816149872353653976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_56
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1029
+        width: 234
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d50c385f75f14b00800000000000000
+      internalID: 811199335193380308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_57
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1029
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fedd05bc0954c770800000000000000
+      internalID: 8630120697060777716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_58
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 1028
+        width: 218
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1af38db690275280800000000000000
+      internalID: -9054732694008366566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_59
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 1027
+        width: 220
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec77d42fa8e7b8620800000000000000
+      internalID: 2777452730439792590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_60
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 775
+        width: 234
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92c9e8c2432b4fd0800000000000000
+      internalID: -2356751210252746085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_61
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 771
+        width: 236
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa359700e58f0fa80800000000000000
+      internalID: -8434969019446373457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_62
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 770
+        width: 234
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dfcaaf44c19a060800000000000000
+      internalID: 6965129381294177669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_63
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 769
+        width: 237
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31962bd704b9d8b60800000000000000
+      internalID: 7750021235063548179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_64
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 753
+        width: 234
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06fce9973bccc240800000000000000
+      internalID: 4813445541418300943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_65
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 769
+        width: 237
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecc30634bfd62550800000000000000
+      internalID: 6135837507432205551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_66
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 763
+        width: 237
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35e6bdd5fe543d10800000000000000
+      internalID: 2104411335968613691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_67
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 769
+        width: 237
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958ba6de653d39a70800000000000000
+      internalID: 8832635664507517017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_68
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 770
+        width: 237
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c5010a23da89f60800000000000000
+      internalID: 8041367567615417387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_69
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 769
+        width: 237
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1ad84e932e0cc10800000000000000
+      internalID: 2071904566865928647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_70
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 761
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0119799fba7f1c70800000000000000
+      internalID: 8944002348313284879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_71
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 733
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9e1dae9cba4ee10800000000000000
+      internalID: 2226092999544269304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_72
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 520
+        width: 237
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5531aff1a10574560800000000000000
+      internalID: 7297889794313032533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_73
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 520
+        width: 237
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3026f1edd4b40b2c0800000000000000
+      internalID: -4417948436639292925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_74
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 507
+        width: 235
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e8cb160df5ba180800000000000000
+      internalID: -9103076873201742276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_75
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 520
+        width: 236
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c7aca767fe52d60800000000000000
+      internalID: 7864955616417709058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_76
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 519
+        width: 235
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1813c775047ebda90800000000000000
+      internalID: -7287977308437335679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_77
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 517
+        width: 236
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730986fc85e580e60800000000000000
+      internalID: 7928690879515627575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_78
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 518
+        width: 239
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f362f815cd46352c0800000000000000
+      internalID: -4444097509860628929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_79
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 519
+        width: 236
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4786edee9b9a3c820800000000000000
+      internalID: 2937377998017292404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_80
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 512
+        width: 234
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a249ede8db7806e0800000000000000
+      internalID: -1871109473537801568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_81
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 517
+        width: 237
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0fbc43052a890f0800000000000000
+      internalID: -1109958842779963154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_82
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 474
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4014fb825a703ba50800000000000000
+      internalID: 6535575890179342596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_83
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 259
+        width: 237
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c434ac69c133d8b70800000000000000
+      internalID: 8902828236263277388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_84
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 464
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f20c5cfbbf5977e0800000000000000
+      internalID: -1767276117768797454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_85
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 259
+        width: 234
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d657a1e1154c810800000000000000
+      internalID: 1784640542080331052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_86
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 260
+        width: 237
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303f8ba3a11b17d30800000000000000
+      internalID: 4427514634894373635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_87
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 246
+        width: 237
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e604362b560aa80800000000000000
+      internalID: -8457648283358040550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_88
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 259
+        width: 237
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07da29c9b43bbff00800000000000000
+      internalID: 1151711267054071152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_89
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 259
+        width: 237
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9775c3e2f1a11c2c0800000000000000
+      internalID: -4413217438624360583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_90
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 258
+        width: 237
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c97cfbd51d78590800000000000000
+      internalID: -7671933239622656910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_91
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 251
+        width: 237
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc20fcf5ae79845a0800000000000000
+      internalID: -6536807826242731316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_92
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 250
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ba09129a01803e0800000000000000
+      internalID: -2087400108687578233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_93
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 258
+        width: 235
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b9f582efe030e70800000000000000
+      internalID: 9080117758470888206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_94
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 253
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9ba590963cf8790800000000000000
+      internalID: -7525581596416886337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_95
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 243
+        width: 236
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9653429b0401aca0800000000000000
+      internalID: -6007515980190493029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_96
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 2
+        width: 236
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fda2eed604357940800000000000000
+      internalID: 5293194141157731825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_97
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 6
+        width: 235
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f76bf2181072370800000000000000
+      internalID: 8297602492816326430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_98
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 205
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddffdd00f3f5b2f0800000000000000
+      internalID: -957591133395878442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_99
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3
+        width: 235
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc71ec4869544a070800000000000000
+      internalID: 8116688941203986381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_100
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 4
+        width: 239
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2ab89870dfec380800000000000000
+      internalID: -8948937200724368724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_101
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 8
+        width: 235
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46f496fdd4a45ce0800000000000000
+      internalID: -1417326709483178421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_102
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 5
+        width: 235
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279dd1c21c2a91790800000000000000
+      internalID: -7558831549012125326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_103
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 4
+        width: 235
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32778a79c94a8d1b0800000000000000
+      internalID: -5631570341560551645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_104
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 0
+        width: 241
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930230330e45e9790800000000000000
+      internalID: -7521481005756899271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_105
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 7
+        width: 216
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a43f508d98586c0800000000000000
+      internalID: -4141752721391531484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ESTE SI Isometric Assets (Con Aguas) (1)_106
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 3
+        width: 222
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a15784cbf9bb7850800000000000000
+      internalID: 6375894188458201511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 47418ea411ebe6545a1250e218692ca4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ESTE SI Isometric Assets (Con Aguas) (1)_0: 4749913113538005048
+      ESTE SI Isometric Assets (Con Aguas) (1)_1: 7716885732642586686
+      ESTE SI Isometric Assets (Con Aguas) (1)_10: -6847620177364884342
+      ESTE SI Isometric Assets (Con Aguas) (1)_100: -8948937200724368724
+      ESTE SI Isometric Assets (Con Aguas) (1)_101: -1417326709483178421
+      ESTE SI Isometric Assets (Con Aguas) (1)_102: -7558831549012125326
+      ESTE SI Isometric Assets (Con Aguas) (1)_103: -5631570341560551645
+      ESTE SI Isometric Assets (Con Aguas) (1)_104: -7521481005756899271
+      ESTE SI Isometric Assets (Con Aguas) (1)_105: -4141752721391531484
+      ESTE SI Isometric Assets (Con Aguas) (1)_106: 6375894188458201511
+      ESTE SI Isometric Assets (Con Aguas) (1)_11: -1920904640756425101
+      ESTE SI Isometric Assets (Con Aguas) (1)_12: 2547776863071976890
+      ESTE SI Isometric Assets (Con Aguas) (1)_13: 5030346526729226927
+      ESTE SI Isometric Assets (Con Aguas) (1)_14: 3398406824959051924
+      ESTE SI Isometric Assets (Con Aguas) (1)_15: -2196841148909385963
+      ESTE SI Isometric Assets (Con Aguas) (1)_16: 7014134544457203317
+      ESTE SI Isometric Assets (Con Aguas) (1)_17: -5497654061674914829
+      ESTE SI Isometric Assets (Con Aguas) (1)_18: 8131483640734071707
+      ESTE SI Isometric Assets (Con Aguas) (1)_19: -5827717105569175813
+      ESTE SI Isometric Assets (Con Aguas) (1)_2: -561570754486710043
+      ESTE SI Isometric Assets (Con Aguas) (1)_20: -3369595542375672425
+      ESTE SI Isometric Assets (Con Aguas) (1)_21: 8679461898754770583
+      ESTE SI Isometric Assets (Con Aguas) (1)_22: -5666109814778435311
+      ESTE SI Isometric Assets (Con Aguas) (1)_23: 6024575231323153751
+      ESTE SI Isometric Assets (Con Aguas) (1)_24: 6003476583701305649
+      ESTE SI Isometric Assets (Con Aguas) (1)_25: -3139065198916126821
+      ESTE SI Isometric Assets (Con Aguas) (1)_26: 2766208722549854097
+      ESTE SI Isometric Assets (Con Aguas) (1)_27: -7501931629169112701
+      ESTE SI Isometric Assets (Con Aguas) (1)_28: 8554406523350508073
+      ESTE SI Isometric Assets (Con Aguas) (1)_29: 8613810010980214410
+      ESTE SI Isometric Assets (Con Aguas) (1)_3: -498350181247604746
+      ESTE SI Isometric Assets (Con Aguas) (1)_30: 6896887072754831625
+      ESTE SI Isometric Assets (Con Aguas) (1)_31: 4782529835844122158
+      ESTE SI Isometric Assets (Con Aguas) (1)_32: -4504996475727357348
+      ESTE SI Isometric Assets (Con Aguas) (1)_33: 1720841528645693885
+      ESTE SI Isometric Assets (Con Aguas) (1)_34: -3892971788419889298
+      ESTE SI Isometric Assets (Con Aguas) (1)_35: 4981038286330404816
+      ESTE SI Isometric Assets (Con Aguas) (1)_36: 2192015224406465689
+      ESTE SI Isometric Assets (Con Aguas) (1)_37: 4708268607289081500
+      ESTE SI Isometric Assets (Con Aguas) (1)_38: -3328279562638464042
+      ESTE SI Isometric Assets (Con Aguas) (1)_39: -1301010692516679533
+      ESTE SI Isometric Assets (Con Aguas) (1)_4: -5920104581694824551
+      ESTE SI Isometric Assets (Con Aguas) (1)_40: 5114217058524022766
+      ESTE SI Isometric Assets (Con Aguas) (1)_41: 7578649773784215666
+      ESTE SI Isometric Assets (Con Aguas) (1)_42: 7034144747724001315
+      ESTE SI Isometric Assets (Con Aguas) (1)_43: -7925175203264184654
+      ESTE SI Isometric Assets (Con Aguas) (1)_44: -878473724083645326
+      ESTE SI Isometric Assets (Con Aguas) (1)_45: 3284463885234909117
+      ESTE SI Isometric Assets (Con Aguas) (1)_46: -5346791365506187251
+      ESTE SI Isometric Assets (Con Aguas) (1)_47: -5021569433872477003
+      ESTE SI Isometric Assets (Con Aguas) (1)_48: 7214747790231782718
+      ESTE SI Isometric Assets (Con Aguas) (1)_49: -8344174112957460270
+      ESTE SI Isometric Assets (Con Aguas) (1)_5: 8004013154535710159
+      ESTE SI Isometric Assets (Con Aguas) (1)_50: 4357224780908553551
+      ESTE SI Isometric Assets (Con Aguas) (1)_51: 2082885924180057931
+      ESTE SI Isometric Assets (Con Aguas) (1)_52: -6142439760202949803
+      ESTE SI Isometric Assets (Con Aguas) (1)_53: 1954465999015214693
+      ESTE SI Isometric Assets (Con Aguas) (1)_54: -1326282551594212909
+      ESTE SI Isometric Assets (Con Aguas) (1)_55: -4816149872353653976
+      ESTE SI Isometric Assets (Con Aguas) (1)_56: 811199335193380308
+      ESTE SI Isometric Assets (Con Aguas) (1)_57: 8630120697060777716
+      ESTE SI Isometric Assets (Con Aguas) (1)_58: -9054732694008366566
+      ESTE SI Isometric Assets (Con Aguas) (1)_59: 2777452730439792590
+      ESTE SI Isometric Assets (Con Aguas) (1)_6: 3045540922513455215
+      ESTE SI Isometric Assets (Con Aguas) (1)_60: -2356751210252746085
+      ESTE SI Isometric Assets (Con Aguas) (1)_61: -8434969019446373457
+      ESTE SI Isometric Assets (Con Aguas) (1)_62: 6965129381294177669
+      ESTE SI Isometric Assets (Con Aguas) (1)_63: 7750021235063548179
+      ESTE SI Isometric Assets (Con Aguas) (1)_64: 4813445541418300943
+      ESTE SI Isometric Assets (Con Aguas) (1)_65: 6135837507432205551
+      ESTE SI Isometric Assets (Con Aguas) (1)_66: 2104411335968613691
+      ESTE SI Isometric Assets (Con Aguas) (1)_67: 8832635664507517017
+      ESTE SI Isometric Assets (Con Aguas) (1)_68: 8041367567615417387
+      ESTE SI Isometric Assets (Con Aguas) (1)_69: 2071904566865928647
+      ESTE SI Isometric Assets (Con Aguas) (1)_7: 1865252531874246283
+      ESTE SI Isometric Assets (Con Aguas) (1)_70: 8944002348313284879
+      ESTE SI Isometric Assets (Con Aguas) (1)_71: 2226092999544269304
+      ESTE SI Isometric Assets (Con Aguas) (1)_72: 7297889794313032533
+      ESTE SI Isometric Assets (Con Aguas) (1)_73: -4417948436639292925
+      ESTE SI Isometric Assets (Con Aguas) (1)_74: -9103076873201742276
+      ESTE SI Isometric Assets (Con Aguas) (1)_75: 7864955616417709058
+      ESTE SI Isometric Assets (Con Aguas) (1)_76: -7287977308437335679
+      ESTE SI Isometric Assets (Con Aguas) (1)_77: 7928690879515627575
+      ESTE SI Isometric Assets (Con Aguas) (1)_78: -4444097509860628929
+      ESTE SI Isometric Assets (Con Aguas) (1)_79: 2937377998017292404
+      ESTE SI Isometric Assets (Con Aguas) (1)_8: 6440780322845399801
+      ESTE SI Isometric Assets (Con Aguas) (1)_80: -1871109473537801568
+      ESTE SI Isometric Assets (Con Aguas) (1)_81: -1109958842779963154
+      ESTE SI Isometric Assets (Con Aguas) (1)_82: 6535575890179342596
+      ESTE SI Isometric Assets (Con Aguas) (1)_83: 8902828236263277388
+      ESTE SI Isometric Assets (Con Aguas) (1)_84: -1767276117768797454
+      ESTE SI Isometric Assets (Con Aguas) (1)_85: 1784640542080331052
+      ESTE SI Isometric Assets (Con Aguas) (1)_86: 4427514634894373635
+      ESTE SI Isometric Assets (Con Aguas) (1)_87: -8457648283358040550
+      ESTE SI Isometric Assets (Con Aguas) (1)_88: 1151711267054071152
+      ESTE SI Isometric Assets (Con Aguas) (1)_89: -4413217438624360583
+      ESTE SI Isometric Assets (Con Aguas) (1)_9: -870590198291324019
+      ESTE SI Isometric Assets (Con Aguas) (1)_90: -7671933239622656910
+      ESTE SI Isometric Assets (Con Aguas) (1)_91: -6536807826242731316
+      ESTE SI Isometric Assets (Con Aguas) (1)_92: -2087400108687578233
+      ESTE SI Isometric Assets (Con Aguas) (1)_93: 9080117758470888206
+      ESTE SI Isometric Assets (Con Aguas) (1)_94: -7525581596416886337
+      ESTE SI Isometric Assets (Con Aguas) (1)_95: -6007515980190493029
+      ESTE SI Isometric Assets (Con Aguas) (1)_96: 5293194141157731825
+      ESTE SI Isometric Assets (Con Aguas) (1)_97: 8297602492816326430
+      ESTE SI Isometric Assets (Con Aguas) (1)_98: -957591133395878442
+      ESTE SI Isometric Assets (Con Aguas) (1)_99: 8116688941203986381
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

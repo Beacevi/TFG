@@ -12,7 +12,7 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     //STP 5: RULE TILES
 
     [Header("Player")]
-    [SerializeField] GameObject player; 
+    [SerializeField] GameObject player;
 
     [Header("Tilemap")]
     [SerializeField] Tilemap tilemap;
@@ -52,6 +52,11 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     [SerializeField] GameObject[] sandObjects;
     [Range(0f, 1f)]
     [SerializeField] float spawnChance = 0.1f;
+
+    [Header("Beach Settings")]
+    [SerializeField] int beachMinWidth = 1;
+    [SerializeField] int beachMaxWidth = 4;
+    [SerializeField] float beachNoiseScale = 6f;
 
     private float seedOffsetX;
     private float seedOffsetY;
@@ -174,14 +179,57 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
     private void PostProcessTerrain(int[,] grid)
     {
+        int[,] originalGrid = (int[,])grid.Clone();
+
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                if (grid[x, y] == 2 && CountNeighbors(grid, x, y, 0) > 0)
-                    grid[x, y] = 1; //grass next to water -> sand
+                if (originalGrid[x, y] != 2)
+                    continue;
+
+                int distanceToWater = GetDistanceToWater(originalGrid, x, y, beachMaxWidth);
+
+                if (distanceToWater == -1)
+                    continue;
+
+                float beachNoise = Mathf.PerlinNoise(
+                    (x + seedOffsetX) / beachNoiseScale,
+                    (y + seedOffsetY) / beachNoiseScale
+                );
+
+                float localBeachWidth = Mathf.Lerp(beachMinWidth, beachMaxWidth, beachNoise);
+
+                if (distanceToWater <= localBeachWidth)
+                    grid[x, y] = 1;
             }
         }
+    }
+
+    private int GetDistanceToWater(int[,] grid, int x, int y, int maxDistance)
+    {
+        for (int distance = 1; distance <= maxDistance; distance++)
+        {
+            for (int dx = -distance; dx <= distance; dx++)
+            {
+                for (int dy = -distance; dy <= distance; dy++)
+                {
+                    if (Mathf.Max(Mathf.Abs(dx), Mathf.Abs(dy)) != distance)
+                        continue;
+
+                    int nx = x + dx;
+                    int ny = y + dy;
+
+                    if (nx < 0 || ny < 0 || nx >= width || ny >= height)
+                        continue;
+
+                    if (grid[nx, ny] == 0)
+                        return distance;
+                }
+            }
+        }
+
+        return -1;
     }
 
     private void DrawIsometricGridAndPopulateNodes(int[,] grid)
@@ -291,7 +339,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
             //Vector3 worldPos = tilemap.CellToWorld(cell);
             Vector3 worldPos = tilemap.CellToWorld(cell);
-            worldPos.y += 0.75f;
+            //worldPos.y += 0.75f;
+            Vector3 cellSize = tilemap.layoutGrid.cellSize;
+            worldPos += new Vector3(0, cellSize.y * 0.5f, 0);
             GameObject spawned = Instantiate(birdSpawned.birdPrefab, worldPos, Quaternion.identity, parent);
             spawned.name = $"{birdSpawned.birdPrefab.name}_{pos.x}_{pos.y}";
 
@@ -444,7 +494,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
                 GameObject prefab = pool[Random.Range(0, pool.Length)];
                 Vector3 worldPos = tilemap.CellToWorld(cell);
-                worldPos += new Vector3(0, 1.25f/4, 0);
+                //worldPos += new Vector3(0, 1.25f/4, 0); 
+                Vector3 cellSize = tilemap.layoutGrid.cellSize;
+                worldPos += new Vector3(0, cellSize.y * 0.5f, 0);
 
                 GameObject spawned = Instantiate(prefab, worldPos, Quaternion.identity, parent);
                 spawned.name = $"{prefab.name}_{x}_{y}";
