@@ -1,4 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
@@ -13,6 +16,10 @@ public class TileAStar : MonoBehaviour
     [SerializeField] PCGtiles_IsometricPerlin mapGenerator;
 
     public ChangeScene cambiaEscenas;
+
+    public SpriteRenderer imagenPajaroConseguido;
+    
+    public string textoNombrePajaro;
 
     private List<Vector3> path = new List<Vector3>();
     private int currentIndex = 0;
@@ -201,8 +208,21 @@ public class TileAStar : MonoBehaviour
             {
                 ScenePersistentManager.instance.interactedBird.obtenido = true;
             }
-                
+
+            foreach (Transform hijo in ScenePersistentManager.instance.interactedBird.birdPrefab.transform)
+            {
+                if (hijo.name == "Normal")//El sprite de cuando no estan detras de un arbol
+                {
+                    imagenPajaroConseguido = hijo.GetComponent<SpriteRenderer>();
+                    textoNombrePajaro = ScenePersistentManager.instance.interactedBird.GetComponent<InteractableGameObject>().birdData.birdName;
+
+                }
+            }
+            
             //cambiaEscenas.StartCoroutine("StartAnimation");
+            
+            StartCoroutine(isometricCamera.MostrarPanelPajaroConseguido(imagenPajaroConseguido,textoNombrePajaro));
+
             Destroy(interactableNode.Interactable);
             interactableNode.Interactable = null;
             interactableNode.hasObject = false;

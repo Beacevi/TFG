@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtenido: 1
   birdPrefab: {fileID: 5805991993125803581, guid: 384ee0f28125fb79680a19065dd09eac, type: 3}
-  birdName: Pajaro9
+  birdName: Wiggy
   rondasTotales: 6
   notasPorTurno: 3
   maxFallos: 3

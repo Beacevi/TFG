@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtenido: 1
   birdPrefab: {fileID: 4595146617996938225, guid: 48bf3801890eb814793525cfe21b5402, type: 3}
-  birdName: Pajaro2
+  birdName: Precky
   rondasTotales: 4
   notasPorTurno: 1
   maxFallos: 3

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtenido: 1
   birdPrefab: {fileID: 5805991993125803581, guid: 40e2a345ab886c4acae9f1593ef15da9, type: 3}
-  birdName: Pajaro7
+  birdName: Esty
   rondasTotales: 6
   notasPorTurno: 3
   maxFallos: 3

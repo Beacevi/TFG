@@ -3,6 +3,7 @@ using static UnityEngine.GraphicsBuffer;
 using System.Collections;
 using Unity.VisualScripting;
 using TMPro;
+using UnityEngine.UI;
 
 public class IsometricCamera : MonoBehaviour
 {
@@ -35,6 +36,14 @@ public class IsometricCamera : MonoBehaviour
     private float dragThreshold = 10f;
 
     public static bool inputEnabled = true;
+
+    public GameObject panelPajaroConseguido;
+
+    public Image imagenPanelPajaroConseguido;
+
+    public TextMeshProUGUI textoNombrePajaro;
+
+    public GameObject botonSalirMenupajaroConseguido;
 
     [Header("Minigame Zoom")]
     [SerializeField] float minigameZoom = 6f;
@@ -262,8 +271,11 @@ public class IsometricCamera : MonoBehaviour
         Debug.Log("Cambiando de escena");
         state = CameraState.ChangingScene;
         changeScene.Cambiar_A_Escena("UI");
+    }
 
-        
+    public void ReturnToIsla()
+    {
+        panelPajaroConseguido.SetActive(false);
     }
 
 
@@ -275,4 +287,19 @@ public class IsometricCamera : MonoBehaviour
         tileAstar.SetCanMove(true);
         transform.position = target.position + offset;
     }
+
+    public IEnumerator MostrarPanelPajaroConseguido(SpriteRenderer imagenPajaroConseguido, string nombrePajaro)
+    {
+        imagenPanelPajaroConseguido.sprite = imagenPajaroConseguido.sprite;
+
+        textoNombrePajaro.text = nombrePajaro;
+
+        panelPajaroConseguido.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+        //botonSalirMenupajaroConseguido.SetActive(true);
+
+        panelPajaroConseguido.SetActive(false);
+    }
+
 }
