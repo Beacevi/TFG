@@ -217,13 +217,15 @@ public class TileAStar : MonoBehaviour
                 if (hijo.name == "Normal")//El sprite de cuando no estan detras de un arbol
                 {
                     imagenPajaroConseguido = hijo.GetComponent<SpriteRenderer>();
-                    textoNombrePajaro = ScenePersistentManager.instance.interactedBird.GetComponent<InteractableGameObject>().birdData.birdName;
+                    textoNombrePajaro = interactableNode.Interactable.GetComponent<InteractableGameObject>().birdData.birdName;
 
                 }
             }
             
             //cambiaEscenas.StartCoroutine("StartAnimation");
             
+            ScenePersistentManager.instance.collectedBirdsList.Add(ScenePersistentManager.instance.interactedBird);
+
             StartCoroutine(isometricCamera.MostrarPanelPajaroConseguido(imagenPajaroConseguido,textoNombrePajaro));
 
             Destroy(interactableNode.Interactable);

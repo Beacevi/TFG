@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,8 @@ public class ScenePersistentManager : MonoBehaviour
     [SerializeField] private GameObject bird;
     [SerializeField] private GameObject balloon;
     public Bird interactedBird;
+
+    public List <Bird> collectedBirdsList;
 
 
     private void Awake()
@@ -30,12 +33,29 @@ public class ScenePersistentManager : MonoBehaviour
         SceneManager.sceneUnloaded += OnSceneUnloaded;
 
         ApplyVisibility(SceneManager.GetActiveScene().name);
+        collectedBirdsList = new List<Bird>();
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    ApplyVisibility(scene.name);
+
+    if (scene.name.Equals("UI"))
     {
-        ApplyVisibility(scene.name);
+        if (collectedBirdsList.Count > 0)
+        {
+            Debug.Log("Habia pajaros en la lista de domesticados");
+            foreach (Bird b in collectedBirdsList)
+            {
+                Debug.Log($"Pájaro recogido: {b.birdName}");
+            }
+        }
+        else
+        {
+            Debug.Log("NOOOOOO habia pajaros en la lista de domesticados");
+        }
     }
+}
 
     private void OnSceneUnloaded(Scene scene)
     {

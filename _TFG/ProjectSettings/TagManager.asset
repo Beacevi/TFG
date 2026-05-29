@@ -31,6 +31,8 @@ TagManager:
   - Sticker
   - PasosBar
   - Coin
+  - CanvasDesktop
+  - CanvasMobile
   layers:
   - Default
   - TransparentFX
