@@ -16,6 +16,15 @@ public class SimonGameManager : MonoBehaviour
     public TextMeshProUGUI contadorText;
     public Button startButton, backButton;
 
+    [Header("Confirmación de salida")]
+    [Tooltip("Panel con los botones Sí/No que pide confirmación al pulsar el botón Atrás.")]
+    [SerializeField] private GameObject exitConfirmPanel;
+
+    [Tooltip("ChangeScene al que llamar para cambiar de escena al confirmar la salida. Si se deja vacío, se busca por tag SceneChanger.")]
+    [SerializeField] private ChangeScene changeScene;
+    [Tooltip("Nombre de la escena a la que volver al confirmar la salida del minijuego.")]
+    [SerializeField] private string exitScene = "UI";
+
     public Image globo;
 
     public float flashDuration = 1f;
@@ -89,28 +98,47 @@ public class SimonGameManager : MonoBehaviour
 
     public void OnBackButtonPressed()
     {
+        // Si hay panel de confirmación, lo mostramos y esperamos a Sí/No.
+        // Si no, conservamos el comportamiento previo (salida directa).
+        if (exitConfirmPanel != null)
+        {
+            exitConfirmPanel.SetActive(true);
+            return;
+        }
 
-        //if (startButton != null && backButton != null)
-        //{
-        //    startButton.gameObject.SetActive(false);
-        //    backButton.gameObject.SetActive(false);
-        //}
-        //if (globo != null)
-        //{
-        //    globo.gameObject.SetActive(false);
-        //}
+        ConfirmExit();
+    }
 
-        //for (int i = 0; i < circles.Length; i++)
-        //{
-        //    if (circles[i] != null)
-        //    {
-        //        circles[i].gameObject.SetActive(false);
-        //    }
-        //}
-
+    /// <summary>Botón "Sí" del panel de confirmación de salida.</summary>
+    public void ConfirmExit()
+    {
+        if (exitConfirmPanel != null) exitConfirmPanel.SetActive(false);
         StopAllCoroutines();
-        StartCoroutine(wait());
-       
+
+        // Resolver ChangeScene si no está asignado: lo buscamos por tag.
+        if (changeScene == null)
+        {
+            var go = GameObject.FindGameObjectWithTag("SceneChanger");
+            if (go != null) changeScene = go.GetComponent<ChangeScene>();
+        }
+
+        if (changeScene != null)
+        {
+            changeScene.Cambiar_A_Escena(exitScene);
+        }
+        else
+        {
+            // Sin ChangeScene disponible, conservamos el comportamiento anterior
+            // (ocultar el canvas) para no dejar al jugador colgado.
+            Debug.LogWarning("[SimonGameManager] No hay ChangeScene asignado ni encontrado por tag; se oculta el canvas como fallback.");
+            StartCoroutine(wait());
+        }
+    }
+
+    /// <summary>Botón "No" del panel de confirmación de salida.</summary>
+    public void CancelExit()
+    {
+        if (exitConfirmPanel != null) exitConfirmPanel.SetActive(false);
     }
     IEnumerator SetActiveObjects()
     {
@@ -180,6 +208,10 @@ public class SimonGameManager : MonoBehaviour
     {
         canPress = false;
 
+        // Apagar visualmente los círculos durante la secuencia: el jugador ve que
+        // no son pulsables. El flash de cada nota vuelve por sí solo al color atenuado.
+        foreach (var c in circles) c.SetIdleDimmed(true);
+
         foreach (int index in pattern)
         {
             PlaySound(index);
@@ -190,6 +222,9 @@ public class SimonGameManager : MonoBehaviour
 
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
+
+        // Devolver los círculos a su color normal para indicar que es el turno del jugador.
+        foreach (var c in circles) c.SetIdleDimmed(false);
 
         canPress = true;
     }

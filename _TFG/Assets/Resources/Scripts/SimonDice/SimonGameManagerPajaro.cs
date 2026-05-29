@@ -30,6 +30,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
     public Button startButton;
     public Button backButton;
 
+    [Header("Confirmación de salida")]
+    [Tooltip("Panel con los botones Sí/No que pide confirmación al pulsar el botón de salir.")]
+    [SerializeField] private GameObject exitConfirmPanel;
+
     private int level = 0;
     private int failCount = 0;
     public int maxFails = 3;
@@ -77,9 +81,11 @@ public class SimonGameManagerPajaro : MonoBehaviour
             Debug.LogWarning("No se encontró SpriteRenderer en el prefab del pájaro ni en sus hijos.");
         }
 
-        // Ocultar botones — el minijuego arranca automáticamente
+        // El minijuego arranca automáticamente, por eso se oculta el botón de Start.
+        // El botón de salir (backButton) sí se muestra para que el jugador pueda abandonar.
         if (startButton != null) startButton.gameObject.SetActive(false);
-        if (backButton != null)  backButton.gameObject.SetActive(false);
+        if (backButton != null)  backButton.gameObject.SetActive(true);
+        if (exitConfirmPanel != null) exitConfirmPanel.SetActive(false);
 
         OnStartButtonPressed();
     }
@@ -136,6 +142,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
     {
         canPress = false;
 
+        // Apagar visualmente los círculos durante la secuencia: el jugador ve que
+        // no son pulsables. El flash de cada nota vuelve por sí solo al color atenuado.
+        foreach (var c in circles) c.SetIdleDimmed(true);
+
         foreach (int index in pattern)
         {
             PlaySound(index);
@@ -143,6 +153,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
             yield return StartCoroutine(circles[index].Flash(flashDuration));
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
+
+        // Devolver los círculos a su color normal para indicar que es el turno del jugador.
+        foreach (var c in circles) c.SetIdleDimmed(false);
 
         canPress = true;
     }
@@ -335,5 +348,50 @@ public class SimonGameManagerPajaro : MonoBehaviour
     public bool CanPlayerPress()
     {
         return isPlayerTurn && canPress;
+    }
+
+    // -------- Salida con confirmación --------
+
+    /// <summary>Botón de salir del minijuego. Muestra el panel de confirmación.</summary>
+    public void OnBackButtonPressed()
+    {
+        if (exitConfirmPanel != null)
+        {
+            exitConfirmPanel.SetActive(true);
+            return;
+        }
+
+        // Sin panel, sale directamente (no debería ocurrir si está bien configurado en el Inspector).
+        ConfirmExit();
+    }
+
+    /// <summary>Botón "Sí" del panel de confirmación: aborta el minijuego sin penalizar al pájaro.</summary>
+    public void ConfirmExit()
+    {
+        if (exitConfirmPanel != null) exitConfirmPanel.SetActive(false);
+
+        // Bloquear el input del mapa durante un instante para evitar que el clic
+        // sobre el botón "Sí" se propague al tilemap (mismo frame, LateUpdate de
+        // IsometricCamera) y mueva al jugador a la casilla bajo el botón.
+        TileAStar.BlockInputForSeconds(0.3f);
+
+        // Detener cualquier corrutina en curso (secuencia, flashes, esperas).
+        StopAllCoroutines();
+
+        // No se marca el pájaro como fallado: el jugador podrá volver a intentarlo.
+        selectedBird = null;
+        if (ScenePersistentManager.instance != null)
+        {
+            ScenePersistentManager.instance.interactedBird = null;
+        }
+
+        IsActive = false;
+        Destroy(transform.root.gameObject);
+    }
+
+    /// <summary>Botón "No" del panel de confirmación: cierra el panel y deja seguir la partida.</summary>
+    public void CancelExit()
+    {
+        if (exitConfirmPanel != null) exitConfirmPanel.SetActive(false);
     }
 }

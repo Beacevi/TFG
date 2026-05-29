@@ -34888,6 +34888,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -424.0205
       objectReference: {fileID: 0}
+    - target: {fileID: 4391781094466448154, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391781094466448154, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1780912822}
+    - target: {fileID: 4391781094466448154, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Cambiar_A_Escena
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391781094466448154, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391781094466448154, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: SimonSays
+      objectReference: {fileID: 0}
     - target: {fileID: 4634368587329242988, guid: 9c8b59557e5e7a34982dfbf7c7425147, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

@@ -118,6 +118,7 @@ public class IsometricCamera : MonoBehaviour
     void HandleInput()
     {
         if (SimonGameManagerPajaro.IsActive) return;
+        if (IslandExitButton.IsConfirmOpen) return;
 
         if(tileAstar != null)
         {

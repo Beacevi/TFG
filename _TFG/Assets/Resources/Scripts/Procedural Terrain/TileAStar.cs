@@ -135,6 +135,9 @@ public class TileAStar : MonoBehaviour
 
         if (!canMove) return;
 
+        // Si está abierto el panel de confirmación de salida de la isla, ignorar clics.
+        if (IslandExitButton.IsConfirmOpen) return;
+
         if (IsPointerOverUI(screenPos)) return;
 
         Vector3 w = Camera.main.ScreenToWorldPoint(screenPos);
