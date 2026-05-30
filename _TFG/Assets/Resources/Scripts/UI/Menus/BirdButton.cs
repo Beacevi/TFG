@@ -208,6 +208,7 @@ public class BirdButton : MonoBehaviour
         }
 
     }
+
     private void TypeOfBoosts()
     {
         if (BirdSelected.Count != 3)
