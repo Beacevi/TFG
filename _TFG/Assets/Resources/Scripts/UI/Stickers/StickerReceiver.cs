@@ -1,7 +1,21 @@
+/**
+ * @file StickerReceiver.cs
+ * @brief Zona receptora que permite colocar stickers o elementos decorativos en la interfaz.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using UnityEngine;
 
+/// <summary>
+/// Zona receptora que permite colocar stickers o elementos decorativos en la interfaz.
+/// </summary>
 public class StickerReceiver : MonoBehaviour
 {
+    /// <summary>
+    /// Procesa la pulsación directa sobre el objeto desde el ratón o entrada equivalente.
+    /// </summary>
     private void OnMouseDown()
     {
         if (!StickerManager.Instance.modoActual)
@@ -16,6 +30,9 @@ public class StickerReceiver : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Elimina sticker del estado gestionado por el componente.
+    /// </summary>
     void RemoveSticker()
     {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -45,6 +62,9 @@ public class StickerReceiver : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a place sticker dentro de StickerReceiver.
+    /// </summary>
     void PlaceSticker()
 {
     if (StickerManager.Instance != null)

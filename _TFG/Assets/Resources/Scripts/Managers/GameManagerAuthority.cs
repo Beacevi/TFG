@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+/**
+ * @file GameManagerAuthority.cs
+ * @brief Capa de autoridad que valida operaciones relevantes del estado global antes de aplicarlas.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
+using UnityEngine;
 using TMPro;
 
 /// <summary>
@@ -16,23 +24,44 @@ using TMPro;
 /// </summary>
 public class GameManagerAuthority : MonoBehaviour
 {
+    /// <summary>
+    /// Instancia singleton utilizada para acceder globalmente al controlador.
+    /// </summary>
     public static GameManagerAuthority Instance;
 
     // ── Referencia a la autoridad ────────────────────────────────────────────
     // El cliente necesita la autoridad para funcionar; si no está presente, no opera.
+    /// <summary>
+    /// Campo de tipo EconomyAuthority utilizado para almacenar o configurar authority.
+    /// </summary>
     private EconomyAuthority authority;
 
+    /// <summary>
+    /// Indica si clouds closing está activo o habilitado.
+    /// </summary>
     public bool cloudsClosing = false;
+    /// <summary>
+    /// Campo de tipo CSVReader utilizado para almacenar o configurar reader.
+    /// </summary>
     public CSVReader reader;
 
     // ── UI ───────────────────────────────────────────────────────────────────
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar coins ui.
+    /// </summary>
     [Header("UI")]
     [SerializeField] private TMP_Text coins_ui;
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar gems ui.
+    /// </summary>
     [SerializeField] private TMP_Text gems_ui;
 
     // ────────────────────────────────────────────────────────────────────────
     #region Unity Lifecycle
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     private void Awake()
     {
         if (Instance == null)
@@ -56,11 +85,17 @@ public class GameManagerAuthority : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private void Start()
     {
         RefreshUI();
     }
 
+    /// <summary>
+    /// Guarda o sincroniza datos cuando la aplicación se cierra.
+    /// </summary>
     private void OnApplicationQuit()
     {
         // El guardado lo gestiona la autoridad; aquí solo lo invocamos
@@ -158,10 +193,30 @@ public class GameManagerAuthority : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Getters (el cliente lee de la autoridad, no de sus propias variables)
 
+    /// <summary>
+    /// Obtiene money a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetMoney() => CheckAuthority() ? authority.GetCoins() : 0;
+    /// <summary>
+    /// Obtiene gems a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetGems() => CheckAuthority() ? authority.GetGems() : 0;
+    /// <summary>
+    /// Obtiene energy a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetEnergy() => CheckAuthority() ? authority.GetEnergy() : 0;
+    /// <summary>
+    /// Obtiene curret level a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetCurretLevel() => CheckAuthority() ? authority.GetCurrentLevel() : 1;
+    /// <summary>
+    /// Obtiene balloon level a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetBalloonLevel() => CheckAuthority() ? authority.GetBalloonLevel() : 1;
 
     #endregion

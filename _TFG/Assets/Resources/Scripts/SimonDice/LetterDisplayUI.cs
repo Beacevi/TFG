@@ -1,21 +1,50 @@
+/**
+ * @file LetterDisplayUI.cs
+ * @brief Actualiza la visualización de letras o símbolos durante el minijuego musical.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
+/// <summary>
+/// Actualiza la visualización de letras o símbolos durante el minijuego musical.
+/// </summary>
 public class LetterDisplayUI : MonoBehaviour
 {
+    /// <summary>
+    /// Instancia singleton utilizada para acceder globalmente al controlador.
+    /// </summary>
     public static LetterDisplayUI Instance;
 
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar letter image.
+    /// </summary>
     [Header("UI")]
     public Image letterImage;
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar energy text.
+    /// </summary>
     public TextMeshProUGUI energyText;
 
+    /// <summary>
+    /// Tiempo o duración asociado a display time.
+    /// </summary>
     [Header("Animation")]
     public float displayTime = 0.6f;
 
+    /// <summary>
+    /// Campo de tipo Coroutine utilizado para almacenar o configurar current routine.
+    /// </summary>
     private Coroutine currentRoutine;
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     void Awake()
     {
         Instance = this;
@@ -24,6 +53,10 @@ public class LetterDisplayUI : MonoBehaviour
         energyText.enabled = false;
     }
 
+    /// <summary>
+    /// Muestra letter en la interfaz o en la escena.
+    /// </summary>
+    /// <param name="sprite">Parámetro sprite empleado por el método.</param>
     public void ShowLetter(Sprite sprite)
     {
         if (currentRoutine != null)
@@ -32,6 +65,11 @@ public class LetterDisplayUI : MonoBehaviour
         currentRoutine = StartCoroutine(ShowLetterRoutine(sprite));
     }
 
+    /// <summary>
+    /// Muestra letter routine en la interfaz o en la escena.
+    /// </summary>
+    /// <param name="sprite">Parámetro sprite empleado por el método.</param>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator ShowLetterRoutine(Sprite sprite)
     {
         energyText.enabled = false;
@@ -47,7 +85,7 @@ public class LetterDisplayUI : MonoBehaviour
         letterImage.color = new Color(1, 1, 1, 1);
         letterImage.transform.localScale = Vector3.zero;
 
-        // Animaci�n pop
+        // Animaci�n pop
         float scaleTime = 0.2f;
         float t = 0;
 
@@ -87,6 +125,10 @@ public class LetterDisplayUI : MonoBehaviour
         letterImage.enabled = false;
     }
 
+    /// <summary>
+    /// Muestra energy en la interfaz o en la escena.
+    /// </summary>
+    /// <param name="energy">Parámetro energy empleado por el método.</param>
     public void ShowEnergy(int energy)
     {
         if (currentRoutine != null)
@@ -95,6 +137,11 @@ public class LetterDisplayUI : MonoBehaviour
         StartCoroutine(ShowEnergyRoutine(energy));
     }
 
+    /// <summary>
+    /// Muestra energy routine en la interfaz o en la escena.
+    /// </summary>
+    /// <param name="energy">Parámetro energy empleado por el método.</param>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator ShowEnergyRoutine(int energy)
     {
         letterImage.enabled = false;
@@ -107,7 +154,7 @@ public class LetterDisplayUI : MonoBehaviour
 
         energyText.transform.localScale = Vector3.zero;
 
-        // Animaci�n
+        // Animaci�n
         float scaleTime = 0.25f;
         float t = 0;
 

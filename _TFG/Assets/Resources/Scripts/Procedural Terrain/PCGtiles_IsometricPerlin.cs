@@ -1,8 +1,19 @@
+/**
+ * @file PCGtiles_IsometricPerlin.cs
+ * @brief Genera una isla isométrica mediante ruido procedural, máscara insular, autómata celular y colocación de objetos.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+/// <summary>
+/// Genera una isla isométrica mediante ruido procedural, máscara insular, autómata celular y colocación de objetos.
+/// </summary>
 public class PCGtiles_IsometricPerlin : MonoBehaviour
 {
     //STP 1: SET TILES 
@@ -11,36 +22,81 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
     //STP 4: CELULLAR AUTOMATA
     //STP 5: RULE TILES
 
+    /// <summary>
+    /// Referencia al jugador o a su objeto asociado en la escena.
+    /// </summary>
     [Header("Player")]
     [SerializeField] GameObject player;
 
+    /// <summary>
+    /// Tilemap sobre el que se dibuja o consulta el terreno.
+    /// </summary>
     [Header("Tilemap")]
     [SerializeField] Tilemap tilemap;
 
+    /// <summary>
+    /// Campo de tipo TileBase utilizado para almacenar o configurar rule grass.
+    /// </summary>
     [Header("Tiles (RuleTile or TileBase)")]
     [SerializeField] TileBase ruleGrass;
+    /// <summary>
+    /// Campo de tipo TileBase utilizado para almacenar o configurar rule sand.
+    /// </summary>
     [SerializeField] TileBase ruleSand;
+    /// <summary>
+    /// Campo de tipo TileBase utilizado para almacenar o configurar rule water.
+    /// </summary>
     [SerializeField] TileBase ruleWater;
 
+    /// <summary>
+    /// Anchura del mapa o área generada.
+    /// </summary>
     [Header("Map Settings")]
     public int width = 50;
+    /// <summary>
+    /// Altura del mapa o área generada.
+    /// </summary>
     public int height = 50;
 
+    /// <summary>
+    /// Escala del ruido procedural utilizada para modular la generación.
+    /// </summary>
     [Header("Perlin Noise Settings")]
     [SerializeField] float noiseScale = 10f;
+    /// <summary>
+    /// Semilla utilizada para obtener resultados procedurales reproducibles.
+    /// </summary>
     [SerializeField] int seed = -1;
 
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar island falloff power.
+    /// </summary>
     [Header("Island Shape Settings")]
     [SerializeField] float islandFalloffPower = 2.5f;   //cuanto mas alto, mas suave el borde
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar island size factor.
+    /// </summary>
     [SerializeField] float islandSizeFactor = 0.75f;    //cuanto mas bajo, mas peque�a la isla
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar coast roughness.
+    /// </summary>
     [SerializeField] float coastRoughness = 0.25f;      //cuanto mas alto, mas irregular el contorno
 
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar smoothing iterations.
+    /// </summary>
     [Header("Cellular Automata")]
     [Range(0, 5)] public int smoothingIterations = 2;
 
     [Header("Interactable Objects")]
     //[SerializeField] LayerMask interactableGameObjectsLayerMask;
+    /// <summary>
+    /// Colección de interactable game objects utilizada por este componente.
+    /// </summary>
     [SerializeField] Bird[] interactableGameObjects;
+    /// <summary>
+    /// Valor numérico que limita o define interactable game objects count.
+    /// </summary>
     [SerializeField] int interactableGameObjectsCount = 10;
     //[Range(0f, 1f)]
     //[SerializeField] float spawnChance = 0.1f;
@@ -48,29 +104,74 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
     [Header("Object Prefabs (per biome)")]
     //[SerializeField] LayerMask terrainLayerMask;
+    /// <summary>
+    /// Colección de grass objects utilizada por este componente.
+    /// </summary>
     [SerializeField] GameObject[] grassObjects;
+    /// <summary>
+    /// Colección de sand objects utilizada por este componente.
+    /// </summary>
     [SerializeField] GameObject[] sandObjects;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar spawn chance.
+    /// </summary>
     [Range(0f, 1f)]
     [SerializeField] float spawnChance = 0.1f;
 
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar beach min width.
+    /// </summary>
     [Header("Beach Settings")]
     [SerializeField] int beachMinWidth = 1;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar beach max width.
+    /// </summary>
     [SerializeField] int beachMaxWidth = 4;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar beach noise scale.
+    /// </summary>
     [SerializeField] float beachNoiseScale = 6f;
 
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar seed offset x.
+    /// </summary>
     private float seedOffsetX;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar seed offset y.
+    /// </summary>
     private float seedOffsetY;
+    /// <summary>
+    /// Campo de tipo Transform utilizado para almacenar o configurar map parent.
+    /// </summary>
     private Transform mapParent;
 
+    /// <summary>
+    /// Campo de tipo int[,] utilizado para almacenar o configurar terrain grid.
+    /// </summary>
     private int[,] terrainGrid;
 
+    /// <summary>
+    /// Campo de tipo Node[,] utilizado para almacenar o configurar nodes.
+    /// </summary>
     public Node[,] nodes;
+    /// <summary>
+    /// Cantidad de monedas almacenadas o mostradas por el sistema.
+    /// </summary>
     [Header("Coins")]
     [SerializeField] Coin[] coins;
+    /// <summary>
+    /// Valor numérico que limita o define coins count.
+    /// </summary>
     [SerializeField] int coinsCount = 15;
+    /// <summary>
+    /// Indica si coins on grass only está activo o habilitado.
+    /// </summary>
     [SerializeField] bool coinsOnGrassOnly = false; // o filtra por bioma que quieras
 
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private void Start()
     {
         if (seed == -1)
@@ -83,6 +184,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a regenerate dentro de PCGtiles_IsometricPerlin.
+    /// </summary>
     [ContextMenu("Regenerate Map")]
     public void Regenerate()
     {
@@ -93,6 +197,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         SpawnPlayer(10);
     }
 
+    /// <summary>
+    /// Genera map utilizando los parámetros configurados.
+    /// </summary>
     private void GenerateMap()
     {
         tilemap.ClearAllTiles();
@@ -139,6 +246,12 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         Debug.Log($"[PCG] Isla generada con semilla {seed}");
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a cellular step dentro de PCGtiles_IsometricPerlin.
+    /// </summary>
+    /// <param name="int[">Parámetro int empleado por el método.</param>
+    /// <param name="grid">Parámetro grid empleado por el método.</param>
+    /// <returns>Instancia o valor de tipo int[,] resultante de la operación.</returns>
     private int[,] CellularStep(int[,] grid)
     {
         int[,] newGrid = new int[width, height];
@@ -162,6 +275,15 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         return newGrid;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a count neighbors dentro de PCGtiles_IsometricPerlin.
+    /// </summary>
+    /// <param name="int[">Parámetro int empleado por el método.</param>
+    /// <param name="grid">Parámetro grid empleado por el método.</param>
+    /// <param name="x">Posición o coordenada utilizada en el cálculo.</param>
+    /// <param name="y">Posición o coordenada utilizada en el cálculo.</param>
+    /// <param name="target">Parámetro target empleado por el método.</param>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     private int CountNeighbors(int[,] grid, int x, int y, int target)
     {
         int count = 0;
@@ -177,6 +299,11 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         return count;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a post process terrain dentro de PCGtiles_IsometricPerlin.
+    /// </summary>
+    /// <param name="int[">Parámetro int empleado por el método.</param>
+    /// <param name="grid">Parámetro grid empleado por el método.</param>
     private void PostProcessTerrain(int[,] grid)
     {
         int[,] originalGrid = (int[,])grid.Clone();
@@ -206,6 +333,15 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Obtiene distance to water a partir del estado actual del sistema.
+    /// </summary>
+    /// <param name="int[">Parámetro int empleado por el método.</param>
+    /// <param name="grid">Parámetro grid empleado por el método.</param>
+    /// <param name="x">Posición o coordenada utilizada en el cálculo.</param>
+    /// <param name="y">Posición o coordenada utilizada en el cálculo.</param>
+    /// <param name="maxDistance">Parámetro max distance empleado por el método.</param>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     private int GetDistanceToWater(int[,] grid, int x, int y, int maxDistance)
     {
         for (int distance = 1; distance <= maxDistance; distance++)
@@ -232,6 +368,11 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         return -1;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a draw isometric grid and populate nodes dentro de PCGtiles_IsometricPerlin.
+    /// </summary>
+    /// <param name="int[">Parámetro int empleado por el método.</param>
+    /// <param name="grid">Parámetro grid empleado por el método.</param>
     private void DrawIsometricGridAndPopulateNodes(int[,] grid)
     {
         tilemap.ClearAllTiles();
@@ -267,6 +408,10 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         tilemap.CompressBounds();
     }
 
+    /// <summary>
+    /// Obtiene random bird by chance a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Instancia o valor de tipo Bird resultante de la operación.</returns>
     private Bird GetRandomBirdByChance()
     {
         float totalChance = 0f;
@@ -291,6 +436,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         return interactableGameObjects[0];
     }
 
+    /// <summary>
+    /// Instancia o coloca interactables objects from nodes dentro de la escena.
+    /// </summary>
     private void SpawnInteractablesObjectsFromNodes()
     {
         Transform parent = transform.Find("SpawnedInteractableObjects");
@@ -374,6 +522,10 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Obtiene random coin by chance a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Instancia o valor de tipo Coin resultante de la operación.</returns>
     private Coin GetRandomCoinByChance()
     {
         float total = coins.Sum(c => c.spawnChance);
@@ -389,6 +541,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         return coins[0];
     }
 
+    /// <summary>
+    /// Instancia o coloca coins from nodes dentro de la escena.
+    /// </summary>
     private void SpawnCoinsFromNodes()
     {
         Transform parent = transform.Find("SpawnedCoins");
@@ -459,6 +614,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instancia o coloca decoration from nodes dentro de la escena.
+    /// </summary>
     private void SpawnDecorationFromNodes()
     {
         Transform parent = transform.Find("SpawnedObjects");
@@ -525,6 +683,10 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         }
 
     }
+    /// <summary>
+    /// Instancia o coloca player dentro de la escena.
+    /// </summary>
+    /// <param name="stepsAvailable">Parámetro steps available empleado por el método.</param>
     private void SpawnPlayer(int stepsAvailable)
     {
         if (player == null)
@@ -569,6 +731,9 @@ public class PCGtiles_IsometricPerlin : MonoBehaviour
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<IsometricCamera>().AssingPlayer(spawnedPlayer);
     }
 
+    /// <summary>
+    /// Actualiza la lógica del componente en cada fotograma.
+    /// </summary>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))

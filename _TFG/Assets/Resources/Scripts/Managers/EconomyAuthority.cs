@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+/**
+ * @file EconomyAuthority.cs
+ * @brief Actúa como punto de control para validar operaciones económicas del juego.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
+using UnityEngine;
 using System.IO;
 using GUPS.AntiCheat.Protected;
 
@@ -19,29 +27,65 @@ using GUPS.AntiCheat.Protected;
 /// </summary>
 public class EconomyAuthority : MonoBehaviour
 {
+    /// <summary>
+    /// Instancia singleton utilizada para acceder globalmente al controlador.
+    /// </summary>
     public static EconomyAuthority Instance;
 
     // ── Variables críticas (solo accesibles desde este módulo) ───────────────
     // Usamos ProtectedInt32 para añadir la capa de cifrado en memoria del Sistema 1
     // por encima de la autoridad centralizada del Sistema 3.
+    /// <summary>
+    /// Cantidad de monedas almacenadas o mostradas por el sistema.
+    /// </summary>
     [SerializeField] private int coins = 200;
+    /// <summary>
+    /// Cantidad de gemas almacenadas o mostradas por el sistema.
+    /// </summary>
     [SerializeField] private int gems = 20;
+    /// <summary>
+    /// Valor de energía o stamina disponible para el jugador.
+    /// </summary>
     [SerializeField] private int energy = 6;
+    /// <summary>
+    /// Nivel actual de progreso del jugador.
+    /// </summary>
     [SerializeField] private int currentLevel = 1;
+    /// <summary>
+    /// Nivel actual del globo aerostático.
+    /// </summary>
     [SerializeField] private int balloonLevel = 1;
 
     // ── Límites del sistema ──────────────────────────────────────────────────
+    /// <summary>
+    /// Valor numérico que limita o define max coins.
+    /// </summary>
     private const int MAX_COINS = 999999;
+    /// <summary>
+    /// Valor numérico que limita o define max gems.
+    /// </summary>
     private const int MAX_GEMS = 99999;
+    /// <summary>
+    /// Valor numérico que limita o define max energy.
+    /// </summary>
     private const int MAX_ENERGY = 500;
+    /// <summary>
+    /// Valor numérico que limita o define max change per op.
+    /// </summary>
     private const int MAX_CHANGE_PER_OP = 1000;
 
     // ── Persistencia ─────────────────────────────────────────────────────────
+    /// <summary>
+    /// Campo de tipo string utilizado para almacenar o configurar save path.
+    /// </summary>
     private string savePath;
 
     // ────────────────────────────────────────────────────────────────────────
     #region Unity Lifecycle
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     private void Awake()
     {
         if (Instance == null)
@@ -57,6 +101,9 @@ public class EconomyAuthority : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Guarda o sincroniza datos cuando la aplicación se cierra.
+    /// </summary>
     private void OnApplicationQuit()
     {
         SaveState();
@@ -211,10 +258,30 @@ public class EconomyAuthority : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Getters (solo lectura para el cliente)
 
+    /// <summary>
+    /// Obtiene coins a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetCoins() => coins;
+    /// <summary>
+    /// Obtiene gems a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetGems() => gems;
+    /// <summary>
+    /// Obtiene energy a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetEnergy() => energy;
+    /// <summary>
+    /// Obtiene current level a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetCurrentLevel() => currentLevel;
+    /// <summary>
+    /// Obtiene balloon level a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetBalloonLevel() => balloonLevel;
 
     #endregion
@@ -237,6 +304,11 @@ public class EconomyAuthority : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Validaciones internas
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a is amount in range dentro de EconomyAuthority.
+    /// </summary>
+    /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     private bool IsAmountInRange(int amount)
     {
         return amount >= -MAX_CHANGE_PER_OP && amount <= MAX_CHANGE_PER_OP;
@@ -247,6 +319,9 @@ public class EconomyAuthority : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Persistencia
 
+    /// <summary>
+    /// Guarda el estado actual para que pueda recuperarse posteriormente.
+    /// </summary>
     public void SaveState()
     {
         SaveDataManager data = new SaveDataManager
@@ -263,6 +338,9 @@ public class EconomyAuthority : MonoBehaviour
         Debug.Log("[Authority] Estado guardado: " + savePath);
     }
 
+    /// <summary>
+    /// Carga el estado previamente guardado y restaura los datos del sistema.
+    /// </summary>
     private void LoadState()
     {
         if (!File.Exists(savePath))
@@ -302,6 +380,9 @@ public class EconomyAuthority : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Restablece los valores del sistema a su configuración inicial o por defecto.
+    /// </summary>
     public void ResetState()
     {
         coins = 200;

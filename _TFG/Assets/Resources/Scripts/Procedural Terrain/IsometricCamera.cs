@@ -1,3 +1,11 @@
+/**
+ * @file IsometricCamera.cs
+ * @brief Controla el movimiento de la cámara isométrica y sus estados dentro de la isla procedural.
+ * @author Hortensia Studio - Alejandro Romero Burgada
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using System.Collections;
@@ -5,59 +13,167 @@ using Unity.VisualScripting;
 using TMPro;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controla el movimiento de la cámara isométrica y sus estados dentro de la isla procedural.
+/// </summary>
 public class IsometricCamera : MonoBehaviour
 {
+    /// <summary>
+    /// Campo de tipo Transform utilizado para almacenar o configurar target.
+    /// </summary>
     [SerializeField] Transform target;
+    /// <summary>
+    /// Campo de tipo Vector3 utilizado para almacenar o configurar offset.
+    /// </summary>
     [SerializeField] Vector3 offset = new Vector3(25, 25, -25);
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar follow speed.
+    /// </summary>
     [SerializeField] float followSpeed = 5f;
 
+    /// <summary>
+    /// Campo de tipo ChangeScene utilizado para almacenar o configurar change scene.
+    /// </summary>
     [SerializeField] ChangeScene changeScene;
+    /// <summary>
+    /// Campo de tipo Vector3 utilizado para almacenar o configurar start pos.
+    /// </summary>
     private Vector3 startPos;
+    /// <summary>
+    /// Indica si no more steps está activo o habilitado.
+    /// </summary>
     bool noMoreSteps = false;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar distancia minima.
+    /// </summary>
     float distanciaMinima = 0.1f;
 
+    /// <summary>
+    /// Campo de tipo TileAStar utilizado para almacenar o configurar tile astar.
+    /// </summary>
     private TileAStar tileAstar;
 
+    /// <summary>
+    /// Campo de tipo Animator utilizado para almacenar o configurar animator.
+    /// </summary>
     [SerializeField] private Animator animator;
 
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar drag speed.
+    /// </summary>
     [Header("Camera Control")]
     [SerializeField] float dragSpeed = 0.01f;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar zoom speed.
+    /// </summary>
     [SerializeField] float zoomSpeed = 0.1f;
+    /// <summary>
+    /// Valor numérico que limita o define min zoom.
+    /// </summary>
     [SerializeField] float minZoom = 5f;
+    /// <summary>
+    /// Valor numérico que limita o define max zoom.
+    /// </summary>
     [SerializeField] float maxZoom = 20f;
+    /// <summary>
+    /// Valor numérico que limita o define max distance from target.
+    /// </summary>
     [SerializeField] float maxDistanceFromTarget = 15f;
 
+    /// <summary>
+    /// Campo de tipo Camera utilizado para almacenar o configurar cam.
+    /// </summary>
     private Camera cam;
+    /// <summary>
+    /// Indica si is attached está activo o habilitado.
+    /// </summary>
     private bool isAttached = true;
+    /// <summary>
+    /// Campo de tipo Vector3 utilizado para almacenar o configurar last mouse pos.
+    /// </summary>
     private Vector3 lastMousePos;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar initial zoom.
+    /// </summary>
     private float initialZoom;
 
+    /// <summary>
+    /// Indica si is dragging está activo o habilitado.
+    /// </summary>
     private bool isDragging = false;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar drag threshold.
+    /// </summary>
     private float dragThreshold = 10f;
 
+    /// <summary>
+    /// Indica si input enabled está activo o habilitado.
+    /// </summary>
     public static bool inputEnabled = true;
 
+    /// <summary>
+    /// Panel de interfaz asociado a panel pajaro conseguido.
+    /// </summary>
     public GameObject panelPajaroConseguido;
 
+    /// <summary>
+    /// Panel de interfaz asociado a imagen panel pajaro conseguido.
+    /// </summary>
     public Image imagenPanelPajaroConseguido;
 
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar texto nombre pajaro.
+    /// </summary>
     public TextMeshProUGUI textoNombrePajaro;
 
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar boton salir menupajaro conseguido.
+    /// </summary>
     public GameObject botonSalirMenupajaroConseguido;
 
+    /// <summary>
+    /// Valor numérico que limita o define minigame zoom.
+    /// </summary>
     [Header("Minigame Zoom")]
     [SerializeField] float minigameZoom = 6f;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar zoom lerp speed.
+    /// </summary>
     [SerializeField] float zoomLerpSpeed = 3f;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar target zoom.
+    /// </summary>
     private float targetZoom;
+    /// <summary>
+    /// Indica si simon was loaded está activo o habilitado.
+    /// </summary>
     private bool simonWasLoaded = false;
 
+    /// <summary>
+    /// Panel de interfaz asociado a panel resumen isla.
+    /// </summary>
     [Header("Resumen Isla")]
     public GameObject panelResumenIsla;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar cantidad monedas.
+    /// </summary>
     public int cantidadMonedas;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar cantidad pajaros.
+    /// </summary>
     public int cantidadPajaros;
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar texto birds.
+    /// </summary>
     public TextMeshProUGUI textoBirds;
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar texto coins.
+    /// </summary>
     public TextMeshProUGUI textoCoins;
 
+    /// <summary>
+    /// Estados de cámara empleados para alternar entre modos de vista o interacción isométrica.
+    /// </summary>
     enum CameraState
     {
         Following,
@@ -66,8 +182,14 @@ public class IsometricCamera : MonoBehaviour
         ChangingScene
     }
 
+    /// <summary>
+    /// Campo de tipo CameraState utilizado para almacenar o configurar state.
+    /// </summary>
     CameraState state = CameraState.Following;
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     void Start()
     {
         cam = GetComponent<Camera>();
@@ -79,6 +201,9 @@ public class IsometricCamera : MonoBehaviour
         startPos = transform.position;
     }
 
+    /// <summary>
+    /// Ejecuta ajustes finales al terminar la actualización del fotograma.
+    /// </summary>
     void LateUpdate()
     {
         if (tileAstar == null) return;
@@ -115,6 +240,9 @@ public class IsometricCamera : MonoBehaviour
                 break;
         }
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle input dentro de CameraState.
+    /// </summary>
     void HandleInput()
     {
         if (SimonGameManagerPajaro.IsActive) return;
@@ -127,6 +255,9 @@ public class IsometricCamera : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle mouse dentro de CameraState.
+    /// </summary>
     void HandleMouse()
     {
         if (Input.GetMouseButtonDown(0))
@@ -175,6 +306,9 @@ public class IsometricCamera : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle touch dentro de CameraState.
+    /// </summary>
     void HandleTouch()
     {
         if (Input.touchCount == 1)
@@ -214,6 +348,10 @@ public class IsometricCamera : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a move camera dentro de CameraState.
+    /// </summary>
+    /// <param name="delta">Parámetro delta empleado por el método.</param>
     void MoveCamera(Vector3 delta)
     {
         Vector3 move = new Vector3(-delta.x, -delta.y, 0) * dragSpeed;
@@ -222,6 +360,9 @@ public class IsometricCamera : MonoBehaviour
         ClampDistance();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a clamp distance dentro de CameraState.
+    /// </summary>
     void ClampDistance()
     {
         if (target == null) return;
@@ -235,12 +376,19 @@ public class IsometricCamera : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a zoom dentro de CameraState.
+    /// </summary>
+    /// <param name="increment">Parámetro increment empleado por el método.</param>
     void Zoom(float increment)
     {
         cam.orthographicSize -= increment;
         cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, minZoom, maxZoom);
     }
 
+    /// <summary>
+    /// Restablece los valores del sistema a su configuración inicial o por defecto.
+    /// </summary>
     public void ResetCamera()
     {
         isAttached = true;
@@ -254,6 +402,9 @@ public class IsometricCamera : MonoBehaviour
         tileAstar.SetCanMove(true);
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a follow player dentro de CameraState.
+    /// </summary>
     void FollowPlayer()
     {
         if (target == null) return;
@@ -261,12 +412,19 @@ public class IsometricCamera : MonoBehaviour
         Vector3 targetPosition = target.position + offset;transform.position = Vector3.Lerp(transform.position,targetPosition,followSpeed * Time.deltaTime);
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a wait before return dentro de CameraState.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator WaitBeforeReturn()
     {
         yield return new WaitForSeconds(1f);
         state = CameraState.Returning;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a return to start dentro de CameraState.
+    /// </summary>
     public void ReturnToStart()
     {
         Debug.Log("Cambiando de escena");
@@ -274,12 +432,19 @@ public class IsometricCamera : MonoBehaviour
         changeScene.Cambiar_A_Escena("UI");
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a return to isla dentro de CameraState.
+    /// </summary>
     public void ReturnToIsla()
     {
         panelPajaroConseguido.SetActive(false);
     }
 
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a assing player dentro de CameraState.
+    /// </summary>
+    /// <param name="_player">Referencia al jugador afectado por la operación.</param>
     public void AssingPlayer(GameObject _player)
     {
         target = _player.transform;
@@ -289,6 +454,12 @@ public class IsometricCamera : MonoBehaviour
         transform.position = target.position + offset;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a mostrar panel pajaro conseguido dentro de CameraState.
+    /// </summary>
+    /// <param name="imagenPajaroConseguido">Parámetro imagen pajaro conseguido empleado por el método.</param>
+    /// <param name="nombrePajaro">Parámetro nombre pajaro empleado por el método.</param>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     public IEnumerator MostrarPanelPajaroConseguido(SpriteRenderer imagenPajaroConseguido, string nombrePajaro)
     {
         imagenPanelPajaroConseguido.sprite = imagenPajaroConseguido.sprite;

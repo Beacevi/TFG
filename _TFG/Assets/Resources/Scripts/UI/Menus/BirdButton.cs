@@ -1,3 +1,11 @@
+/**
+ * @file BirdButton.cs
+ * @brief Representa un botón de selección asociado a un ave dentro de los menús.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,60 +15,159 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Representa un botón de selección asociado a un ave dentro de los menús.
+/// </summary>
 public class BirdButton : MonoBehaviour
 {
+    /// <summary>
+    /// Campo de tipo Animator utilizado para almacenar o configurar animator.
+    /// </summary>
     [Header("Animators")]
     [SerializeField] private Animator _animator;
+    /// <summary>
+    /// Campo de tipo Animator utilizado para almacenar o configurar balloon animator.
+    /// </summary>
     [SerializeField] private Animator _balloonAnimator;
+    /// <summary>
+    /// Campo de tipo Animator utilizado para almacenar o configurar bird animator.
+    /// </summary>
     [SerializeField] private Animator _birdAnimator;
 
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar bird 1.
+    /// </summary>
     [Header("BirdSelected & Boost")]
     [SerializeField] private GameObject _Bird1;//Bird 1 UI
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar bird 2.
+    /// </summary>
     [SerializeField] private GameObject _Bird2;//Bird 2 UI
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar bird 3.
+    /// </summary>
     [SerializeField] private GameObject _Bird3;//Bird 3 UI
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar my bird 1.
+    /// </summary>
     [SerializeField] private GameObject _MyBird1;//Equipped bird 1
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar my bird 2.
+    /// </summary>
     [SerializeField] private GameObject _MyBird2;//Equipped bird 1
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar my bird 3.
+    /// </summary>
     [SerializeField] private GameObject _MyBird3;//Equipped bird 1
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar boost text.
+    /// </summary>
     [SerializeField] private TMP_Text _BoostText;
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar boost info text.
+    /// </summary>
     [SerializeField] private TMP_Text _BoostInfoText;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar boost image.
+    /// </summary>
     [SerializeField] private GameObject _BoostImage;
+    /// <summary>
+    /// Campo de tipo Sprite utilizado para almacenar o configurar no bird.
+    /// </summary>
     [SerializeField] private Sprite _NoBird;
+    /// <summary>
+    /// Botón de interfaz asociado a deletebirdbutton.
+    /// </summary>
     [SerializeField] private Button _Deletebirdbutton;
 
+    /// <summary>
+    /// Botón de interfaz asociado a button functions.
+    /// </summary>
     [Header("Scripts")]
     private ButtonFunctions _buttonFunctions;
+    /// <summary>
+    /// Referencia al gestor encargado de boost manager.
+    /// </summary>
     private BoostsManager _boostManager;
 
+    /// <summary>
+    /// Panel de interfaz asociado a bird panel.
+    /// </summary>
     [Header("Panels")]
     [SerializeField] private GameObject _BirdPanel;
 
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar opened icon.
+    /// </summary>
     [Header("Icons")]
     [SerializeField] private GameObject _openedIcon;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para almacenar o configurar closed icon.
+    /// </summary>
     [SerializeField] private GameObject _closedIcon;
 
+    /// <summary>
+    /// Botón de interfaz asociado a button expand bird.
+    /// </summary>
     [Header("Plus")]
     [SerializeField] private Button _buttonExpandBird;
 
+    /// <summary>
+    /// Indica si is open está activo o habilitado.
+    /// </summary>
     private bool isOpen = false;
 
     // Tracks which Bird ScriptableObject is in each equip slot so we can
     // keep EquippedBirdsData in sync when slots are reorganized on removal.
+    /// <summary>
+    /// Campo de tipo Bird utilizado para almacenar o configurar bird data slot 1.
+    /// </summary>
     private Bird _birdDataSlot1;
+    /// <summary>
+    /// Campo de tipo Bird utilizado para almacenar o configurar bird data slot 2.
+    /// </summary>
     private Bird _birdDataSlot2;
+    /// <summary>
+    /// Campo de tipo Bird utilizado para almacenar o configurar bird data slot 3.
+    /// </summary>
     private Bird _birdDataSlot3;
 
 
+    /// <summary>
+    /// Campo de tipo Queue<string> utilizado para almacenar o configurar bird selected.
+    /// </summary>
     public Queue<string> BirdSelected = new Queue<string>();
 
+    /// <summary>
+    /// Panel de interfaz asociado a panel bird 1.
+    /// </summary>
     private Image _panelBird1;
+    /// <summary>
+    /// Panel de interfaz asociado a panel bird 2.
+    /// </summary>
     private Image _panelBird2;
+    /// <summary>
+    /// Panel de interfaz asociado a panel bird 3.
+    /// </summary>
     private Image _panelBird3;
 
+    /// <summary>
+    /// Colección de list of available birds utilizada por este componente.
+    /// </summary>
     public List<GameObject> _listOfAvailableBirds;
+    /// <summary>
+    /// Colección de list of scriptable object birds utilizada por este componente.
+    /// </summary>
     public List<Bird> _listOfScriptableObjectBirds;
 
+    /// <summary>
+    /// Botón de interfaz asociado a button.
+    /// </summary>
     Button button;
 
+    /// <summary>
+    /// Colección de bird grid utilizada por este componente.
+    /// </summary>
     private Dictionary<string, Vector2Int> birdGrid = new Dictionary<string, Vector2Int>()
     {
         { "A", new Vector2Int(0, 2) },
@@ -77,21 +184,54 @@ public class BirdButton : MonoBehaviour
     };
 
 
+    /// <summary>
+    /// Campo de tipo AudioSource utilizado para almacenar o configurar audio source.
+    /// </summary>
     [Header("Feedback")]
     [SerializeField] private AudioSource _audioSource;
 
+    /// <summary>
+    /// Tiempo o duración asociado a scale duration.
+    /// </summary>
     [SerializeField] private float _scaleDuration;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar scale multiplier.
+    /// </summary>
     [SerializeField] private float _scaleMultiplier;
 
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar image bird 1.
+    /// </summary>
     [SerializeField] private Image _imageBird1;
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar image bird 2.
+    /// </summary>
     [SerializeField] private Image _imageBird2;
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar image bird 3.
+    /// </summary>
     [SerializeField] private Image _imageBird3;
 
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar frame bird 1.
+    /// </summary>
     [SerializeField] private Image _frameBird1;
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar frame bird 2.
+    /// </summary>
     [SerializeField] private Image _frameBird2;
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar frame bird 3.
+    /// </summary>
     [SerializeField] private Image _frameBird3;
+    /// <summary>
+    /// Color utilizado para representar default frame color.
+    /// </summary>
     private Color _defaultFrameColor;
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private void Start()
     {
         _buttonFunctions = GetComponent<ButtonFunctions>();
@@ -128,6 +268,11 @@ public class BirdButton : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a is valid combo dentro de BirdButton.
+    /// </summary>
+    /// <param name="queue">Parámetro queue empleado por el método.</param>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     private bool IsValidCombo(Queue<string> queue)
     {
         string[] tags = queue.ToArray();
@@ -150,6 +295,10 @@ public class BirdButton : MonoBehaviour
         return (maxY - minY) == 2;
     }
 
+    /// <summary>
+    /// Abre bird menu dentro del flujo de interfaz.
+    /// </summary>
+    /// <param name="button">Parámetro button empleado por el método.</param>
     public void OpenBirdMenu(Button button)
     {
         _BirdPanel.SetActive(true);
@@ -162,6 +311,10 @@ public class BirdButton : MonoBehaviour
 
         _buttonFunctions.OpenBirdMenu(_listOfAvailableBirds, _listOfScriptableObjectBirds);
     }
+    /// <summary>
+    /// Cierra bird menu dentro del flujo de interfaz.
+    /// </summary>
+    /// <param name="button">Parámetro button empleado por el método.</param>
     public void CloseBirdMenu(Button button)
     {
         if (isOpen) BirdMenu(true);
@@ -178,6 +331,10 @@ public class BirdButton : MonoBehaviour
 
         _buttonFunctions.CloseMenu();
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a bird menu dentro de BirdButton.
+    /// </summary>
+    /// <param name="close">Parámetro close empleado por el método.</param>
     public void BirdMenu(bool close)
     {
         if (isOpen)
@@ -209,6 +366,9 @@ public class BirdButton : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a type of boosts dentro de BirdButton.
+    /// </summary>
     private void TypeOfBoosts()
     {
         if (BirdSelected.Count != 3)
@@ -263,26 +423,51 @@ public class BirdButton : MonoBehaviour
         Sprite uiSprite = bird.GetComponent<Image>().sprite;
         _myBird.GetComponent<SpriteRenderer>().sprite = uiSprite;
     }
+    /// <summary>
+    /// Establece o actualiza grandpa text dentro del sistema.
+    /// </summary>
+    /// <param name="Bird">Parámetro bird empleado por el método.</param>
+    /// <param name="UpdateText">Parámetro update text empleado por el método.</param>
     private void SetGrandpaText(GameObject Bird, string UpdateText)
     {
         Transform grandparentBird = Bird.transform.parent.parent;
         grandparentBird.GetComponent<TMP_Text>().text = UpdateText;
     }
+    /// <summary>
+    /// Obtiene grandpa text a partir del estado actual del sistema.
+    /// </summary>
+    /// <param name="Bird">Parámetro bird empleado por el método.</param>
+    /// <returns>Texto resultante de la consulta o procesamiento.</returns>
     private string GetGrandpaText(GameObject Bird)
     {
         Transform grandparentBird = Bird.transform.parent.parent;
         return grandparentBird.GetComponent<TMP_Text>().text;
     }
+    /// <summary>
+    /// Establece o actualiza great grandpa text dentro del sistema.
+    /// </summary>
+    /// <param name="Bird">Parámetro bird empleado por el método.</param>
+    /// <param name="UpdateText">Parámetro update text empleado por el método.</param>
     private void SetGreatGrandpaText(GameObject Bird, string UpdateText)
     {
         Transform greatgrandparentBird = Bird.transform.parent.parent.parent;
         greatgrandparentBird.GetComponent<TMP_Text>().text = UpdateText;
     }
+    /// <summary>
+    /// Obtiene great grandpa text a partir del estado actual del sistema.
+    /// </summary>
+    /// <param name="Bird">Parámetro bird empleado por el método.</param>
+    /// <returns>Texto resultante de la consulta o procesamiento.</returns>
     private string GetGreatGrandpaText(GameObject Bird)
     {
         Transform greatgrandparentBird = Bird.transform.parent.parent.parent;
         return greatgrandparentBird.GetComponent<TMP_Text>().text;
     }
+    /// <summary>
+    /// Cambia change color panel según la interacción o parámetro recibido.
+    /// </summary>
+    /// <param name="panel">Parámetro panel empleado por el método.</param>
+    /// <param name="isSelected">Parámetro is selected empleado por el método.</param>
     private void ChangeColorPanel(Image panel, bool isSelected)
     {
         if (panel == null) return;
@@ -291,6 +476,14 @@ public class BirdButton : MonoBehaviour
 
         panel.color = isSelected ? selectedColor : unselectedColor;
     }
+    /// <summary>
+    /// Establece o actualiza bird dentro del sistema.
+    /// </summary>
+    /// <param name="bird">Parámetro bird empleado por el método.</param>
+    /// <param name="Title">Parámetro title empleado por el método.</param>
+    /// <param name="Update">Parámetro update empleado por el método.</param>
+    /// <param name="Tag">Parámetro tag empleado por el método.</param>
+    /// <param name="ImageBird">Parámetro image bird empleado por el método.</param>
     private void SetBird(GameObject bird, string Title, string Update, string Tag, Sprite ImageBird)
     {
         SetGrandpaText(bird, Title);
@@ -303,6 +496,15 @@ public class BirdButton : MonoBehaviour
         if (!_Deletebirdbutton.gameObject.activeSelf)
             _Deletebirdbutton.gameObject.SetActive(true);
     }
+    /// <summary>
+    /// Actualiza text based on tag para reflejar el estado actual del sistema.
+    /// </summary>
+    /// <param name="birdData">Datos de entrada que se van a procesar.</param>
+    /// <param name="buttonTag">Parámetro button tag empleado por el método.</param>
+    /// <param name="buttonImage">Parámetro button image empleado por el método.</param>
+    /// <param name="buttonTitle">Parámetro button title empleado por el método.</param>
+    /// <param name="buttonUpdate">Parámetro button update empleado por el método.</param>
+    /// <param name="panel">Parámetro panel empleado por el método.</param>
     public void UpdateTextBasedOnTag(Bird birdData, string buttonTag, Image buttonImage, string buttonTitle, string buttonUpdate, Image panel)
     {
         if (BirdSelected.Contains(buttonTag))
@@ -401,6 +603,9 @@ public class BirdButton : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a swap tag image dentro de BirdButton.
+    /// </summary>
     private void SwapTagImage()
     {
         string tempTitle = GetGrandpaText(_Bird2);
@@ -433,6 +638,11 @@ public class BirdButton : MonoBehaviour
     {
         SetBird(bird, "Bird Name", "No Level", "Untagged", Resources.Load<Sprite>("Birds/UnselectedBird"));
     }
+    /// <summary>
+    /// Cambia change bird 1 info to bird 2 según la interacción o parámetro recibido.
+    /// </summary>
+    /// <param name="bird1">Parámetro bird 1 empleado por el método.</param>
+    /// <param name="bird2">Parámetro bird 2 empleado por el método.</param>
     private void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
     {
         SetBird(bird1, GetGrandpaText(bird2), GetGreatGrandpaText(bird2), bird2.tag, bird2.GetComponent<Image>().sprite);
@@ -448,12 +658,21 @@ public class BirdButton : MonoBehaviour
             _MyBird2.SetActive(false);
         }
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a reaoganize panel dentro de BirdButton.
+    /// </summary>
+    /// <param name="bird1">Parámetro bird 1 empleado por el método.</param>
+    /// <param name="bird2">Parámetro bird 2 empleado por el método.</param>
     private void ReaoganizePanel(ref Image bird1, ref Image bird2)
     {
         ChangeColorPanel(bird2, false); // Limpia el panel anterior
         bird1 = bird2;                  // Copia la referencia del siguiente
         ChangeColorPanel(bird1, true);  // Activa el nuevo panel
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a clear one tag dentro de BirdButton.
+    /// </summary>
+    /// <param name="tagToRemove">Parámetro tag to remove empleado por el método.</param>
     public void ClearOneTag(string tagToRemove)
     {
         if (_Bird1.tag == tagToRemove)
@@ -598,6 +817,9 @@ public class BirdButton : MonoBehaviour
 
         SyncRegistryAfterRemoval();
     }
+    /// <summary>
+    /// Limpia o normaliza my birds antes de utilizarlo.
+    /// </summary>
     public void CleanMyBirds()
     {
         EquippedBirdsData.ClearAll();
@@ -628,6 +850,12 @@ public class BirdButton : MonoBehaviour
 
         TypeOfBoosts();
     }
+    /// <summary>
+    /// Limpia o normaliza elemento antes de utilizarlo.
+    /// </summary>
+    /// <param name="MyBird">Parámetro my bird empleado por el método.</param>
+    /// <param name="Bird">Parámetro bird empleado por el método.</param>
+    /// <param name="PanelBird">Parámetro panel bird empleado por el método.</param>
     private void Clean(GameObject MyBird, GameObject Bird, ref Image PanelBird)
     {
         if (Bird != null)
@@ -645,6 +873,11 @@ public class BirdButton : MonoBehaviour
         PanelBird = null;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a scale pop dentro de BirdButton.
+    /// </summary>
+    /// <param name="target">Parámetro target empleado por el método.</param>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     private IEnumerator ScalePop(Transform target)
     {
         if (target == null) yield break;
@@ -692,6 +925,9 @@ public class BirdButton : MonoBehaviour
         Destroy(clone);
     }
 
+    /// <summary>
+    /// Actualiza frame colors para reflejar el estado actual del sistema.
+    /// </summary>
     private void UpdateFrameColors()
     {
         if (BirdSelected.Count == 3)
@@ -707,6 +943,9 @@ public class BirdButton : MonoBehaviour
             _frameBird3.color = _defaultFrameColor;
         }
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a sync registry after removal dentro de BirdButton.
+    /// </summary>
     private void SyncRegistryAfterRemoval()
     {
         EquippedBirdsData.ClearAll();

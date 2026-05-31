@@ -1,22 +1,42 @@
+/**
+ * @file LevelManager.cs
+ * @brief Gestiona informaci贸n de nivel y progresi贸n usada por los sistemas de juego.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentaci贸n se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y m茅todos relevantes.
+ */
+
 using UnityEngine;
 
+/// <summary>
+/// Gestiona informaci贸n de nivel y progresi贸n usada por los sistemas de juego.
+/// </summary>
 public class LevelManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya est谩 cargada y lista para comenzar.
+    /// </summary>
     void Start()
     {
         
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// Actualiza la l贸gica del componente en cada fotograma.
+    /// </summary>
     void Update()
     {
         
     }
 
+    /// <summary>
+    /// Ejecuta la l贸gica asociada a upgrade level dentro de LevelManager.
+    /// </summary>
     public void UpgradeLevel()
     {
-        // L骻ica para subir de nivel
+        // L锟絞ica para subir de nivel
 
         GameManager.Instance.AddMoney(-200); // Insertar valor del CSV
     }

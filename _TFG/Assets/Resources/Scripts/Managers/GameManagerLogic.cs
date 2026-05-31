@@ -1,55 +1,141 @@
-﻿
+/**
+ * @file GameManagerLogic.cs
+ * @brief Agrupa lógica de apoyo relacionada con las reglas de progreso y economía del juego.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
+
 using UnityEngine;
 using System.IO;
 using GUPS.AntiCheat.Protected;
 using TMPro;
  
+/// <summary>
+/// Agrupa lógica de apoyo relacionada con las reglas de progreso y economía del juego.
+/// </summary>
 public class GameManagerLogic : MonoBehaviour
 {
+    /// <summary>
+    /// Instancia singleton utilizada para acceder globalmente al controlador.
+    /// </summary>
     public static GameManagerLogic Instance;
 
+    /// <summary>
+    /// Cantidad de monedas almacenadas o mostradas por el sistema.
+    /// </summary>
     [Header("Variables")]
     [SerializeField] private ProtectedInt32 coins = 200;
+    /// <summary>
+    /// Cantidad de gemas almacenadas o mostradas por el sistema.
+    /// </summary>
     [SerializeField] private ProtectedInt32 gems = 20;
+    /// <summary>
+    /// Valor de energía o stamina disponible para el jugador.
+    /// </summary>
     [SerializeField] private ProtectedInt32 energy = 6;
+    /// <summary>
+    /// Nivel actual de progreso del jugador.
+    /// </summary>
     [SerializeField] private ProtectedInt32 currentLevel = 1;
+    /// <summary>
+    /// Nivel actual del globo aerostático.
+    /// </summary>
     [SerializeField] private ProtectedInt32 balloonLevel = 1;
+    /// <summary>
+    /// Indica si clouds closing está activo o habilitado.
+    /// </summary>
     public bool cloudsClosing = false;
 
     // ?? Validación: rangos máximos
+    /// <summary>
+    /// Valor numérico que limita o define max coins.
+    /// </summary>
     private const int MAX_COINS = 999999;
+    /// <summary>
+    /// Valor numérico que limita o define max gems.
+    /// </summary>
     private const int MAX_GEMS = 99999;
+    /// <summary>
+    /// Valor numérico que limita o define max energy.
+    /// </summary>
     private const int MAX_ENERGY = 500;
+    /// <summary>
+    /// Valor numérico que limita o define max change per op.
+    /// </summary>
     private const int MAX_CHANGE_PER_OP = 1000;
 
     // ?? Validación: control temporal
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar last coins change.
+    /// </summary>
     private float lastCoinsChange;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar last gems change.
+    /// </summary>
     private float lastGemsChange;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar last energy change.
+    /// </summary>
     private float lastEnergyChange;
+    /// <summary>
+    /// Valor numérico que limita o define min time between changes.
+    /// </summary>
     private const float MIN_TIME_BETWEEN_CHANGES = 0.1f;
 
     // ?? Validación: origen del cambio
+    /// <summary>
+    /// Indica si operation authorized está activo o habilitado.
+    /// </summary>
     private bool operationAuthorized = false;
 
     // ?? Validación: redundancia
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar coins backup.
+    /// </summary>
     private int coinsBackup;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar gems backup.
+    /// </summary>
     private int gemsBackup;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar energy backup.
+    /// </summary>
     private int energyBackup;
 
     // ?? Control de inicialización
     // Evita falsos positivos durante el frame inicial en que la UI
     // todavía no ha sido asignada o los backups aún no están listos.
+    /// <summary>
+    /// Indica si is ready está activo o habilitado.
+    /// </summary>
     private bool isReady = false;
 
+    /// <summary>
+    /// Campo de tipo string utilizado para almacenar o configurar save path.
+    /// </summary>
     private string savePath;
+    /// <summary>
+    /// Campo de tipo CSVReader utilizado para almacenar o configurar reader.
+    /// </summary>
     public CSVReader reader;
 
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar coins ui.
+    /// </summary>
     [Header("UI")]
     [SerializeField] private TMP_Text coins_ui;
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar gems ui.
+    /// </summary>
     [SerializeField] private TMP_Text gems_ui;
 
     // ────────────────────────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     private void Awake()
     {
         if (Instance == null)
@@ -65,6 +151,9 @@ public class GameManagerLogic : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     public void Start()
     {
         // Inicializar backups con los valores cargados
@@ -80,6 +169,9 @@ public class GameManagerLogic : MonoBehaviour
         Invoke(nameof(SetReady), 0.1f);
     }
 
+    /// <summary>
+    /// Establece o actualiza ready dentro del sistema.
+    /// </summary>
     private void SetReady()
     {
         isReady = true;
@@ -87,12 +179,18 @@ public class GameManagerLogic : MonoBehaviour
 
     // ────────────────────────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Actualiza ui para reflejar el estado actual del sistema.
+    /// </summary>
     private void UpdateUI()
     {
         coins_ui.text = coins.ToString();
         gems_ui.text = gems.ToString();
     }
 
+    /// <summary>
+    /// Actualiza la lógica del componente en cada fotograma.
+    /// </summary>
     private void Update()
     {
         // No comprobar nada hasta que el sistema esté completamente inicializado
@@ -102,6 +200,9 @@ public class GameManagerLogic : MonoBehaviour
         CheckStateIntegrity();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a check ui coherence dentro de GameManagerLogic.
+    /// </summary>
     private void CheckUICoherence()
     {
         // Si la UI no está asignada todavía, no comprobamos nada
@@ -115,6 +216,9 @@ public class GameManagerLogic : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a check state integrity dentro de GameManagerLogic.
+    /// </summary>
     private void CheckStateIntegrity()
     {
         if ((int)coins != coinsBackup ||
@@ -132,6 +236,10 @@ public class GameManagerLogic : MonoBehaviour
 
     // ────────────────────────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle cheat detected dentro de GameManagerLogic.
+    /// </summary>
+    /// <param name="origen">Parámetro origen empleado por el método.</param>
     private void HandleCheatDetected(string origen)
     {
         Debug.LogWarning($"[AntiCheat] Trampa detectada. Origen: {origen}");
@@ -142,6 +250,11 @@ public class GameManagerLogic : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region AddMoney
 
+    /// <summary>
+    /// Añade money al estado gestionado por el componente.
+    /// </summary>
+    /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     public bool AddMoney(int amount)
     {
         operationAuthorized = true;
@@ -188,6 +301,10 @@ public class GameManagerLogic : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region AddGems
 
+    /// <summary>
+    /// Añade gems al estado gestionado por el componente.
+    /// </summary>
+    /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
     public void AddGems(int amount)
     {
         operationAuthorized = true;
@@ -233,6 +350,10 @@ public class GameManagerLogic : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region AddEnergy / SetEnergy
 
+    /// <summary>
+    /// Añade energy al estado gestionado por el componente.
+    /// </summary>
+    /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
     public void AddEnergy(int amount)
     {
         operationAuthorized = true;
@@ -266,6 +387,10 @@ public class GameManagerLogic : MonoBehaviour
         SaveGame();
     }
 
+    /// <summary>
+    /// Establece o actualiza energy dentro del sistema.
+    /// </summary>
+    /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
     public void SetEnergy(int amount)
     {
         operationAuthorized = true;
@@ -288,10 +413,30 @@ public class GameManagerLogic : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Getters
 
+    /// <summary>
+    /// Obtiene money a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetMoney() => coins;
+    /// <summary>
+    /// Obtiene gems a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetGems() => gems;
+    /// <summary>
+    /// Obtiene energy a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetEnergy() => energy;
+    /// <summary>
+    /// Obtiene curret level a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetCurretLevel() => currentLevel;
+    /// <summary>
+    /// Obtiene balloon level a partir del estado actual del sistema.
+    /// </summary>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetBalloonLevel() => balloonLevel;
 
     #endregion
@@ -299,6 +444,9 @@ public class GameManagerLogic : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Nivel
 
+    /// <summary>
+    /// Establece o actualiza a new current level dentro del sistema.
+    /// </summary>
     public void SetANewCurrentLevel()
     {
         operationAuthorized = true;
@@ -306,6 +454,9 @@ public class GameManagerLogic : MonoBehaviour
         SaveGame();
     }
 
+    /// <summary>
+    /// Establece o actualiza a new balloon level dentro del sistema.
+    /// </summary>
     public void SetANewBalloonLevel()
     {
         operationAuthorized = true;
@@ -318,6 +469,9 @@ public class GameManagerLogic : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     #region Save / Load / Reset
 
+    /// <summary>
+    /// Guarda el estado actual para que pueda recuperarse posteriormente.
+    /// </summary>
     public void SaveGame()
     {
         SaveDataManager data = new SaveDataManager
@@ -334,6 +488,9 @@ public class GameManagerLogic : MonoBehaviour
         Debug.Log("Game Saved: " + savePath);
     }
 
+    /// <summary>
+    /// Carga el estado previamente guardado y restaura los datos del sistema.
+    /// </summary>
     public void LoadGame()
     {
         if (File.Exists(savePath))
@@ -373,6 +530,9 @@ public class GameManagerLogic : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Restablece los valores del sistema a su configuración inicial o por defecto.
+    /// </summary>
     public void ResetSave()
     {
         coins = 200;
@@ -388,6 +548,9 @@ public class GameManagerLogic : MonoBehaviour
         Debug.Log("Save reset to default values.");
     }
 
+    /// <summary>
+    /// Guarda o sincroniza datos cuando la aplicación se cierra.
+    /// </summary>
     private void OnApplicationQuit()
     {
         SaveGame();
