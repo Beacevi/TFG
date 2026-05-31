@@ -1,3 +1,11 @@
+/**
+ * @file Energy.cs
+ * @brief Actualiza la representaci√≥n visual de energ√≠a o stamina en la interfaz de usuario.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentaci√≥n se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y m√©todos relevantes.
+ */
+
 
 using System.Collections;
 using System.Collections.Generic;
@@ -10,27 +18,57 @@ using TMPro;
 /// </summary>
 public class Energy : MonoBehaviour
 {
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar actual energy.
+    /// </summary>
     public int         _actualEnergy;               //> Energia del jugador
+    /// <summary>
+    /// Campo de tipo Slider utilizado para almacenar o configurar slider.
+    /// </summary>
     [SerializeField] private Slider slider;
 
 
+    /// <summary>
+    /// Tiempo o duraci√≥n asociado a countdown timer.
+    /// </summary>
     [Header("Timer")]
     [SerializeField] private float       _countdownTimer;             //> Variable que funciona como timer 
-    [SerializeField] private const int   _incrementPerTime   = 1;     //> Cantidad de EnergÌa que se suma cada vez de cada cierto tiempo(_time)
-    [SerializeField] private const float _time = 10f;   //> Segundos que tienen que pasar para que se suba uno de enrgÌa
+    /// <summary>
+    /// Tiempo o duraci√≥n asociado a increment per time.
+    /// </summary>
+    [SerializeField] private const int   _incrementPerTime   = 1;     //> Cantidad de EnergÔøΩa que se suma cada vez de cada cierto tiempo(_time)
+    /// <summary>
+    /// Tiempo o duraci√≥n asociado a time.
+    /// </summary>
+    [SerializeField] private const float _time = 10f;   //> Segundos que tienen que pasar para que se suba uno de enrgÔøΩa
 
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar max energy.
+    /// </summary>
     [Header("Range of Energy")]
-    [SerializeField] private const int   _maxEnergy          = 200;     //> EnergÌa maxima que puede tener el jugador
-    [SerializeField] private const int   _minEnergy          = 0;     //> EnergÌa minima que puede tener el jugador 
+    [SerializeField] private const int   _maxEnergy          = 200;     //> EnergÔøΩa maxima que puede tener el jugador
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar min energy.
+    /// </summary>
+    [SerializeField] private const int   _minEnergy          = 0;     //> EnergÔøΩa minima que puede tener el jugador 
 
+    /// <summary>
+    /// Indica si is coroutine running est√° activo o habilitado.
+    /// </summary>
     private bool        _isCoroutineRunning = false; //> Booleano para saber si hay una corrutina en marcha
 
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar text actual energy.
+    /// </summary>
     [Header("Texts")]
     [SerializeField] private TextMeshProUGUI _textActualEnergy;        //> Se actualiza el texto de Energy de la UI
     //[SerializeField] private TextMeshProUGUI _textTimerEnergy;         //> Timer del tiempo que queda para que se actualice la siguiente energia
 
 
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya est√° cargada y lista para comenzar.
+    /// </summary>
     void Start()
     {
         _actualEnergy = GameManager.Instance.GetEnergy();  //> Puesto a modificaciones, por ello es publica.
@@ -45,6 +83,9 @@ public class Energy : MonoBehaviour
         StartCoroutine(EnergyIncreaseTime());
     }
 
+    /// <summary>
+    /// Actualiza la l√≥gica del componente en cada fotograma.
+    /// </summary>
     void Update()
     {
         if (_actualEnergy < _maxEnergy && !_isCoroutineRunning)
@@ -80,7 +121,7 @@ public class Energy : MonoBehaviour
         _isCoroutineRunning = false;
     }
 
-    /// Actualiza en la UI  la energÌa que posee el usuario.
+    /// Actualiza en la UI  la energÔøΩa que posee el usuario.
     private void ActualiceEnergyUI()
     {
         GameManager.Instance.SetEnergy(_actualEnergy);
@@ -90,7 +131,7 @@ public class Energy : MonoBehaviour
         slider.value = _actualEnergy;
     }
 
-    /// Funcion para actualizar el Timer. Solo se actualiza el timer si la corrutina est· funcionando, y si el tiempo que queda es mas de cero.
+    /// Funcion para actualizar el Timer. Solo se actualiza el timer si la corrutina estÔøΩ funcionando, y si el tiempo que queda es mas de cero.
     private void ActuliceTimerUI()
     {
         if (_isCoroutineRunning && _countdownTimer > 0)

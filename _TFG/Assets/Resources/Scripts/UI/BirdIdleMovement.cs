@@ -1,19 +1,60 @@
-﻿using UnityEngine;
+/**
+ * @file BirdIdleMovement.cs
+ * @brief Aplica movimiento ambiental o de reposo a las aves mostradas en la interfaz.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
 
+using UnityEngine;
+
+/// <summary>
+/// Aplica movimiento ambiental o de reposo a las aves mostradas en la interfaz.
+/// </summary>
 public class BirdIdleMovement : MonoBehaviour
 {
+    /// <summary>
+    /// Campo de tipo Rect utilizado para almacenar o configurar roam bounds.
+    /// </summary>
     [Header("Free Roam Settings")]
     public Rect roamBounds = new Rect(-5f, -3f, 10f, 6f);
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar roam speed.
+    /// </summary>
     public float roamSpeed = 2f;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar direction change interval.
+    /// </summary>
     public float directionChangeInterval = 2f;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar boundary avoid distance.
+    /// </summary>
     public float boundaryAvoidDistance = 0.8f;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar smooth turn speed.
+    /// </summary>
     public float smoothTurnSpeed = 3f;
 
+    /// <summary>
+    /// Campo de tipo Vector2 utilizado para almacenar o configurar roam velocity.
+    /// </summary>
     private Vector2 roamVelocity;
+    /// <summary>
+    /// Campo de tipo Vector2 utilizado para almacenar o configurar roam target direction.
+    /// </summary>
     private Vector2 roamTargetDirection;
+    /// <summary>
+    /// Tiempo o duración asociado a direction change timer.
+    /// </summary>
     private float directionChangeTimer;
+    /// <summary>
+    /// Referencia visual o sprite asociado a sprite renderer.
+    /// </summary>
     private SpriteRenderer spriteRenderer;
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -22,6 +63,9 @@ public class BirdIdleMovement : MonoBehaviour
         directionChangeTimer = Random.Range(0f, directionChangeInterval);
     }
 
+    /// <summary>
+    /// Actualiza la lógica del componente en cada fotograma.
+    /// </summary>
     private void Update()
     {
         // 1. Count down and pick a new wander direction periodically
@@ -74,6 +118,9 @@ public class BirdIdleMovement : MonoBehaviour
     }
 
 #if UNITY_EDITOR
+    /// <summary>
+    /// Ejecuta la lógica asociada a on draw gizmos selected dentro de BirdIdleMovement.
+    /// </summary>
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;

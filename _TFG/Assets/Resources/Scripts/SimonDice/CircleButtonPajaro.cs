@@ -1,22 +1,54 @@
+/**
+ * @file CircleButtonPajaro.cs
+ * @brief Variante de botón circular asociada al minijuego de domesticación de pájaros.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Variante de botón circular asociada al minijuego de domesticación de pájaros.
+/// </summary>
 public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
 {
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar index.
+    /// </summary>
     public int index;
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar image.
+    /// </summary>
     private Image image;
+    /// <summary>
+    /// Color utilizado para representar original color.
+    /// </summary>
     private Color originalColor;
+    /// <summary>
+    /// Color utilizado para representar color simon.
+    /// </summary>
     public Color colorSimon;
 
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar dim factor.
+    /// </summary>
     [Tooltip("Factor (0..1) aplicado al color original cuando el botón está atenuado durante la secuencia.")]
     [SerializeField, Range(0f, 1f)] private float dimFactor = 0.35f;
 
     // Color de reposo "actual": coincide con originalColor en modo normal y con la versión
     // atenuada durante la secuencia. Flash() lo usa para restaurar el color al terminar.
+    /// <summary>
+    /// Color utilizado para representar current base color.
+    /// </summary>
     private Color currentBaseColor;
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     void Awake()
     {
         image = GetComponent<Image>();
@@ -24,6 +56,10 @@ public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
         currentBaseColor = originalColor;
     }
 
+    /// <summary>
+    /// Procesa el clic o toque sobre un elemento de interfaz.
+    /// </summary>
+    /// <param name="eventData">Datos de entrada que se van a procesar.</param>
     public void OnPointerClick(PointerEventData eventData)
     {
         if (SimonGameManagerPajaro.Instance == null) return;
@@ -34,6 +70,11 @@ public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
         StartCoroutine(Flash(0.2f));
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a flash dentro de CircleButtonPajaro.
+    /// </summary>
+    /// <param name="duration">Parámetro duration empleado por el método.</param>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     public IEnumerator Flash(float duration)
     {
         Color flashColor = colorSimon;
@@ -44,11 +85,18 @@ public class CircleButtonPajaro : MonoBehaviour, IPointerClickHandler
         image.color = currentBaseColor;
     }
 
+    /// <summary>
+    /// Establece o actualiza color instant dentro del sistema.
+    /// </summary>
+    /// <param name="newColor">Parámetro new color empleado por el método.</param>
     public void SetColorInstant(Color newColor)
     {
         image.color = newColor;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a restore original color dentro de CircleButtonPajaro.
+    /// </summary>
     public void RestoreOriginalColor()
     {
         image.color = originalColor;

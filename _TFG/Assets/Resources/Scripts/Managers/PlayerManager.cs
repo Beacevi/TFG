@@ -1,22 +1,67 @@
+/**
+ * @file PlayerManager.cs
+ * @brief Administra el estado del jugador y proporciona acceso centralizado a sus datos de progreso.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using Firebase.Firestore;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Modelo de datos que almacena las variables principales asociadas al jugador.
+/// </summary>
 [FirestoreData]
 public class Player
 {
+    /// <summary>
+    /// Propiedad que expone o modifica max balloon level.
+    /// </summary>
     [FirestoreProperty] public int maxBalloonLevel { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica level.
+    /// </summary>
     [FirestoreProperty] public int level { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica sum price.
+    /// </summary>
     [FirestoreProperty] public int sumPrice { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica upgrade cost.
+    /// </summary>
     [FirestoreProperty] public int upgradeCost { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica v level.
+    /// </summary>
     [FirestoreProperty] public int VLevel { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica sc.
+    /// </summary>
     [FirestoreProperty] public int SC { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica coins.
+    /// </summary>
     [FirestoreProperty] public int coins { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica energy.
+    /// </summary>
     [FirestoreProperty] public int energy { get; set; }
+    /// <summary>
+    /// Propiedad que expone o modifica gems.
+    /// </summary>
     [FirestoreProperty] public int gems { get; set; }
 
+    /// <summary>
+    /// Reproduce o inicia er.
+    /// </summary>
     public Player() { }
     
+    /// <summary>
+    /// Reproduce o inicia er.
+    /// </summary>
+    /// <param name="player">Referencia al jugador afectado por la operación.</param>
     public Player(Player player)
     {
         maxBalloonLevel = player.maxBalloonLevel;
@@ -32,11 +77,23 @@ public class Player
     }
 
 }
+/// <summary>
+/// Administra el estado del jugador y proporciona acceso centralizado a sus datos de progreso.
+/// </summary>
 public class PlayerManager : MonoBehaviour
 {
+    /// <summary>
+    /// Campo de tipo PlayerManager utilizado para almacenar o configurar player instance.
+    /// </summary>
     public static PlayerManager playerInstance;
+    /// <summary>
+    /// Colección de level table utilizada por este componente.
+    /// </summary>
     public Dictionary<int, Player> levelTable;
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     private void Awake()
     {
         if (playerInstance != null && playerInstance != this)
@@ -51,6 +108,9 @@ public class PlayerManager : MonoBehaviour
         inicializarLevelTable();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a inicializar level table dentro de PlayerManager.
+    /// </summary>
     private void inicializarLevelTable()
     {
         levelTable = new Dictionary<int, Player>

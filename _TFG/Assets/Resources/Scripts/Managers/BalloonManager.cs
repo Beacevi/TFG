@@ -1,19 +1,54 @@
+/**
+ * @file BalloonManager.cs
+ * @brief Gestiona la tabla de niveles del globo y las operaciones de mejora asociadas al progreso del jugador.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Modelo de datos que define los parámetros de progresión del globo aerostático.
+/// </summary>
 public class Balloon
 {
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar level.
+    /// </summary>
     public int level;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar prices sumatories.
+    /// </summary>
     public int pricesSumatories;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar upgrade cost.
+    /// </summary>
     public int upgradeCost;
+    /// <summary>
+    /// Tiempo o duración asociado a time.
+    /// </summary>
     public float time;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar total days.
+    /// </summary>
     public float totalDays;
 }
 
+/// <summary>
+/// Gestiona la tabla de niveles del globo y las operaciones de mejora asociadas al progreso del jugador.
+/// </summary>
 public class BalloonManager : MonoBehaviour
 {
+    /// <summary>
+    /// Colección de balloon level table utilizada por este componente.
+    /// </summary>
     private Dictionary< int, Balloon > _balloonLevelTable;
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     private void Awake()
     {
         _balloonLevelTable = new Dictionary<int, Balloon>
@@ -31,6 +66,11 @@ public class BalloonManager : MonoBehaviour
         };
     }
 
+    /// <summary>
+    /// Obtiene level data a partir del estado actual del sistema.
+    /// </summary>
+    /// <param name="balloonLevel">Nivel que se utilizará como referencia.</param>
+    /// <returns>Instancia o valor de tipo Balloon resultante de la operación.</returns>
     public Balloon GetLevelData(int balloonLevel)
     {
         if (_balloonLevelTable.ContainsKey(balloonLevel))
@@ -38,6 +78,11 @@ public class BalloonManager : MonoBehaviour
         return null;
     }
 
+    /// <summary>
+    /// Establece o actualiza balloon level dentro del sistema.
+    /// </summary>
+    /// <param name="balloon">Parámetro balloon empleado por el método.</param>
+    /// <param name="player">Referencia al jugador afectado por la operación.</param>
     public void SetBalloonLevel(Balloon balloon, Player player)
     {
         if (balloon.level < player.maxBalloonLevel)

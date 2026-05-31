@@ -1,3 +1,11 @@
+/**
+ * @file IslandExitButton.cs
+ * @brief Gestiona el botón de salida de la isla y el retorno a la interfaz principal.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using UnityEngine;
 
 /// <summary>
@@ -8,27 +16,45 @@ using UnityEngine;
 /// </summary>
 public class IslandExitButton : MonoBehaviour
 {
+    /// <summary>
+    /// Panel de interfaz asociado a exit confirm panel.
+    /// </summary>
     [Tooltip("Panel con los botones Sí/No de confirmación.")]
     [SerializeField] private GameObject exitConfirmPanel;
 
+    /// <summary>
+    /// Botón de interfaz asociado a main exit button.
+    /// </summary>
     [Tooltip("Botón principal de salir de la isla. Se oculta automáticamente mientras el jugador está dentro del minijuego de pájaros.")]
     [SerializeField] private GameObject mainExitButton;
 
+    /// <summary>
+    /// Campo de tipo ChangeScene utilizado para almacenar o configurar change scene.
+    /// </summary>
     [Tooltip("Referencia al ChangeScene. Si se deja vacío, se busca por tag SceneChanger.")]
     [SerializeField] private ChangeScene changeScene;
 
+    /// <summary>
+    /// Campo de tipo string utilizado para almacenar o configurar target scene.
+    /// </summary>
     [Tooltip("Nombre de la escena a la que volver al confirmar la salida.")]
     [SerializeField] private string targetScene = "UI";
 
     /// <summary>Cierto mientras el panel de confirmación está abierto.</summary>
     public static bool IsConfirmOpen { get; private set; }
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     private void Awake()
     {
         // Reset al cargar la escena por si el flag quedó activo de una sesión anterior.
         IsConfirmOpen = false;
     }
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private void Start()
     {
         if (changeScene == null)
@@ -52,6 +78,9 @@ public class IslandExitButton : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Actualiza la lógica del componente en cada fotograma.
+    /// </summary>
     private void Update()
     {
         // Ocultar el botón principal de salir mientras el minijuego de pájaros está activo

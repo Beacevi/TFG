@@ -1,3 +1,11 @@
+/**
+ * @file TileAStar.cs
+ * @brief Calcula rutas sobre la rejilla de tiles mediante A* para conectar puntos del terreno procedural.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,37 +15,100 @@ using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
+/// <summary>
+/// Calcula rutas sobre la rejilla de tiles mediante A* para conectar puntos del terreno procedural.
+/// </summary>
 public class TileAStar : MonoBehaviour
 {
+    /// <summary>
+    /// Tilemap sobre el que se dibuja o consulta el terreno.
+    /// </summary>
     [SerializeField] Tilemap tilemap;
+    /// <summary>
+    /// Referencia al jugador o a su objeto asociado en la escena.
+    /// </summary>
     [SerializeField] Transform player;
+    /// <summary>
+    /// Campo de tipo IsometricCamera utilizado para almacenar o configurar isometric camera.
+    /// </summary>
     [SerializeField] IsometricCamera isometricCamera;
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar move speed.
+    /// </summary>
     [SerializeField] float moveSpeed = 3f;
+    /// <summary>
+    /// Campo de tipo PCGtiles_IsometricPerlin utilizado para almacenar o configurar map generator.
+    /// </summary>
     [SerializeField] PCGtiles_IsometricPerlin mapGenerator;
 
+    /// <summary>
+    /// Campo de tipo ChangeScene utilizado para almacenar o configurar cambia escenas.
+    /// </summary>
     public ChangeScene cambiaEscenas;
 
+    /// <summary>
+    /// Campo de tipo SpriteRenderer utilizado para almacenar o configurar imagen pajaro conseguido.
+    /// </summary>
     public SpriteRenderer imagenPajaroConseguido;
     
+    /// <summary>
+    /// Campo de tipo string utilizado para almacenar o configurar texto nombre pajaro.
+    /// </summary>
     public string textoNombrePajaro;
 
+    /// <summary>
+    /// Colección de path utilizada por este componente.
+    /// </summary>
     private List<Vector3> path = new List<Vector3>();
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar current index.
+    /// </summary>
     private int currentIndex = 0;
+    /// <summary>
+    /// Indica si moving está activo o habilitado.
+    /// </summary>
     public bool moving = false;
 
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar inf.
+    /// </summary>
     private const int INF = int.MaxValue / 4;
 
+    /// <summary>
+    /// Campo de tipo Node utilizado para almacenar o configurar last path node.
+    /// </summary>
     private Node lastPathNode = null;
+    /// <summary>
+    /// Campo de tipo Node utilizado para almacenar o configurar interactable node.
+    /// </summary>
     private Node interactableNode = null;
 
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar pasos bar.
+    /// </summary>
     [SerializeField] private Image pasosBar;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar steps available.
+    /// </summary>
     public int stepsAvailable = 30;
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar initial steps.
+    /// </summary>
     private int initialSteps;
 
+    /// <summary>
+    /// Indica si can move está activo o habilitado.
+    /// </summary>
     private bool canMove = false;
 
+    /// <summary>
+    /// Campo de tipo float utilizado para almacenar o configurar input blocked until.
+    /// </summary>
     private static float inputBlockedUntil = 0f;
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private void Start()
     {
         inputBlockedUntil = 0f; // reset al cargar escena
@@ -68,6 +139,9 @@ public class TileAStar : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Actualiza steps ui para reflejar el estado actual del sistema.
+    /// </summary>
     public void UpdateStepsUI()
     {
         if (pasosBar == null)
@@ -78,6 +152,9 @@ public class TileAStar : MonoBehaviour
         pasosBar.fillAmount = (float)stepsAvailable / initialSteps;
     }
 
+    /// <summary>
+    /// Actualiza la lógica del componente en cada fotograma.
+    /// </summary>
     void Update()
     {
         if (SimonGameManagerPajaro.IsActive)
@@ -85,6 +162,9 @@ public class TileAStar : MonoBehaviour
 
         HandleMovement();
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle movement dentro de TileAStar.
+    /// </summary>
     void HandleMovement()
     {
         if (moving && path.Count > 0)
@@ -103,6 +183,9 @@ public class TileAStar : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a resolve arrival dentro de TileAStar.
+    /// </summary>
     void ResolveArrival()
     {
         if (lastPathNode != null)
@@ -128,6 +211,10 @@ public class TileAStar : MonoBehaviour
         path.Clear();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a process click dentro de TileAStar.
+    /// </summary>
+    /// <param name="screenPos">Parámetro screen pos empleado por el método.</param>
     public void ProcessClick(Vector3 screenPos)
     {
         //BLOQUEO GLOBAL
@@ -174,6 +261,11 @@ public class TileAStar : MonoBehaviour
             currentIndex = 0;
         }
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a is pointer over ui dentro de TileAStar.
+    /// </summary>
+    /// <param name="screenPos">Parámetro screen pos empleado por el método.</param>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     bool IsPointerOverUI(Vector3 screenPos)
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current);
@@ -195,12 +287,19 @@ public class TileAStar : MonoBehaviour
         return false; // no tocó nada
     }
 
+    /// <summary>
+    /// Establece o actualiza can move dentro del sistema.
+    /// </summary>
+    /// <param name="b">Parámetro b empleado por el método.</param>
     public void SetCanMove(bool b)
     {
         canMove = b;
     }
 
 
+    /// <summary>
+    /// Elimina bird at last node del estado gestionado por el componente.
+    /// </summary>
     public void RemoveBirdAtLastNode()
     {
         if (interactableNode == null) return;
@@ -242,6 +341,9 @@ public class TileAStar : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Elimina coin at last node del estado gestionado por el componente.
+    /// </summary>
     public void RemoveCoinAtLastNode()
     {
         if (interactableNode == null)
@@ -258,6 +360,9 @@ public class TileAStar : MonoBehaviour
         GameManager.Instance.GetComponent<Sounds>().SonidoRecolectarPajaro();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a disable bird interaction dentro de TileAStar.
+    /// </summary>
     public void DisableBirdInteraction()
     {
         if (interactableNode == null) return;
@@ -270,6 +375,12 @@ public class TileAStar : MonoBehaviour
         interactableNode.hasObject = false;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a find path dentro de TileAStar.
+    /// </summary>
+    /// <param name="startCell">Parámetro start cell empleado por el método.</param>
+    /// <param name="targetCell">Parámetro target cell empleado por el método.</param>
+    /// <returns>Instancia o valor de tipo List<Vector3> resultante de la operación.</returns>
     List<Vector3> FindPath(Vector3Int startCell, Vector3Int targetCell)
     {
         Node[,] nodes = mapGenerator.nodes;
@@ -346,12 +457,32 @@ public class TileAStar : MonoBehaviour
         return new List<Vector3>();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a in bounds dentro de TileAStar.
+    /// </summary>
+    /// <param name="cell">Parámetro cell empleado por el método.</param>
+    /// <param name="w">Parámetro w empleado por el método.</param>
+    /// <param name="h">Parámetro h empleado por el método.</param>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     bool InBounds(Vector3Int cell, int w, int h)
         => cell.x >= 0 && cell.y >= 0 && cell.x < w && cell.y < h;
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a is diagonal dentro de TileAStar.
+    /// </summary>
+    /// <param name="a">Parámetro a empleado por el método.</param>
+    /// <param name="b">Parámetro b empleado por el método.</param>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     bool IsDiagonal(Node a, Node b)
         => a.position.x != b.position.x && a.position.y != b.position.y;
 
+    /// <summary>
+    /// Obtiene neighbors a partir del estado actual del sistema.
+    /// </summary>
+    /// <param name="node">Parámetro node empleado por el método.</param>
+    /// <param name="Node[">Parámetro node empleado por el método.</param>
+    /// <param name="nodes">Parámetro nodes empleado por el método.</param>
+    /// <returns>Instancia o valor de tipo List<Node> resultante de la operación.</returns>
     List<Node> GetNeighbors(Node node, Node[,] nodes)
     {
         List<Node> r = new();
@@ -377,6 +508,12 @@ public class TileAStar : MonoBehaviour
         return r;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a heuristic dentro de TileAStar.
+    /// </summary>
+    /// <param name="a">Parámetro a empleado por el método.</param>
+    /// <param name="b">Parámetro b empleado por el método.</param>
+    /// <returns>Valor numérico calculado o consultado por el método.</returns>
     int Heuristic(Node a, Node b)
     {
         int dx = Mathf.Abs(a.position.x - b.position.x);
@@ -384,6 +521,12 @@ public class TileAStar : MonoBehaviour
         return 14 * Mathf.Min(dx, dy) + 10 * Mathf.Abs(dx - dy);
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a retrace dentro de TileAStar.
+    /// </summary>
+    /// <param name="start">Parámetro start empleado por el método.</param>
+    /// <param name="end">Parámetro end empleado por el método.</param>
+    /// <returns>Instancia o valor de tipo List<Vector3> resultante de la operación.</returns>
     List<Vector3> Retrace(Node start, Node end)
     {
         List<Vector3> p = new();
@@ -400,6 +543,9 @@ public class TileAStar : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a on draw gizmos dentro de TileAStar.
+    /// </summary>
     void OnDrawGizmos()
     {
         if (path == null || path.Count == 0) return;
@@ -413,11 +559,19 @@ public class TileAStar : MonoBehaviour
             Gizmos.DrawLine(path[i], path[i + 1]);
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a block input for seconds dentro de TileAStar.
+    /// </summary>
+    /// <param name="seconds">Parámetro seconds empleado por el método.</param>
     public static void BlockInputForSeconds(float seconds)
     {
         inputBlockedUntil = Time.time + seconds;
     }
 
+    /// <summary>
+    /// Añade steps al estado gestionado por el componente.
+    /// </summary>
+    /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
     public void AddSteps(int amount)
     {
         stepsAvailable += amount;

@@ -1,51 +1,143 @@
-﻿using UnityEngine;
+/**
+ * @file SimonGameManagerPajaro.cs
+ * @brief Controla la variante del minijuego de Simón dice utilizada para la domesticación de aves.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// Controla la variante del minijuego de Simón dice utilizada para la domesticación de aves.
+/// </summary>
 public class SimonGameManagerPajaro : MonoBehaviour
 {
+    /// <summary>
+    /// Propiedad que expone o modifica instance.
+    /// </summary>
     public static SimonGameManagerPajaro Instance { get; private set; }
+    /// <summary>
+    /// Indica si is active está activo o habilitado.
+    /// </summary>
     public static bool IsActive = false;
 
+    /// <summary>
+    /// Colección de circles utilizada por este componente.
+    /// </summary>
     public CircleButtonPajaro[] circles;
+    /// <summary>
+    /// Campo de tipo LevelIndicator utilizado para almacenar o configurar level indicator.
+    /// </summary>
     public LevelIndicator levelIndicator;
+    /// <summary>
+    /// Colección de circle sounds utilizada por este componente.
+    /// </summary>
     public AudioClip[] circleSounds;
+    /// <summary>
+    /// Colección de letter sprites utilizada por este componente.
+    /// </summary>
     public Sprite[] letterSprites;
+    /// <summary>
+    /// Fuente de audio utilizada para reproducir sonidos del componente.
+    /// </summary>
     private AudioSource audioSource;
+    /// <summary>
+    /// Referencia de interfaz utilizada para mostrar o actualizar contador text.
+    /// </summary>
     public TextMeshProUGUI contadorText;
 
+    /// <summary>
+    /// Tiempo o duración asociado a flash duration.
+    /// </summary>
     public float flashDuration = 1f;
+    /// <summary>
+    /// Tiempo o duración asociado a time between flashes.
+    /// </summary>
     public float timeBetweenFlashes = 1f;
 
+    /// <summary>
+    /// Colección de pattern utilizada por este componente.
+    /// </summary>
     private List<int> pattern = new List<int>();
+    /// <summary>
+    /// Colección de player input utilizada por este componente.
+    /// </summary>
     private List<int> playerInput = new List<int>();
 
+    /// <summary>
+    /// Indica si is player turn está activo o habilitado.
+    /// </summary>
     private bool isPlayerTurn = false;
+    /// <summary>
+    /// Indica si can press está activo o habilitado.
+    /// </summary>
     private bool canPress = false;
+    /// <summary>
+    /// Indica si game started está activo o habilitado.
+    /// </summary>
     private bool gameStarted = false;
 
+    /// <summary>
+    /// Botón de interfaz asociado a start button.
+    /// </summary>
     public Button startButton;
+    /// <summary>
+    /// Botón de interfaz asociado a back button.
+    /// </summary>
     public Button backButton;
 
+    /// <summary>
+    /// Panel de interfaz asociado a exit confirm panel.
+    /// </summary>
     [Header("Confirmación de salida")]
     [Tooltip("Panel con los botones Sí/No que pide confirmación al pulsar el botón de salir.")]
     [SerializeField] private GameObject exitConfirmPanel;
 
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar level.
+    /// </summary>
     private int level = 0;
+    /// <summary>
+    /// Valor numérico que limita o define fail count.
+    /// </summary>
     private int failCount = 0;
+    /// <summary>
+    /// Valor numérico que limita o define max fails.
+    /// </summary>
     public int maxFails = 3;
 
+    /// <summary>
+    /// Color utilizado para representar fail color.
+    /// </summary>
     public Color failColor = Color.red; // Color flash fallo
+    /// <summary>
+    /// Color utilizado para representar success color.
+    /// </summary>
     public Color successColor = Color.green; // Color flash acierto
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar circle flashes.
+    /// </summary>
     public int circleFlashes = 2;         // Cuántas veces parpadea
 
+    /// <summary>
+    /// Campo de tipo Image utilizado para almacenar o configurar pajaro.
+    /// </summary>
     public Image pajaro;
+    /// <summary>
+    /// Campo de tipo Bird utilizado para almacenar o configurar selected bird.
+    /// </summary>
     private Bird selectedBird;
     
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -58,6 +150,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     void Start()
     {
          // Obtener pájaro seleccionado
@@ -90,6 +185,9 @@ public class SimonGameManagerPajaro : MonoBehaviour
         OnStartButtonPressed();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a on start button pressed dentro de SimonGameManagerPajaro.
+    /// </summary>
     public void OnStartButtonPressed()
     {
         if (gameStarted) return; // Evita doble click
@@ -105,6 +203,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
         StartCoroutine(StartNewRound());
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a start new round dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator StartNewRound()
     {
         isPlayerTurn = false;
@@ -138,6 +240,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
         canPress = true;
     }
 
+    /// <summary>
+    /// Reproduce o inicia pattern.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator PlayPattern()
     {
         canPress = false;
@@ -159,6 +265,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
 
         canPress = true;
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a on circle pressed dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <param name="index">Parámetro index empleado por el método.</param>
     public void OnCirclePressed(int index)
     {
         if (!isPlayerTurn || !canPress) return;
@@ -167,6 +277,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
         StartCoroutine(HandlePlayerPress(index));
     }
 
+    /// <summary>
+    /// Muestra letter en la interfaz o en la escena.
+    /// </summary>
+    /// <param name="index">Parámetro index empleado por el método.</param>
     private void ShowLetter(int index)
     {
         if (index < letterSprites.Length)
@@ -175,6 +289,11 @@ public class SimonGameManagerPajaro : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle player press dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <param name="index">Parámetro index empleado por el método.</param>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator HandlePlayerPress(int index)
     {
         PlaySound(index);
@@ -235,6 +354,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
         canPress = true;
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle success dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator HandleSuccess()
     {
         isPlayerTurn = false;
@@ -257,6 +380,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a handle fail dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator HandleFail()
     {
         isPlayerTurn = false;
@@ -288,6 +415,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
     }
 
  
+    /// <summary>
+    /// Reproduce o inicia sound.
+    /// </summary>
+    /// <param name="circleIndex">Parámetro circle index empleado por el método.</param>
     private void PlaySound(int circleIndex)
     {
         if (audioSource != null && circleIndex < circleSounds.Length && circleSounds[circleIndex] != null)
@@ -296,11 +427,18 @@ public class SimonGameManagerPajaro : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a complete mini game dentro de SimonGameManagerPajaro.
+    /// </summary>
     private void CompleteMiniGame()
     {
         StartCoroutine(CompleteRoutine());
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a complete routine dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator CompleteRoutine()
     {
         Debug.Log("MINIJUEGO COMPLETADO");
@@ -324,11 +462,18 @@ public class SimonGameManagerPajaro : MonoBehaviour
         Destroy(transform.root.gameObject);
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a end game fail dentro de SimonGameManagerPajaro.
+    /// </summary>
     private void EndGameFail()
     {
         StartCoroutine(FailRoutine());
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a fail routine dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     IEnumerator FailRoutine()
     {
         Debug.Log("MINIJUEGO FALLADO");
@@ -345,6 +490,10 @@ public class SimonGameManagerPajaro : MonoBehaviour
         IsActive = false;
         Destroy(transform.root.gameObject);
     }
+    /// <summary>
+    /// Ejecuta la lógica asociada a can player press dentro de SimonGameManagerPajaro.
+    /// </summary>
+    /// <returns>true si la operación se ha completado correctamente; false en caso contrario.</returns>
     public bool CanPlayerPress()
     {
         return isPlayerTurn && canPress;

@@ -1,4 +1,12 @@
-﻿using Firebase.Auth;                    // Firebase Authentication
+/**
+ * @file GoogleLogInManager.cs
+ * @brief Gestiona el inicio de sesión mediante servicios de Google/Firebase para vincular datos del usuario.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
+using Firebase.Auth;                    // Firebase Authentication
 using Firebase.Extensions;              // Permite usar ContinueWithOnMainThread
 using Firebase.Firestore;               // Firebase Firestore (base de datos)
 using Google;                           // Google Sign-In para Unity
@@ -15,6 +23,9 @@ using UnityEngine;
 /// </summary>
 public class GoogleFirebaseLogin : MonoBehaviour
 {
+    /// <summary>
+    /// Instancia singleton utilizada para acceder globalmente al controlador.
+    /// </summary>
     public static GoogleFirebaseLogin Instance;
 
     // =========================
@@ -23,40 +34,73 @@ public class GoogleFirebaseLogin : MonoBehaviour
 
     [Header("Google API")]
     // Web Client ID obtenido desde Firebase Console (NO Android ID)
+    /// <summary>
+    /// Campo de tipo string utilizado para almacenar o configurar web client id.
+    /// </summary>
     [SerializeField]
     private string webClientId =
         "264966857771-k8ksaobqrna2mtl7fm8p4fl6u16g521u.apps.googleusercontent.com";
 
     // Evita configurar Google Sign-In más de una vez
+    /// <summary>
+    /// Indica si is google sign in initialized está activo o habilitado.
+    /// </summary>
     private bool isGoogleSignInInitialized = false;
 
     // =========================
     // FIREBASE
     // =========================
 
+    /// <summary>
+    /// Campo de tipo FirebaseAuth utilizado para almacenar o configurar auth.
+    /// </summary>
     private FirebaseAuth auth;           // Sistema de autenticación
+    /// <summary>
+    /// Campo de tipo FirebaseUser utilizado para almacenar o configurar user.
+    /// </summary>
     private FirebaseUser user;           // Usuario autenticado actual
+    /// <summary>
+    /// Campo de tipo FirebaseFirestore utilizado para almacenar o configurar db.
+    /// </summary>
     private FirebaseFirestore db;        // Referencia a Firestore
 
     // =========================
     // UI
     // =========================
 
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar text uuid.
+    /// </summary>
     public TextMeshProUGUI textUUID;
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar text nuevo user.
+    /// </summary>
     public TextMeshProUGUI textNuevoUser;
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar text anterior user.
+    /// </summary>
     public TextMeshProUGUI textAnteriorUser;
+    /// <summary>
+    /// Campo de tipo TextMeshProUGUI utilizado para almacenar o configurar text coins.
+    /// </summary>
     public TextMeshProUGUI textCoins;
 
     // =========================
     // DATOS DE JUEGO
     // =========================
 
+    /// <summary>
+    /// Campo de tipo int utilizado para almacenar o configurar coins actuales.
+    /// </summary>
     public int coinsActuales = 0;
 
     // =========================
     // UNITY LIFECYCLE
     // =========================
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     void Awake()
     {
         // Singleton
@@ -70,6 +114,9 @@ public class GoogleFirebaseLogin : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     void Start()
     {
         InitFirebase();
@@ -369,6 +416,9 @@ public class GoogleFirebaseLogin : MonoBehaviour
         Debug.Log("Usuario desconectado.");
     }
 
+        /// <summary>
+        /// Guarda o sincroniza datos cuando la aplicación se cierra.
+        /// </summary>
         void OnApplicationQuit()
     {
         SaveUserDataKPIs();
@@ -376,6 +426,10 @@ public class GoogleFirebaseLogin : MonoBehaviour
         deleteDataFromMemory();
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a on application pause dentro de GoogleFirebaseLogin.
+    /// </summary>
+    /// <param name="pause">Parámetro pause empleado por el método.</param>
     void OnApplicationPause(bool pause)
     {
         if (pause)
@@ -387,6 +441,9 @@ public class GoogleFirebaseLogin : MonoBehaviour
             
     }
 
+    /// <summary>
+    /// Ejecuta la lógica asociada a delete data from memory dentro de GoogleFirebaseLogin.
+    /// </summary>
     public void deleteDataFromMemory()
     {
         KPIsManager.Instance.contadorSesiones = 0;

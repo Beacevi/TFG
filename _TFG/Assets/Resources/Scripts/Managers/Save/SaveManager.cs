@@ -1,14 +1,40 @@
-﻿using Firebase;
+/**
+ * @file SaveManager.cs
+ * @brief Gestiona el almacenamiento y recuperación de datos persistentes del proyecto.
+ * @author Hortensia Studio
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
+
+using Firebase;
 using Firebase.Firestore;
 using System.Threading.Tasks;
 using UnityEngine;
+/// <summary>
+/// Gestiona el almacenamiento y recuperación de datos persistentes del proyecto.
+/// </summary>
 public class SaveManager : MonoBehaviour
 {
+    /// <summary>
+    /// Campo de tipo FirebaseFirestore utilizado para almacenar o configurar db.
+    /// </summary>
     static FirebaseFirestore db;
+    /// <summary>
+    /// Campo de tipo SaveManager utilizado para almacenar o configurar save instance.
+    /// </summary>
     public static SaveManager saveInstance;
+    /// <summary>
+    /// Campo de tipo string utilizado para almacenar o configurar player name.
+    /// </summary>
     public string playerName;
+    /// <summary>
+    /// Referencia al jugador o a su objeto asociado en la escena.
+    /// </summary>
     public Player player;
 
+    /// <summary>
+    /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
+    /// </summary>
     void Awake()
     {
         if (saveInstance == null)
@@ -22,6 +48,9 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
+    /// </summary>
     private async void Start()
     {
         var dependencyStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
@@ -36,6 +65,9 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Guarda el estado actual para que pueda recuperarse posteriormente.
+    /// </summary>
     public void Save()
     {
         // Obtener el Player del nivel 1
@@ -45,6 +77,9 @@ public class SaveManager : MonoBehaviour
         SavePlayer(playerName, playerLevel1);
     }
 
+    /// <summary>
+    /// Carga el estado previamente guardado y restaura los datos del sistema.
+    /// </summary>
     public async void Load()
     {
         // Antes de cargar
@@ -72,6 +107,11 @@ public class SaveManager : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Guarda el estado actual para que pueda recuperarse posteriormente.
+    /// </summary>
+    /// <param name="playerName">Referencia al jugador afectado por la operación.</param>
+    /// <param name="player">Referencia al jugador afectado por la operación.</param>
     public void SavePlayer(string playerName, Player player)
     {
         Player playerData = new Player(player);
@@ -89,6 +129,11 @@ public class SaveManager : MonoBehaviour
         });
     }
 
+    /// <summary>
+    /// Carga el estado previamente guardado y restaura los datos del sistema.
+    /// </summary>
+    /// <param name="playerName">Referencia al jugador afectado por la operación.</param>
+    /// <returns>Instancia o valor de tipo Task<Player> resultante de la operación.</returns>
     public async Task<Player> LoadPlayer(string playerName)
     {
         try
