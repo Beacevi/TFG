@@ -4270,18 +4270,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinPrefab: {fileID: 7899624229605756167, guid: b7d329fcc8f7da149ab23ec36a762d77, type: 3}
-  _coinChance: 10
+  _coinChance: 4
   _cloudsPrefab: {fileID: 7053339088832149667, guid: a87b5c316c71ef14189a094b95807e64, type: 3}
   _spawnRateMin: 1
   _spawnRateMax: 2
-  xMin: -3
-  xMax: -6
-  yMin: -11
-  yMax: 3
+  xMin: -25
+  xMax: -10
+  yMin: -25
+  yMax: -10
   zMin: -0.3
   zMax: -0.1
-  _scaleMin: 0.4
-  _scaleMax: 0.6
+  _scaleMin: 0.8
+  _scaleMax: 1.2
   _minObjets: 1
   _maxObjets: 1
 --- !u!212 &809978006
