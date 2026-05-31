@@ -50,12 +50,17 @@ public class BoostsManager : MonoBehaviour
     {
         boostCombinations = new Dictionary<string, Boost>
         {
+            // Columnas verticales
             { "ADG", new Boost { name = "ADG", coinMultiplier = 1.5f, energyMultiplier = 0f, description = "Bonus de monedas" } },
             { "BEH", new Boost { name = "BEH", coinMultiplier = 0f, energyMultiplier = 1.5f, description = "Bonus de energía" } },
-            { "CFI", new Boost { name = "CFI", coinMultiplier = 1.2f, energyMultiplier = 1.2f, description = "Bonus mixto" } }
+            { "CFI", new Boost { name = "CFI", coinMultiplier = 1.2f, energyMultiplier = 1.2f, description = "Bonus mixto" } },
+
+            // Filas horizontales
+            { "ABC", new Boost { name = "ABC", coinMultiplier = 1.5f, energyMultiplier = 0f, description = "Bonus de monedas" } },
+            { "DEF", new Boost { name = "DEF", coinMultiplier = 0f, energyMultiplier = 1.5f, description = "Bonus de energía" } },
+            { "GHI", new Boost { name = "GHI", coinMultiplier = 1.2f, energyMultiplier = 1.2f, description = "Bonus mixto" } },
         };
     }
-
     /// <summary>
     /// Obtiene boost from selection a partir del estado actual del sistema.
     /// </summary>
@@ -89,16 +94,17 @@ public class BoostsManager : MonoBehaviour
         switch (nombreBuffo)
         {
             case "ADG":
+            case "ABC":
                 GameManager.Instance.buffMoneyActive = true;
                 break;
             case "BEH":
+            case "DEF":
                 GameManager.Instance.buffEnergyActive = true;
                 break;
             case "CFI":
+            case "GHI":
                 GameManager.Instance.buffBothActive = true;
                 break;
-            default:
-            break;
         }
     }
 

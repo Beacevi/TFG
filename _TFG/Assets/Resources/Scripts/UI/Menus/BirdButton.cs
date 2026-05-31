@@ -284,15 +284,15 @@ public class BirdButton : MonoBehaviour
         Vector2Int b = birdGrid[tags[1]];
         Vector2Int c = birdGrid[tags[2]];
 
-        // Solo misma columna (vertical)
-        if (a.x != b.x || b.x != c.x)
-            return false;
+        // Columna vertical: misma X, Y consecutivas (span de 2)
+        bool isVertical = (a.x == b.x && b.x == c.x) &&
+                        (Mathf.Max(a.y, Mathf.Max(b.y, c.y)) - Mathf.Min(a.y, Mathf.Min(b.y, c.y))) == 2;
 
-        // Deben estar consecutivos en Y (ordenados o no)
-        int minY = Mathf.Min(a.y, Mathf.Min(b.y, c.y));
-        int maxY = Mathf.Max(a.y, Mathf.Max(b.y, c.y));
+        // Fila horizontal: misma Y, X consecutivas (span de 2)
+        bool isHorizontal = (a.y == b.y && b.y == c.y) &&
+                            (Mathf.Max(a.x, Mathf.Max(b.x, c.x)) - Mathf.Min(a.x, Mathf.Min(b.x, c.x))) == 2;
 
-        return (maxY - minY) == 2;
+        return isVertical || isHorizontal;
     }
 
     /// <summary>
