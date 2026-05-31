@@ -1,7 +1,7 @@
 /**
  * @file Node.cs
  * @brief Representa una celda lógica del mapa procedural, incluyendo posición, tipo de terreno y referencias visuales.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Alejandro Romero Burgada
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

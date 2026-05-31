@@ -1,7 +1,7 @@
 /**
  * @file TileAStar.cs
  * @brief Calcula rutas sobre la rejilla de tiles mediante A* para conectar puntos del terreno procedural.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Alejandro Romero Burgada
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */
