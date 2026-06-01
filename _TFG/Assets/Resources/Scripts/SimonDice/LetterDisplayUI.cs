@@ -1,7 +1,7 @@
 /**
  * @file LetterDisplayUI.cs
  * @brief Actualiza la visualización de letras o símbolos durante el minijuego musical.
- * @author Hortensia Studio
+ * @author Hortensia Studio - David Díaz Espinosa de los Monteros
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

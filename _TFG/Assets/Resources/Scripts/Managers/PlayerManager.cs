@@ -1,7 +1,7 @@
 /**
  * @file PlayerManager.cs
  * @brief Administra el estado del jugador y proporciona acceso centralizado a sus datos de progreso.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Beatriz Ceballos Vidal
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

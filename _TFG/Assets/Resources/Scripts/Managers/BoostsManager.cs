@@ -1,7 +1,7 @@
 /**
  * @file BoostsManager.cs
  * @brief Administra los potenciadores del juego y su efecto sobre economía, energía u otras variables de progreso.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Beatriz Ceballos Vidal
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */
