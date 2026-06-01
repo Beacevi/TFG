@@ -1,7 +1,7 @@
 /**
  * @file BirdButtonController.cs
  * @brief Controla los botones generados dinámicamente para listar y seleccionar aves.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Beatriz Ceballos Vidal
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

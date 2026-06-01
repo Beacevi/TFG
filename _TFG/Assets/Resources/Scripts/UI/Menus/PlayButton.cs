@@ -1,7 +1,7 @@
 /**
  * @file PlayButton.cs
  * @brief Gestiona el botón de inicio de partida o acceso a la zona de juego.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Beatriz Ceballos Vidal
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */
