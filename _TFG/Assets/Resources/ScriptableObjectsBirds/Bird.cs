@@ -1,3 +1,10 @@
+/**
+ * @file Bird.cs
+ * @brief Características de cada pájaro, incluyendo su prefab, nombre, comportamiento de movimiento y parámetros relacionados con el minijuego.
+ * @author Hortensia Studio - David Díaz Espinosa de los Monteros
+ * @date 2026
+ * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
+ */
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Bird", menuName = "Scriptable Objects/Bird")]
@@ -20,9 +27,7 @@ public class Bird : ScriptableObject
     public float moveRange = 1f;
     public float moveDuration = 0.5f;
 
-    // -----------------------------
-    // NUEVO SISTEMA (IDLE MOVEMENT)
-    // -----------------------------
+
     [Header("Idle Movement (Ambient)")]
     public BirdIdleMovementType idleMovementType;
 

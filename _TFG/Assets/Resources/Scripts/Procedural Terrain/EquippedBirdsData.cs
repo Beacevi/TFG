@@ -1,7 +1,7 @@
 /**
  * @file EquippedBirdsData.cs
  * @brief Mantiene la información de las aves equipadas por el jugador durante la exploración.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Alejandro Romero Burgada
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

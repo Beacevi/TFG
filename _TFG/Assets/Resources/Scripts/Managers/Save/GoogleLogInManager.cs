@@ -1,7 +1,7 @@
 /**
  * @file GoogleLogInManager.cs
  * @brief Gestiona el inicio de sesión mediante servicios de Google/Firebase para vincular datos del usuario.
- * @author Hortensia Studio
+ * @author Hortensia Studio - David Díaz Espinosa de los Monteros
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

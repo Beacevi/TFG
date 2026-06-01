@@ -1,7 +1,7 @@
 /**
  * @file BirdFollower.cs
  * @brief Controla el comportamiento de seguimiento de las aves equipadas alrededor del jugador.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Alejandro Romero Burgada
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

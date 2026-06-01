@@ -1,7 +1,7 @@
 /**
  * @file ChangeScene.cs
  * @brief Centraliza los cambios de escena del proyecto, incluyendo transiciones visuales y llamadas desde botones de interfaz.
- * @author Hortensia Studio
+ * @author Hortensia Studio - David Díaz Espinosa de los Monteros
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

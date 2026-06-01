@@ -1,7 +1,7 @@
 /**
  * @file StickerData.cs
  * @brief Modelo de datos que describe un sticker o elemento decorativo.
- * @author Hortensia Studio
+ * @author Hortensia Studio - David Díaz Espinosa de los Monteros
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */

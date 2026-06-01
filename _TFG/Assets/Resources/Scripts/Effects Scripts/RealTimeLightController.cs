@@ -1,7 +1,7 @@
 /**
  * @file RealTimeLightController.cs
  * @brief Coordina las luces de la escena para adaptar la iluminación global al ciclo temporal del juego.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Beatriz Ceballos Vidal
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */
