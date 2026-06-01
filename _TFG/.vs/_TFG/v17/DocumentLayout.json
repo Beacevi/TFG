@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\background\u0026anim\\coinclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\background\u0026anim\\coinclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\hamburguerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\background\u0026anim\\cloudsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\background\u0026anim\\cloudsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\balloonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\balloonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\boostsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,11 +82,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "HamburguerButton.cs",
+              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\HamburguerButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:13:12.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Sounds.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Sounds.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Sounds.cs",
@@ -103,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Store.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Store.cs",
@@ -116,33 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoinClick.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T22:59:48.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CloudsMovement.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T22:59:41.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\PlayerManager.cs",
@@ -155,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\LevelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\LevelManager.cs",
@@ -168,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Energy.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
@@ -181,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "GameManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
@@ -194,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "BoostsManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\BoostsManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\BoostsManager.cs",
@@ -220,20 +203,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "ShopMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T16:19:55.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "EconomyAuthority.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
@@ -246,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "SaveDataManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
@@ -259,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "GameManagerAuthority.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
@@ -272,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "GameManagerLogic.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
@@ -285,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "IsometricCamera.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
@@ -297,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "RewardsMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
@@ -309,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "CustomMenuSprites.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
@@ -321,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "CustomMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",

@@ -3,68 +3,24 @@
   "WorkspaceRootPath": "F:\\Proyectos4\\TFG\\_TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\background\u0026anim\\cloudsspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\background\u0026anim\\cloudsspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\birdidlemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\birdidlemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\birdreactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\birdreactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\birdsgriddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\birdsgriddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\birdsreactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\birdsreactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\hour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\gems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\gems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\scenepersistentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\scenepersistentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\sounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\sounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\ui\\sounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\sounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\energy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\background\u0026anim\\cloudsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\background\u0026anim\\cloudsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\background\u0026anim\\coinclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\background\u0026anim\\coinclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\balloonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\managers\\balloonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|F:\\Proyectos4\\TFG\\_TFG\\assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\menus\\shopmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{338EC7F7-1340-1A6E-E62C-AFD5521D080B}|Assembly-CSharp.csproj|f:\\proyectos4\\tfg\\_tfg\\assets\\resources\\scripts\\managers\\boostsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,11 +78,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Sounds.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Sounds.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Sounds.cs",
@@ -139,124 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ScenePersistentManager.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\ScenePersistentManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:55.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Gems.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Gems.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Gems.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Gems.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Gems.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:53.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Hour.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Hour.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Hour.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Hour.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Hour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:51.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Coins.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Coins.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Coins.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Coins.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Coins.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:45.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BirdsReactions.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdsReactions.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\BirdsReactions.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdsReactions.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\BirdsReactions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:42.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BirdsGridDisplay.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdsGridDisplay.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\BirdsGridDisplay.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdsGridDisplay.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\BirdsGridDisplay.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:40.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BirdReactionsManager.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdReactionsManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\BirdReactionsManager.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdReactionsManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\BirdReactionsManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:37.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BirdIdleMovement.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdIdleMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\BirdIdleMovement.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\BirdIdleMovement.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\BirdIdleMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:00:35.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CloudsSpawner.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsSpawner.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsSpawner.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T22:59:45.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "Store.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Store.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Store.cs",
@@ -269,33 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CoinClick.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CoinClick.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T22:59:48.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CloudsMovement.cs",
-              "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Background\u0026Anim\\CloudsMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T22:59:41.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 8,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\PlayerManager.cs",
@@ -308,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\LevelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\LevelManager.cs",
@@ -321,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "Energy.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Energy.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Energy.cs",
@@ -334,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManager.cs",
@@ -347,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
               "Title": "BoostsManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\BoostsManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\BoostsManager.cs",
@@ -360,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
               "Title": "BalloonManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\BalloonManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\BalloonManager.cs",
@@ -373,20 +186,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 0,
               "Title": "ShopMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "ToolTip": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\Menus\\ShopMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T16:19:55.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 11,
               "Title": "EconomyAuthority.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\EconomyAuthority.cs",
@@ -399,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 12,
               "Title": "SaveDataManager.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\Save\\SaveDataManager.cs",
@@ -412,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 10,
               "Title": "GameManagerAuthority.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerAuthority.cs",
@@ -425,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 9,
               "Title": "GameManagerLogic.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Managers\\GameManagerLogic.cs",
@@ -438,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 13,
               "Title": "IsometricCamera.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Procedural Terrain\\IsometricCamera.cs",
@@ -450,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 14,
               "Title": "RewardsMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\RewardsMenu.cs",
@@ -462,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 15,
               "Title": "CustomMenuSprites.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\Skins\\CustomMenuSprites.cs",
@@ -474,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 16,
               "Title": "CustomMenu.cs",
               "DocumentMoniker": "F:\\Proyectos4\\TFG\\_TFG\\Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\Menus\\CustomMenu.cs",

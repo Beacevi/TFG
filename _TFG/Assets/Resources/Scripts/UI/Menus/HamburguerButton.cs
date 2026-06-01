@@ -1,7 +1,7 @@
 /**
  * @file HamburguerButton.cs
  * @brief Gestiona el botón de menú hamburguesa y el despliegue de opciones de interfaz.
- * @author Hortensia Studio
+ * @author Hortensia Studio - Beatriz Ceballos Vidal
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */
