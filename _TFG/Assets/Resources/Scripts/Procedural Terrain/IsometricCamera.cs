@@ -477,7 +477,7 @@ public class IsometricCamera : MonoBehaviour
 
         panelPajaroConseguido.SetActive(true);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         //botonSalirMenupajaroConseguido.SetActive(true);
 
         panelPajaroConseguido.SetActive(false);

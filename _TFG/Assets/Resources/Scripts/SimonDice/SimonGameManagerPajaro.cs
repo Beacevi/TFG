@@ -456,7 +456,7 @@ public class SimonGameManagerPajaro : MonoBehaviour
         int energiaGanada = level;
         LetterDisplayUI.Instance.ShowEnergy(energiaGanada);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.15f);
 
         IsActive = false;
         Destroy(transform.root.gameObject);
