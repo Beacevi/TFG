@@ -125,12 +125,11 @@ public class CloudsSpawner : MonoBehaviour
                 Random.Range(zMin, zMax)
             );
 
-            //GameObject _newObject = Instantiate(_cloudsPrefab, _spawnPoint, Quaternion.identity);
-
             GameObject prefabToSpawn;
 
-            // 1 out of every _coinChance spawns becomes a coin
-            if (Random.Range(1, _coinChance + 1) == 1)
+            bool enSimonSays = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "SimonSays";
+
+            if (!enSimonSays && Random.Range(1, _coinChance + 1) == 1)
             {
                 prefabToSpawn = _coinPrefab;
             }
@@ -140,7 +139,6 @@ public class CloudsSpawner : MonoBehaviour
             }
 
             GameObject _newObject = Instantiate(prefabToSpawn, _spawnPoint, Quaternion.identity);
-
 
             float _scale = Random.Range(_scaleMin, _scaleMax);
             _newObject.transform.localScale = new Vector3(_scale, _scale, 1f);

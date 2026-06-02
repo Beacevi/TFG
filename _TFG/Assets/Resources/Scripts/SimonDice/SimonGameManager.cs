@@ -44,6 +44,10 @@ public class SimonGameManager : MonoBehaviour
     /// </summary>
     public TextMeshProUGUI contadorText;
     /// <summary>
+    /// Referencia de interfaz utilizada para mostrar u ocultar el container de contador text.
+    /// </summary>
+    public GameObject contadorContainer;
+    /// <summary>
     /// Botón de interfaz asociado a start button.
     /// </summary>
     public Button startButton, backButton;
@@ -183,6 +187,7 @@ public class SimonGameManager : MonoBehaviour
 
         if (startButton != null)
         {
+            contadorContainer.SetActive(true);
             startButton.gameObject.SetActive(false);
         }
 
