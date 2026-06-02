@@ -15,6 +15,7 @@ MonoBehaviour:
   obtenido: 1
   birdPrefab: {fileID: 5805991993125803581, guid: cc912e5546e2e0776954256619f271cd, type: 3}
   birdName: Tiala
+  animator: {fileID: 9100000, guid: e9736bf137cc90c459f45544907e9189, type: 2}
   rondasTotales: 5
   notasPorTurno: 2
   maxFallos: 3

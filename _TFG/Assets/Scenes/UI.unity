@@ -32659,6 +32659,7 @@ GameObject:
   - component: {fileID: 870708645}
   - component: {fileID: 870708649}
   - component: {fileID: 870708648}
+  - component: {fileID: 870708650}
   m_Layer: 0
   m_Name: EquippedBird1
   m_TagString: Untagged
@@ -32932,6 +32933,28 @@ MonoBehaviour:
   directionChangeInterval: 2
   boundaryAvoidDistance: 0.8
   smoothTurnSpeed: 3
+--- !u!95 &870708650
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870708641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &875819436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6881456423625635574, guid: b09380459bd7791a0b2665256bcc84db, type: 3}
@@ -42565,6 +42588,7 @@ GameObject:
   - component: {fileID: 1126918665}
   - component: {fileID: 1126918663}
   - component: {fileID: 1126918666}
+  - component: {fileID: 1126918667}
   m_Layer: 0
   m_Name: EquippedBird2
   m_TagString: Untagged
@@ -42816,6 +42840,28 @@ MonoBehaviour:
   directionChangeInterval: 2
   boundaryAvoidDistance: 0.8
   smoothTurnSpeed: 3
+--- !u!95 &1126918667
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126918659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1131861840
 GameObject:
   m_ObjectHideFlags: 0
@@ -49203,6 +49249,7 @@ GameObject:
   - component: {fileID: 1358193906}
   - component: {fileID: 1358193904}
   - component: {fileID: 1358193907}
+  - component: {fileID: 1358193908}
   m_Layer: 0
   m_Name: EquippedBird3
   m_TagString: Untagged
@@ -49454,6 +49501,28 @@ MonoBehaviour:
   directionChangeInterval: 2
   boundaryAvoidDistance: 0.8
   smoothTurnSpeed: 3
+--- !u!95 &1358193908
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358193900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1361250311
 GameObject:
   m_ObjectHideFlags: 0

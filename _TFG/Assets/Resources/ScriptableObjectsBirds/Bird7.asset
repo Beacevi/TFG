@@ -15,6 +15,7 @@ MonoBehaviour:
   obtenido: 1
   birdPrefab: {fileID: 5805991993125803581, guid: 40e2a345ab886c4acae9f1593ef15da9, type: 3}
   birdName: Esty
+  animator: {fileID: 9100000, guid: d6bf6ccfde9790143bd7c18e219149e3, type: 2}
   rondasTotales: 6
   notasPorTurno: 3
   maxFallos: 3

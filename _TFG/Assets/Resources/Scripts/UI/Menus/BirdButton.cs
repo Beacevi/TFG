@@ -530,6 +530,12 @@ public class BirdButton : MonoBehaviour
             _MyBird1.SetActive(true);
             _MyBird1.GetComponent<BirdsReactions>().birdData = birdData;
 
+            Animator anim = _MyBird1.GetComponent<Animator>();
+            if (anim != null && birdData.animator != null)
+            {
+                anim.runtimeAnimatorController = birdData.animator;
+            }
+
             _birdDataSlot1 = birdData;
             EquippedBirdsData.Set(0, birdData, buttonImage.sprite);
 
@@ -550,6 +556,12 @@ public class BirdButton : MonoBehaviour
 
             _MyBird2.SetActive(true);
             _MyBird2.GetComponent<BirdsReactions>().birdData = birdData;
+
+            Animator anim = _MyBird2.GetComponent<Animator>();
+            if (anim != null && birdData.animator != null)
+            {
+                anim.runtimeAnimatorController = birdData.animator;
+            }
 
             _birdDataSlot2 = birdData;
             EquippedBirdsData.Set(1, birdData, buttonImage.sprite);
@@ -579,6 +591,12 @@ public class BirdButton : MonoBehaviour
 
             _MyBird3.SetActive(true);
             _MyBird3.GetComponent<BirdsReactions>().birdData = birdData;
+
+            Animator anim = _MyBird3.GetComponent<Animator>();
+            if (anim != null && birdData.animator != null)
+            {
+                anim.runtimeAnimatorController = birdData.animator;
+            }
 
             _birdDataSlot3 = birdData;
             EquippedBirdsData.Set(2, birdData, buttonImage.sprite);

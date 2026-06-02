@@ -5,6 +5,7 @@
  * @date 2026
  * @details Archivo perteneciente al proyecto Cloud Wander. La documentación se ha preparado con comentarios XML compatibles con Doxygen para describir clases, campos y métodos relevantes.
  */
+using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Bird", menuName = "Scriptable Objects/Bird")]
@@ -15,6 +16,7 @@ public class Bird : ScriptableObject
     [Header("Visual")]
     public GameObject birdPrefab;
     public string birdName;
+    public AnimatorController animator;
 
     [Header("Gameplay")]
     public int rondasTotales;      // Cuantas rondas dura el minijuego

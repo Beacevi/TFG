@@ -15,6 +15,7 @@ MonoBehaviour:
   obtenido: 1
   birdPrefab: {fileID: 926288913471853959, guid: 8198ab1b178ef2a408fac1b7ea419a87, type: 3}
   birdName: Blu
+  animator: {fileID: 9100000, guid: 4e6f7f7acb9a1eb4ab40a474683516cb, type: 2}
   rondasTotales: 4
   notasPorTurno: 1
   maxFallos: 3

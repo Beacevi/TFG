@@ -15,6 +15,7 @@ MonoBehaviour:
   obtenido: 1
   birdPrefab: {fileID: 8457740664911959370, guid: f969d3a2d9a91d444ba1c268bd91788c, type: 3}
   birdName: Kaku
+  animator: {fileID: 9100000, guid: 36d6cfd02f21ceb4abec32d976279e28, type: 2}
   rondasTotales: 4
   notasPorTurno: 1
   maxFallos: 3

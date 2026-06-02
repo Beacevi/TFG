@@ -15,6 +15,7 @@ MonoBehaviour:
   obtenido: 1
   birdPrefab: {fileID: 5805991993125803581, guid: 384ee0f28125fb79680a19065dd09eac, type: 3}
   birdName: Wiggy
+  animator: {fileID: 9100000, guid: bf3da979260cbbf4fb161f92802f3bc1, type: 2}
   rondasTotales: 6
   notasPorTurno: 3
   maxFallos: 3
