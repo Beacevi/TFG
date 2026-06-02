@@ -142,6 +142,8 @@ MonoBehaviour:
   moveSpeed: 3
   mapGenerator: {fileID: 0}
   cambiaEscenas: {fileID: 0}
+  imagenPajaroConseguido: {fileID: 0}
+  textoNombrePajaro: 
   moving: 0
   pasosBar: {fileID: 0}
   stepsAvailable: 300
@@ -243,6 +245,7 @@ MonoBehaviour:
   sortingLayerName: UI
   sortingOrder: 1000
   defaultFacingRight: 0
+  unlitMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   minRadius: 0.4
   maxRadius: 5
   verticalBias: 5

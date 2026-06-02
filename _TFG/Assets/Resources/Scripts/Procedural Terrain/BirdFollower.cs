@@ -52,6 +52,11 @@ public class BirdFollower : MonoBehaviour
     /// </summary>
     [Tooltip("Enable if your sprite naturally faces RIGHT. Disable if it faces LEFT.")]
     [SerializeField] private bool defaultFacingRight = true;
+    // Añade esta línea:
+    /// <summary>
+    /// Indica el material que tiene.
+    /// </summary>
+    [SerializeField] private Material unlitMaterial;
 
     // ── Wander ────────────────────────────────────────────────────────────────
     /// <summary>
@@ -961,8 +966,18 @@ public class BirdFollower : MonoBehaviour
                     sr.sortingLayerName = sortingLayerName;
                     sr.sortingOrder = sortingOrder;
 
-                    go.SetActive(false);
+                    
 
+                    sr.sortingLayerName = sortingLayerName;
+                    sr.sortingOrder = sortingOrder;
+
+                    // Asignar el material Unlit si ha sido proporcionado
+                    if (unlitMaterial != null)
+                    {
+                        sr.material = unlitMaterial;
+                    }
+                    
+                    go.SetActive(false);
                     _birdGOs[i] = go;
                     _renderers[i] = sr;
                     _baseScales[i] = go.transform.localScale;
