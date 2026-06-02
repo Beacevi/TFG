@@ -218,6 +218,7 @@
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_PASSES.cginc" />
     <None Include="Assets/Packages/Newtonsoft.Json.13.0.4/lib/netstandard2.0/Newtonsoft.Json.xml" />
     <None Include="Assets/Packages/System.CodeDom.7.0.0/LICENSE.TXT" />
+    <None Include="Assets/Resources/Fonts/Font 1/OFL.txt" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
     <None Include="Assets/Packages/System.Management.7.0.2/lib/netstandard2.0/System.Management.dll" />
     <None Include="Assets/Packages/System.CodeDom.7.0.0/THIRD-PARTY-NOTICES.TXT" />
