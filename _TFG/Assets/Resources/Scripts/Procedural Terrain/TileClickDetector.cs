@@ -46,7 +46,7 @@ public class TileHoverDetector : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
         if (!mainTilemap)
             mainTilemap = GameObject.FindGameObjectWithTag("MainTileMap").GetComponent<Tilemap>();
         if (!highlightTilemap)

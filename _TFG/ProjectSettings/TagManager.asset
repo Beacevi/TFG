@@ -79,5 +79,11 @@ TagManager:
   - name: Characters
     uniqueID: 556140305
     locked: 0
+  - name: UI
+    uniqueID: 2911701983
+    locked: 0
+  - name: "Nubes transici\xF3n"
+    uniqueID: 2694325957
+    locked: 0
   m_RenderingLayers:
   - Default
