@@ -107,6 +107,55 @@ public class TileAStar : MonoBehaviour
     private static float inputBlockedUntil = 0f;
 
     /// <summary>
+    /// Referencia cacheada al script Sounds para evitar llamadas repetidas a GetComponent
+    /// al reproducir el clic de mapa y los pasos del jugador.
+    /// </summary>
+    private Sounds _soundsCache;
+
+    /// <summary>
+    /// AudioSource dedicado para el bucle de pasos del jugador.
+    /// Se crea en Start() y se reutiliza en cada movimiento.
+    /// </summary>
+    private AudioSource _footstepsSource;
+
+    /// <summary>
+    /// Obtiene la instancia de Sounds del GameManager de forma perezosa y cacheada.
+    /// Devuelve null si el GameManager aún no está disponible.
+    /// </summary>
+    private Sounds GetSounds()
+    {
+        if (_soundsCache != null) return _soundsCache;
+        if (GameManager.Instance == null) return null;
+        _soundsCache = GameManager.Instance.GetComponent<Sounds>();
+        return _soundsCache;
+    }
+
+    /// <summary>
+    /// Arranca (si no está sonando) el bucle de pasos del jugador.
+    /// </summary>
+    private void StartFootsteps()
+    {
+        if (_footstepsSource == null) return;
+        var s = GetSounds();
+        if (s == null || s.sonidoPasos == null) return;
+
+        if (_footstepsSource.clip != s.sonidoPasos)
+            _footstepsSource.clip = s.sonidoPasos;
+
+        if (!_footstepsSource.isPlaying)
+            _footstepsSource.Play();
+    }
+
+    /// <summary>
+    /// Detiene el bucle de pasos del jugador (si está sonando).
+    /// </summary>
+    private void StopFootsteps()
+    {
+        if (_footstepsSource != null && _footstepsSource.isPlaying)
+            _footstepsSource.Stop();
+    }
+
+    /// <summary>
     /// Inicializa el componente cuando la escena ya está cargada y lista para comenzar.
     /// </summary>
     private void Start()
@@ -137,6 +186,13 @@ public class TileAStar : MonoBehaviour
         initialSteps = stepsAvailable;
         UpdateStepsUI();
 
+        // AudioSource propio para el bucle de pasos. No se inicia hasta que el
+        // jugador empieza a moverse (StartFootsteps).
+        _footstepsSource = gameObject.GetComponent<AudioSource>();
+        if (_footstepsSource == null)
+            _footstepsSource = gameObject.AddComponent<AudioSource>();
+        _footstepsSource.playOnAwake = false;
+        _footstepsSource.loop = true;
     }
 
     /// <summary>
@@ -188,6 +244,9 @@ public class TileAStar : MonoBehaviour
     /// </summary>
     void ResolveArrival()
     {
+        // Cortar el bucle de pasos al llegar al destino, antes de cualquier interacción.
+        StopFootsteps();
+
         if (lastPathNode != null)
         {
             if (lastPathNode.hasObject)
@@ -235,19 +294,29 @@ public class TileAStar : MonoBehaviour
 
         path = FindPath(start, clicked);
 
-        // Si el tile destino tiene un pájaro, el jugador se para en el tile adyacente
-        // (lastPathNode sigue apuntando al nodo del pájaro para disparar la interacción)
-        if (path.Count > 1
+        // ¿Es el tile destino un interactuable (pájaro / moneda)?
+        bool targetHasObject = path.Count > 0
             && mapGenerator.nodes != null
             && InBounds(clicked, mapGenerator.width, mapGenerator.height)
-            && mapGenerator.nodes[clicked.x, clicked.y].hasObject)
+            && mapGenerator.nodes[clicked.x, clicked.y].hasObject;
+
+        // Si el destino tiene un pájaro, el jugador se para en el tile adyacente
+        // (lastPathNode sigue apuntando al nodo del pájaro para disparar la interacción).
+        if (path.Count > 1 && targetHasObject)
         {
             path.RemoveAt(path.Count - 1);
         }
 
         if (path.Count > stepsAvailable)
         {
+            // No hay pasos para llegar: truncamos la ruta y, si íbamos a un
+            // interactuable, anulamos lastPathNode para que ResolveArrival no
+            // dispare la interacción con un objeto al que no hemos llegado.
             path = path.GetRange(0, stepsAvailable);
+            if (targetHasObject)
+            {
+                lastPathNode = null;
+            }
         }
 
         if (path.Count > 0)
@@ -256,6 +325,12 @@ public class TileAStar : MonoBehaviour
             stepsAvailable = Mathf.Max(0, stepsAvailable);
 
             UpdateStepsUI();
+
+            // Sonido de clic en el mapa: solo si el clic se traduce en un movimiento real.
+            GetSounds()?.SonidoClickMapa();
+
+            // Bucle de pasos mientras dure el desplazamiento.
+            StartFootsteps();
 
             moving = true;
             currentIndex = 0;

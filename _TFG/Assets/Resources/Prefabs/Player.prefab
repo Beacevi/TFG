@@ -276,10 +276,10 @@ MonoBehaviour:
   notifTextColor: {r: 1, g: 1, b: 1, a: 1}
   notifFontSize: 25
   notifIconSize: 44
-  sfxDive: {fileID: 0}
-  sfxRummage: {fileID: 0}
-  sfxFound: {fileID: 0}
-  sfxCollect: {fileID: 0}
+  sfxDive: {fileID: 8300000, guid: ba4d86d0f16fd274d8ca5baa981c147c, type: 3}
+  sfxRummage: {fileID: 8300000, guid: 4d093abc8b58f424281f1c1406aab9c5, type: 3}
+  sfxFound: {fileID: 8300000, guid: 63cee5f03e6bd424b9664b36e24550bb, type: 3}
+  sfxCollect: {fileID: 8300000, guid: eb0017e463c105c47918557a72742197, type: 3}
   vfxDive: {fileID: 0}
   vfxRummage: {fileID: 0}
   vfxFound: {fileID: 0}

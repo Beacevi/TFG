@@ -44,14 +44,23 @@ public class InteractableGameObject : MonoBehaviour
             Debug.Log("EL pajaro es: " + birdData.birdName);
             ScenePersistentManager.instance.interactedBird = birdData;
 
-            if (simonMinigamePrefab != null && script.stepsAvailable > 0)
+            // El minijuego solo arranca si:
+            //  1) el prefab está bien asignado,
+            //  2) el jugador llega al pájaro con stamina restante.
+            // Si el jugador agota la stamina justo al llegar, el minijuego se omite
+            // y el flujo continúa con el panel de resumen de la expedición.
+            if (simonMinigamePrefab == null)
             {
-                Debug.Log("Tenia: "+script.stepsAvailable+" pasos");
-                Instantiate(simonMinigamePrefab);
+                Debug.LogError("InteractableGameObject: simonMinigamePrefab no asignado en el Inspector.");
+            }
+            else if (script.stepsAvailable <= 0)
+            {
+                Debug.Log("Sin stamina al llegar al pájaro: minijuego omitido, mostrará el resumen.");
             }
             else
             {
-                Debug.LogError("InteractableGameObject: simonMinigamePrefab no asignado en el Inspector o no se pudo llegar.");
+                Debug.Log("Tenia: " + script.stepsAvailable + " pasos");
+                Instantiate(simonMinigamePrefab);
             }
         }
 
