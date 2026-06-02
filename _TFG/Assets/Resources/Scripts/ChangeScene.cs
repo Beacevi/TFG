@@ -172,6 +172,17 @@ public class ChangeScene : MonoBehaviour
     /// <returns>Corrutina que permite ejecutar la operación de forma diferida en Unity.</returns>
     public IEnumerator SceneTransition(string nombreEscena, bool additive)
     {
+
+        // Si estamos en ProceduralTerrain, resetear el zoom de la cámara isométrica
+        if (SceneManager.GetActiveScene().name == "ProceduralTerrain")
+        {
+            IsometricCamera isoCam = FindFirstObjectByType<IsometricCamera>();
+            if (isoCam != null)
+            {
+                yield return isoCam.StartCoroutine(isoCam.SuavizarZoomParaTransicion(0.5f));
+            }
+        }
+
         if (cloudsIzquierda != null && cloudsDerecha != null)
         {
             yield return StartCoroutine(AnimarNubes(false));

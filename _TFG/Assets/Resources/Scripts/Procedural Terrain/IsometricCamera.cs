@@ -273,7 +273,7 @@ public class IsometricCamera : MonoBehaviour
             if (!isDragging && delta.magnitude > dragThreshold)
             {
                 isDragging = true;
-                isAttached = false;
+                if (!tileAstar.moving) isAttached = false;
                 tileAstar.SetCanMove(false);
             }
 
@@ -294,16 +294,25 @@ public class IsometricCamera : MonoBehaviour
             }
             else
             {
-                isAttached = true;
-                tileAstar.SetCanMove(false);
+                tileAstar.SetCanMove(true);
             }
         }
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0)
         {
+            if (!tileAstar.moving) isAttached = false;
             Zoom(scroll * 100f);
         }
+    }
+
+    /// <summary>
+    /// Engancha la cámara al jugador para reanudar el seguimiento automático.
+    /// </summary>
+    public void AttachToPlayer()
+    {
+        Debug.Log("AttachToPlayer ejecutado, isAttached = true");
+        isAttached = true;
     }
 
     /// <summary>
@@ -382,8 +391,8 @@ public class IsometricCamera : MonoBehaviour
     /// <param name="increment">Parámetro increment empleado por el método.</param>
     void Zoom(float increment)
     {
-        cam.orthographicSize -= increment;
-        cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, minZoom, maxZoom);
+        targetZoom -= increment;
+        targetZoom = Mathf.Clamp(targetZoom, minZoom, maxZoom);
     }
 
     /// <summary>
@@ -472,6 +481,27 @@ public class IsometricCamera : MonoBehaviour
         //botonSalirMenupajaroConseguido.SetActive(true);
 
         panelPajaroConseguido.SetActive(false);
+    }
+
+    /// <summary>
+    /// Interpola suavemente el zoom de la cámara hasta el valor inicial antes de una transición de escena.
+    /// </summary>
+    /// <param name="duracion">Duración en segundos de la interpolación.</param>
+    public IEnumerator SuavizarZoomParaTransicion(float duracion = 0.5f)
+    {
+        float tiempoTranscurrido = 0f;
+        float zoomInicial = cam.orthographicSize;
+
+        while (tiempoTranscurrido < duracion)
+        {
+            tiempoTranscurrido += Time.deltaTime;
+            float t = Mathf.Clamp01(tiempoTranscurrido / duracion);
+            targetZoom = Mathf.Lerp(zoomInicial, initialZoom, t);
+            yield return null;
+        }
+
+        targetZoom = initialZoom;
+        cam.orthographicSize = initialZoom;
     }
 
 }

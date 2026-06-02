@@ -256,9 +256,11 @@ public class TileAStar : MonoBehaviour
             stepsAvailable = Mathf.Max(0, stepsAvailable);
 
             UpdateStepsUI();
-            
+
             moving = true;
             currentIndex = 0;
+            Debug.Log("Llamando AttachToPlayer");
+            isometricCamera.AttachToPlayer();
         }
     }
     /// <summary>
