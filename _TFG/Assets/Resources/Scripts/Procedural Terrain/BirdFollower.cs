@@ -424,13 +424,26 @@ public class BirdFollower : MonoBehaviour
         {
             bool occupied = EquippedBirdsData.IsActive(i);
             _birdGOs[i].SetActive(occupied);
+            
             if (occupied)
             {
+                Bird b = EquippedBirdsData.GetBird(i);
+                
+                // 1. Asignar Sprite
                 Sprite s = EquippedBirdsData.GetSprite(i);
                 if (s != null) _renderers[i].sprite = s;
-                Bird b = EquippedBirdsData.GetBird(i);
-                _birdNames[i] = (b != null && !string.IsNullOrEmpty(b.name))
-                    ? b.name : $"Bird {i + 1}";
+
+                // 2. NUEVA LÓGICA: Asignar el Animator Controller
+                if (b != null)
+                {
+                    _birdNames[i] = !string.IsNullOrEmpty(b.name) ? b.name : $"Bird {i + 1}";
+                    
+                    var anim = _birdGOs[i].GetComponent<Animator>();
+                    if (anim != null && b.animator != null)
+                    {
+                        anim.runtimeAnimatorController = b.animator;
+                    }
+                }
             }
         }
     }
@@ -925,35 +938,39 @@ public class BirdFollower : MonoBehaviour
     /// Ejecuta la lógica asociada a create follower objects dentro de FindState.
     /// </summary>
     private void CreateFollowerObjects()
-    {
-        float angleStep = 360f / BirdCount;
-        for (int i = 0; i < BirdCount; i++)
         {
-            float angle = i * angleStep * Mathf.Deg2Rad;
-            float radius = (minRadius + maxRadius) * 0.5f;
-            Vector3 startPos = player.position + new Vector3(
-                Mathf.Cos(angle) * radius,
-                Mathf.Sin(angle) * radius * 0.5f + verticalBias,
-                0f);
+            float angleStep = 360f / BirdCount;
+                for (int i = 0; i < BirdCount; i++)
+                {
+                    float angle = i * angleStep * Mathf.Deg2Rad;
+                    float radius = (minRadius + maxRadius) * 0.5f;
+                    Vector3 startPos = player.position + new Vector3(
+                        Mathf.Cos(angle) * radius,
+                        Mathf.Sin(angle) * radius * 0.5f + verticalBias,
+                        0f);
 
-            var go = new GameObject($"BirdFollower_{i + 1}");
-            go.transform.position = startPos;
-            go.transform.localScale = Vector3.one * birdScale;
+                    var go = new GameObject($"BirdFollower_{i + 1}");
+                    go.transform.position = startPos;
+                    go.transform.localScale = Vector3.one * birdScale;
 
-            var sr = go.AddComponent<SpriteRenderer>();
-            sr.sortingLayerName = sortingLayerName;
-            sr.sortingOrder = sortingOrder;
+                    // 1. Añadimos el componente Animator
+                    go.AddComponent<Animator>();
 
-            go.SetActive(false);
+                    // 2. Añadimos el SpriteRenderer
+                    var sr = go.AddComponent<SpriteRenderer>();
+                    sr.sortingLayerName = sortingLayerName;
+                    sr.sortingOrder = sortingOrder;
 
-            _birdGOs[i] = go;
-            _renderers[i] = sr;
-            _baseScales[i] = go.transform.localScale;
-            _velocities[i] = Vector3.zero;
-            _wanderTargets[i] = startPos;
-            _wanderTimers[i] = Random.Range(0f, wanderInterval);
-            _findStates[i] = FindState.Wandering;
-            _findTimers[i] = Random.Range(findDelayMin, findDelayMax);
+                    go.SetActive(false);
+
+                    _birdGOs[i] = go;
+                    _renderers[i] = sr;
+                    _baseScales[i] = go.transform.localScale;
+                    _velocities[i] = Vector3.zero;
+                    _wanderTargets[i] = startPos;
+                    _wanderTimers[i] = Random.Range(0f, wanderInterval);
+                    _findStates[i] = FindState.Wandering;
+                    _findTimers[i] = Random.Range(findDelayMin, findDelayMax);
+                }
         }
-    }
 }
