@@ -367,7 +367,7 @@ public class BirdFollower : MonoBehaviour
     /// <summary>
     /// Campo de tipo AudioSource utilizado para almacenar o configurar audio source.
     /// </summary>
-    private AudioSource _audioSource;
+    public AudioSource audioSource;
 
     // ═════════════════════════════════════════════════════════════════════════
     // LIFECYCLE
@@ -395,10 +395,10 @@ public class BirdFollower : MonoBehaviour
             Debug.LogWarning("[BirdFollower] TileAStar not found — step rewards won't work.");
 
         // Use or add an AudioSource on this GameObject
-        _audioSource = GetComponent<AudioSource>();
-        if (_audioSource == null)
-            _audioSource = gameObject.AddComponent<AudioSource>();
-        _audioSource.playOnAwake = false;
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
 
         CreateFollowerObjects();
         CreateNotificationUI();
@@ -923,8 +923,8 @@ public class BirdFollower : MonoBehaviour
     /// <param name="clip">Parámetro clip empleado por el método.</param>
     private void PlaySFX(AudioClip clip)
     {
-        if (clip != null && _audioSource != null)
-            _audioSource.PlayOneShot(clip);
+        if (clip != null && audioSource != null)
+            audioSource.PlayOneShot(clip);
     }
 
     /// <summary>
