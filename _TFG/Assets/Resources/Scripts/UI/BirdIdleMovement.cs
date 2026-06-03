@@ -117,6 +117,23 @@ public class BirdIdleMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reinicializa el movimiento del pájaro con los bounds y velocidad configurados en el Inspector.
+    /// Debe llamarse después de restaurar datos entre escenas para evitar que los valores del Start queden desactualizados.
+    /// </summary>
+    public void ReinicializarMovimiento()
+    {
+        roamTargetDirection = Random.insideUnitCircle.normalized;
+        roamVelocity = roamTargetDirection * roamSpeed;
+        directionChangeTimer = Random.Range(0f, directionChangeInterval);
+
+        // Reposicionar dentro de los bounds si está fuera
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, roamBounds.xMin, roamBounds.xMax);
+        pos.y = Mathf.Clamp(pos.y, roamBounds.yMin, roamBounds.yMax);
+        transform.position = pos;
+    }
+
 #if UNITY_EDITOR
     /// <summary>
     /// Ejecuta la lógica asociada a on draw gizmos selected dentro de BirdIdleMovement.

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97d281e56f091f4792c90b958d5e763, type: 3}
   m_Name: Bird3
   m_EditorClassIdentifier: 
-  obtenido: 1
+  obtenido: 0
   birdPrefab: {fileID: 8457740664911959370, guid: f969d3a2d9a91d444ba1c268bd91788c, type: 3}
   birdName: Kaku
   animator: {fileID: 9100000, guid: 36d6cfd02f21ceb4abec32d976279e28, type: 2}

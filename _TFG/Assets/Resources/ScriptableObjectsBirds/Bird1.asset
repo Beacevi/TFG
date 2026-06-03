@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97d281e56f091f4792c90b958d5e763, type: 3}
   m_Name: Bird1
   m_EditorClassIdentifier: 
-  obtenido: 1
+  obtenido: 0
   birdPrefab: {fileID: 926288913471853959, guid: 8198ab1b178ef2a408fac1b7ea419a87, type: 3}
   birdName: Blu
   animator: {fileID: 9100000, guid: 4e6f7f7acb9a1eb4ab40a474683516cb, type: 2}

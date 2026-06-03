@@ -7,11 +7,27 @@
  */
 
 using GUPS.AntiCheat.Protected;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+/// <summary>
+/// Almacena los datos necesarios para restaurar un pájaro equipado entre escenas.
+/// </summary>
+[System.Serializable]
+public class DatosPajaroEquipado
+{
+    public Bird birdData;
+    public RuntimeAnimatorController animator;
+    public Sprite sprite;
+
+    // CircleCollider2D
+    public float colliderRadius;
+    public Vector2 colliderOffset;
+}
 
 /// <summary>
 /// Controlador persistente principal que mantiene el estado global del jugador, la economía, el guardado y la interfaz.
@@ -85,26 +101,62 @@ public class GameManager : MonoBehaviour
     /// </summary>
     [SerializeField] private GameObject soundManager;
 
-
     /// <summary>
     /// Campo de tipo Store utilizado para almacenar o configurar store.
     /// </summary>
     Store store;
 
-
     /// <summary>
     /// Campo de tipo CustomMenu utilizado para almacenar o configurar custom menu.
     /// </summary>
     CustomMenu customMenu;
-    //[SerializeField] private TMP_Text energy_ui;
 
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para guardar el pajaro equipado
+    /// </summary>
+    public GameObject BirdEquipped1;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para guardar el pajaro equipado
+    /// </summary>
+    public GameObject BirdEquipped2;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para guardar el pajaro equipado
+    /// </summary>
+    public GameObject BirdEquipped3;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para asignar el pajaro equipado
+    /// </summary>
+    public GameObject EquippedBirdUI1;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para asignar el pajaro equipado
+    /// </summary>
+    public GameObject EquippedBirdUI2;
+    /// <summary>
+    /// Campo de tipo GameObject utilizado para asignar el pajaro equipado
+    /// </summary>
+    public GameObject EquippedBirdUI3;
+
+    /// <summary>
+    /// Datos persistentes del pájaro equipado en el slot 1.
+    /// </summary>
+    public DatosPajaroEquipado datosPajaro1;
+    /// <summary>
+    /// Datos persistentes del pájaro equipado en el slot 2.
+    /// </summary>
+    public DatosPajaroEquipado datosPajaro2;
+    /// <summary>
+    /// Datos persistentes del pájaro equipado en el slot 3.
+    /// </summary>
+    public DatosPajaroEquipado datosPajaro3;
 
     /// <summary>
     /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
     /// </summary>
     private void Awake()
     {
-
+        EquippedBirdUI1 = GameObject.FindGameObjectWithTag("EquippedBird1");
+        EquippedBirdUI2 = GameObject.FindGameObjectWithTag("EquippedBird2");
+        EquippedBirdUI3 = GameObject.FindGameObjectWithTag("EquippedBird3");
 
         if (Instance == null)
         {
@@ -119,9 +171,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        
     }
+
     /// <summary>
     /// Suscribe eventos o activa el comportamiento del componente al habilitarse.
     /// </summary>
@@ -152,8 +203,93 @@ public class GameManager : MonoBehaviour
             soundManager = GameObject.FindGameObjectWithTag("SoundManager");
             soundManager.GetComponent<Sounds>().src = GetComponent<AudioSource>();
 
+            EquippedBirdUI1 = GameObject.FindGameObjectWithTag("EquippedBird1");
+            EquippedBirdUI2 = GameObject.FindGameObjectWithTag("EquippedBird2");
+            EquippedBirdUI3 = GameObject.FindGameObjectWithTag("EquippedBird3");
+
+            StartCoroutine(AsignarPajarosDelayado());
+
             UpdateUI();
         }
+    }
+
+    /// <summary>
+    /// Espera un frame para que los Start() de los componentes se ejecuten antes de restaurar los datos de los pájaros.
+    /// </summary>
+    private IEnumerator AsignarPajarosDelayado()
+    {
+        yield return null;
+
+        if (datosPajaro1 != null) AsignarPajaroEnUI(datosPajaro1, EquippedBirdUI1);
+        if (datosPajaro2 != null) AsignarPajaroEnUI(datosPajaro2, EquippedBirdUI2);
+        if (datosPajaro3 != null) AsignarPajaroEnUI(datosPajaro3, EquippedBirdUI3);
+    }
+
+    /// <summary>
+    /// Extrae y persiste los datos relevantes del pájaro en el slot indicado.
+    /// </summary>
+    /// <param name="slot">Slot de equipamiento destino (1, 2 o 3).</param>
+    /// <param name="bird">GameObject del pájaro del que extraer los datos.</param>
+    public void SetEquippedBird(int slot, GameObject bird)
+    {
+        if (bird == null) return;
+
+        DatosPajaroEquipado datos = new DatosPajaroEquipado();
+
+        SpriteRenderer sr = bird.GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) datos.sprite = sr.sprite;
+
+        Animator anim = bird.GetComponent<Animator>();
+        if (anim != null) datos.animator = anim.runtimeAnimatorController;
+
+        BirdsReactions br = bird.GetComponentInChildren<BirdsReactions>();
+        if (br != null) datos.birdData = br.birdData;
+
+        CircleCollider2D col = bird.GetComponentInChildren<CircleCollider2D>();
+        if (col != null)
+        {
+            datos.colliderRadius = col.radius;
+            datos.colliderOffset = col.offset;
+        }
+
+        switch (slot)
+        {
+            case 1: datosPajaro1 = datos; break;
+            case 2: datosPajaro2 = datos; break;
+            case 3: datosPajaro3 = datos; break;
+        }
+    }
+
+    /// <summary>
+    /// Restaura los datos de un pájaro guardado sobre el slot de UI correspondiente, sin reparentarlo para preservar la referencia entre escenas.
+    /// </summary>
+    /// <param name="datos">Datos del pájaro a restaurar.</param>
+    /// <param name="slotUI">GameObject del slot de UI donde se aplicarán los datos.</param>
+    private void AsignarPajaroEnUI(DatosPajaroEquipado datos, GameObject slotUI)
+    {
+        if (datos == null || slotUI == null) return;
+
+        SpriteRenderer sr = slotUI.GetComponentInChildren<SpriteRenderer>();
+        if (sr != null && datos.sprite != null) sr.sprite = datos.sprite;
+
+        Animator anim = slotUI.GetComponent<Animator>();
+        if (anim != null && datos.animator != null) anim.runtimeAnimatorController = datos.animator;
+
+        BirdsReactions br = slotUI.GetComponentInChildren<BirdsReactions>();
+        if (br != null && datos.birdData != null) br.birdData = datos.birdData;
+
+        CircleCollider2D col = slotUI.GetComponentInChildren<CircleCollider2D>();
+        if (col != null)
+        {
+            col.radius = datos.colliderRadius;
+            col.offset = datos.colliderOffset;
+        }
+
+        BirdIdleMovement bim = slotUI.GetComponentInChildren<BirdIdleMovement>();
+        if (bim != null)
+            bim.ReinicializarMovimiento();
+
+        slotUI.SetActive(true);
     }
 
     /// <summary>
@@ -187,7 +323,6 @@ public class GameManager : MonoBehaviour
         data.energy          = energy;
         data.currentLevel    = currentLevel;
         data.balloonLevel    = balloonLevel;
-
 
         if (store != null)
         {
@@ -244,6 +379,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("No save file found.");
         }
     }
+
     /// <summary>
     /// Restablece los valores del sistema a su configuración inicial o por defecto.
     /// </summary>
@@ -262,13 +398,10 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Guarda o sincroniza datos cuando la aplicación se cierra.
     /// </summary>
-    private void OnApplicationQuit() //< QuitGamePause (No pdn estar las dos funciones a la vez)
+    private void OnApplicationQuit()
     {
-        SaveGame();   //< Para que cndo se salga del juego se guarde todo
-        //ResetSave(); //< Para resetear todo
+        SaveGame();
     }
-
-
 
     /// <summary>
     /// Añade money al estado gestionado por el componente.
@@ -276,9 +409,9 @@ public class GameManager : MonoBehaviour
     /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
     public void AddMoney(int amount)
     {
-        if(buffBothActive|| buffMoneyActive)
+        if (buffBothActive || buffMoneyActive)
         {
-            amount = amount *2; //TODO: Cambiar a que sea por el valor real
+            amount = amount * 2;
         }
         coins += amount;
         coins_ui.text = coins.ToString();
@@ -317,7 +450,7 @@ public class GameManager : MonoBehaviour
     /// <returns>Valor numérico calculado o consultado por el método.</returns>
     public int GetMoney()
     {
-        return coins; 
+        return coins;
     }
 
     /// <summary>
@@ -328,7 +461,6 @@ public class GameManager : MonoBehaviour
     {
         gems += amount;
         gems_ui.text = gems.ToString();
-
         SaveGame();
     }
 
@@ -367,16 +499,15 @@ public class GameManager : MonoBehaviour
     /// <param name="amount">Cantidad que se debe aplicar en la operación.</param>
     public void AddEnergy(int amount)
     {
-
-        if(buffBothActive || buffEnergyActive)
+        if (buffBothActive || buffEnergyActive)
         {
-            amount = amount *2; //TODO: Añadir que sea el valor del buffo
+            amount = amount * 2;
         }
 
         energy += amount;
-
         SaveGame();
     }
+
     /// <summary>
     /// Establece o actualiza energy dentro del sistema.
     /// </summary>
@@ -384,7 +515,6 @@ public class GameManager : MonoBehaviour
     public void SetEnergy(int amount)
     {
         energy = amount;
-
         SaveGame();
     }
 
@@ -404,7 +534,7 @@ public class GameManager : MonoBehaviour
     public int GetCurretLevel()
     {
         return currentLevel;
-    }   
+    }
 
     /// <summary>
     /// Establece o actualiza a new current level dentro del sistema.
@@ -412,8 +542,6 @@ public class GameManager : MonoBehaviour
     public void SetANewCurrentLevel()
     {
         currentLevel += 1;
-
-
         SaveGame();
     }
 
@@ -432,7 +560,6 @@ public class GameManager : MonoBehaviour
     public void SetANewBalloonLevel()
     {
         balloonLevel += 1;
-
         SaveGame();
     }
 }

@@ -33,6 +33,9 @@ TagManager:
   - Coin
   - CanvasDesktop
   - CanvasMobile
+  - EquippedBird1
+  - EquippedBird2
+  - EquippedBird3
   layers:
   - Default
   - TransparentFX

@@ -132,7 +132,6 @@ public class BirdButton : MonoBehaviour
     /// </summary>
     private Bird _birdDataSlot3;
 
-
     /// <summary>
     /// Campo de tipo Queue<string> utilizado para almacenar o configurar bird selected.
     /// </summary>
@@ -182,7 +181,6 @@ public class BirdButton : MonoBehaviour
         { "H", new Vector2Int(1, 0) },
         { "I", new Vector2Int(2, 0) },
     };
-
 
     /// <summary>
     /// Campo de tipo AudioSource utilizado para almacenar o configurar audio source.
@@ -238,12 +236,10 @@ public class BirdButton : MonoBehaviour
         _boostManager = GetComponent<BoostsManager>();
         _audioSource = GetComponent<AudioSource>();
 
-
         if (_frameBird1 != null)
         {
             _defaultFrameColor = _frameBird1.color;
         }
-
 
         if (_MyBird1 != null && _MyBird2 != null && _MyBird3 != null)
         {
@@ -264,8 +260,6 @@ public class BirdButton : MonoBehaviour
             _BoostImage.SetActive(false);
             _Deletebirdbutton.gameObject.SetActive(false);
         }
-
-
     }
 
     /// <summary>
@@ -311,6 +305,7 @@ public class BirdButton : MonoBehaviour
 
         _buttonFunctions.OpenBirdMenu(_listOfAvailableBirds, _listOfScriptableObjectBirds);
     }
+
     /// <summary>
     /// Cierra bird menu dentro del flujo de interfaz.
     /// </summary>
@@ -328,9 +323,9 @@ public class BirdButton : MonoBehaviour
             StartCoroutine(_buttonFunctions.CloseInteractibleButton(button, _animator, _BirdPanel));
         }
 
-
         _buttonFunctions.CloseMenu();
     }
+
     /// <summary>
     /// Ejecuta la lógica asociada a bird menu dentro de BirdButton.
     /// </summary>
@@ -363,7 +358,6 @@ public class BirdButton : MonoBehaviour
             _openedIcon.SetActive(false);
             isOpen = true;
         }
-
     }
 
     /// <summary>
@@ -393,19 +387,16 @@ public class BirdButton : MonoBehaviour
             {
                 _BoostText.text = "Money + Energy";
                 _BoostInfoText.text = "+10% Money & Energy";
-                //_BoostImage.SetActive(false);
             }
             else if (boost.coinMultiplier > 0)
             {
                 _BoostText.text = "Money";
                 _BoostInfoText.text = "+10% Money";
-                //_BoostImage.SetActive(false);
             }
             else if (boost.energyMultiplier > 0)
             {
                 _BoostText.text = "Energy";
                 _BoostInfoText.text = "+10% Energy";
-                //_BoostImage.SetActive(false);
             }
         }
         else
@@ -415,6 +406,7 @@ public class BirdButton : MonoBehaviour
             _BoostImage.SetActive(false);
         }
     }
+
     /// <summary>
     /// Add Birds
     /// </summary>
@@ -423,6 +415,7 @@ public class BirdButton : MonoBehaviour
         Sprite uiSprite = bird.GetComponent<Image>().sprite;
         _myBird.GetComponent<SpriteRenderer>().sprite = uiSprite;
     }
+
     /// <summary>
     /// Establece o actualiza grandpa text dentro del sistema.
     /// </summary>
@@ -433,6 +426,7 @@ public class BirdButton : MonoBehaviour
         Transform grandparentBird = Bird.transform.parent.parent;
         grandparentBird.GetComponent<TMP_Text>().text = UpdateText;
     }
+
     /// <summary>
     /// Obtiene grandpa text a partir del estado actual del sistema.
     /// </summary>
@@ -443,6 +437,7 @@ public class BirdButton : MonoBehaviour
         Transform grandparentBird = Bird.transform.parent.parent;
         return grandparentBird.GetComponent<TMP_Text>().text;
     }
+
     /// <summary>
     /// Establece o actualiza great grandpa text dentro del sistema.
     /// </summary>
@@ -453,6 +448,7 @@ public class BirdButton : MonoBehaviour
         Transform greatgrandparentBird = Bird.transform.parent.parent.parent;
         greatgrandparentBird.GetComponent<TMP_Text>().text = UpdateText;
     }
+
     /// <summary>
     /// Obtiene great grandpa text a partir del estado actual del sistema.
     /// </summary>
@@ -463,6 +459,7 @@ public class BirdButton : MonoBehaviour
         Transform greatgrandparentBird = Bird.transform.parent.parent.parent;
         return greatgrandparentBird.GetComponent<TMP_Text>().text;
     }
+
     /// <summary>
     /// Cambia change color panel según la interacción o parámetro recibido.
     /// </summary>
@@ -476,6 +473,7 @@ public class BirdButton : MonoBehaviour
 
         panel.color = isSelected ? selectedColor : unselectedColor;
     }
+
     /// <summary>
     /// Establece o actualiza bird dentro del sistema.
     /// </summary>
@@ -496,6 +494,7 @@ public class BirdButton : MonoBehaviour
         if (!_Deletebirdbutton.gameObject.activeSelf)
             _Deletebirdbutton.gameObject.SetActive(true);
     }
+
     /// <summary>
     /// Actualiza text based on tag para reflejar el estado actual del sistema.
     /// </summary>
@@ -537,10 +536,13 @@ public class BirdButton : MonoBehaviour
             }
 
             _birdDataSlot1 = birdData;
+
             EquippedBirdsData.Set(0, birdData, buttonImage.sprite);
 
-            //_MyBird1.GetComponent<BirdIdleMovement>().birdData = birdData;
             SetImage(_Bird1, _MyBird1);
+
+            GameManager.Instance.SetEquippedBird(1, _MyBird1);
+
             return;
         }
 
@@ -566,8 +568,9 @@ public class BirdButton : MonoBehaviour
             _birdDataSlot2 = birdData;
             EquippedBirdsData.Set(1, birdData, buttonImage.sprite);
 
-            //_MyBird2.GetComponent<BirdIdleMovement>().birdData = birdData;
             SetImage(_Bird2, _MyBird2);
+
+            GameManager.Instance.SetEquippedBird(2, _MyBird2);
 
             return;
         }
@@ -601,11 +604,10 @@ public class BirdButton : MonoBehaviour
             _birdDataSlot3 = birdData;
             EquippedBirdsData.Set(2, birdData, buttonImage.sprite);
 
-            //_MyBird3.GetComponent<BirdIdleMovement>().birdData = birdData;
-
             SetImage(_Bird3, _MyBird3);
-
             SetImage(_Bird2, _MyBird2);
+
+            GameManager.Instance.SetEquippedBird(3, _MyBird3);
 
             if (_audioSource != null)
                 _audioSource.Play();
@@ -618,7 +620,6 @@ public class BirdButton : MonoBehaviour
 
             TypeOfBoosts();
         }
-
     }
 
     /// <summary>
@@ -627,11 +628,8 @@ public class BirdButton : MonoBehaviour
     private void SwapTagImage()
     {
         string tempTitle = GetGrandpaText(_Bird2);
-
         string tempUpdate = GetGreatGrandpaText(_Bird2);
-
         string tempTag = _Bird2.tag;
-
         Sprite tempImage = _Bird2.GetComponent<Image>().sprite;
 
         SetBird(_Bird2, GetGrandpaText(_Bird1), GetGreatGrandpaText(_Bird1), _Bird1.tag, _Bird1.GetComponent<Image>().sprite);
@@ -656,6 +654,7 @@ public class BirdButton : MonoBehaviour
     {
         SetBird(bird, "Bird Name", "No Level", "Untagged", Resources.Load<Sprite>("Birds/UnselectedBird"));
     }
+
     /// <summary>
     /// Cambia change bird 1 info to bird 2 según la interacción o parámetro recibido.
     /// </summary>
@@ -664,7 +663,6 @@ public class BirdButton : MonoBehaviour
     private void ChangeBird1InfoToBird2(GameObject bird1, GameObject bird2)
     {
         SetBird(bird1, GetGrandpaText(bird2), GetGreatGrandpaText(bird2), bird2.tag, bird2.GetComponent<Image>().sprite);
-
 
         if (bird1 == _Bird1 && BirdSelected.Count == 3)
         {
@@ -676,6 +674,7 @@ public class BirdButton : MonoBehaviour
             _MyBird2.SetActive(false);
         }
     }
+
     /// <summary>
     /// Ejecuta la lógica asociada a reaoganize panel dentro de BirdButton.
     /// </summary>
@@ -687,6 +686,7 @@ public class BirdButton : MonoBehaviour
         bird1 = bird2;                  // Copia la referencia del siguiente
         ChangeColorPanel(bird1, true);  // Activa el nuevo panel
     }
+
     /// <summary>
     /// Ejecuta la lógica asociada a clear one tag dentro de BirdButton.
     /// </summary>
@@ -707,49 +707,30 @@ public class BirdButton : MonoBehaviour
                 _birdDataSlot1 = null;
             }
 
-
             QuitInfoOfBird(_Bird1);
-
             _MyBird1.SetActive(false);
-
             ChangeColorPanel(_panelBird1, false);
-
-
 
             if (BirdSelected.Count >= 2)
             {
                 ChangeBird1InfoToBird2(_Bird1, _Bird2);
-
                 ReaoganizePanel(ref _panelBird1, ref _panelBird2);
 
                 if (BirdSelected.Count == 3)
                 {
-
                     ChangeBird1InfoToBird2(_Bird2, _Bird3);
-
                     QuitInfoOfBird(_Bird3);
                     _MyBird3.SetActive(false);
-
-
                     ReaoganizePanel(ref _panelBird2, ref _panelBird3);
-
                     _Bird3.GetComponent<Image>().sprite = _NoBird;
                     _panelBird3 = null;
-
-
                 }
                 else
                 {
                     QuitInfoOfBird(_Bird2);
-
-
-
                     _MyBird2.SetActive(false);
-
                     _Bird2.GetComponent<Image>().sprite = _NoBird;
                     _panelBird2 = null;
-
-
                 }
 
                 ChangeColorPanel(_panelBird1, true);
@@ -772,45 +753,32 @@ public class BirdButton : MonoBehaviour
                 _birdDataSlot2 = null;
             }
 
-
             QuitInfoOfBird(_Bird2);
-
-
             ChangeColorPanel(_panelBird2, false);
 
             if (BirdSelected.Count == 3)
             {
                 ChangeBird1InfoToBird2(_Bird2, _Bird3);
-
                 QuitInfoOfBird(_Bird3);
                 _MyBird3.SetActive(false);
-
                 ReaoganizePanel(ref _panelBird2, ref _panelBird3);
                 _Bird3.GetComponent<Image>().sprite = _NoBird;
-
                 _panelBird3 = null;
             }
             else
             {
                 _MyBird2.SetActive(false);
-
                 ChangeColorPanel(_panelBird2, false);
                 ReaoganizePanel(ref _panelBird2, ref _panelBird1);
-
                 _Bird2.GetComponent<Image>().sprite = _NoBird;
                 _panelBird2 = null;
             }
-
-
         }
         else if (_Bird3.tag == tagToRemove)
         {
             _birdDataSlot3 = null;
-
             QuitInfoOfBird(_Bird3);
-
             _Bird3.GetComponent<Image>().sprite = _NoBird;
-
             ChangeColorPanel(_panelBird3, false);
             _panelBird3 = null;
         }
@@ -830,11 +798,10 @@ public class BirdButton : MonoBehaviour
         SetImage(_Bird3, _MyBird3);
 
         UpdateFrameColors();
-
         TypeOfBoosts();
-
         SyncRegistryAfterRemoval();
     }
+
     /// <summary>
     /// Limpia o normaliza my birds antes de utilizarlo.
     /// </summary>
@@ -845,7 +812,14 @@ public class BirdButton : MonoBehaviour
         _birdDataSlot2 = null;
         _birdDataSlot3 = null;
 
+        // Limpiar datos del GameManager
+        GameManager.Instance.datosPajaro1 = null;
+        GameManager.Instance.datosPajaro2 = null;
+        GameManager.Instance.datosPajaro3 = null;
 
+        GameManager.Instance.BirdEquipped1 = null;
+        GameManager.Instance.BirdEquipped2 = null;
+        GameManager.Instance.BirdEquipped3 = null;
 
         // Limpiar datos primero
         BirdSelected.Clear();
@@ -868,6 +842,7 @@ public class BirdButton : MonoBehaviour
 
         TypeOfBoosts();
     }
+
     /// <summary>
     /// Limpia o normaliza elemento antes de utilizarlo.
     /// </summary>
@@ -904,7 +879,6 @@ public class BirdButton : MonoBehaviour
         Vector3 endScale = startScale * _scaleMultiplier;
 
         GameObject clone = Instantiate(target.gameObject, target.position, target.rotation, target.root);
-
         clone.transform.SetAsLastSibling();
 
         LayoutElement le = clone.GetComponent<LayoutElement>();
@@ -920,26 +894,22 @@ public class BirdButton : MonoBehaviour
         {
             float t = time / _scaleDuration;
             rt.localScale = Vector3.Lerp(startScale, endScale, t);
-
             time += Time.unscaledDeltaTime;
             yield return null;
         }
 
         rt.localScale = endScale;
-
         time = 0f;
 
         while (time < _scaleDuration)
         {
             float t = time / _scaleDuration;
             rt.localScale = Vector3.Lerp(endScale, startScale, t);
-
             time += Time.unscaledDeltaTime;
             yield return null;
         }
 
         rt.localScale = startScale;
-
         Destroy(clone);
     }
 
@@ -961,6 +931,7 @@ public class BirdButton : MonoBehaviour
             _frameBird3.color = _defaultFrameColor;
         }
     }
+
     /// <summary>
     /// Ejecuta la lógica asociada a sync registry after removal dentro de BirdButton.
     /// </summary>
@@ -982,5 +953,4 @@ public class BirdButton : MonoBehaviour
         if (count >= 3 && _birdDataSlot3 != null)
             EquippedBirdsData.Set(2, _birdDataSlot3, _Bird3.GetComponent<Image>().sprite);
     }
-
 }
