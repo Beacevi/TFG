@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1825432720426759422, guid: 0e1da8e97b311114e8248106c08994e7, type: 3}
+  m_Sprite: {fileID: -1555603165, guid: 0f1cddaddf0c4b9c4967f3488afe1e26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 387158389040031380}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf3da979260cbbf4fb161f92802f3bc1, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8057a1a30c92eee7abba8ecb0f5b736, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -207,7 +207,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7994319225194908165}
   - component: {fileID: 3200006787828381032}
-  - component: {fileID: 946792401836782873}
   - component: {fileID: 5538368840409695663}
   - component: {fileID: 8793803736949130595}
   m_Layer: 0
@@ -250,28 +249,6 @@ MonoBehaviour:
   simonMinigamePrefab: {fileID: 1526808233990887436, guid: c261781d13d70e044b2b7b1e5452dcb5, type: 3}
   silhouette: {fileID: 2991993792377451206}
   normalSprite: {fileID: 387158389040031380}
---- !u!95 &946792401836782873
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5805991993125803581}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf3da979260cbbf4fb161f92802f3bc1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &5538368840409695663
 Rigidbody2D:
   serializedVersion: 5

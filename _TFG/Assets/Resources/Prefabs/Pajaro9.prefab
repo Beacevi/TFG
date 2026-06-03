@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7470902984da3934f92c5a6d77dc97ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdData: {fileID: 11400000, guid: 8d3c6500079ab0b4895a52980a1ecd54, type: 2}
+  birdData: {fileID: 11400000, guid: 82129d2e6d958d74ab8bdb73b5348844, type: 2}
   simonMinigamePrefab: {fileID: 1526808233990887436, guid: c261781d13d70e044b2b7b1e5452dcb5, type: 3}
   silhouette: {fileID: 960755278083825602}
   normalSprite: {fileID: 6128619408579821354}
@@ -281,7 +281,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1825432720426759422, guid: 0e1da8e97b311114e8248106c08994e7, type: 3}
-  m_Color: {r: 0.9312555, g: 0.51370597, b: 0.9811321, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
