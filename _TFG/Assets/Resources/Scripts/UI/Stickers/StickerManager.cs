@@ -33,6 +33,21 @@ public class StickerManager : MonoBehaviour
     public bool modoActual = false;//False es colocar, true es borrar
 
     /// <summary>
+    /// Referencia al componente Image del botón para cambiar su color visualmente.
+    /// </summary>
+    public Image imagenDelBoton; 
+
+    /// <summary>
+    /// Color que tomará el botón cuando el modo esté activo.
+    /// </summary>
+    public Color colorActivo = Color.green;
+
+    /// <summary>
+    /// Color que tomará el botón cuando el modo esté desactivado.
+    /// </summary>
+    public Color colorInactivo = Color.white;
+
+    /// <summary>
     /// Inicializa referencias internas antes de que comience la ejecución normal del componente.
     /// </summary>
     private void Awake()
@@ -85,7 +100,18 @@ public class StickerManager : MonoBehaviour
     /// </summary>
     public void CambiarModo()
     {
+        // 1. Cambiamos el estado
         modoActual = !modoActual;
+
+        // 2. Aplicamos el color correspondiente
+        if (modoActual)
+        {
+            imagenDelBoton.color = colorActivo;
+        }
+        else
+        {
+            imagenDelBoton.color = colorInactivo;
+        }
     }
 
     /// <summary>
